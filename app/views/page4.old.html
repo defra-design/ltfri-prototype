@@ -1,0 +1,186 @@
+{% extends "template.njk" %} {% from "accordion/macro.njk" import govukAccordion
+%} {% from "back-link/macro.njk" import govukBackLink %} {% from
+"breadcrumbs/macro.njk" import govukBreadcrumbs %} {% from "button/macro.njk"
+import govukButton %} {% from "character-count/macro.njk" import
+govukCharacterCount %} {% from "checkboxes/macro.njk" import govukCheckboxes %}
+{% from "date-input/macro.njk" import govukDateInput %} {% from
+"details/macro.njk" import govukDetails %} {% from "error-message/macro.njk"
+import govukErrorMessage %} {% from "error-summary/macro.njk" import
+govukErrorSummary %} {% from "fieldset/macro.njk" import govukFieldset %} {%
+from "file-upload/macro.njk" import govukFileUpload %} {% from "input/macro.njk"
+import govukInput %} {% from "inset-text/macro.njk" import govukInsetText %} {%
+from "panel/macro.njk" import govukPanel %} {% from "phase-banner/macro.njk"
+import govukPhaseBanner %} {% from "radios/macro.njk" import govukRadios %} {%
+from "select/macro.njk" import govukSelect %} {% from "skip-link/macro.njk"
+import govukSkipLink %} {% from "summary-list/macro.njk" import govukSummaryList
+%} {% from "table/macro.njk" import govukTable %} {% from "tabs/macro.njk"
+import govukTabs %} {% from "tag/macro.njk" import govukTag %} {% from
+"textarea/macro.njk" import govukTextarea %} {% from "warning-text/macro.njk"
+import govukWarningText %} {% block head %} {% include "includes/head.html" %}
+{% endblock %} {% block pageTitle %} GOV.UK Flooding {% endblock %} {%
+block header %} {% include "includes/cookie-banner.html" %} {# Set serviceName
+in config.js. #}
+{{
+  govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  })
+}}
+
+{% endblock %} {% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl"> Flood Risk For: <span class="postcode">BL9 1XX</span> </h1>
+
+
+    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </p> -->
+
+
+    <div class="govuk-accordion" data-module="accordion" id="accordion-default">
+
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+              <div class="govuk-inset-text high">
+                <b>Surface Water - High Risk:</b> - This area has a greater than 1 in 30 chance of flooding
+
+              </div>
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content"
+          aria-labelledby="accordion-default-heading-1">
+          <p class='govuk-body'>
+
+            <span class="mapImage"><img src="\..\public\images\map3.png" alt="Si needs a new bike" />
+              <!-- ***interactive map*** -->
+
+
+              <p><b>What is surface water </b></p>
+              <p>Surface water flooding happens when heavy rainfall cannot drain away. Over 3 million properties are at
+                risk from surface water in the UK, more than those at risk from rivers and the sea (2.7 million).
+              </p>
+              <p><b>How we assess flood risk from surface water</b></p>
+
+              <p>Flood experts use computer models to observe and assess:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Rainwater flow and pooling</li>
+                <li>weather patterns</li>
+                <li>local landscape</li>
+                <li>historical data</li>
+              </ul>
+
+              <br>
+              <p>
+
+                <b>Accuracy</b><br><br>
+
+                We assessed the surface water flood risk for this area in 2017. We will do it again in 2022,
+                surface water flooding is difficult to predict as rainfall location and volume are difficult to
+                forecast.
+
+                <br><br><b>Surface water risk management</b><br><br>
+
+                <a
+                  href="https://www.google.com/url?q=https://www.bury.gov.uk/index.aspx?articleid%3D12174&sa=D&ust=1563801538571000&usg=AFQjCNFlkRWT_bg8hzT6-MEBjsEsTM_kCQ">Contact
+                  your Lead Local Flood Authority</a> who is responsible for managing the risk of flooding from
+                surface water.<p>
+                  They may have more detailed information on the flood risk from surface water.
+
+                  <br><br>
+
+                </p>
+        </div>
+      </div>
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+              <div class="govuk-inset-text medium">
+                <b>Rivers & Sea - Medium Risk:</b> - This area has between 1 in 30 and 1 in 100 chance of flooding
+              </div>
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-2" class="govuk-accordion__section-content"
+          aria-labelledby="accordion-default-heading-2">
+          <p class='govuk-body'>
+            <p><b>How we assess flood risk from rivers and the sea
+              </b></p>
+
+
+            <p>Flood experts use computer models to observe and assess:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>rainwater</li>
+              <li>weather patterns</li>
+              <li>tides</li>
+              <li>historical data</li>
+            </ul>
+            <br>
+          </p>
+        </div>
+      </div>
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+              <div class="govuk-inset-text low">
+                <b>Reservoirs</b> - The selected area is at no risk of flooding from reservoirs
+
+              </div>
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-3" class="govuk-accordion__section-content"
+          aria-labelledby="accordion-default-heading-3">
+          <p class='govuk-body'>
+            <p>Your area is catagorised as having zero risk of flooding from reservoirs.
+            </p>
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <a href="/page5" role="button"
+      class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8 custom">Continue</a>
+    <span class="floatRight"><button type="submit" onclick="window.print();return false;"
+        class="govuk-button govuk-button--secondary">
+        Print details
+      </button>
+      <!-- <button type="submit" class="govuk-button govuk-button--secondary">
+        Detailed view
+      </button> -->
+    </span>
+  </div>
+
+</div>
+{% endblock %} {% if useAutoStoreData %} {% block footer %}
+{{
+  govukFooter({
+    meta: {
+      items: [
+        {
+          href: "https://govuk-prototype-kit.herokuapp.com/",
+          text: "GOV.UK Flooding " + releaseVersion
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+      ]
+    }
+  })
+}}
+{% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
+"includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
+<!-- GOV.UK Flooding {{releaseVersion}} -->
+{% endblock %}
