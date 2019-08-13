@@ -25,23 +25,23 @@
 
 // ***TEMP ---- THIS IS NOT PRODUCTION CSS, DO NOT ADD TO LIVE***
 
-.govuk-panel--confirmation {
-  background-color: #b11a1a;
+// .govuk-panel--confirmation {
+//   background-color: #b11a1a;
 
-  &.medium {
-    background-color: #FFD401;
-  }
+//   &.medium {
+//     background-color: #FFD401;
+//   }
 
-  &.low {
-    background-color: #28a197
-  }
-}
+//   &.low {
+//     background-color: #28a197
+//   }
+// }
 
 .govuk-inset-text {
   // width: 73%;
   // float: right;
   // clear: none;
-  margin-bottom: 15px; 
+  // margin-bottom: 15px; 
 }
 .mtz{
   margin-top: -20px; 
@@ -150,4 +150,9 @@ margin-bottom: 30px;
 }
 .govuk-\!-margin-bottom-8.custom{
   margin-top: 0px!important; 
+}
+
+
+.govuk-link--white {
+  color: #ffffff!important;
 }
