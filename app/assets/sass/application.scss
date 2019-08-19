@@ -13,3 +13,21 @@ $govuk-global-styles: true;
 @import "components/cookie-banner";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+.no-margin {
+  margin: 0 0 10px 0!important;
+}
+
+.govuk-link--white {
+  color: #ffffff!important;
+}
+
+.form-hint {
+  font-weight: 400;
+  text-transform: none;
+  display: block;
+  color: #6f777b;
+  font-weight: normal;
+  margin-top: -2px;
+  padding-bottom: 2px;
+}
