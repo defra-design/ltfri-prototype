@@ -42,21 +42,25 @@ in config.js. #}
 
 
     <div class="govuk-inset-text high">
-      <h3 class="no-margin">High risk</h3>
-      <p><strong>Flash Flooding (Surface Water)</strong></p>
-      <p>This area has a greater than 3.3% chance of flash flooding (surface water) each year</p>
-      {# <p><a href="#" class="govuk-link">More details</a></p>
-      <p><a href="#" class="govuk-link">Find out what to do next</a></p> #}
+      <h3 class="no-margin">Surface water</h3>
+      <p><strong>High risk - greater than 3.3% chance each year</strong></p>
+      <p><a href="https://flood-warning-information.service.gov.uk/long-term-flood-risk/map?easting=379223&northing=413327&address=100010969070&map=SurfaceWater" class="govuk-link">View map of surface water risk</a> </p>
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+Accuracy of this information          </span>
+        </summary>
+        <div class="govuk-details__text">This information is suitable for identifying which parts of towns or streets are at risk, or have the most risk. It's also suitable for identifying the approximate extent and depth of flooding. It's likely to be reliable for a local area but not for identifying individual properties at risk.
+</div>
+</details>
     </div>
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
     <div class="govuk-inset-text medium">
-      <h3 class="no-margin">Medium risk</h3>
-       <p><strong>Rivers and the Sea</strong></p>
-      <p>This area has between 1% and 3.3% chance of
-      flooding from rivers or the sea each year</p>
-      {# <a href="#" class="govuk-link">More details</a> #}
-    </div>
+      <h3 class="no-margin">Rivers and the sea</h3>
+       <p><strong>Medium risk - between 1.1% and 3.3% chance each year</strong></p>
+       <p><a href="https://flood-warning-information.service.gov.uk/long-term-flood-risk/map?easting=379223&northing=413327&address=100010969070&map=SurfaceWater" class="govuk-link">View map of rivers and sea risk</a> </p>
+     </div>
     {# <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"> #}
 
     {# <div class="govuk-inset-text low">
@@ -65,17 +69,37 @@ in config.js. #}
     </div> #}
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 </br>
-    <h2 class="govuk-heading-l">Other flood risks</h2>
+    <h3 class="govuk-heading-m">Other flood risks</h2>
 
+    <div class="govuk-inset-text low">
+      <p><strong>Reservoirs</strong></p>
+      <p>There is a risk of flooding in this area from reservoirs - it is extremely unlikely</p>
+      <p><a href="https://flood-warning-information.service.gov.uk/long-term-flood-risk/map?easting=379223&northing=413327&address=100010969070&map=SurfaceWater" class="govuk-link">View map of reservoir risk</a> </p>
+      <details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">Reservoirs that could affect this area</span>
+  </summary>
+  <div class="govuk-details__text">
+    <p><strong>Bough Beech</strong> (grid reference TQ4916847292)</p>
+    <p>Owner: Sutton & East Surrey Water Company</p>
+    <p>Lead Local Flood Authority: Kent</p>
+    <p>If you have questions about local emergency plans for this reservoir you should contact the named Local Authority</p>
+    <br>
+    <p><strong>Bewl Bridge</strong> (grid reference TQ4943847292)</p>
+    <p>Owner: Sutton & East Surrey Water Company</p>
+    <p>Lead Local Flood Authority: East Sussex</p>
+    <p>If you have questions about local emergency plans for this reservoir you should contact the named Local Authority</p>
+  </div>
+</details>
+    </div>
 
     <div class="govuk-inset-text low">
       <p><strong>Groundwater</strong></p>
-      {# <p>This area is unlikely to flood from groundwater.</p> #}
       <p>High groundwater levels may cause flooding in this area</p>
     </div>
 
-    <br><br><a href="/page5" role="button"
-      class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8 custom">View flash flooding details</a>
+    <br><br><a href="/page7" role="button"
+      class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8 custom">What you can do next</a>
 
     {# <span class="floatRight"><button type="submit" onclick="window.print();return false;"
         class="govuk-button govuk-button--secondary">
