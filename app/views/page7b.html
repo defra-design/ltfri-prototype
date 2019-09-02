@@ -34,20 +34,12 @@ in config.js. #}
   <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        
-        <div class="govuk-panel govuk-panel--confirmation">
-          <h1 class="govuk-panel__title">
-            Check complete
-          </h1>
-          <div class="govuk-panel__body">
-            Save your report
-          </div>
-      </div>
+
     </div>
   </div>
   <br>
 
-    <h2 class="govuk-heading-l">What you can do next</h2>
+    <h2 class="govuk-heading-l">Things you can do</h2>
 
     <p>There are some actions you can take if you’re at risk of flooding. You can:</p>
 
@@ -113,7 +105,7 @@ Read about what the Environment Agency is doing about flooding</span>
         <li>Spending over 2.6bn on flood and coastal erosion risk management between April 2015 and May 2021</li>
         <li>Constructed more than 500 new flood and coastal erosion schemes since 2015 - better protecting 142,800 homes and thousands of businesses</li>
       </ul>
-      <p>You can read about everything we’re doing about flooding in our       <a class="govuk-link" target="_blank" href="https://www.gov.uk/search/news-and-communications?organisations%5B%5D=environment-agency&parent=environment-agency">key messages document</a></p>
+      <p>You can read about everything we’re doing about flooding in our <a class="govuk-link" target="_blank" href="https://www.gov.uk/government/publications/flood-and-coastal-risk-management-national-report">Flood and Coastal Risk Report</a></p>
 
 
 
@@ -176,76 +168,35 @@ Read about what the Environment Agency is doing about flooding</span>
             </div>
         </div>
 
-        <h2 class="govuk-heading-l">What you can do next</h2>
 
-        <p>There are some actions you can take if you’re at risk of flooding. You can:</p>
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h3 class="govuk-fieldset__heading">
+            How could we improve this service: </h3>
+        </legend>
 
-        <ul class="govuk-list govuk-list--bullet">
-          <li>plan how you'll respond by
-            <a class="govuk-link" target="_blank"
-              href="https://www.gov.uk/government/publications/personal-flood-plan">preparing for flooding
-            </a>
-          </li>
-          <br>
+        <div class="govuk-form-group">
 
-          <li>receive a free call or message from the Environment Agency to warn you about flooding - check if your area is covered by
-            <a class="govuk-link" target="_blank" href="https://www.gov.uk/sign-up-for-flood-warnings">signing up for flood
-              warnings
-            </a>
-          </li>
-          <br>
-
-          <li>find out more detailed information about surface water and groundwater flooding from your
-            <a class="govuk-link" target="_blank"
-             href="https://flood-warning-information.service.gov.uk/river-and-sea-levels?location=bury">Lead Local Flood Authority (LLFA)
-            </a>
-          </li>
-          <br>
-
-          <li>understand your flood risk now and in the next few days by
-            <a class="govuk-link" target="_blank" href="https://www.gov.uk/prepare-for-flooding">monitoring river and sea levels
-              for flooding
-            </a>
-          </li>
-          <br>
-
-          <li>get evidence of your flood risk for your insurer by contacting the
-            <a class="govuk-link" target="_blank" href="https://www.gov.uk/prepare-for-flooding">Environment Agency
-            </a>
-          </li>
-          <br>
-
-          <li>check if your community has a
-            <a class="govuk-link" target="_blank" href="https://www.gov.uk/prepare-for-flooding">flood action group
-            </a>
-          </li>
-          <br>
-
-          <li>tell your community how to check their flood risk on
-            <a class="govuk-link" target="_blank" href="https://www.gov.uk/prepare-for-flooding">Facebook or Twitter</a>
-          </li>
-          <br>
-
-          <li>find out which flood zone a location is in using the
-            <a class="govuk-link" target="_blank" href="https://www.gov.uk/prepare-for-flooding">flood map for planning service
-            </a>
-          </li>
-        </ul>
-
-        <p><a href="/page3" role="button"
-          class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-4">Check another area</a>
-        </p>
-
-        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-        <p><a href="">Give feedback on this service</a></p>
-
+          <span id="more-detail-hint" class="govuk-hint">
+            Do not include personal or financial information, like your National Insurance number or credit card
+            details.
+          </span>
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"
+            aria-describedby="more-detail-hint"></textarea>
+        </div>
+        <button type="submit" class="govuk-button">
+          Send Feedback
+        </button>
+        </fieldset>
       </div>
-    </div>
-  </main>
+
+  </div>
+  </details> #}
+
+  <p><a href="">Give feedback on this service</a></p>
+
+
+
 </div>
-
-
 {% endblock %} {% if useAutoStoreData %} {% block footer %}
 {{
   govukFooter({
