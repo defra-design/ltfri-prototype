@@ -32,59 +32,58 @@ in config.js. #}
 {% endblock %} {% block content %}
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    
+    
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-    </div>
-  </div>
-  <br>
+        <h2 class="govuk-heading-l">Things you can do</h2>
 
-    <h2 class="govuk-heading-l">Things you can do</h2>
+        <p>There are some actions you can take if you’re at risk of flooding. You can:</p>
+       
+        <ul class="govuk-list govuk-list--bullet">
 
-    <p>There are some actions you can take if you’re at risk of flooding. You can:</p>
-    <ul class="govuk-list govuk-list--bullet">
+          <li>find out more detailed information about surface water and groundwater flooding from <strong>York Council</strong> (your LLFA)
+          </li>
+        <br>
 
-      <li>find out more detailed information about surface water and groundwater flooding from <strong>York Council</strong> (your LLFA)
-      </li>
-  <br>
+          <li>plan how you'll respond by
+            <a class="govuk-link" target="_blank"
+              href="https://www.gov.uk/government/publications/personal-flood-plan">preparing for flooding
+            </a>
+          </li>
+        <br>
 
-      <li>plan how you'll respond by
-        <a class="govuk-link" target="_blank"
-          href="https://www.gov.uk/government/publications/personal-flood-plan">preparing for flooding
+        <li>receive a free call or message from the Environment Agency to warn you about flooding - check if your area is covered by
+          <a class="govuk-link" target="_blank" href="https://www.gov.uk/sign-up-for-flood-warnings">signing up for flood
+            warnings
+          </a>
+        </li>
+        <br>
+
+        <li>understand your flood risk now and in the next few days by
+          <a class="govuk-link" target="_blank" href="https://www.gov.uk/prepare-for-flooding">monitoring river and sea levels
+            for flooding
+          </a>
+        </li>
+        <br>
+
+      <li>get evidence of your flood risk for your insurer by contacting the
+        <a class="govuk-link" target="_blank" href="https://www.gov.uk/prepare-for-flooding">Environment Agency
         </a>
       </li>
       <br>
 
-      <li>receive a free call or message from the Environment Agency to warn you about flooding - check if your area is covered by
-        <a class="govuk-link" target="_blank" href="https://www.gov.uk/sign-up-for-flood-warnings">signing up for flood
-          warnings
+      <li>get more advice about flooding in your community and protecting your home from the
+        <a class="govuk-link" target="_blank" href="https://nationalfloodforum.org.uk/">National Flood Forum
         </a>
       </li>
       <br>
 
-      <li>understand your flood risk now and in the next few days by
-        <a class="govuk-link" target="_blank" href="https://www.gov.uk/prepare-for-flooding">monitoring river and sea levels
-          for flooding
-        </a>
+      <li>tell your community how to check their flood risk on
+        <a class="govuk-link" target="_blank" href="https://www.gov.uk/prepare-for-flooding">Facebook or Twitter</a>
       </li>
       <br>
-
-    <li>get evidence of your flood risk for your insurer by contacting the
-      <a class="govuk-link" target="_blank" href="https://www.gov.uk/prepare-for-flooding">Environment Agency
-      </a>
-    </li>
-    <br>
-
-    <li>get more advice about flooding in your community and protecting your home from the
-      <a class="govuk-link" target="_blank" href="https://nationalfloodforum.org.uk/">National Flood Forum
-      </a>
-    </li>
-    <br>
-
-    <li>tell your community how to check their flood risk on
-      <a class="govuk-link" target="_blank" href="https://www.gov.uk/prepare-for-flooding">Facebook or Twitter</a>
-    </li>
-    <br>
 
     <li>find out which flood zone a location is in using the
       <a class="govuk-link" target="_blank" href="https://www.gov.uk/prepare-for-flooding">flood map for planning service
@@ -92,7 +91,7 @@ in config.js. #}
     </li>
     </ul>
     <a class="govuk-link" target="_blank" href="https://www.gov.uk/government/publications/flood-and-coastal-risk-management-national-report">Read about what the Environment Agency is doing about flooding</a>
-    </div>
+
 
     <P><a href="/page2" role="button"
       class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-4">Check another area</a>
@@ -180,6 +179,10 @@ in config.js. #}
 
 
 </div>
+</div>
+</main>
+</div>
+
 {% endblock %} {% if useAutoStoreData %} {% block footer %}
 {{
   govukFooter({
