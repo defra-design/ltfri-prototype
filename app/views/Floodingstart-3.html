@@ -17,7 +17,7 @@ import govukSkipLink %} {% from "summary-list/macro.njk" import govukSummaryList
 import govukTabs %} {% from "tag/macro.njk" import govukTag %} {% from
 "textarea/macro.njk" import govukTextarea %} {% from "warning-text/macro.njk"
 import govukWarningText %} {% block head %} {% include "includes/head.html" %}
-{% endblock %} {% block pageTitle %} GOV.UK Flooding {% endblock %} {%
+{% endblock %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {%
 block header %} {% include "includes/cookie-banner.html" %} {# Set serviceName
 in config.js. #}
 {{
@@ -30,38 +30,42 @@ in config.js. #}
 }}
 
 {% endblock %} {% block content %}
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    <h1 class="govuk-heading-xl">
-      Where do you want to check?
-    </h1>
 
-    {# <p>Postcode</p>
-    <p>wa2 013 <a href"" class="govuk-link">Chanage</a></p> #}
+<div class="govuk-width-container">
+  <a href="#" class="govuk-back-link">Back</a>
 
-    <fieldset class="govuk-fieldset">
-      <div class="govuk-form-group">
-        <label class="govuk-label" for="sort">
-        </label>
-        <select class="govuk-select" id="sort" name="sort">
-          <option value="published">1 Appletree Road</option>
-          <option value="updated" selected="">2 Appletree Road</option>
-          <option value="views">3 Appletree Road</option>
-          <option value="comments">4 Appletree Road</option>
-          <option value="comments">5 Appletree Road</option>
-          <option value="comments">6 Appletree Road</option>
-          <option value="comments">7 Appletree Road</option>
-          <option value="comments">8 Appletree Road</option>
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/form-handler" method="post" novalidate>
+          {# <div class="govuk-form-group">
+            <label class="govuk-label" for="address-postcode">
+What area do you want to check?              <span class="form-hint">for example, Flat 20A</span>
+            </label>
+            <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" />
+          </div> #}
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-postcode">
+Enter a location              <span class="form-hint">for example, 'Lancashire' or 'Milton Keynes'</span>
+            </label>
+            <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" />
+          </div>
 
-        </select>
+
+
+          <a href="/floodingstart-4" role="button"
+            class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">Continue</a>
+
+        </form>
       </div>
-
-    </fieldset>
-    <a href="/page4" role="button"
-      class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">Continue</a>
-  </div>
-
+    </div>
+  </main>
 </div>
+
+
+
+
+
 
 {% endblock %} {% if useAutoStoreData %} {% block footer %}
 {{
@@ -70,7 +74,7 @@ in config.js. #}
       items: [
         {
           href: "https://govuk-prototype-kit.herokuapp.com/",
-          text: "GOV.UK Flooding " + releaseVersion
+          text: "GOV.UK Flooin " + releaseVersion
         },
         {
           href: "/prototype-admin/clear-data",
@@ -82,5 +86,5 @@ in config.js. #}
 }}
 {% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
 "includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
-<!-- GOV.UK Flooding {{releaseVersion}} -->
+<!-- GOV.UK Prototype Kit {{releaseVersion}} -->
 {% endblock %}
