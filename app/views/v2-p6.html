@@ -32,23 +32,45 @@ in config.js. #}
 {% endblock %} {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">Future flood risk for<strong>BL9 1XX<strong> </h1>
+    <h1 class="govuk-heading-xl">Future flood risk for <strong>BL9 1XX<strong> </h1>
 
 
-    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat.
-    </p> -->
 
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Note</span>
+          <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                The Environment Agency have further information available about this location
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p>14/07/2018 - We're aware of data inaccruracies on Town Street, we're currently remappoing that section</p>
+              <p>12/07/2018 - We're currently building a new flood defence in this area. The risk will be updated on 12/12/19</p>
+              <p>14/07/2018 - We're aware of data inaccruracies on Town Street, we're currently remappoing that section</p>
+              <p>12/07/2018 - We're currently building a new flood defence in this area. The risk will be updated on 12/12/19</p>
+            </div>
+          </details>
+      </div>
     <div class="govuk-inset-text high">
       <h3 class="no-margin">Surface water</h3>
       <p><strong>Above average flood risk in this area</strong></p>
-      <p><strong>Sefton Council</strong> is your Lead Local Flood Authority (LLFA). It is responsible for managing the risk of flooding from surface water.</p>
+      <p><strong>Sefton Council</strong> hold additional information about the surface water risk in this area. Contact Sefton Council to view it</p>
+      <br>
+      <p>We have rainfall monitoring stations at:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Nicky Nook</li>
+        <li>Calders Way</li>
+      </ul>
+
       <p><a href="https://flood-warning-information.service.gov.uk/long-term-flood-risk/map?easting=379223&northing=413327&address=100010969070&map=SurfaceWater" class="govuk-link">View map of surface water risk</a> </p>
       <details class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
-Accuracy of this information          </span>
+            Accuracy of this information
+          </span>
         </summary>
         <div class="govuk-details__text">
           <p>This information is:</p>
@@ -67,7 +89,9 @@ Accuracy of this information          </span>
       <h3 class="no-margin">Rivers and the sea</h3>
        <p><strong>Average flood risk in this area</strong></p>
        <p>This takes into account the effect of any flood defences in the area. These defences reduce but do not completely stop the chance of flooding as they can be overtopped, or fail.</p>
-
+       <p><strong>The risk is from:</strong></p>
+       <p>The River Humber</p>
+       <p>We monitor this river daily at Lacy Beck</p>
        <p><a href="https://flood-warning-information.service.gov.uk/long-term-flood-risk/map?easting=379223&northing=413327&address=100010969070&map=SurfaceWater" class="govuk-link">View map of rivers and sea risk</a> </p>
      </div>
     {# <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"> #}
