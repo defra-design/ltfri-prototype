@@ -17,7 +17,7 @@ import govukSkipLink %} {% from "summary-list/macro.njk" import govukSummaryList
 import govukTabs %} {% from "tag/macro.njk" import govukTag %} {% from
 "textarea/macro.njk" import govukTextarea %} {% from "warning-text/macro.njk"
 import govukWarningText %} {% block head %} {% include "includes/head.html" %}
-{% endblock %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {%
+{% endblock %} {% block pageTitle %} GOV.UK Flooding {% endblock %} {%
 block header %} {% include "includes/cookie-banner.html" %} {# Set serviceName
 in config.js. #}
 {{
@@ -32,29 +32,54 @@ in config.js. #}
 {% endblock %} {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">Check the flood risk for an area in England</h1>
+    <h1 class="govuk-heading-xl">Short term results for:<strong>BL9 1XX<strong> </h1>
 
-    <p>Use this service to find out:</p>
 
-    <ul class="govuk-list govuk-list--bullet">
-      <li>an areas short and long term flood risk</li>
-      <li>possible causes of flooding</li>
-      <li> advice on action to take</li>
+    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat.
+    </p> -->
+
+<h2 class="govuk-heading-l">Immediate risk</h2>
+  <p>No current risk alerts or warnings for this area</p>
+  <br>
+  <h2 class="govuk-heading-l">Next 5 days</h2>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Friday 10 October: <strong>medium risk</strong></li>
+    <li>Saturday 11 October: <strong>medium risk</strong></li>
+    <li>Sunday 12 October: <strong>high risk</strong></li>
+    <li>Monday 13 October: <strong>high risk</strong></li>
+    <li>Tuesday 14 October: <strong>high risk</strong></li>
     </ul>
+
+  <h2 class="govuk-heading-l">Previous flood warnings</h2>
+    <p>Flood warnings are issued by the Environment Agency in areas identified at above average risk of flooding</p>
+    <P><strong>This area has flood warnings available</strong></P>
     <br>
+    <p>Previous warnings issues:<p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>19/09/2018 - Flood warning issued</li>
+        <li>18/04/2009 - Severe flood warning issued</li>
+        </ul>
 
-    <div class="govuk-warning-text">
-      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-      <strong class="govuk-warning-text__text">
-        <span class="govuk-warning-text__assistive">Warning</span>
-        This service will tell you the flood risk of an area, not a specific property
-      </strong>
-    </div>
 
-    <p><a href="#">Check the flood risk for areas in Wales, Scotland and Northern Ireland.</a></p>
-    <a href="/floodingstart-1" role="button"
-      class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">Start now</a>
+    <br><br><a href="/v2-p6" role="button"
+      class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8 custom">View future flood risks</a>
+
+    {# <span class="floatRight"><button type="submit" onclick="window.print();return false;"
+        class="govuk-button govuk-button--secondary">
+        Save as PDF
+      </button> <button type="submit" onclick="window.print();return false;"
+        class="govuk-button govuk-button--secondary">
+        Print details
+      </button>
+      <!-- <button type="submit" class="govuk-button govuk-button--secondary">
+        Detailed view
+      </button> -->
+    </span> #}
+
   </div>
+
 </div>
 {% endblock %} {% if useAutoStoreData %} {% block footer %}
 {{
@@ -63,7 +88,7 @@ in config.js. #}
       items: [
         {
           href: "https://govuk-prototype-kit.herokuapp.com/",
-          text: "GOV.UK Flooin " + releaseVersion
+          text: "GOV.UK Flooding " + releaseVersion
         },
         {
           href: "/prototype-admin/clear-data",
@@ -75,5 +100,5 @@ in config.js. #}
 }}
 {% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
 "includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
-<!-- GOV.UK Prototype Kit {{releaseVersion}} -->
+<!-- GOV.UK Flooding {{releaseVersion}} -->
 {% endblock %}
