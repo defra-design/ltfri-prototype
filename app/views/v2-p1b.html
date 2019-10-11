@@ -31,30 +31,37 @@ in config.js. #}
 
 {% endblock %} {% block content %}
 <div class="govuk-grid-row">
- <div class="govuk-grid-column-two-thirds">
-    <div class="govuk-inset-text low">
-      <h1 class="govuk-heading-l">Groundwater</h1>
-    </div>
-
-    {# <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible "> #}
-
-    <p>Flooding is possible in the local area when groundwater levels are high</p>
-
-      <h2 class="govuk-heading-l">What is groundwater flooding?</h2>
-
-      <p>Groundwater flooding can happen when the level of water within the rock or soil that makes up the land surface (known as the water table) rises.</p>
-
-    <h3 class="govuk-heading-m">Groundwater flooding risk management</h3>
-
-    <p>Your LLFA is responsible for managing the risk of flooding from groundwater.</p>
-
-      <p><a href="/page7" role="button"
-          class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8 custom">What you can do next</a>
-       </p>
-
-
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-xl">Types of flooding in England</h2>
+      <h3 class="govuk-heading-l">Flash flooding from surface water</h3>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>happens when heavy rain cannot drain away</li>
+          <li>the most common cause of flooding - over 3 million properties are at risk in the UK</li>
+          <li>difficult to predict as it depends on rainfall volume and location</li>
+        </ul>
   </div>
+  </div>
+      <h3 class="govuk-heading-l">Rivers and the sea</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>2.7 million properties are at risk in the UK</li>
+                <li>easier to predict as we check river levels at least once a day</li>
+            </ul>
 
+      <h3 class="govuk-heading-l">Reservoirs</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>an area is considered at risk if peoples' lives could be threatened by an uncontrolled release of water from a reservoir.</li>
+                <li>extremely unlikely - there has been no loss of life in the UK from reservoir flooding since 1925.</li>
+              </ul>
+
+<h3 class="govuk-heading-l">Groundwater</h3>              <ul class="govuk-list govuk-list--bullet">
+                <li>happens when water in the ground (the water table) rises.</li>
+                <li>happens after heavy rainfall</li>
+              </ul>
+
+      <p><a href="/v2-p2" role="button"
+        class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">Continue</a>
+        </p>
+  </div>
 </div>
 {% endblock %} {% if useAutoStoreData %} {% block footer %}
 {{
