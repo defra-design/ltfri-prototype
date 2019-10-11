@@ -1,0 +1,317 @@
+{% extends "template.njk" %} {% from "accordion/macro.njk" import govukAccordion
+%} {% from "back-link/macro.njk" import govukBackLink %} {% from
+"breadcrumbs/macro.njk" import govukBreadcrumbs %} {% from "button/macro.njk"
+import govukButton %} {% from "character-count/macro.njk" import
+govukCharacterCount %} {% from "checkboxes/macro.njk" import govukCheckboxes %}
+{% from "date-input/macro.njk" import govukDateInput %} {% from
+"details/macro.njk" import govukDetails %} {% from "error-message/macro.njk"
+import govukErrorMessage %} {% from "error-summary/macro.njk" import
+govukErrorSummary %} {% from "fieldset/macro.njk" import govukFieldset %} {%
+from "file-upload/macro.njk" import govukFileUpload %} {% from "input/macro.njk"
+import govukInput %} {% from "inset-text/macro.njk" import govukInsetText %} {%
+from "panel/macro.njk" import govukPanel %} {% from "phase-banner/macro.njk"
+import govukPhaseBanner %} {% from "radios/macro.njk" import govukRadios %} {%
+from "select/macro.njk" import govukSelect %} {% from "skip-link/macro.njk"
+import govukSkipLink %} {% from "summary-list/macro.njk" import govukSummaryList
+%} {% from "table/macro.njk" import govukTable %} {% from "tabs/macro.njk"
+import govukTabs %} {% from "tag/macro.njk" import govukTag %} {% from
+"textarea/macro.njk" import govukTextarea %} {% from "warning-text/macro.njk"
+import govukWarningText %} {% block head %} {% include "includes/head.html" %}
+{% endblock %} {% block pageTitle %} GOV.UK Flooding {% endblock %} {%
+block header %} {% include "includes/cookie-banner.html" %} {# Set serviceName
+in config.js. #}
+{{
+  govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  })
+}}
+
+{% endblock %} {% block content %}
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">
+        Flooding guidance and services     </h1>
+
+      <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number"></span>About flooding
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="eligibility-completed">
+                  Types of flooding
+                </a>
+              </span>
+              <br>
+              <br>
+
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="read-declaration-completed">
+                  Who is responsible for flooding
+                </a>
+              </span>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number"></span>Preparing for flooding
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <p><strong>Services</strong></p>
+                <a href="#" aria-describedby="eligibility-completed">
+                  Check your flood risk
+                </a>
+                <br>
+                <br>
+              </span>
+
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="read-declaration-completed">
+                  Make a flood plan
+                </a>
+                <br>
+                <br>
+              </span>
+
+
+              <span class="app-task-list__task-name">
+                <p><strong>Guidance</strong></p>
+                <a href="#" aria-describedby="read-declaration-completed">
+                  Protect your property
+                </a>
+              </span>
+              <span class="app-task-list__task-name">
+                <br>
+                <a href="#" aria-describedby="read-declaration-completed">
+                  Get insurance
+                </a>
+              </span>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number"></span>Keep informed
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <p><strong>Services</strong></p>
+                <a href="#" aria-describedby="eligibility-completed">
+                  Sign up for flood warnings
+                </a>
+              </span>
+              <span class="app-task-list__task-name">
+                <br>
+                <a href="#" aria-describedby="read-declaration-completed">
+                  Monitor river and sea levels
+                </a>
+              </span>
+              <span class="app-task-list__task-name">
+                <br>
+                <a href="#" aria-describedby="read-declaration-completed">
+                  Monitor local rain gauges
+                </a>
+                <br>
+              </span>
+              <span class="app-task-list__task-name">
+                <br>
+                <p><strong>Guidance</strong></p>
+                <a href="#" aria-describedby="read-declaration-completed">
+                  Keep up to speed on social media
+                </a>
+              </span>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number"></span>During a flood
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <p><Strong>Services</strong></p>
+                <a href="#" aria-describedby="eligibility-completed">
+                  Report a flood
+                </a>
+                <br>
+                <br>
+              </span>
+
+              <span class="app-task-list__task-name">
+                <p><strong>Guidance</strong></p>
+                <a href="#" aria-describedby="eligibility-completed">
+                  Get temporary accommodation
+                </a>
+                <br>
+                <br>
+              </span>
+
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="eligibility-completed">
+                  Learn to travel safely
+                </a>
+              </span>
+              <br>
+              <br>
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="read-declaration-completed">
+                  Who is responsible for flooding
+                </a>
+              </span>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number"></span>Recovering from a flood
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="eligibility-completed">
+                  Types of flooding
+                </a>
+              </span>
+              <br>
+              <br>
+
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="read-declaration-completed">
+                  Who is responsible for flooding
+                </a>
+              </span>
+            </li>
+          </ul>
+        </li>
+
+      </ol>
+
+    </div>
+  </div>
+
+    <P><a href="v2-p9a" role="button"
+      class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-4">Check another area</a>
+    </p>
+
+    <p><a class="govuk-link" target="_blank"
+      href="https://www.gov.uk/topic/environmental-management/flooding-coastal-change">Flooding home
+    </a>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    {# <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Give feedback on this service
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <br>
+              <h1 class="govuk-fieldset__heading">
+                How happy are you with this service: </h1>
+            </legend>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio"
+                  value="england">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
+                  Very Satisfied </label> </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio"
+                  value="scotland">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                  Quite Satisfied </label> </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio"
+                  value="wales">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                  Neither Satisfied nor Dissatisfied
+                </label> </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio"
+                  value="northern-ireland">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                  Dissatisfied </label> </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio"
+                  value="northern-ireland">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                  Very Dissatisfied </label> </div>
+            </div>
+        </div>
+
+
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h3 class="govuk-fieldset__heading">
+            How could we improve this service: </h3>
+        </legend>
+
+        <div class="govuk-form-group">
+
+          <span id="more-detail-hint" class="govuk-hint">
+            Do not include personal or financial information, like your National Insurance number or credit card
+            details.
+          </span>
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"
+            aria-describedby="more-detail-hint"></textarea>
+        </div>
+        <button type="submit" class="govuk-button">
+          Send Feedback
+        </button>
+        </fieldset>
+      </div>
+
+  </div>
+  </details> #}
+
+  <p><a href="">Give feedback on this service</a></p>
+
+
+
+</div>
+</div>
+</main>
+</div>
+
+{% endblock %} {% if useAutoStoreData %} {% block footer %}
+{{
+  govukFooter({
+    meta: {
+      items: [
+        {
+          href: "https://govuk-prototype-kit.herokuapp.com/",
+          text: "GOV.UK Flooding " + releaseVersion
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+      ]
+    }
+  })
+}}
+{% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
+"includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
+<!-- GOV.UK Flooding {{releaseVersion}} -->
+{% endblock %}
