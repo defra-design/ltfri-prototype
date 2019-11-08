@@ -1,0 +1,132 @@
+{% extends "layout.html" %}
+
+ {% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl"> Flood risk summary for: <strong>BL9 1XX<strong> </h1>
+    <div class="govuk-inset-text medium">
+      <h3 class="no-margin"> Rivers and the sea</h3>
+      <p><strong>Medium risk</strong></p>
+    </div>
+      <p>This service takes into account any flood defences. The Environment Agency monitors river levels at least once a day. </p>
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            What this information means?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p>Medium risk means that each year this area has a chance of flooding of between 1% and 3.3%.
+            </p>
+          <p>This information is suitable for identifying:
+          </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>which parts of counties or towns are at risk, or have the most risk</li>
+            <li>the approximate extent and depth of flooding</li>
+          </ul>
+          <p>It’s unlikely to be reliable for a local area and very unlikely to be reliable for identifying individual properties at risk.</p>
+        </details>
+      <p><a href="https://flood-warning-information.service.gov.uk/long-term-flood-risk/map?easting=379223&northing=413327&address=100010969070&map=SurfaceWater" class="govuk-link">View map of rivers and the sea flood risk</a>
+      </p>
+    </div>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <div class="govuk-inset-text high">
+      <h3 class="no-margin">Surface water</h3>
+       <p><strong>High risk</strong></p>
+     </div>
+     <div>
+       <p>Surface water flooding, sometimes known as flash flooding:</p>
+       <div>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>happens when heavy rain cannot drain away</li>
+          <li>is difficult to predict as it depends on rainfall volume and location</li>
+          <li>can happen up hills and away from rivers and other bodies of water</li>
+          <li>is more widespread in areas with harder surfaces like concrete</li>
+        </ul>
+      <p>Lead local flood authorities (LLFAs) manage the risk from surface water flooding and may hold more detailed information.
+      </p>
+      <p>Your LLFA is <strong>Sefton.<strong>
+      </p>
+      <p>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              What this information means?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p>High risk means that each year this area has a chance of flooding of greater than 3.3%.</p>
+            <p>This information is suitable for identifying:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>which parts of counties or towns are at risk, or have the most risk</li>
+              <li>the approximate extent and depth of flooding</li>
+            </ul>
+            <p>It’s unlikely to be reliable for a local area and very unlikely to be reliable for identifying individual properties at risk.</p>
+          </details>
+        <a href="https://flood-warning-information.service.gov.uk/long-term-flood-risk/map?easting=379223&northing=413327&address=100010969070&map=SurfaceWater" class="govuk-link">View map of surface water flood risk</a></p>
+        </div>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <h3 class="govuk-heading-m">Other flood risks</h3>
+
+    <div class="govuk-inset-text low">
+      <p><strong>Reservoirs</strong></p>
+      <p><strong>There is a risk of flooding in this area from reservoirs</strong></p>
+      </div>
+      <p>Flooding from reservoirs is extremely unlikely. An area is considered at risk if peoples' lives could be threatened by an uncontrolled release of water from a reservoir.</p>
+      <p><a href="https://flood-warning-information.service.gov.uk/long-term-flood-risk/map?easting=379223&northing=413327&address=100010969070&map=SurfaceWater" class="govuk-link">View map of reservoir risk</a> </p>
+      <details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">Reservoirs that could affect this area</span>
+  </summary>
+  <div class="govuk-details__text">
+    <p><strong>Bough Beech</strong> (grid reference TQ4916847292)</p>
+    <p>Owner: Sutton & East Surrey Water Company</p>
+    <p>Lead Local Flood Authority: Kent</p>
+    <p>If you have questions about local emergency plans for this reservoir you should contact the named Local Authority</p>
+    <br>
+    <p><strong>Bewl Bridge</strong> (grid reference TQ4943847292)</p>
+    <p>Owner: Sutton & East Surrey Water Company</p>
+    <p>Lead Local Flood Authority: East Sussex</p>
+    <p>If you have questions about local emergency plans for this reservoir you should contact the named Local Authority</p>
+  </div>
+</details>
+    </div>
+    <div class="govuk-inset-text low">
+      <p><strong>Groundwater</strong></p>
+      <p><strong>High groundwater levels may cause flooding in this area</strong</p>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <h3 class="govuk-heading-m">Additional information about this area</h3>
+
+<p>14/07/2018 - We're aware of data inaccuracies on Town Street, we're currently remapping that section</p>
+<p>12/07/2018 - We're currently building a new flood defence in this area. The risk will be updated on 12/12/19</p>
+
+    <br><br><a href="/p4" role="button"
+      class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8 custom">What you can do</a>
+  </div>
+
+</div>
+{% endblock %} {% if useAutoStoreData %} {% block footer %}
+{{
+  govukFooter({
+    meta: {
+      items: [
+        {
+          href: "https://govuk-prototype-kit.herokuapp.com/",
+          text: "GOV.UK Flooding " + releaseVersion
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+      ]
+    }
+  })
+}}
+{% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
+"includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
+<!-- GOV.UK Flooding {{releaseVersion}} -->
+{% endblock %}

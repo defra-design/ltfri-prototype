@@ -1,6 +1,9 @@
 // global styles for <a> and <p> tags
 $govuk-global-styles: true;
 
+// We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework.
+$govuk-assets-path: '/govuk/assets/';
+
 // Import GOV.UK Frontend and any extension styles if extensions have been configured
 @import "lib/extensions/extensions";
 
@@ -30,4 +33,113 @@ $govuk-global-styles: true;
   font-weight: normal;
   margin-top: -2px;
   padding-bottom: 2px;
+}
+
+.mtz{
+  margin-top: -20px; 
+  margin-bottom: 20px;
+}
+.red{
+  color: #E3000E; 
+}
+.yellow{
+  color: #F18604
+
+}
+.grey{
+  // color: #6E777A; 
+  color: black; 
+}
+.govuk-inset-text.high {
+  border-left-color: #E3000E
+}
+
+.govuk-inset-text.medium {
+  border-left-color: #F18604
+}
+
+.govuk-inset-text.low {
+  // border-left-color: #6E777A
+  border-left-color: black
+}
+.font-xsmall{
+  font-size: 0.2em;
+}
+
+.gmap_canvas {
+  float: left;
+}
+
+
+h3 {
+  font-size: 1.5em;
+}
+
+.floodIcon img {
+  width: 110px;
+  margin-bottom: 15px;
+  margin-top: -5px;
+
+}
+
+.govuk-panel__body {
+  font-size: 1.6rem;
+  margin-bottom: -5px;
+}
+
+// .floodIconTwo {
+//   width: 20%;
+//   float: left;
+//   clear: none;
+//   margin-top: 30px;
+//   margin-bottom: 15px; 
+
+//   & img {
+//     width: 75px;
+//     margin-left: auto;
+//     position: relative;
+//     margin-right: auto;
+//     display: block;
+//   }
+// }
+
+.floodIconTwo img{
+width: 60%;
+margin-left: 20%;
+margin-bottom: 30px; 
+}
+
+.riskContainer {
+  width: 100%;
+  min-height: 200px;
+}
+// .govuk-details__summary{
+//   float: right; 
+// }
+.govuk-details__text{
+  clear: both;
+  border-left: none; 
+ 
+}
+.second .govuk-details__summary-text{
+  margin-right: 15px; 
+}
+.mapImage img{
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 15px; 
+
+}
+.js-enabled .govuk-accordion__section-button{
+  padding-top: 0px; 
+}
+
+.postcode{
+  color: #4d5456; 
+}
+.floatRight{
+  float: right;
+}
+.govuk-\!-margin-bottom-8.custom{
+  margin-top: 0px!important; 
 }

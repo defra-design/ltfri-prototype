@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+ {% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">Managing flood risk</h1>
+    </div>
+    </div>
+    <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Prepare for flooding
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+      <p class='govuk-body'>This is the content for Writing well for the web.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+          Protect your property
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+      <p class='govuk-body'>This is the content for Writing well for specialists.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+          Get insurance advice
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+      <p class='govuk-body'>This is the content for Know your audience.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          Planning permission
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+      <p class='govuk-body'>This is the content for How people read.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+    <a href="/p1" role="button"
+      class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">Check another area</a>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %} {% if useAutoStoreData %} {% block footer %}
+{{
+  govukFooter({
+    meta: {
+      items: [
+        {
+          href: "https://govuk-prototype-kit.herokuapp.com/",
+          text: "GOV.UK Flooding " + releaseVersion
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+      ]
+    }
+  })
+}}
+{% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
+"includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
+<!-- GOV.UK Flooding {{releaseVersion}} -->
+{% endblock %}

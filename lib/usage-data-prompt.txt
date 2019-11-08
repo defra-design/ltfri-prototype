@@ -1,5 +1,5 @@
 
-Help us improve the GOV.UK Flooding
+Help us improve the GOV.UK Prototype Kit
 ────────────────────────────────────────
 
 With your permission, the kit can send useful anonymous usage data

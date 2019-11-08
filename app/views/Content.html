@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Flooding in England</h1>
+
+    <p>Flooding in the UK is increasing. Due to climate change we are experiencing more and more devasting flooding.</p>
+    <p>Flooding affects:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>health - through disease or impact on mental health</li>
+      <li>access to clean water and food supplies</li>
+      <li>gas, electricity and drainage</li>
+      <li>doctor’s surgery or hospital</li>
+      <li>transport - cars, buses and trains</li>
+      <li>school, place of work, community centre or place of worship</li>
+    </ul>
+  <h2 class="govuk-heading-l">The impact of flooding</h2>
+  <p> <iframe width="560" height="315" src="https://www.youtube.com/embed/9uA3P2o6pw4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <h3 class="govuk-heading-m">Who is at risk</h3>
+        <p> 5.2 million homes and businesses are at risk of flooding in England.</p>
+        <p> You can still suffer from flooding if you live on a hill or far from a river. </p>
+
+      <h3 class="govuk-heading-m">The impacts</h3>
+        <p> If you are flooded:</P>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>£30,000 is the average cost of flood damage to a home - £82,000 for a business</li>
+            <li>£10,000 is the average cost of temporary accommodation</li>
+            <li>5 months is the average time you are likely to be out of your home</li>
+          </ul>
+<h2 class="govuk-heading-l">Use our guides to help:</h2>
+<ul class="govuk-list govuk-list--bullet">
+<li>Find out your flood risk</li>
+<li>Prepare for Flooding</li>
+<li>Keep informed about flooding</li>
+<li>See what to do in a flood</li>
+<li>Recover from a flood</li>
+</ul>
+<a href="/v2-p1b" role="button"
+  class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">Continue</a>
+  </div>
+</div>
+{% endblock %} {% if useAutoStoreData %} {% block footer %}
+{{
+  govukFooter({
+    meta: {
+      items: [
+        {
+          href: "https://govuk-prototype-kit.herokuapp.com/",
+          text: "GOV.UK Flooin " + releaseVersion
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+      ]
+    }
+  })
+}}
+{% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
+"includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
+<!-- GOV.UK Prototype Kit {{releaseVersion}} -->
+{% endblock %}
