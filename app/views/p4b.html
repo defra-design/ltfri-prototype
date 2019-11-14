@@ -1,0 +1,140 @@
+{% extends "layout.html" %}
+
+ {% block content %}
+ <div class="govuk-grid-row">
+   <div class="govuk-grid-column-full">
+     <h1 class="govuk-heading-xl">Managing flood risk</h1>
+  </div>
+</div>
+       <p>Contents</p>
+       <p>– <a href="#prepare">Prepare for flooding</a></p>
+       <p>– <a href="#getinsurance">Get insurance advice</a></p>
+       <p>– <a href="#protect">Protect your property</a></p>
+       <p>– <a href="#buyorsell">Buy or sell property</a></p>
+       <p>– <a href="#gethelp">Get help during a flood</a></p>
+       <p>– <a href="#recover">Recover from flooding</a></p>
+       <p>– <a href="#planning">Planning permission</a></p>
+       <br>
+       <br>
+    <div>
+      <h2 class="govuk-heading-m" id="prepare">Prepare for flooding</h2>
+       <p class='govuk-body'>Use these services to get prepared:</p>
+       <ul class='govuk-list govuk-list--bullet'>
+         <li>check your<a href="#"> local weather</a></li>
+         <li>sign up for <a href="#"> flood warnings</a></li>
+         <li>view a <a href="#">5-day flood forecast</a></li>
+         <li>monitor <a href="#">local rivers and the sea</a></li>
+       </ul>
+       <p class='govuk-body'>If you are about to be flooded think about those around you, such as:
+       </p>
+       <ul class='govuk-list govuk-list--bullet'>
+         <li>babies and children</li>
+         <li>older people</li>
+         <li>disabled people</li>
+         <li>neighbours</li>
+         <li>your pets</li>
+       </ul>
+       <p class='govuk-body'>It can affect your gas, water and electricity supplies and disrupt your travel plans.
+       </p>
+       <p class='govuk-body'>Plan how you’ll respond to a flood by making a:
+       </p>
+       <ul class='govuk-list govuk-list--bullet'>
+         <li><a href="#">personal flood plan</a></li>
+         <li><a href="#">community or group flood plan</a></li>
+         <li><a href="#">business flood plan</a></li>
+       </ul>
+       <p class='govuk-body'>For further advice about flooding check the <a href="#">National flood forum</a>.
+       </p>
+       <p class='govuk-body'>The Lead Local Flood Authority (LLFA) for the area you checked is <strong>Sefton</strong>. Sefton LLFA manages the flood risk from surface water and may hold more detailed information.
+       </p>
+      </div>
+      <br>
+      <br>
+    <div>
+      <h2 class="govuk-heading-m" id="getinsurance">Get insurance advice</h2>
+      <p class='govuk-body'>You can:</p>
+      <ul class='govuk-list govuk-list--bullet'>
+        <li>find lower-cost home insurance through <a href="#">Flood Re</a> if you’re in a flood-risk area</li>
+        <li>get insurance advice from the <a href="#">National Flood Forum</a></li>
+        <li><a href="#">find a broker</a> that specialises in properties that are difficult to insure</li>
+      </ul>
+      <p class='govuk-body'><strong>Get evidence of flood risk</strong></p>
+      <p class='govuk-body'>Contact the Environment Agency if your insurer asks for evidence of your flood risk.</p>
+      <p class='govuk-body'><a href="#">enquiries@environment-agency.gov.uk</a></p>
+      <p class='govuk-body'><strong>If you've done work on your property</strong></p>
+      <p class='govuk-body'>Show insurers or buyers how the work has reduced your flood risk. You or your surveyor can complete a <a href="#">Flood Risk Report</a>
+    </div>
+    <br>
+    <br>
+    <div>
+      <h2 class="govuk-heading-m" id="buyorsell">Buying or selling</h2>
+      <p class='govuk-body'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <ul class='govuk-list govuk-list--bullet'>
+        <li>ipsum dolor sit amet</li>
+        <li>consectetur adipiscing elit</li>
+        <li>incididunt ut labore et dolore</li>
+      </ul>
+    </div>
+    <br>
+    <br>
+    <div>
+      <h2 class="govuk-heading-m" id="gethelp">Get help during a flood</h2>
+        <p class='govuk-body'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <ul class='govuk-list govuk-list--bullet'>
+          <li>ipsum dolor sit amet</li>
+          <li>consectetur adipiscing elit</li>
+          <li>incididunt ut labore et dolore</li>
+        </ul>
+      </div>
+      <br>
+      <br>
+      <div>
+        <h2 class="govuk-heading-m" id="recover">Recover from flooding</h2>
+          <p class='govuk-body'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <ul class='govuk-list govuk-list--bullet'>
+            <li>ipsum dolor sit amet</li>
+            <li>consectetur adipiscing elit</li>
+            <li>incididunt ut labore et dolore</li>
+          </ul>
+        </div>
+      <br>
+      <br>
+      <div>
+        <h2 class="govuk-heading-m" id="gethelp">Planning permission</h2>
+        <p class='govuk-body'>If you want to build a new extension, property or development find out if you need a <a href="#">Flood Risk Assessment (FRA)</a><p>
+        </div>
+        <br>
+        <br>
+      <div>
+     <a href="/p1" role="button"
+       class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">Check another area</a>
+       <p class="govuk-body"><strong>Is there something missing from this guide? <a href="#">Tell us</a></strong> </p>
+    </div>
+</div>
+</div>
+
+
+{% endblock %} {% if useAutoStoreData %} {% block footer %}
+{{
+  govukFooter({
+    meta: {
+      items: [
+        {
+          href: "https://govuk-prototype-kit.herokuapp.com/",
+          text: "GOV.UK Flooding " + releaseVersion
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+      ]
+    }
+  })
+}}
+{% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
+"includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
+<!-- GOV.UK Flooding {{releaseVersion}} -->
+{% endblock %}
