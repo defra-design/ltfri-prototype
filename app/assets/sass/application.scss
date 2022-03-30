@@ -17,6 +17,19 @@ $govuk-assets-path: '/govuk/assets/';
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
+
+//Under this line are styles done post March 2022
+
+.contact {
+  border-left: 1px solid #b1b4b6;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-left: 15px;
+}
+
+
+//Under this line are styles for the original work
+
 .no-margin {
   margin: 0 0 10px 0!important;
 }
@@ -118,7 +131,7 @@ margin-bottom: 30px;
 // }
 .govuk-details__text{
   clear: both;
-  border-left: none;
+  
 
 }
 .second .govuk-details__summary-text{

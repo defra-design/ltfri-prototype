@@ -8,28 +8,58 @@
 {% block content %}
 
   <div class="govuk-grid-row">
+
     <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">
-      LTFRI PROTOTYPE
-      <span class="govuk-caption-xl">V3.01<span>
-    </span></span></h1>
 
-    <h2 class="govuk-heading-m">Mockup Link</h2>
+      <h1 class="govuk-heading-xl">
+        Check your long term flood risk PROTOTYPE
+        <span class="govuk-caption-xl">V3.01<span>
+      </h1>
 
-    <ul class="govuk-list govuk-list--bullet">
-      <li>
-        <a href="/p1">LTFRI MOCKUP</a>
-      </li>
-      <li>
-        <a href="/p3-WV57BW">Results page WV5 7BW</a>
-      </li>
-    </ul>
-    <h2 class="govuk-heading-m">About this page</h2>
-    <p>
-      We recommend you add links to your prototype to this page, rather than
-      delete it. You'll find this page in the kit at '/app/views/index.html'.
-    </p>
+      <h2 class="govuk-heading-m">
+        Matching the current live service
+      </h2>
+
+      <p class="govuk-body">
+        As of 30 March 2022 there wasn't a prototype that fully reflected the current state of the service. This is an attempt to back fill the gap and provide a platform to build iterations from.
+      <p>
+
+      <h3 class="govuk-heading-s">
+        Mockup of live as of 30 March 2022
+      </h3>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="live-march-22/start?address=select-an-address-l23.html&results=results-l23">Check your long term flood risk results for L23 0SA</a> - A step through journey resulting in <strong>Surface Water High Risk</strong> and <strong>Rivers and the sea Very low risk</strong>.
+        </li>
+      </ul>
+
+      {# Size modifiers: xl, l, m #}
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">
+        Original work
+      </h2>
+
+      <p class="govuk-body">
+        Initial work done on the prototype from July 2019 to Jan 2020. It hadn't been updated to reflect changes in the live service.
+      <p>
+
+      <h3 class="govuk-heading-s">
+        Original mockup links
+      </h3>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="version_1/p1">LTFRI MOCKUP</a> - most of the service as a step through journey
+        </li>
+        <li>
+          <a href="version_1/p3-WV57BW">Results page WV5 7BW</a> - an alternative design for the results page based on a postcode
+        </li>
+      </ul>
+
   </div>
+
 </div>
 
 {% endblock %}
