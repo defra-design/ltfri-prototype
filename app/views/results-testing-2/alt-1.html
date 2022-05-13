@@ -1,6 +1,16 @@
 {% extends "layout.html" %}
 
- {% block content %}
+{% block beforeContent %}
+
+    {{ govukBackLink ({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+
+{% endblock %}
+
+{% block content %}
+
 <div class="govuk-grid-row">
 
   <div class="govuk-grid-column-two-thirds">
@@ -36,19 +46,24 @@
       <div class="govuk-details__text">
 
         <p class="govuk-body">
-          Surface water happens when rainwater does not drain away through the normal drainage systems but lies on or flows over the ground instead.
+          This flood risk summary reports the highest risk from surface water within a 20m radius of this property.
         </p>
 
         <p class="govuk-body">
-          This flood risk summary reports the highest risk from surface water within a 20-metre radius of this property.
+          High risk means that each year this area has a chance of flooding of greater than 3.3%.
         </p>
 
         <p class="govuk-body">
-          High risk means this area has a chance of flooding of greater than 3.3% each year. 
+          This information is suitable for identifying:
         </p>
 
+        <ul class="govuk-list govuk-list--bullet">
+          <li>which parts of towns or streets are at risk, or have the most risk</li>
+          <li>the approximate extent and depth of flooding</li>
+        </ul>
+
         <p class="govuk-body">
-          ​Find out more about <a class="govuk-link" href="#">how to manage your flood risk</a>.
+          It's likely to be reliable for a local area but not for identifying individual properties at risk.
         </p>
 
       </div>
@@ -56,27 +71,12 @@
     </details>
 
     <p class="govuk-body">
-      <a href="managing-flood-risk" class="govuk-link">Managing my flood risk</a>
+
     </p>
 
     <p class="govuk-body">
-      Surface water flooding, sometimes known as flash flooding:
-    </p>
-
-    <ul class="govuk-list govuk-list--bullet">
-      <li>
-        happens when heavy rain cannot drain away
-      </li>
-      <li>
-        is difficult to predict as it depends on rainfall volume and location
-      </li>
-      <li>
-        can happen up hills and away from rivers and other bodies of water
-      </li>
-      <li>
-        is more widespread in areas with harder surfaces like concrete
-      </li>
-    </ul>
+      Surface water happens when rainwater does not drain away through the normal drainage systems but lies on or flows over the ground instead. 
+    <p>
 
     <p class="govuk-body">
       Lead local flood authorities (LLFA) are responsible for managing the flood risk from surface water and may hold more detailed information.
@@ -86,11 +86,17 @@
       Your LLFA is <strong>Sheffield council</strong>.
     </p>
 
-     <p class="govuk-body">
-       <a href="https://flood-warning-information.service.gov.uk/long-term-flood-risk/map?easting=379223&northing=413327&address=100010969070&map=SurfaceWater" class="govuk-link">
-         View a map of the risk of flooding from surface water
-       </a>
-     </p>
+
+     <ul class="govuk-list govuk-list--bullet">
+       <li>
+         <a href="managing-flood-risk" class="govuk-link">Managing my flood risk</a>
+       </li>
+       <li>
+         <a href="https://flood-warning-information.service.gov.uk/long-term-flood-risk/map?easting=379223&northing=413327&address=100010969070&map=SurfaceWater" class="govuk-link">
+           View a map of the risk of flooding from surface water
+         </a>
+       </li>
+     </ul>
 
      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
@@ -113,21 +119,28 @@
 
       <div class="govuk-details__text">
 
-       <p class="govuk-body">
-         This flood risk summary is not property specific.
-       </p>
+        <p class="govuk-body">
+          This flood risk summary is not property specific.
+        </p>
 
-       <p class="govuk-body">
-         Medium risk means this area has a has a chance of flooding of between 1 and 1.3% each year.
-       </p>
+        <p class="govuk-body">
+         Medium risk means that each year this area has a chance of flooding of between 1% and 3.3%.
+        </p>
 
-       <p class="govuk-body">
-         This service takes into account any flood defences.
-       </p>
+        <p class="govuk-body">
+         This information is suitable for identifying:
+        </p>
 
-       <p class="govuk-body">
-         ​Find out more about <a class="govuk-link" href="#">how to manage your flood risk</a>.
-       </p>
+        <ul class="govuk-list govuk-list--bullet">
+         <li>which parts of counties or towns are at risk, or have the most risk</li>
+         <li>the approximate extent and depth of flooding</li>
+        </ul>
+
+        <p class="govuk-body">
+         It's unlikely to be reliable for a local area and very unlikely to be reliable for identifying individual properties at risk.
+        </p>
+
+        <p>This service takes into account any flood defences.</p>
 
       </div>
 
@@ -259,9 +272,23 @@
 
      </details>
 
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-bottom-6">
+     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible govuk-!-margin-bottom-6">
 
-    <a href="managing-flood-risk" role="button" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8 custom">Continue</a>
+     <h2 class="govuk-heading-m">
+       Manage your flood risk
+     </h2>
+
+     <p class="govuk-body">
+       There are things everyone can do to prepare for flooding.
+     <p>
+
+     <p class="govuk-body">
+       Find out more about <a class="govuk-link" href="managing-flood-risk">managing your flood risk</a>.
+     <p>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible govuk-!-margin-bottom-6">
+
+    <a href="managing-flood-risk" role="button" class="govuk-button govuk-button--secondary govuk-!-margin-top-2 govuk-!-margin-bottom-8 custom">Check another area</a>
 
   </div>
 

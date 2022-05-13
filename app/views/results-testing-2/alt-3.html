@@ -1,5 +1,14 @@
 {% extends "layout.html" %}
 
+{% block beforeContent %}
+
+    {{ govukBackLink ({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+
+{% endblock %}
+
  {% block content %}
 <div class="govuk-grid-row">
 
@@ -66,19 +75,19 @@
 
      <ul class="govuk-list govuk-list--bullet">
        <li>
-         <a href="#" class="govuk-link">Get insurance for my property</a>
+         <a href="managing-flood-risk#protect" class="govuk-link">Learn what I can do to protect my property from future flooding</a>
+      </li>
+       <li>
+         <a href="managing-flood-risk#insure" class="govuk-link">Get insurance for my property</a>
        </li>
        <li>
-         <a href="#" class="govuk-link">What’s happening in my area to reduce flood risk</a>
+         <a href="https://www.gov.uk/government/collections/flood-risk-management-current-schemes-and-strategies#yorkshire-(map-area-3)" class="govuk-link">What’s happening in my area to reduce flood risk</a>
        </li>
        <li>
-         <a href="#" class="govuk-link">Contact Sheffield Council</a> for advice on managing surface water flood risk
+         <a href="https://www.sheffield.gov.uk/home/public-health/flood-protection-schemes" class="govuk-link">Contact Sheffield Council</a> for advice on managing surface water flood risk
        </li>
-     </ul>
 
-     <p class="govuk-body">
-       <a href="managing-flood-risk" class="govuk-link">Managing my flood risk</a>
-     </p>
+     </ul>
 
      <p class="govuk-body">
        <a href="https://flood-warning-information.service.gov.uk/long-term-flood-risk/map?easting=379223&northing=413327&address=100010969070&map=SurfaceWater" class="govuk-link">
@@ -107,30 +116,28 @@
 
       <div class="govuk-details__text">
 
-       <p class="govuk-body">
-         This flood risk summary is not property specific.
-       </p>
+        <p class="govuk-body">
+          This flood risk summary is not property specific.
+        </p>
 
-       <p class="govuk-body">
-        Medium risk means that each year this area has a chance of flooding of between 1% and 3.3%.
-       </p>
+        <p class="govuk-body">
+         Medium risk means that each year this area has a chance of flooding of between 1% and 3.3%.
+        </p>
 
-       <p class="govuk-body">
+        <p class="govuk-body">
          This information is suitable for identifying:
-       </p>
+        </p>
 
-       <ul class="govuk-list govuk-list--bullet">
+        <ul class="govuk-list govuk-list--bullet">
          <li>which parts of counties or towns are at risk, or have the most risk</li>
          <li>the approximate extent and depth of flooding</li>
-       </ul>
+        </ul>
 
-       <p class="govuk-body">
+        <p class="govuk-body">
          It's unlikely to be reliable for a local area and very unlikely to be reliable for identifying individual properties at risk.
-       </p>
+        </p>
 
-       <p class="govuk-body">
-         This service takes into account any flood defences.
-       <p>
+        <p>This service takes into account any flood defences.</p>
 
       </div>
 
@@ -142,19 +149,19 @@
 
      <ul class="govuk-list govuk-list--bullet">
        <li>
-         This area is covered by the flood warning service. <a href="#" class="govuk-link">Sign up to receive warnings by phone, text or email </a>
+         This area is covered by the flood warning service. <a href="https://www.gov.uk/sign-up-for-flood-warnings" class="govuk-link">Sign up to receive warnings by phone, text or email </a>
        </li>
        <li>
-         <a href="#" class="govuk-link">What’s happening in my area to reduce flood risk</a>
+         <a href="https://www.gov.uk/government/collections/flood-risk-management-current-schemes-and-strategies#yorkshire-(map-area-3)" class="govuk-link">What’s happening in my area to reduce flood risk</a>
        </li>
        <li>
-         <a href="#" class="govuk-link">How I can protect my property</a>
+         <a href="managing-flood-risk#protect" class="govuk-link">Learn what I can do to protect my property from future flooding</a>
        </li>
      </ul>
 
-     <p class="govuk-body">
+     <!-- <p class="govuk-body">
        <a href="managing-flood-risk" class="govuk-link">Managing my flood risk</a>
-     </p>
+     </p> -->
 
     <p class="govuk-body">
       The Environment Agency is responsible for managing the flood risk from rivers and the sea.
@@ -183,9 +190,7 @@
       Flooding from reservoirs is extremely unlikely. An area is considered at risk if peoples' lives could be threatened in the event of a dam or reservoir failure.
     <p>
 
-    <p class="govuk-body">
-      <a href="https://check-long-term-flood-risk.service.gov.uk/map?easting=433226.58&northing=389589.35&map=Reservoirs" class="govuk-link">View a map of the risk of flooding from reservoirs</a>
-    <p>
+
 
       <details class="govuk-details" data-module="govuk-details">
 
@@ -281,9 +286,13 @@
 
      </details>
 
+     <p class="govuk-body">
+       <a href="https://check-long-term-flood-risk.service.gov.uk/map?easting=433226.58&northing=389589.35&map=Reservoirs" class="govuk-link">View a map of the risk of flooding from reservoirs</a>
+     <p>
+
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-bottom-6">
 
-    <h2 class="govuk-heading-l">
+    <h2 class="govuk-heading-m">
       Manage your flood risk
     </h2>
 
@@ -292,7 +301,7 @@
     <p>
 
     <p class="govuk-body">
-      Find out <a class="govuk-link" href="#">how to manage your flood risk</a>.
+      Find out more about <a class="govuk-link" href="managing-flood-risk">managing your flood risk</a>.
     <p>
 
   </div>

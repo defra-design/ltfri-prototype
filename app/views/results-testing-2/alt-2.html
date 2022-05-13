@@ -1,5 +1,14 @@
 {% extends "layout.html" %}
 
+{% block beforeContent %}
+
+    {{ govukBackLink ({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+
+{% endblock %}
+
  {% block content %}
 <div class="govuk-grid-row">
 
@@ -27,6 +36,18 @@
 
     </div>
 
+    <p class="govuk-body">
+      Surface water happens when rainwater does not drain away through the normal drainage systems but lies on or flows over the ground instead. 
+    <p>
+
+      <p class="govuk-body">
+        Lead local flood authorities (LLFA) are responsible for managing the flood risk from surface water and may hold more detailed information.
+      <p>
+
+      <p class="govuk-body">
+        Your LLFA is <strong>Sheffield council</strong>.
+      <p>
+
     <details class="govuk-details" data-module="govuk-details">
 
       <summary class="govuk-details__summary">
@@ -50,20 +71,16 @@
         </p>
 
         <ul class="govuk-list govuk-list--bullet">
-          <li>
-            which parts of towns or streets are at risk, or have the most risk
-          </li>
-          <li>
-            the approximate extent and depth of flooding
-          </li>
+          <li>which parts of towns or streets are at risk, or have the most risk</li>
+          <li>the approximate extent and depth of flooding</li>
         </ul>
 
         <p class="govuk-body">
           It's likely to be reliable for a local area but not for identifying individual properties at risk.
-        <p>
+        </p>
 
         <p class="govuk-body">
-          <a class="govuk-link" href="managing-flood-risk">Managing my flood risk</a>.
+          <a class="govuk-link" href="managing-flood-risk">Managing my flood risk</a>
         </p>
 
       </div>
@@ -106,21 +123,19 @@
         </p>
 
         <p class="govuk-body">
-          This information is suitable for identifying:
+         This information is suitable for identifying:
         </p>
 
         <ul class="govuk-list govuk-list--bullet">
-          <li>which parts of counties or towns are at risk, or have the most risk</li>
-          <li>the approximate extent and depth of flooding</li>
+         <li>which parts of counties or towns are at risk, or have the most risk</li>
+         <li>the approximate extent and depth of flooding</li>
         </ul>
 
         <p class="govuk-body">
-          It's unlikely to be reliable for a local area and very unlikely to be reliable for identifying individual properties at risk.
+         It's unlikely to be reliable for a local area and very unlikely to be reliable for identifying individual properties at risk.
         </p>
 
-        <p class="govuk-body">
-          This service takes into account any flood defences.
-        <p>
+        <p>This service takes into account any flood defences.</p>
 
        <p class="govuk-body">
          <a class="govuk-link" href="managing-flood-risk">Managing my flood risk</a>.
@@ -166,10 +181,6 @@
      </div>
 
    </details>
-
-    <p class="govuk-body">
-      <a href="https://check-long-term-flood-risk.service.gov.uk/map?easting=433226.58&northing=389589.35&map=Reservoirs" class="govuk-link">View a map of the risk of flooding from reservoirs</a>
-    <p>
 
       <details class="govuk-details" data-module="govuk-details">
 
@@ -265,7 +276,23 @@
 
      </details>
 
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-bottom-6">
+     <p class="govuk-body">
+       <a href="https://check-long-term-flood-risk.service.gov.uk/map?easting=433226.58&northing=389589.35&map=Reservoirs" class="govuk-link">View a map of the risk of flooding from reservoirs</a>
+     <p>
+
+       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible govuk-!-margin-bottom-6">
+
+       <h2 class="govuk-heading-m">
+         Manage your flood risk
+       </h2>
+
+       <p class="govuk-body">
+         There are things everyone can do to prepare for flooding.
+       <p>
+
+       <p class="govuk-body">
+         Find out more about <a class="govuk-link" href="managing-flood-risk">managing your flood risk</a>.
+       <p>
 
   </div>
 

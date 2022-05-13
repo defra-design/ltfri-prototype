@@ -1,5 +1,14 @@
 {% extends "layout.html" %}
 
+{% block beforeContent %}
+
+    {{ govukBackLink ({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+
+{% endblock %}
+
  {% block content %}
 <div class="govuk-grid-row">
 
@@ -64,7 +73,7 @@
 
      <summary class="govuk-details__summary">
        <span class="govuk-details__summary-text">
-         Managing my flood risk
+         What I can do
        </span>
      </summary>
 
@@ -72,14 +81,18 @@
 
        <ul class="govuk-list govuk-list--bullet">
          <li>
-           <a href="#" class="govuk-link">Get insurance for my property</a>
+           <a href="managing-flood-risk#protect" class="govuk-link">Learn what I can do to protect my property from future flooding</a>
+        </li>
+         <li>
+           <a href="managing-flood-risk#insure" class="govuk-link">Get insurance for my property</a>
          </li>
          <li>
-           <a href="#" class="govuk-link">What’s happening in my area to reduce flood risk</a>
+           <a href="https://www.gov.uk/government/collections/flood-risk-management-current-schemes-and-strategies#yorkshire-(map-area-3)" class="govuk-link">What’s happening in my area to reduce flood risk</a>
          </li>
          <li>
-           <a href="#" class="govuk-link">Contact Sheffield Council</a> for advice on managing surface water flood risk
+           <a href="https://www.sheffield.gov.uk/home/public-health/flood-protection-schemes" class="govuk-link">Contact Sheffield Council</a> for advice on managing surface water flood risk
          </li>
+
        </ul>
 
      </div>
@@ -143,31 +156,33 @@
     </details>
 
 
-    <p class="govuk-body">
-      The Environment Agency is responsible for managing the flood risk from rivers and the sea.
-    <p>
+
 
       <details class="govuk-details" data-module="govuk-details">
 
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
-          Managing my flood risk
+          What I can do
         </span>
       </summary>
 
       <div class="govuk-details__text">
 
-        <ul class="govuk-list govuk-list--bullet">
-          <li>
-            This area is covered by the flood warning service. <a href="#" class="govuk-link">Sign up to receive warnings by phone, text or email </a>
-          </li>
-          <li>
-            <a href="#" class="govuk-link">What’s happening in my area to reduce flood risk</a>
-          </li>
-          <li>
-            <a href="#" class="govuk-link">How I can protect my property</a>
-          </li>
-        </ul>
+        <p class="govuk-body">
+          The Environment Agency is responsible for managing the flood risk from rivers and the sea.
+        <p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              This area is covered by the flood warning service. <a href="https://www.gov.uk/sign-up-for-flood-warnings" class="govuk-link">Sign up to receive warnings by phone, text or email </a>
+            </li>
+            <li>
+              <a href="https://www.gov.uk/government/collections/flood-risk-management-current-schemes-and-strategies#yorkshire-(map-area-3)" class="govuk-link">What’s happening in my area to reduce flood risk</a>
+            </li>
+            <li>
+              <a href="managing-flood-risk#protect" class="govuk-link">Learn what I can do to protect my property from future flooding</a>
+            </li>
+          </ul>
 
         <p class="govuk-body">
           <a href="managing-flood-risk" class="govuk-link">Managing my flood risk</a>
@@ -300,7 +315,7 @@
 
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-bottom-6">
 
-    <h2 class="govuk-heading-l">
+    <h2 class="govuk-heading-m">
       Manage your flood risk
     </h2>
 
@@ -309,7 +324,7 @@
     <p>
 
     <p class="govuk-body">
-      Find out <a class="govuk-link" href="#">how to manage your flood risk</a>.
+      Find out more about <a class="govuk-link" href="managing-flood-risk">managing your flood risk</a>.
     <p>
 
   </div>
