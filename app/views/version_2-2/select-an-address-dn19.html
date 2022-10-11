@@ -1,0 +1,188 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div id="address-page">
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Select an address
+      </h1>
+
+      <div class="govuk-inset-text">
+
+        <p>
+          This service will tell you the flood risk of an area, not a specific property.
+        </p>
+
+        <p>
+          We need to ask for the property number so we know where you want to check.
+        </p>
+
+      </div>
+
+
+      <form method="post">
+
+        <div class="govuk-form-group">
+
+          <span class="govuk-label">Postcode</span>
+
+          <p class="govuk-body">
+            <strong style="text-transform: uppercase;">DN19 7DJ</strong>
+            <a href="where-do-you-want-to-check" class="govuk-link">Change</a>
+          </p>
+
+        </div>
+
+        <div class="govuk-form-group">
+
+          <label class="govuk-label" for="address">
+            Select an address
+          </label>
+
+          <select class="govuk-select" id="address" name="address">
+  
+    
+            <option value="-1">25 addresses found</option>
+          
+        
+          
+            <option value="0">BEECH LODGE, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ</option>
+          
+        
+          
+            <option value="1">BEECHCROFT, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ</option>
+          
+        
+          
+            <option value="2">BOWENGARTH, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ</option>
+          
+        
+          
+            <option value="3">CANTRAL VILLA, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ</option>
+          
+        
+          
+            <option value="4">CORNER COTTAGE, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ</option>
+          
+        
+          
+            <option value="5">FERN COTTAGE, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ</option>
+          
+        
+          
+            <option value="6">INGLENOOK, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ</option>
+          
+        
+          
+            <option value="7">INVERMAY, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ</option>
+          
+        
+          
+            <option value="8">KEEDALE, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ</option>
+          
+        
+          
+            <option value="9">KENDENIAN, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ</option>
+          
+        
+          
+            <option value="10">KNIGHTON, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ</option>
+          
+        
+          
+            <option value="11">MAPLEWOOD, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ</option>
+          
+        
+          
+            <option value="12">MILE FAILTE, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ</option>
+          
+        
+          
+            <option value="13">OLD COTTAGE, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ</option>
+          
+        
+          
+            <option value="14">PARK VIEW COTTAGE, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ</option>
+          
+        
+          
+            <option value="15">PARKVIEW HOUSE, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ</option>
+          
+        
+          
+            <option value="16">PEAR TREE COTTAGE, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ</option>
+          
+        
+          
+            <option value="17">PICCARDY, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ</option>
+          
+        
+          
+            <option value="18">SWALLOW COTTAGE, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ</option>
+          
+        
+          
+            <option value="19">THE SPINNEY, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ</option>
+          
+        
+          
+            <option value="20">TIMBERLANDS, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ</option>
+          
+        
+          
+            <option value="21">TRESCO, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ</option>
+          
+        
+          
+            <option value="22">WESTWOOD, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ</option>
+          
+        
+          
+            <option value="23">WOOD LEA, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ</option>
+          
+        
+          
+            <option value="24">WOODHALL, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ</option>
+          
+        
+        </select>
+        </div>
+
+        <a href="{{ data['results'] }}" role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">Continue</a>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+{% endblock %} {% if useAutoStoreData %} {% block footer %}
+{{
+  govukFooter({
+    meta: {
+      items: [
+        {
+          href: "https://govuk-prototype-kit.herokuapp.com/",
+          text: "GOV.UK Flooding " + releaseVersion
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+      ]
+    }
+  })
+}}
+{% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
+"includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
+<!-- GOV.UK Flooding {{releaseVersion}} -->
+{% endblock %}

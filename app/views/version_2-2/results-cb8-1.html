@@ -1,0 +1,167 @@
+{% extends "layout.html" %}
+
+ {% block content %}
+ <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <!-- Page summary -->
+    <div class="page-summary">
+      <h1 class="govuk-heading-xl">
+        Flood risk summary for the area around:
+      </h1>
+      <h2 class="govuk-heading-m">CHURCH COTTAGE, CHURCH LANE, NEWMARKET, CB8 0HL</h2>
+
+      <!-- Holding Comments -->
+      
+
+      <!-- Rivers and sea and surface water -->
+      <div class="surface-water">
+<div class="govuk-inset-text medium">
+  <h3 class="govuk-!-margin-bottom-2">Surface water</h3>
+  <p class="govuk-!-margin-top-0 risk"><strong>Medium risk</strong></p>
+</div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary" data-journey-click="ltfri:risk:surface-water-details">
+    <span class="govuk-details__summary-text">What this information means</span>
+  </summary>
+  <div class="govuk-details__text">
+    <p class="govuk-body">
+      This flood risk summary reports the highest risk from surface water within a 20 metre radius of this property.
+    </p>
+    <p class="govuk-body risk-description">
+      
+      Medium risk means that this area has a chance of flooding of between 1% and 3.3% <strong>each year</strong>.
+      
+    </p>
+    
+    <p class="govuk-body">
+This information is suitable for identifying:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+<li>which parts of counties or towns are at risk, or have the most risk</li>
+<li>the approximate extent and depth of flooding</li>
+</ul>
+
+<p class="govuk-body">
+It's unlikely to be reliable for a local area and very unlikely to be reliable for identifying individual properties at risk.
+</p>
+    
+  </div>
+</details>
+
+<p class="govuk-body">
+  Surface water flooding, sometimes known as flash flooding:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>happens when heavy rain cannot drain away</li>
+  <li>is difficult to predict as it depends on rainfall volume and location</li>
+  <li>can happen up hills and away from rivers and other bodies of water</li>
+  <li>is more widespread in areas with harder surfaces like concrete</li>
+</ul>
+
+<p class="govuk-body">
+  Lead local flood authorities (LLFA) are responsible for managing the flood risk from surface
+  water and may hold more detailed information.
+
+  <!-- LLFA -->
+  
+  <p class="govuk-body">
+    Your LLFA is <strong>Suffolk council</strong>.
+
+    <!-- LLFA Comments -->
+    
+
+  </p>
+  
+</p>
+
+<p class="govuk-body">
+  <a class="govuk-link"
+    href="/map?easting=564142&northing=263437&map=SurfaceWater">
+    View a map of the risk of flooding from surface water
+  </a>
+</p>
+</div>
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <div class="rivers-sea">
+<div class="govuk-inset-text very-low">
+  <h3 class="govuk-!-margin-bottom-2">Rivers and the sea</h3>
+  <p class="govuk-!-margin-top-0 risk"><strong>Very low risk</strong></p>
+</div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary" data-journey-click="ltfri:risk:rivers-and-sea-details">
+    <span class="govuk-details__summary-text">What this information means</span>
+  </summary>
+  <div class="govuk-details__text">
+    <p class="govuk-body">
+      This flood risk summary is not property specific.
+    </p>
+    <p class="govuk-body risk-description">
+      
+      Very low risk means that this area has a chance of flooding of less than 0.1% <strong>each year</strong>.
+      
+    </p>
+    
+    <p>This service takes into account any flood defences.</p>
+  </div>
+</details>
+
+<p class="govuk-body">
+  The Environment Agency is responsible for managing the flood risk from rivers and the sea.
+</p>
+
+<p class="govuk-body">
+  <a class="govuk-link"
+    href="/map?easting=564142&northing=263437&map=RiversOrSea">
+    View a map of the risk of flooding from rivers and the sea
+  </a>
+</p>
+</div>
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      
+      <h3 class="govuk-heading-m">Other flood risks</h3>
+
+      <!-- Reservoir -->
+      
+
+      <!-- Groundwater -->
+      
+      <div class="groundwater">
+        <div class="govuk-inset-text">
+          <h3 class="govuk-!-margin-bottom-2">Groundwater</h3>
+          <p class="govuk-!-margin-top-0 risk">Flooding is possible in the local area when groundwater levels are high
+          </p>
+        </div>
+      </div>
+      
+
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <a href="managing-flood-risk" role="button" class="govuk-button govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8 custom">Continue</a>
+
+{% endblock %} {% if useAutoStoreData %} {% block footer %}
+{{
+  govukFooter({
+    meta: {
+      items: [
+        {
+          href: "https://govuk-prototype-kit.herokuapp.com/",
+          text: "GOV.UK Flooding " + releaseVersion
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+      ]
+    }
+  })
+}}
+{% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
+"includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
+<!-- GOV.UK Flooding {{releaseVersion}} -->
+{% endblock %}
