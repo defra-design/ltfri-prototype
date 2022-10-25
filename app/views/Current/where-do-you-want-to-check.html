@@ -2,7 +2,13 @@
 
 {% block content %}
 
-
+<script
+  type="module"
+  src="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.7/widget.module.min.js"
+  async
+  defer
+></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.7/widget.min.js" async defer></script>
 
 <div class="govuk-grid-row">
 
@@ -29,9 +35,10 @@
           <span class="form-hint">for example, WA4 1AB</span>
         </label>
         
-        <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" />
+        <input class="govuk-input govuk-input--width-10 govuk-!-margin-bottom-2" id="address-postcode" name="address-postcode" type="text" />
        
-      
+        <div class="frc-captcha" data-sitekey=FCMPBN3B86H9P6PC></div>
+        <p class="govuk-body govuk-!-margin-top-2">Text advising users on captcha?</p>
       </div>
 
 
