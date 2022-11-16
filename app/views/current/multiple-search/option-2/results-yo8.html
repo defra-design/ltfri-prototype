@@ -1,232 +1,368 @@
 {% extends "layout.html" %}
 
  {% block content %}
- <div class="govuk-grid-row">
+<div class="govuk-grid-row">
+
   <div class="govuk-grid-column-two-thirds">
-    <!-- Page summary -->
-    <div class="page-summary">
-      <h1 class="govuk-heading-xl">
-        Flood risk summary for the area around
-      </h1>
-      <h2 class="govuk-heading-m">12, WEST PARK, SELBY, YO8 4JL</h2>
 
-      <!-- Holding Comments -->
-      
+    <h1 class="govuk-heading-xl">
+      Flood risk summary for the area around
+    </h1>
 
-      <!-- Rivers and sea and surface water -->
-      <div class="rivers-sea">
-<div class="govuk-inset-text very-low">
-  <h3 class="govuk-!-margin-bottom-2">Rivers and the sea</h3>
-  <p class="govuk-!-margin-top-0 risk"><strong>Low risk</strong></p>
-</div>
+    <h2 class="govuk-heading-m">
+      12, West Park, Selby, YO8 4JL
+    </h2>
 
-<details class="govuk-details" data-module="govuk-details">
-  <summary class="govuk-details__summary" data-journey-click="ltfri:risk:rivers-and-sea-details">
-    <span class="govuk-details__summary-text">What this information means</span>
-  </summary>
-  <div class="govuk-details__text">
-    <p class="govuk-body">
-      This flood risk summary is not property specific.
-    </p>
-    <p class="govuk-body risk-description">
-      
-      Low risk means that this area has a chance of flooding of between 0.1% and 1% <strong>each year</strong>.
-      
-    </p>
-    
-    <p class="govuk-body">
-This information is suitable for identifying:
-</p>
+   <!-- {{ govukWarningText({
+        text: "This flood risk summary is for the area around the address you selected, not the specific property.",
+        iconFallbackText: "Warning"
+      }) }} -->
+      <div class="govuk-inset-text very-low">
 
-<ul class="govuk-list govuk-list--bullet">
-<li>which parts of countries or counties are at risk, or have the most risk</li>
-<li>areas likely to flood first, deepest or most frequently</li>
-</ul>
-
-<p class="govuk-body">
-It's very unlikely to be reliable for a local area and extremely unlikely to be reliable for identifying individual properties at risk.
-</p>
-    
-    <p>This service takes into account any flood defences.</p>
-  </div>
-</details>
-
-<p class="govuk-body">
-  The Environment Agency is responsible for managing the flood risk from rivers and the sea.
-</p>
-
-<p class="govuk-body">
-  <a class="govuk-link"
-    href="/map?easting=460121&northing=431744&map=RiversOrSea">
-    View a map of the risk of flooding from rivers and the sea
-  </a>
-</p>
-</div>
-<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-      <div class="surface-water">
-<div class="govuk-inset-text very-low">
-  <h3 class="govuk-!-margin-bottom-2">Surface water</h3>
-  <p class="govuk-!-margin-top-0 risk"><strong>Low risk</strong></p>
-</div>
-
-<details class="govuk-details" data-module="govuk-details">
-  <summary class="govuk-details__summary" data-journey-click="ltfri:risk:surface-water-details">
-    <span class="govuk-details__summary-text">What this information means</span>
-  </summary>
-  <div class="govuk-details__text">
-    <p class="govuk-body">
-      This flood risk summary reports the highest risk from surface water within a 20 metre radius of this property.
-    </p>
-    <p class="govuk-body risk-description">
-      
-      Low risk means that this area has a chance of flooding of between 0.1% and 1% <strong>each year</strong>.
-      
-    </p>
-    
-    <p class="govuk-body">
-This information is suitable for identifying:
-</p>
-
-<ul class="govuk-list govuk-list--bullet">
-<li>which parts of counties or towns are at risk, or have the most risk</li>
-<li>the approximate extent and depth of flooding</li>
-</ul>
-
-<p class="govuk-body">
-It's unlikely to be reliable for a local area and very unlikely to be reliable for identifying individual properties at risk.
-</p>
-    
-  </div>
-</details>
-
-<p class="govuk-body">
-  Surface water flooding, sometimes known as flash flooding:
-</p>
-
-<ul class="govuk-list govuk-list--bullet">
-  <li>happens when heavy rain cannot drain away</li>
-  <li>is difficult to predict as it depends on rainfall volume and location</li>
-  <li>can happen up hills and away from rivers and other bodies of water</li>
-  <li>is more widespread in areas with harder surfaces like concrete</li>
-</ul>
-
-<p class="govuk-body">
-  Lead local flood authorities (LLFA) are responsible for managing the flood risk from surface
-  water and may hold more detailed information.
-
-  <!-- LLFA -->
-  
-  <p class="govuk-body">
-    Your LLFA is <strong>North Yorkshire council</strong>.
-
-    <!-- LLFA Comments -->
-    
-
-  </p>
-  
-</p>
-
-<p class="govuk-body">
-  <a class="govuk-link"
-    href="/map?easting=460121&northing=431744&map=SurfaceWater">
-    View a map of the risk of flooding from surface water
-  </a>
-</p>
-</div>
-<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-
-      
-      <h3 class="govuk-heading-m">Other flood risks</h3>
-
-      <!-- Reservoir -->
-      
-      <div class="reservoirs">
-        <div class="govuk-inset-text">
-          <h3 class="govuk-!-margin-bottom-2">Reservoirs</h3>
-          <p class="govuk-!-margin-top-0 risk">There is a risk of flooding from reservoirs in this area</p>
-        </div>
+        <h3 class="no-margin">Rivers and the sea</h3>
         <p class="govuk-body">
-          Flooding from reservoirs is extremely unlikely.
-          An area is considered at risk if peoples' lives could be threatened in the event of a dam or reservoir failure.
-        </p>
-
-        <p class="govuk-body">
-          <a class="govuk-link"
-            href="/map?easting=460121&northing=431744&map=Reservoirs">
-            View a map of the risk of flooding from reservoirs
-          </a>
-        </p>
-
-        <details class="govuk-details" data-module="govuk-details">
-          <summary class="govuk-details__summary" data-journey-click="ltfri:risk:reservoir-details">
-            <span class="govuk-details__summary-text">Reservoirs that could affect this area</span>
-          </summary>
-          <div class="govuk-details__text">
-            
-            <ul class="govuk-list">
-              <li><strong>Barden Upper</strong> (grid reference SE0120057800)</li>
-              <li>Owner: Yorkshire Water Services Ltd</li>
-              <li>Lead Local Flood Authority: North Yorkshire</li>
-              <!-- <li>Risk designation: High-risk</li> -->
-              <li>Comments: If you have questions about local emergency plans for this reservoir you should contact the named Local Authority</li>
-            </ul>
-            
-            <ul class="govuk-list">
-              <li><strong>Roundhill</strong> (grid reference SE1500077200)</li>
-              <li>Owner: Yorkshire Water Services Ltd</li>
-              <li>Lead Local Flood Authority: North Yorkshire</li>
-              <!-- <li>Risk designation: High-risk</li> -->
-              <li>Comments: If you have questions about local emergency plans for this reservoir you should contact the named Local Authority</li>
-            </ul>
-            
-            <ul class="govuk-list">
-              <li><strong>Thruscross</strong> (grid reference SE1520057800)</li>
-              <li>Owner: Yorkshire Water Services Ltd</li>
-              <li>Lead Local Flood Authority: North Yorkshire</li>
-              <!-- <li>Risk designation: High-risk</li> -->
-              <li>Comments: If you have questions about local emergency plans for this reservoir you should contact the named Local Authority</li>
-            </ul>
-            
-            <ul class="govuk-list">
-              <li><strong>Eccup</strong> (grid reference SE3040041700)</li>
-              <li>Owner: Yorkshire Water Services Ltd</li>
-              <li>Lead Local Flood Authority: Leeds</li>
-              <!-- <li>Risk designation: High-risk</li> -->
-              <li>Comments: If you have questions about local emergency plans for this reservoir you should contact the named Local Authority</li>
-            </ul>
-            
-            <ul class="govuk-list">
-              <li><strong>Fewston</strong> (grid reference SE1870054100)</li>
-              <li>Owner: Yorkshire Water Services Ltd</li>
-              <li>Lead Local Flood Authority: North Yorkshire</li>
-              <!-- <li>Risk designation: High-risk</li> -->
-              <li>Comments: If you have questions about local emergency plans for this reservoir you should contact the named Local Authority</li>
-            </ul>
-            
-            <ul class="govuk-list">
-              <li><strong>Lindley Wood</strong> (grid reference SE2150049300)</li>
-              <li>Owner: Yorkshire Water Services Ltd</li>
-              <li>Lead Local Flood Authority: North Yorkshire</li>
-              <!-- <li>Risk designation: High-risk</li> -->
-              <li>Comments: If you have questions about local emergency plans for this reservoir you should contact the named Local Authority</li>
-            </ul>
-            
-            <ul class="govuk-list">
-              <li><strong>Swinsty</strong> (grid reference SE1980052800)</li>
-              <li>Owner: Yorkshire Water Services Ltd</li>
-              <li>Lead Local Flood Authority: North Yorkshire</li>
-              <!-- <li>Risk designation: High-risk</li> -->
-              <li>Comments: If you have questions about local emergency plans for this reservoir you should contact the named Local Authority</li>
-            </ul>
-            
-          </div>
-        </details>
+          <strong>Low risk</strong>
+       </p>
+ 
       </div>
-      
+ 
+      <p class="govuk-body">
+        Reviewed in September 2022. This data is reviewed every 3 months.
+       </p>
+ 
+      <details class="govuk-details" data-module="govuk-details">
+ 
+       <summary class="govuk-details__summary">
+         <span class="govuk-details__summary-text">
+             More information about your level of flood risk from rivers and the sea
+         </span>
+       </summary>
+ 
+       <div class="govuk-details__text">
+ 
+        <p class="govuk-body">
+          This flood risk summary is not property specific.
+        </p>
+ 
+        <p class="govuk-body">
+         Low risk means that each year this area has a chance of flooding of between 0.1% and 1% each year.
+       </p>
+ 
+ 
+        <p class="govuk-body">
+          This information is suitable for identifying:
+        </p>
+ 
+        <ul class="govuk-list govuk-list--bullet">
+          <li>which parts of counties or towns are at risk, or have the most risk</li>
+          <li>the approximate extent and depth of flooding</li>
+        </ul>
+ 
+        <p class="govuk-body">
+          It's unlikely to be reliable for a local area and very unlikely to be reliable for identifying individual properties at risk.
+        </p>
+ 
+        <p class="govuk-body">
+          This service takes into account any flood defences.
+        <p>
+ 
+       </div>
+ 
+     </details>
+ 
+     <p class="govuk-body">
+         The Environment Agency is responsible for managing the flood risk from rivers and the sea.
+      </p>
+ 
+ 
+ 
+ 
+       <details class="govuk-details" data-module="govuk-details">
+ 
+       <summary class="govuk-details__summary">
+         <span class="govuk-details__summary-text">
+           What you can do
+         </span>
+       </summary>
+ 
+       <div class="govuk-details__text">
+ 
+ 
+           <ul class="govuk-list govuk-list--bullet">
+             <li>
+               This area is covered by the flood warning service. <a href="https://www.gov.uk/sign-up-for-flood-warnings" class="govuk-link">Sign up to receive warnings by phone, text or email </a>
+             </li>
+             <li>
+               What you can do to  <a href="/current/multiple-search/managing-flood-risk#protect" class="govuk-link">protect your property from flooding</a>
+             </li>
+             <li>
+             Make a <a href="https://www.gov.uk/government/publications/personal-flood-plan" class="govuk-link">personal flood plan</a>
+               </li>
+           </ul>
+ 
+       </div>
+ 
+     </details>
+ 
+     <p>
+       <a href="https://check-long-term-flood-risk.service.gov.uk/map?easting=460121&northing=431744&map=RiversOrSea" class="govuk-link">View a map of the risk of flooding from rivers and the sea</a>
+     </p>
+ 
+     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <div class="govuk-inset-text very-low">
 
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+       <h3 class="no-margin">
+         Surface water
+       </h3>
 
-    <a href="managing-flood-risk" role="button" class="govuk-button govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8 custom">Continue</a>
+       <p>
+         <strong>Low risk</strong>
+       </p>
+
+    </div>
+
+    <p class="govuk-body">
+        Reviewed in August 2022. This data is reviewed every 12 months.
+      </p>
+
+    <details class="govuk-details" data-module="govuk-details">
+
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          More information about your level of flood risk from surface water
+        </span>
+      </summary>
+
+      <div class="govuk-details__text">
+
+        <p class="govuk-body">
+          This flood risk summary reports the highest risk from surface water within a 15 metre radius of this property.
+        </p>
+
+        <p class="govuk-body">
+          Low risk means that each year this area has a chance of flooding of between 0.1% and 1% each year.
+        </p>
+
+        <p class="govuk-body">
+          This information is suitable for identifying:
+        </p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>which parts of towns or streets are at risk, or have the most risk</li>
+          <li>the approximate extent and depth of flooding</li>
+        </ul>
+
+        <p class="govuk-body">
+          It's likely to be reliable for a local area but not for identifying individual properties at risk.
+        </p>
+      </div>
+
+    </details>
+    <p class="govuk-body">
+        Surface water flooding happens when rainwater cannot drain away through the normal drainage systems. Instead, it lies on or flows over the ground. Surface water flooding is sometimes known as flash flooding. It can:
+    </p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>be difficult to predict as it depends on rainfall volume and location</li>
+        <li>happen up hills and away from rivers and other bodies of water</li>
+        <li>affect areas with harder surfaces, like concrete, more severely</li>
+      </ul>
+      <p class="govuk-body">
+        Lead local flood authorities (LLFA) are responsible for managing the flood risk from surface water and may hold more detailed information.
+      </p>
+    <p class="govuk-body">
+            Your LLFA is North Yorkshire council.
+          </p>
+
+     <details class="govuk-details" data-module="govuk-details">
+
+     <summary class="govuk-details__summary">
+       <span class="govuk-details__summary-text">
+         What you can do
+       </span>
+     </summary>
+
+     <div class="govuk-details__text">
+
+       <ul class="govuk-list govuk-list--bullet">
+        <li>
+            <a href="https://www.metoffice.gov.uk/" class="govuk-link">Check UK weather updates from the Met Office</a> (flood alerts and warnings for surface water are not provided as they are unpredictable)
+          </li>
+         <li>
+            What you can do to <a href="/current/multiple-search/managing-flood-risk#protect" class="govuk-link">protect your property from flooding</a>
+         </li>
+         <li>
+           <a href="https://www.northyorks.gov.uk/" class="govuk-link">Contact North Yorkshire council</a> for advice on managing surface water flood risk
+         </li>
+
+       </ul>
+
+     </div>
+
+   </details>
+
+     <p class="govuk-body">
+       <a href="https://check-long-term-flood-risk.service.gov.uk/map?easting=399039&northing=427232&map=SurfaceWater" class="govuk-link">
+         View a map of the risk of flooding from surface water
+       </a>
+     </p>
+
+     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+     
+
+    <h2 class="govuk-heading-m">
+      Other flood risks
+    </h2>
+
+    <div class="govuk-inset-text very-low">
+
+      <h3 class="no-margin">Reservoirs</h3>
+      <p class="govuk-body">
+       <strong> There is a risk of flooding from reservoirs in this area</strong>
+      </p>
+
+    </div>
+
+    <p class="govuk-body govuk-!-padding-bottom-3">
+        Reviewed in July 2022. This data is reviewed every 12 months.
+      </p>
+      <details class="govuk-details" data-module="govuk-details">
+
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            What a reservoir is and how we check an area's risk
+          </span>
+        </summary>
+
+        <div class="govuk-details__text">
+
+          <p class="govuk-body">
+            A reservoir is a large natural or artifcial lake that is designed to collect and store water.
+          </p>
+          <p class="govuk-body">
+            We use predicted scenarios to understand the risk of flooding from reservoirs.
+          </p>
+
+      </details>
+    <p class="govuk-body">
+      Flooding from reservoirs is extremely unlikely. An area is considered at risk if peoples' lives could be threatened in the event of a dam or reservoir failure.
+    <p>
+
+    <p class="govuk-body">
+      <a href="https://check-long-term-flood-risk.service.gov.uk/map?easting=460121&northing=431744&map=Reservoirs" class="govuk-link">View a map of the risk of flooding from reservoirs</a>
+    <p>
+
+      <details class="govuk-details" data-module="govuk-details">
+
+       <summary class="govuk-details__summary">
+         <span class="govuk-details__summary-text">
+            Reservoirs that could affect this area
+         </span>
+       </summary>
+
+       <div class="govuk-details__text">
+              
+          <ul class="govuk-list">
+            <li><strong>Gorple Lower</strong> (grid reference SD9400031400)</li>
+            <li>Owner: Yorkshire Water Services Ltd</li>
+            <li>Lead Local Flood Authority: Calderdale</li>
+            <!-- <li>Risk designation: High-risk</li> -->
+            <li>Comments: If you have questions about local emergency plans for this reservoir you should contact the named Local Authority</li>
+          </ul>
+          
+          <ul class="govuk-list">
+            <li><strong>Gorple Upper</strong> (grid reference SD9240031400)</li>
+            <li>Owner: Yorkshire Water Services Ltd</li>
+            <li>Lead Local Flood Authority: Calderdale</li>
+            <!-- <li>Risk designation: High-risk</li> -->
+            <li>Comments: If you have questions about local emergency plans for this reservoir you should contact the named Local Authority</li>
+          </ul>
+          
+          <ul class="govuk-list">
+            <li><strong>Walshaw Dean Lower</strong> (grid reference SD9600033000)</li>
+            <li>Owner: Yorkshire Water Services Ltd</li>
+            <li>Lead Local Flood Authority: Calderdale</li>
+            <!-- <li>Risk designation: High-risk</li> -->
+            <li>Comments: If you have questions about local emergency plans for this reservoir you should contact the named Local Authority</li>
+          </ul>
+          
+          <ul class="govuk-list">
+            <li><strong>Walshaw Dean Middle</strong> (grid reference SD9660033500)</li>
+            <li>Owner: Yorkshire Water Services Ltd</li>
+            <li>Lead Local Flood Authority: Calderdale</li>
+            <!-- <li>Risk designation: High-risk</li> -->
+            <li>Comments: If you have questions about local emergency plans for this reservoir you should contact the named Local Authority</li>
+          </ul>
+          
+          <ul class="govuk-list">
+            <li><strong>Walshaw Dean Upper</strong> (grid reference SD9680034500)</li>
+            <li>Owner: Yorkshire Water Services Ltd</li>
+            <li>Lead Local Flood Authority: Calderdale</li>
+            <!-- <li>Risk designation: High-risk</li> -->
+            <li>Comments: If you have questions about local emergency plans for this reservoir you should contact the named Local Authority</li>
+          </ul>
+          
+          <ul class="govuk-list">
+            <li><strong>Widdop</strong> (grid reference SD9300033000)</li>
+            <li>Owner: Yorkshire Water Services Ltd</li>
+            <li>Lead Local Flood Authority: Calderdale</li>
+            <!-- <li>Risk designation: High-risk</li> -->
+            <li>Comments: If you have questions about local emergency plans for this reservoir you should contact the named Local Authority</li>
+          </ul>
+          
+          <ul class="govuk-list">
+            <li><strong>Gorpley</strong> (grid reference SD9100023000)</li>
+            <li>Owner: Yorkshire Water Services Ltd</li>
+            <li>Lead Local Flood Authority: Calderdale</li>
+            <!-- <li>Risk designation: High-risk</li> -->
+            <li>Comments: If you have questions about local emergency plans for this reservoir you should contact the named Local Authority</li>
+          </ul>
+          
+          <ul class="govuk-list">
+            <li><strong>Warland</strong> (grid reference SD9593520815)</li>
+            <li>Owner: United Utilities PLC</li>
+            <li>Lead Local Flood Authority: Calderdale</li>
+            <!-- <li>Risk designation: High-risk</li> -->
+            <li>Comments: If you have questions about local emergency plans for this reservoir you should contact the named Local Authority</li>
+          </ul>
+          
+          <ul class="govuk-list">
+            <li><strong>Gaddings West</strong> (grid reference SD9480022400)</li>
+            <li>Owner: The Gaddings Dam Preservation Company Limited</li>
+            <li>Lead Local Flood Authority: Calderdale</li>
+            <!-- <li>Risk designation: High-risk</li> -->
+            <li>Comments: If you have questions about local emergency plans for this reservoir you should contact the named Local Authority</li>
+          </ul>
+          
+          <ul class="govuk-list">
+            <li><strong>Ramsden Clough (Ramsden Wood)</strong> (grid reference SD9160021300)</li>
+            <li>Owner: United Utilities PLC</li>
+            <li>Lead Local Flood Authority: Calderdale</li>
+            <!-- <li>Risk designation: High-risk</li> -->
+            <li>Comments: If you have questions about local emergency plans for this reservoir you should contact the named Local Authority</li>
+          </ul>
+          
+        </div>
+
+     </details>
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-bottom-6">
+
+    <h2 class="govuk-heading-m">
+      Manage your flood risk
+    </h2>
+
+    <p class="govuk-body">
+      There are things everyone can do to prepare for flooding.
+    <p>
+
+    <p class="govuk-body">
+      Find out more about <a class="govuk-link" href="/current/multiple-search/managing-flood-risk">managing your flood risk</a>.
+    <p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-bottom-3">
+      <p class="govuk-body">
+        <a class="govuk-link" href="/current/multiple-search/option-2/table-comparison">Back to address list</a>
+      <p>
 
   </div>
 
