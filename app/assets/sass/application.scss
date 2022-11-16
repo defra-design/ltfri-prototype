@@ -14,6 +14,7 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/step-by-step-related";
 @import "patterns/task-list";
 @import "patterns/related-items";
+@import "patterns/multiple-search";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
@@ -26,44 +27,6 @@ $govuk-assets-path: '/govuk/assets/';
   margin-bottom: 30px;
   padding-left: 15px;
 }
-
- .high-risk {
-  border: 1px solid;
-  border-style: none none none none;
-  padding: 10px;
-  box-shadow: -6px 0px 0px 0px #FF0000;
-}
-
-.medium-risk {
-  border: 1px solid;
-  border-style: none none none none;
-  padding: 10px;
-  box-shadow: -6px 0px 0px 0px #FFA14A;
-}
-
-.low-risk {
-  border: 1px solid;
-  border-style: none none none none;
-  padding: 10px;
-  box-shadow: -6px 0px 0px 0px #D8D8D8;
-}
-
-.cell {
-  padding: 10px 10px 0 0;
-}
-
-.divider {
-  display:inline-block;
-  border: 1px solid #D8D8D8;
-  height: 16px;
-  margin: 0 5px -4px 5px;
-}
-
-.column-width {
-  width: 15%;
-}
-
-
 
 //Under this line are styles for the original work
 

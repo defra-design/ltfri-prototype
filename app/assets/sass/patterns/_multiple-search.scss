@@ -1,0 +1,37 @@
+.high-risk {
+    border: 1px solid;
+    border-style: none none none none;
+    padding: 10px;
+    box-shadow: -6px 0px 0px 0px #FF0000;
+  }
+  
+  .medium-risk {
+    border: 1px solid;
+    border-style: none none none none;
+    padding: 10px;
+    box-shadow: -6px 0px 0px 0px #FFA14A;
+  }
+  
+  .low-risk {
+    border: 1px solid;
+    border-style: none none none none;
+    padding: 10px;
+    box-shadow: -6px 0px 0px 0px #D8D8D8;
+  }
+  
+  .cell {
+    padding: 10px 10px 0 0;
+  }
+  
+  .divider {
+    display:inline-block;
+    border: 1px solid #D8D8D8;
+    height: 16px;
+    margin: 0 5px -4px 5px;
+  }
+  
+  .column-width {
+    width: 15%;
+  }
+  
+  
