@@ -28,6 +28,14 @@ $govuk-assets-path: '/govuk/assets/';
   padding-left: 15px;
 }
 
+.govuk-warning-text__icon {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 //Under this line are styles for the original work
 
 .no-margin {
