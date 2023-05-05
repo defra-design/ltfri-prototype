@@ -1,0 +1,180 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div id="address-page">
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Select an address
+      </h1>
+
+      <div class="govuk-inset-text">
+
+        <p>
+          This service will tell you the flood risk of an area, not a specific property.
+        </p>
+
+        <p>
+          We need to ask for the property number so we know where you want to check.
+        </p>
+
+      </div>
+
+
+      <form method="post">
+
+        <div class="govuk-form-group">
+
+          <span class="govuk-label">Postcode</span>
+
+          <p class="govuk-body">
+            <strong style="text-transform: uppercase;">le2 7qa</strong>
+            <a href="where-do-you-want-to-check" class="govuk-link">Change</a>
+          </p>
+
+        </div>
+
+        <div class="govuk-form-group">
+
+          <label class="govuk-label" for="address">
+            Select an address
+          </label>
+
+          <select class="govuk-select" id="address" name="address">
+
+            
+  
+    
+      <option value="-1">22 addresses found</option>
+    
+  
+    
+      <option value="0">1, ERITH ROAD, LEICESTER, LE2 7QA</option>
+    
+  
+    
+      <option value="1">2, ERITH ROAD, LEICESTER, LE2 7QA</option>
+    
+  
+    
+      <option value="2">3, ERITH ROAD, LEICESTER, LE2 7QA</option>
+    
+  
+    
+      <option value="3">4, ERITH ROAD, LEICESTER, LE2 7QA</option>
+    
+  
+    
+      <option value="4">5, ERITH ROAD, LEICESTER, LE2 7QA</option>
+    
+  
+    
+      <option value="5">7, ERITH ROAD, LEICESTER, LE2 7QA</option>
+    
+  
+    
+      <option value="6">10, ERITH ROAD, LEICESTER, LE2 7QA</option>
+    
+  
+    
+      <option value="7">12, ERITH ROAD, LEICESTER, LE2 7QA</option>
+    
+  
+    
+      <option value="8">14, ERITH ROAD, LEICESTER, LE2 7QA</option>
+    
+  
+    
+      <option value="9">MALCOLM MILES MOTOR ENGINEER, 15, ERITH ROAD, LEICESTER, LE2 7QA</option>
+    
+  
+    
+      <option value="10">16, ERITH ROAD, LEICESTER, LE2 7QA</option>
+    
+  
+    
+      <option value="11">18, ERITH ROAD, LEICESTER, LE2 7QA</option>
+    
+  
+    
+      <option value="12">22, ERITH ROAD, LEICESTER, LE2 7QA</option>
+    
+  
+    
+      <option value="13">24, ERITH ROAD, LEICESTER, LE2 7QA</option>
+    
+  
+    
+      <option value="14">26, ERITH ROAD, LEICESTER, LE2 7QA</option>
+    
+  
+    
+      <option value="15">28, ERITH ROAD, LEICESTER, LE2 7QA</option>
+    
+  
+    
+      <option value="16">30, ERITH ROAD, LEICESTER, LE2 7QA</option>
+    
+  
+    
+      <option value="17">32, ERITH ROAD, LEICESTER, LE2 7QA</option>
+    
+  
+    
+      <option value="18">34, ERITH ROAD, LEICESTER, LE2 7QA</option>
+    
+  
+    
+      <option value="19">1A, ERITH ROAD, LEICESTER, LE2 7QA</option>
+    
+  
+    
+      <option value="20">FLAT, 2A, ERITH ROAD, LEICESTER, LE2 7QA</option>
+    
+  
+    
+      <option value="21">3A, ERITH ROAD, LEICESTER, LE2 7QA</option>
+    
+  
+  </select>
+          </select>
+
+        </div>
+
+        <a href="{{ data['results'] }}" role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">Continue</a>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+{% endblock %} {% if useAutoStoreData %} {% block footer %}
+{{
+  govukFooter({
+    meta: {
+      items: [
+        {
+          href: "https://govuk-prototype-kit.herokuapp.com/",
+          text: "GOV.UK Flooding " + releaseVersion
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+      ]
+    }
+  })
+}}
+{% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
+"includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
+<!-- GOV.UK Flooding {{releaseVersion}} -->
+{% endblock %}

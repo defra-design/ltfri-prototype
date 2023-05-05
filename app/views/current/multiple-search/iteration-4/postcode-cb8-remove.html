@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        
+     
+
+        <h1 class="govuk-heading-xl">
+          Enter a postcode
+        </h1>
+    
+        <div class="govuk-inset-text">
+    
+          <p>
+            This service will tell you the flood risk of an area, not a specific property.
+          </p>
+    
+        </div>
+    
+        <fieldset class="govuk-fieldset">
+    
+          <div class="govuk-form-group">
+    
+            <label class="govuk-label" for="address-postcode">
+              Postcode
+              
+            </label>
+            
+            <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" />
+           
+          
+          </div>
+    
+    
+        </fieldset>
+       
+       
+        <div class="govuk-button-group">
+          <a href="/current/multiple-search/iteration-4/address-le2" role="button" class="govuk-button govuk-button--primary">
+            Find address
+          </a>
+          <a href="javascript:history.back()" target="" class="govuk-body">Cancel</a></div>
+       
+        
+
+
+          
+       
+       
+        <p class="govuk-heading-m">Selected addresses</p>
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+              <dt class="govuk-summary-list__key govuk-!-width-one-quarter">
+                Postcode
+              </dt>
+              <dt class="govuk-summary-list__key govuk-!-width-three-quarters">
+                Address
+              </dt>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                DN19 7DJ
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Park View Cottage, Westoby Lane, Barrow-Upon-Humber
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden">change</span>
+                </a>
+              <div class="divider" aria-hidden="true"></div>
+                <a class="govuk-link" href="#">
+                  Remove<span class="govuk-visually-hidden">remove</span>
+                </a>
+              </dd>
+            </div>
+    <!-- end of first row -->
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        HX7 6AA
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Valley Organics Workers Co-op, 16, Market Street, Hebden Bridge
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">
+        Change<span class="govuk-visually-hidden">change</span>
+        </a>
+      <div class="divider" aria-hidden="true"></div>
+        <a class="govuk-link" href="#">
+          Remove<span class="govuk-visually-hidden">remove</span>
+        </a>
+      </dd>
+    </div>
+            </div>
+          </dl>
+      </div>
+      <!-- end of table -->
+      
+          
+    </div>
+  </main>
+</div>
+
+{% endblock %} {% if useAutoStoreData %} {% block footer %}
+{{
+  govukFooter({
+    meta: {
+      items: [
+        {
+          href: "https://govuk-prototype-kit.herokuapp.com/",
+          text: "GOV.UK Flooding " + releaseVersion
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+      ]
+    }
+  })
+}}
+{% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
+"includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
+<!-- GOV.UK Flooding {{releaseVersion}} -->
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">You're about to remove an address</h1>
+
+
+          
+
+        
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+              <dt class="govuk-summary-list__key govuk-!-width-one-quarter">
+                Postcode
+              </dt>
+              <dt class="govuk-summary-list__key govuk-!-width-three-quarters">
+                Address
+              </dt>
+            </div>
+    <!-- end of first row -->
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        ST11 9JN
+      </dt>
+      <dd class="govuk-summary-list__value">
+        4 Glebe Close, Blythe Bridge, Stoke-On-Trent
+      </dd>
+     
+    </div>
+    
+            </div>
+          </dl>
+      </div>
+      <!-- end of table -->
+      
+         
+          <a href="/current/multiple-search/option-2/address-list-6" role="button" class="govuk-button govuk-button--primary govuk-!-margin-bottom-8">
+            Remove address
+          </a>
+    </div>
+  </main>
+</div>
+
+{% endblock %} {% if useAutoStoreData %} {% block footer %}
+{{
+  govukFooter({
+    meta: {
+      items: [
+        {
+          href: "https://govuk-prototype-kit.herokuapp.com/",
+          text: "GOV.UK Flooding " + releaseVersion
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+      ]
+    }
+  })
+}}
+{% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
+"includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
+<!-- GOV.UK Flooding {{releaseVersion}} -->
+{% endblock %}

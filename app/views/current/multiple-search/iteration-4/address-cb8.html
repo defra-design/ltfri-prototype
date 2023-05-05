@@ -1,0 +1,143 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        
+     
+
+        <h1 class="govuk-heading-xl">
+          Select an address
+        </h1>
+    
+        <div class="govuk-inset-text">
+
+          <p>
+            This service will tell you the flood risk of an area, not a specific property.
+          </p>
+  
+          <p>
+            We need to ask for the property number so we know where you want to check.
+          </p>
+  
+        </div>
+  
+  
+        <form method="post">
+  
+          <div class="govuk-form-group">
+  
+            <span class="govuk-label">Postcode</span>
+  
+            <p class="govuk-body">
+              <strong style="text-transform: uppercase;">CB8 0HL</strong>
+              <a href="/current/multiple-search/iteration-4/postcode-cb8-remove" class="govuk-link">Change</a>
+            </p>
+  
+          </div>
+  
+          <div class="govuk-form-group">
+  
+            <label class="govuk-label" for="address">
+              Select an address
+            </label>
+  
+            <select class="govuk-select" id="address" name="address">
+  
+    
+              <option value="-1">6 addresses found</option>
+            
+          
+            
+              <option value="0">1 ROCKINGHAM VILLAS, CHURCH LANE, NEWMARKET, CB8 0HL</option>
+            
+          
+            
+              <option value="1">2 ROCKINGHAM VILLAS, CHURCH LANE, NEWMARKET, CB8 0HL</option>
+            
+          
+            
+              <option value="2">3 ROCKINGHAM VILLAS, CHURCH LANE, NEWMARKET, CB8 0HL</option>
+            
+          
+            
+              <option value="3">4 ROCKINGHAM VILLAS, CHURCH LANE, NEWMARKET, CB8 0HL</option>
+            
+          
+            
+              <option value="4">CHURCH COTTAGE, CHURCH LANE, NEWMARKET, CB8 0HL</option>
+            
+          
+            
+              <option value="5">TURNER HALL, CHURCH LANE, NEWMARKET, CB8 0HL</option>
+            
+          
+          </select>
+          </div>
+    
+       
+       
+       
+   
+
+        <div class="govuk-button-group">
+          <a href="/current/multiple-search/iteration-4/address-list-3" role="button" class="govuk-button govuk-button--primary">
+            Add address
+          </a>
+          <a href="javascript:history.back()" target="" class="govuk-body">Cancel</a></div>
+          <div class="govuk-!-margin-bottom-6"></div>
+       
+        
+
+
+          
+       
+       
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Selected addresses</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Postcode</th>
+                <th scope="col" class="govuk-table__header govuk-table__header govuk-!-width-three-quarters">Address</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">1. DN19 7DJ</th>
+                <td class="govuk-table__cell govuk-table__cell">Park View Cottage, Westoby Lane, Barrow-Upon-Humber</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">2. HX7 6AA</th>
+                <td class="govuk-table__cell govuk-table__cell">Valley Organics Workers Co-op, 16, Market Street, Hebden Bridge</td>
+              </tr>
+            </tbody>
+          </table>
+      <!-- end of table -->
+      
+          
+    </div>
+  </main>
+</div>
+
+{% endblock %} {% if useAutoStoreData %} {% block footer %}
+{{
+  govukFooter({
+    meta: {
+      items: [
+        {
+          href: "https://govuk-prototype-kit.herokuapp.com/",
+          text: "GOV.UK Flooding " + releaseVersion
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+      ]
+    }
+  })
+}}
+{% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
+"includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
+<!-- GOV.UK Flooding {{releaseVersion}} -->
+{% endblock %}

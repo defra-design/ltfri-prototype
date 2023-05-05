@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div id="address-page">
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Select an address
+      </h1>
+
+      <div class="govuk-inset-text">
+
+        <p>
+          This service will tell you the flood risk of an area, not a specific property.
+        </p>
+
+        <p>
+          We need to ask for the property number so we know where you want to check.
+        </p>
+
+      </div>
+
+
+      <form method="post">
+
+        <div class="govuk-form-group">
+
+          <span class="govuk-label">Postcode</span>
+
+          <p class="govuk-body">
+            <strong style="text-transform: uppercase;">CB8 0HL</strong>
+            <a href="where-do-you-want-to-check" class="govuk-link">Change</a>
+          </p>
+
+        </div>
+
+        <div class="govuk-form-group">
+
+          <label class="govuk-label" for="address">
+            Select an address
+          </label>
+
+          <select class="govuk-select" id="address" name="address">
+  
+    
+            <option value="-1">6 addresses found</option>
+          
+        
+          
+            <option value="0">1 ROCKINGHAM VILLAS, CHURCH LANE, NEWMARKET, CB8 0HL</option>
+          
+        
+          
+            <option value="1">2 ROCKINGHAM VILLAS, CHURCH LANE, NEWMARKET, CB8 0HL</option>
+          
+        
+          
+            <option value="2">3 ROCKINGHAM VILLAS, CHURCH LANE, NEWMARKET, CB8 0HL</option>
+          
+        
+          
+            <option value="3">4 ROCKINGHAM VILLAS, CHURCH LANE, NEWMARKET, CB8 0HL</option>
+          
+        
+          
+            <option value="4">CHURCH COTTAGE, CHURCH LANE, NEWMARKET, CB8 0HL</option>
+          
+        
+          
+            <option value="5">TURNER HALL, CHURCH LANE, NEWMARKET, CB8 0HL</option>
+          
+        
+        </select>
+        </div>
+
+        <a href="{{ data['results'] }}" role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">Continue</a>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+{% endblock %} {% if useAutoStoreData %} {% block footer %}
+{{
+  govukFooter({
+    meta: {
+      items: [
+        {
+          href: "https://govuk-prototype-kit.herokuapp.com/",
+          text: "GOV.UK Flooding " + releaseVersion
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+      ]
+    }
+  })
+}}
+{% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
+"includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
+<!-- GOV.UK Flooding {{releaseVersion}} -->
+{% endblock %}

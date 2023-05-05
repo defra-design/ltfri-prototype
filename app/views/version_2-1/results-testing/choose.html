@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Choose a results page version
+    </h1>
+
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="current">Current</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="alt-1">Option 1</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="alt-2">Option 2</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="alt-3">Option 3</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="alt-4">Option 4</a>
+      </li>
+    </ul>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+
+</div>
+{% endblock %} {% if useAutoStoreData %} {% block footer %}
+{{
+  govukFooter({
+    meta: {
+      items: [
+        {
+          href: "https://govuk-prototype-kit.herokuapp.com/",
+          text: "GOV.UK Flooin " + releaseVersion
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+      ]
+    }
+  })
+}}
+{% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
+"includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
+<!-- GOV.UK Prototype Kit {{releaseVersion}} -->
+{% endblock %}

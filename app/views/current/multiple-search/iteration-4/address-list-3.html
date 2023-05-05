@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">You've added 3 addresses</h1>
+
+
+          
+
+        <p class="govuk-body"><a href="/current/multiple-search/iteration-4/clear-list" class="govuk-link">Clear list and return to search</a></p>
+
+        <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">Selected addresses</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Postcode</th>
+              <th scope="col" class="govuk-table__header govuk-table__header">Address</th>
+              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Actions</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">1. DN19 7DJ</th>
+              <td class="govuk-table__cell govuk-table__cell">Park View Cottage, Westoby Lane, Barrow-Upon-Humber</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">
+                <a href="/current/multiple-search/iteration-4/results-dn19" role="button" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-2">View flood details</a>
+                <div class="action-group">
+                <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden">change</span>
+                </a>
+                <a class="govuk-link" href="#">
+                  Remove<span class="govuk-visually-hidden">remove</span>
+                </a></td></div>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">2. HX7 6AA</th>
+              <td class="govuk-table__cell govuk-table__cell">Valley Organics Workers Co-op, 16, Market Street, Hebden Bridge</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">
+                <a href="/current/multiple-search/iteration-4/results-hx76aa" role="button" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-2">View flood details</a>
+                <div class="action-group">
+                <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden">change</span>
+                </a>
+                <a class="govuk-link" href="#">
+                  Remove<span class="govuk-visually-hidden">remove</span>
+                </a></td></div>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">3. CB8 0HL</th>
+              <td class="govuk-table__cell govuk-table__cell">	3 Rockingham Villas, Church Lane, Newmarket</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">
+                <a href="/current/multiple-search/iteration-4/results-cb8" role="button" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-2">View flood details</a>
+                <div class="action-group">
+                <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden">change</span>
+                </a>
+                <a class="govuk-link" href="/current/multiple-search/iteration-4/remove-cb8">
+                  Remove<span class="govuk-visually-hidden">remove</span>
+                </a></td></div>
+            </tr>
+                <!-- end of first row -->
+          </tbody>
+        </table>
+
+
+
+     
+     
+      <a href="#" role="button" class="govuk-button govuk-button--secondary">Add another address</a>
+          
+          <p class="form-hint">You can add up to 10 addresses</p>
+
+          
+
+       
+    </div>
+  </main>
+</div>
+
+{% endblock %} {% if useAutoStoreData %} {% block footer %}
+{{
+  govukFooter({
+    meta: {
+      items: [
+        {
+          href: "https://govuk-prototype-kit.herokuapp.com/",
+          text: "GOV.UK Flooding " + releaseVersion
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+      ]
+    }
+  })
+}}
+{% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
+"includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
+<!-- GOV.UK Flooding {{releaseVersion}} -->
+{% endblock %}

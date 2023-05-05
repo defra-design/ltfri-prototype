@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">You're about to remove 3 addresses</h1>
+
+
+          
+
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Postcode</th>
+              <th scope="col" class="govuk-table__header govuk-table__header govuk-!-width-three-quarters">Address</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">1. DN19 7DJ</th>
+              <td class="govuk-table__cell govuk-table__cell">Park View Cottage, Westoby Lane, Barrow-Upon-Humber</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">2. HX7 6AA</th>
+              <td class="govuk-table__cell govuk-table__cell">Valley Organics Workers Co-op, 16, Market Street, Hebden Bridge</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">3. CB8 0HL</th>
+              <td class="govuk-table__cell govuk-table__cell">3 Rockingham Villas, Church Lane, Newmarket</td>
+            </tr>
+          </tbody>
+        </table>
+    <!-- end of table -->
+
+    <div class="govuk-button-group">
+      <a href="where-do-you-want-to-check.html" role="button" class="govuk-button govuk-button--primary">
+        Remove addresses
+      </a>
+      <a href="javascript:history.back()" target="" class="govuk-body">Cancel</a></div>
+    </div>
+    </div>
+
+{% endblock %} {% if useAutoStoreData %} {% block footer %}
+{{
+  govukFooter({
+    meta: {
+      items: [
+        {
+          href: "https://govuk-prototype-kit.herokuapp.com/",
+          text: "GOV.UK Flooding " + releaseVersion
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+      ]
+    }
+  })
+}}
+{% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
+"includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
+<!-- GOV.UK Flooding {{releaseVersion}} -->
+{% endblock %}

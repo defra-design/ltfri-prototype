@@ -1,18 +1,18 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Documentation - GOV.UK Flooding
+{{ title or "Documentation" }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
 	{{ govukBreadcrumbs({
 	  items: [
 	    {
-	      text: "GOV.UK Flooding",
+	      text: "GOV.UK Prototype Kit",
 	      href: "/docs"
 	    },
 	    {
-	      text: "Tutorials and examples",
+	      text: "Tutorials and templates",
 	      href: "/docs/tutorials-and-examples"
 	    }
 	  ]

@@ -1,2 +1,0 @@
-# LTFRI
-.GOV LTFRI

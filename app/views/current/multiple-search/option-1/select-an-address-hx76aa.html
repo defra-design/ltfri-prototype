@@ -1,0 +1,230 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div id="address-page">
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Select an address
+      </h1>
+
+      <div class="govuk-inset-text">
+
+        <p>
+          This service will tell you the flood risk of an area, not a specific property.
+        </p>
+
+        <p>
+          We need to ask for the property number so we know where you want to check.
+        </p>
+
+      </div>
+
+
+      <form method="post">
+
+        <div class="govuk-form-group">
+
+          <span class="govuk-label">Postcode</span>
+
+          <p class="govuk-body">
+            <strong style="text-transform: uppercase;">HX7 6AA</strong>
+            <a href="where-do-you-want-to-check" class="govuk-link">Change</a>
+          </p>
+
+        </div>
+
+        <div class="govuk-form-group">
+
+          <label class="govuk-label" for="address">
+            Select an address
+          </label>
+
+          <select class="govuk-select" id="address" name="address">
+              <option value="-1">36 addresses found</option>
+            
+          
+            
+              <option value="0">ORIGANO, 2, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="1">4, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="2">YORKSHIRE SOAP CO, 6, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="3">TOTALLY AWESOME, 14, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="4">VALLEY ORGANICS WORKERS CO-OP, 16, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="5">FLEUR &amp; FLORA, 20, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="6">PAPAS TAKEAWAY, 22, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="7">MOOCH CAFE BAR, 24, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="8">26, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="9">RYBURNE BROKERS &amp; CO, 28, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="10">SAKER WHOLEFOODS, 30, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="11">32, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="12">34, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="13">TALL POPPIES, 36, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="14">THE SEWING ROOM, 36, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="15">38, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="16">2 TONE COMICS, 40, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="17">UPPER VALLEY COMMUNITY HUB, 46, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="18">KITTIES RESTAURANT, 52, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="19">TURKISH BARBERS, 54, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="20">HAT THERAPY, 56, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="21">58, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="22">1, CUCKOO STEPS MILL, 62, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="23">2, CUCKOO STEPS MILL, 62, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="24">3, CUCKOO STEPS MILL, 62, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="25">4, CUCKOO STEPS MILL, 62, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="26">5, CUCKOO STEPS MILL, 62, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="27">20A, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="28">24A, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="29">26A, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="30">WOLF &amp; WILDE, 42-44, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="31">BANYAN TREE, 48-50, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="32">HEART GALLERY LTD, 4A, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="33">52A, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="34">54A, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+            
+              <option value="35">HEBDEN ROYAL METHODIST CHURCH, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</option>
+            
+          
+          </select>
+        </div>
+
+        <a href="{{ data['results'] }}" role="button" class="govuk-button govuk-button--primary govuk-!-margin-top-2 govuk-!-margin-bottom-8">Continue</a>
+        <p> <a href="/current/multiple-search/option-1/address-list-1" target="">Cancel and go back to address list</a></p>
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+{% endblock %} {% if useAutoStoreData %} {% block footer %}
+{{
+  govukFooter({
+    meta: {
+      items: [
+        {
+          href: "https://govuk-prototype-kit.herokuapp.com/",
+          text: "GOV.UK Flooding " + releaseVersion
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+      ]
+    }
+  })
+}}
+{% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
+"includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
+<!-- GOV.UK Flooding {{releaseVersion}} -->
+{% endblock %}

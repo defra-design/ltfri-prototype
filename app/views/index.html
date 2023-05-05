@@ -1,26 +1,110 @@
-{% extends "layout.html" %} {% block pageTitle %} GOV.UK Flooding {%
-endblock %} {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">
-      LTFRI PROTOTYPE
-      <span class="govuk-caption-xl">V3.01<span>
-    </h1>
+{% extends "layout.html" %}
 
-    <h2 class="govuk-heading-m">Mockup Link</h2>
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
 
-    <ul class="govuk-list govuk-list--bullet">
-      <li>
-        <a href="/p1"> LTFRI MOCKUP</a>
-      </li>
-    </ul>
-    <h2 class="govuk-heading-m">About this page</h2>
-    <p>
-      We recommend you add links to your prototype to this page, rather than
-      delete it. You'll find this page in the kit at '/app/views/index.html'.
-    </p>
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+    
+
+      <h1 class="govuk-heading-xl">
+        Check your long term flood risk prototypes
+      </h1>
+      <p class="govuk-body">A collection of prototypes for testing scenarios and user journeys for the service 'Check your long term flood risk'.</p>
+</div>
+<div class="govuk-grid-column-full">
+      <table class="govuk-table">
+        <!--<caption class="govuk-table__caption govuk-table__caption--m"></caption>-->
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Version</th>
+            <th scope="col" class="govuk-table__header">Date</th>
+            <th scope="col" class="govuk-table__header">What's changed</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+         <!-- <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="">Version 3.0</a>
+          </th>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell"><p class="govuk-body"></p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </td>
+          </tr>-->
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="/version-3">Current</a>
+          </th>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell"><p class="govuk-body">Testing scenarios for:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Friendly captcha</li>
+                <li>Multiple search</li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="/version-2-2">Version 2.2</a>
+          </th>
+            <td class="govuk-table__cell">October 2022</td>
+            <td class="govuk-table__cell"><p class="govuk-body">A list of as-is journeys of different flood risk summaries, includes:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>A table of postcodes ranging from high risk to very low</li>
+                <li>Groundwater and reservoirs are included in some flows</li>
+                <li>An updated manage flood risk page</li>
+                <li>Links to maps are still linking to live service</li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="/version-2-1.html">Version 2.1</a>
+          </th>
+            <td class="govuk-table__cell">April 2022 to August 2022</td>
+            <td class="govuk-table__cell"><p class="govuk-body">A collection of different testing scenarios:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Content changes for flood risk summary pages</li>
+                <li>Holding comment content and structural changes</li>
+                <li>Different iterations of structural changes for flood risk summary pages</li>
+                <li>List of JPGs for a multiple postcode result feature</li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="/version-2">Version 2.0</a>
+          </th>
+            <td class="govuk-table__cell">March 2022</td>
+            <td class="govuk-table__cell"><p class="govuk-body">As-is prototype:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Updated journey to match live service</li>
+                <li>Changed summary page</li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="/version-1">Version 1.0</a>
+          </th>
+            <td class="govuk-table__cell">July 2019 to Jan 2020</td>
+            <td class="govuk-table__cell"><p class="govuk-body">Original work containing:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Mock up of live service</li>
+                <li>Alternative results page</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  
+   
   </div>
+
 </div>
 
 {% endblock %}

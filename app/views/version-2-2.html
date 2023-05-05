@@ -1,0 +1,132 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+    
+
+      <h1 class="govuk-heading-xl">
+       As-is journeys for different risk variations
+        <span class="govuk-caption-xl">Version 2.2<span>
+      </h1>
+
+      <p class="govuk-body">
+        This is an attempt to create flows for each flood risk variation that is in the live service as of 11 October 2022.
+      <p>
+      </div>
+        <div class="govuk-grid-column-full">
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">A list of risk summaries</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Postcode</th>
+                <th scope="col" class="govuk-table__header">Surface water</th>
+                <th scope="col" class="govuk-table__header">Rivers and the Sea</th>
+                <th scope="col" class="govuk-table__header">Groundwater</th>
+                <th scope="col" class="govuk-table__header">Reservoirs</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__cell"><a href="version_2-2/start?address=select-an-address-le2.html&results=results-le2">2, ERITH ROAD, LEICESTER, LE2 7QA</a>
+              </th>
+                <td class="govuk-table__cell">High</td>
+                <td class="govuk-table__cell">High</td>
+                <td class="govuk-table__cell">No</td>
+                <td class="govuk-table__cell">No</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__cell"><a href='version_2-2/start?address=select-an-address-hx76aa.html&results=results-hx76aa'>VALLEY ORGANICS WORKERS CO-OP, 16, MARKET STREET, HEBDEN BRIDGE, HX7 6AA</a>
+              </th>
+                <td class="govuk-table__cell">High</td>
+                <td class="govuk-table__cell">High</td>
+                <td class="govuk-table__cell">No</td>
+                <td class="govuk-table__cell">Yes</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__cell"><a href='version_2-2/start?address=select-an-address-cb8.html&results=results-cb8'>3 ROCKINGHAM VILLAS, CHURCH LANE, NEWMARKET, CB8 0HL</a>
+              </th>
+                <td class="govuk-table__cell">High</td>
+                <td class="govuk-table__cell">Medium</td>
+                <td class="govuk-table__cell">Yes</td>
+                <td class="govuk-table__cell">No</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__cell"><a href='version_2-2/start?address=select-an-address-dn19.html&results=results-dn19'>PARK VIEW COTTAGE, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ
+                </a>
+                </th>
+                  <td class="govuk-table__cell">Medium</td>
+                  <td class="govuk-table__cell">High</td>
+                  <td class="govuk-table__cell">Yes</td>
+                  <td class="govuk-table__cell">No</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__cell"><a href='version_2-2/start?address=select-an-address-hx76aa-1.html&results=results-hx76aa-1'>BANYAN TREE, 48-50, MARKET STREET, HEBDEN BRIDGE, HX7 6AA
+                  </a>
+                  </th>
+                    <td class="govuk-table__cell">Medium</td>
+                    <td class="govuk-table__cell">Medium</td>
+                    <td class="govuk-table__cell">No</td>
+                    <td class="govuk-table__cell">Yes</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__cell"><a href='version_2-2/start?address=select-an-address-cb8-1.html&results=results-cb8-1'>CHURCH COTTAGE, CHURCH LANE, NEWMARKET, CB8 0HL
+                    </a>
+                    </th>
+                      <td class="govuk-table__cell">Medium</td>
+                      <td class="govuk-table__cell">Very low</td>
+                      <td class="govuk-table__cell">Yes</td>
+                      <td class="govuk-table__cell">No</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__cell"><a href='version_2-2/start?address=select-an-address-hx76aa-2.html&results=results-hx76aa-2'>58, MARKET STREET, HEBDEN BRIDGE, HX7 6AA
+
+                      </a>
+                      </th>
+                        <td class="govuk-table__cell">Low</td>
+                        <td class="govuk-table__cell">Medium</td>
+                        <td class="govuk-table__cell">No</td>
+                        <td class="govuk-table__cell">Yes</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__cell"><a href='version_2-2/start?address=select-an-address-yo8.html&results=results-yo8'>12, WEST PARK, SELBY, YO8 4JL
+
+                        </a>
+                        </th>
+                          <td class="govuk-table__cell">Low</td>
+                          <td class="govuk-table__cell">Low</td>
+                          <td class="govuk-table__cell">No</td>
+                          <td class="govuk-table__cell">Yes</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__cell"><a href='version_2-2/start?address=select-an-address-dn19-1.html&results=results-dn19-1'>FERN COTTAGE, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ
+                          </a>
+                          </th>
+                            <td class="govuk-table__cell">Low</td>
+                            <td class="govuk-table__cell">Very low</td>
+                            <td class="govuk-table__cell">Yes</td>
+                            <td class="govuk-table__cell">No</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell"><a href='version_2-2/start?address=select-an-address-dn19-2.html&results=results-dn19-2'>WOOD LEA, WESTOBY LANE, BARROW-UPON-HUMBER, DN19 7DJ
+                            </a>
+                            </th>
+                              <td class="govuk-table__cell">Very low</td>
+                              <td class="govuk-table__cell">Very low</td>
+                              <td class="govuk-table__cell">No</td>
+                              <td class="govuk-table__cell">Yes</td>
+                            </tr>
+             
+              
+            </tbody>
+          </table>
+
+</div>
+
+{% endblock %}

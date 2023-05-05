@@ -1,0 +1,147 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+
+ <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Enter postcodes for where you want to check
+    </h1>
+
+    <div class="govuk-inset-text">
+
+      <p>
+        This service will tell you the flood risk of an area, not a specific property.
+      </p>
+
+    </div>
+
+    <fieldset class="govuk-fieldset ">
+
+      <div class="govuk-form-group govuk-!-margin-bottom-2">
+
+        <label class="govuk-label" for="address-postcode">
+          Postcode 1
+        </label>
+        
+        <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" />
+      </div>
+    </fieldset>
+    <p class="govuk-body govuk-!-margin-bottom-6"><a href="#" class="govuk-link">Remove</a></p>
+
+        <!-- end of postcode 1 -->
+
+    <fieldset class="govuk-fieldset ">
+
+      <div class="govuk-form-group govuk-!-margin-bottom-2">
+
+        <label class="govuk-label" for="address-postcode">
+          Postcode 2
+        </label>
+        
+        <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" />
+      </div>
+    </fieldset>
+    <p class="govuk-body govuk-!-margin-bottom-6"><a href="#" class="govuk-link">Remove</a></p>
+
+    <fieldset class="govuk-fieldset ">
+
+      <div class="govuk-form-group govuk-!-margin-bottom-2">
+
+        <label class="govuk-label" for="address-postcode">
+          Postcode 3
+        </label>
+        
+        <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" />
+      </div>
+    </fieldset>
+    <p class="govuk-body govuk-!-margin-bottom-6"><a href="#" class="govuk-link">Remove</a></p>
+
+    <fieldset class="govuk-fieldset ">
+
+      <div class="govuk-form-group govuk-!-margin-bottom-2">
+
+        <label class="govuk-label" for="address-postcode">
+          Postcode 4
+        </label>
+        
+        <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" />
+      </div>
+    </fieldset>
+    <p class="govuk-body govuk-!-margin-bottom-6"><a href="#" class="govuk-link">Remove</a></p>
+
+    <fieldset class="govuk-fieldset ">
+
+      <div class="govuk-form-group govuk-!-margin-bottom-2">
+
+        <label class="govuk-label" for="address-postcode">
+          Postcode 5
+        </label>
+        
+        <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" />
+      </div>
+    </fieldset>
+    <p class="govuk-body govuk-!-margin-bottom-6"><a href="#" class="govuk-link">Remove</a></p>
+
+    <fieldset class="govuk-fieldset ">
+
+      <div class="govuk-form-group govuk-!-margin-bottom-2">
+
+        <label class="govuk-label" for="address-postcode">
+          Postcode 6
+        </label>
+        
+        <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" />
+      </div>
+    </fieldset>
+    <p class="govuk-body govuk-!-margin-bottom-6"><a href="#" class="govuk-link">Remove</a></p>
+
+    
+
+    <p class="form-hint">You can add up to 10 addresses</p>
+    <p class="govuk-body"><a href="/current/multiple-search/iteration-3/postcodes-7" class="govuk-link">Add another address</a></p>
+
+
+    
+   
+
+
+
+
+
+<!-- Continue below -->
+    <a href="#" role="button" class="govuk-button govuk-button--primary govuk-!-margin-top-3">
+      Continue
+    </a>
+
+
+  </div>
+
+</div>
+
+
+{% endblock %} {% if useAutoStoreData %} {% block footer %}
+{{
+  govukFooter({
+    meta: {
+      items: [
+        {
+          href: "https://govuk-prototype-kit.herokuapp.com/",
+          text: "GOV.UK Flooding " + releaseVersion
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+      ]
+    }
+  })
+}}
+{% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
+"includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
+<!-- GOV.UK Flooding {{releaseVersion}} -->
+{% endblock %}

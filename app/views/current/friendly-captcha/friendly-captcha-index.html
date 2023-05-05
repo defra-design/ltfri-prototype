@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Friendly Captcha scenarios</h1>
+        <p class="govuk-body">
+          Service unavailable screens:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="/current/friendly-captcha/javascript-disabled">User doesn't have Javascript enabled</a></li>
+          <li><a href="/current/friendly-captcha/captcha-expired">Friendly captcha has expired</a></li>
+          <li><a href="/current/friendly-captcha/session-time-out">Session has timed out</a></li>
+          <li><a href="/current/friendly-captcha/unusual-traffic">Unusual traffic detected</a></li>
+        </ul>
+        <p class="govuk-body">
+          Error flows:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="/current/friendly-captcha/where-do-you-want-to-check-flow-1">When user clicks continue before Friendly Captcha has finished verifying</a></li>
+          <li><a href="/current/friendly-captcha/where-do-you-want-to-check-flow-2">When user clicks continue before clicking friendly captcha validate</a></li>
+        </ul>
+        <p class="govuk-body">
+          <strong>Final iterations for testing:</strong>
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="/current/friendly-captcha/where-do-you-want-to-check-flow-normal">Static page with friendly captcha on it</a></li>
+          <li><a href="/current/friendly-captcha/where-do-you-want-to-check-flow-1">When user clicks continue before Friendly Captcha has finished verifying</a></li>
+          <li><a href="/current/friendly-captcha/where-do-you-want-to-check-flow-time-out-warning">Warning when a user is close to timing out</a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %} {% if useAutoStoreData %} {% block footer %}
+{{
+  govukFooter({
+    meta: {
+      items: [
+        {
+          href: "https://govuk-prototype-kit.herokuapp.com/",
+          text: "GOV.UK Flooding " + releaseVersion
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+      ]
+    }
+  })
+}}
+{% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
+"includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
+<!-- GOV.UK Flooding {{releaseVersion}} -->
+{% endblock %}

@@ -4,13 +4,13 @@
 
 module.exports = {
   // Service name used in header. Eg: 'Renew your passport'
-  serviceName: 'Long term flood risk information',
+  serviceName: 'Check your long term flood risk',
 
   // Default port that prototype runs on
   port: '3000',
 
   // Enable or disable password protection on production
-  useAuth: 'true',
+  useAuth: 'false',
 
   // Automatically stores form data, and send to all views
   useAutoStoreData: 'true',
@@ -29,6 +29,9 @@ module.exports = {
   cookieText: 'GOV.UK uses cookies to make the site simpler. <a href="#">Find out more about cookies</a>',
 
   // Enable or disable Browser Sync
-  useBrowserSync: 'true'
+  useBrowserSync: 'true',
+
+  // Enable logging, options: true, false, get or post
+  useLogging: 'true'
 
 }

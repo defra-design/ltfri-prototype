@@ -1,0 +1,115 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div id="address-page">
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Select an address
+      </h1>
+
+      <div class="govuk-inset-text">
+
+        <p>
+          This service will tell you the flood risk of an area, not a specific property.
+        </p>
+
+        <p>
+          We need to ask for the property number so we know where you want to check.
+        </p>
+
+      </div>
+
+
+      <form method="post">
+
+        <div class="govuk-form-group">
+
+          <span class="govuk-label">Postcode</span>
+
+          <p class="govuk-body">
+            <strong style="text-transform: uppercase;">S6 4JP</strong>
+            <a href="where-do-you-want-to-check" class="govuk-link">Change</a>
+          </p>
+
+        </div>
+
+        <div class="govuk-form-group">
+
+          <label class="govuk-label" for="address">
+            Select an address
+          </label>
+
+          <select class="govuk-select" id="address" name="address">
+
+            <option value="-1">28 addresses found</option>
+            <option value="0">GEE VEE TRAVEL, 23, HOLME LANE, SHEFFIELD, S6 4JP</option>
+            <option value="1">27, HOLME LANE, SHEFFIELD, S6 4JP</option>
+            <option value="2">29, HOLME LANE, SHEFFIELD, S6 4JP</option>
+            <option value="3">31, HOLME LANE, SHEFFIELD, S6 4JP</option>
+            <option value="4">33, HOLME LANE, SHEFFIELD, S6 4JP</option>
+            <option value="5">35, HOLME LANE, SHEFFIELD, S6 4JP</option>
+            <option value="6">39, HOLME LANE, SHEFFIELD, S6 4JP</option>
+            <option value="7">51, HOLME LANE, SHEFFIELD, S6 4JP</option>
+            <option value="8">53, HOLME LANE, SHEFFIELD, S6 4JP</option>
+            <option value="9">57, HOLME LANE, SHEFFIELD, S6 4JP</option>
+            <option value="10">59, HOLME LANE, SHEFFIELD, S6 4JP</option>
+            <option value="11">61, HOLME LANE, SHEFFIELD, S6 4JP</option>
+            <option value="12">63, HOLME LANE, SHEFFIELD, S6 4JP</option>
+            <option value="13">HAWLEYS TYRES &amp; EXHAUST, 65, HOLME LANE, SHEFFIELD, S6 4JP</option>
+            <option value="14">67, HOLME LANE, SHEFFIELD, S6 4JP</option>
+            <option value="15">69, HOLME LANE, SHEFFIELD, S6 4JP</option>
+            <option value="16">DAVE BARBER SHOP, 71, HOLME LANE, SHEFFIELD, S6 4JP</option>
+            <option value="17">73, HOLME LANE, SHEFFIELD, S6 4JP</option>
+            <option value="18">75, HOLME LANE, SHEFFIELD, S6 4JP</option>
+            <option value="19">77, HOLME LANE, SHEFFIELD, S6 4JP</option>
+            <option value="20">27A, HOLME LANE, SHEFFIELD, S6 4JP</option>
+            <option value="21">HALLAM VETERINARY CENTRE, 45-47, HOLME LANE, SHEFFIELD, S6 4JP</option>
+            <option value="22">71A, HOLME LANE, SHEFFIELD, S6 4JP</option>
+            <option value="23">77A, HOLME LANE, SHEFFIELD, S6 4JP</option>
+            <option value="24">HOLME FISH BAR, 79-81, HOLME LANE, SHEFFIELD, S6 4JP</option>
+            <option value="25">HALLAM GLASS &amp; GLAZING, 83-85, HOLME LANE, SHEFFIELD, S6 4JP</option>
+            <option value="26">83A, HOLME LANE, SHEFFIELD, S6 4JP</option>
+            <option value="27">REAR OF 85, HOLME LANE, SHEFFIELD, S6 4JP</option>
+
+          </select>
+
+        </div>
+
+        <a href="alt-1" role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">Continue</a>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+{% endblock %} {% if useAutoStoreData %} {% block footer %}
+{{
+  govukFooter({
+    meta: {
+      items: [
+        {
+          href: "https://govuk-prototype-kit.herokuapp.com/",
+          text: "GOV.UK Flooding " + releaseVersion
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+      ]
+    }
+  })
+}}
+{% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
+"includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
+<!-- GOV.UK Flooding {{releaseVersion}} -->
+{% endblock %}

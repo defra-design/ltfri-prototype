@@ -1,0 +1,121 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div id="address-page">
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Select an address
+      </h1>
+
+      <div class="govuk-inset-text">
+
+        <p>
+          This service will tell you the flood risk of an area, not a specific property.
+        </p>
+
+        <p>
+          We need to ask for the property number so we know where you want to check.
+        </p>
+
+      </div>
+
+
+      <form method="post">
+
+        <div class="govuk-form-group">
+
+          <span class="govuk-label">Postcode</span>
+
+          <p class="govuk-body">
+            <strong style="text-transform: uppercase;">l23 0sa</strong>
+            <a href="where-do-you-want-to-check" class="govuk-link">Change</a>
+          </p>
+
+        </div>
+
+        <div class="govuk-form-group">
+
+          <label class="govuk-label" for="address">
+            Select an address
+          </label>
+
+          <select class="govuk-select" id="address" name="address">
+
+            <option value="">34 addresses found</option>
+            <option value="41064120">1, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064121">2, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064122">3, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064123">4, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064124">5, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064125">6, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064126">7, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064127">8, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064128">9, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064129">10, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064130">11, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064131">12, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064132">13, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064133">14, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064134">15, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064135">16, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064136">17, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064137">18, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064138">19, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064139">20, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064140">21, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064141">22, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064142">23, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064143">24, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064144">25, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064145">26, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064146">27, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064147">28, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064148">29, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064149">30, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064150">31, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064151">32, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064152">33, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+            <option value="41064153">34, MORNINGTON AVENUE, LIVERPOOL, L23 0SA</option>
+
+          </select>
+
+        </div>
+
+        <a href="{{ data['results'] }}" role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">Continue</a>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+{% endblock %} {% if useAutoStoreData %} {% block footer %}
+{{
+  govukFooter({
+    meta: {
+      items: [
+        {
+          href: "https://govuk-prototype-kit.herokuapp.com/",
+          text: "GOV.UK Flooding " + releaseVersion
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+      ]
+    }
+  })
+}}
+{% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
+"includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
+<!-- GOV.UK Flooding {{releaseVersion}} -->
+{% endblock %}
