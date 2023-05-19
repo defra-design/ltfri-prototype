@@ -2,10 +2,61 @@
 // For guidance on how to add CSS and SCSS see:
 // https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
 // 
+@import "tools/mixins";
 
 // Add extra styles here
-
+@import "map/map";
+@import "map/map-key";
+@import "summary/summary";
+@import "map/map-key-left";
+@import "map/map-key-left-depth";
 @import "patterns/multiple-search";
+
+// Maps styling
+body { margin:0; padding:0; }
+.map { position:absolute; top:0; bottom:0; width:100%; }
+
+
+// card summary page tests
+.govuk-summary-card__title-wrapper {
+    padding-left: 25px;
+}
+
+.govuk-summary-card__title-wrapper.high {
+    box-shadow: inset 10px 0px 0px #E3000E;
+}
+
+.govuk-summary-card__title-wrapper.medium {
+    box-shadow: inset 10px 0px 0px #F18604;
+}
+
+
+
+
+body { margin: 0; padding:0;}
+.map-small { position:absolute; top: 360px; bottom:0px; left: 315px; right: 300px; width:1180px; height: 760px; }
+
+.govuk-main-wrapper {
+    padding-top: 0;
+}
+
+.bottom-footer {
+    margin-top: 800px;
+}
+
+
+.risk-rating {
+   font-weight: normal;
+   padding-left: 5px;
+}
+
+.hideonsmallscreens {
+    display: none;
+}
+
+.govuk-grid-row-new {
+    margin: 0 300px 0 300px;
+}
 
 //Under this line are styles done post March 2022
 

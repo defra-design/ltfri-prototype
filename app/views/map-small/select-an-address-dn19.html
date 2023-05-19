@@ -1,0 +1,159 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div id="address-page">
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Select an address
+      </h1>
+
+      <div class="govuk-inset-text">
+
+        <p>
+          This service will tell you the flood risk of an area, not a specific property.
+        </p>
+
+        <p>
+          We need to ask for the property number so we know where you want to check.
+        </p>
+
+      </div>
+
+
+      <form method="post">
+
+        <div class="govuk-form-group">
+
+          <span class="govuk-label">Postcode</span>
+
+          <p class="govuk-body">
+            <strong style="text-transform: uppercase;">YO8 4JN</strong>
+            <a href="where-do-you-want-to-check" class="govuk-link">Change</a>
+          </p>
+
+        </div>
+
+        <div class="govuk-form-group">
+
+          <label class="govuk-label" for="address">
+            Address
+          </label>
+
+          <select class="govuk-select" id="address" name="address">
+
+
+            <option value="-1">18 addresses found</option>
+    
+  
+    
+            <option value="0">60, WEST PARK, SELBY, YO8 4JN</option>
+          
+        
+          
+            <option value="1">61, WEST PARK, SELBY, YO8 4JN</option>
+          
+        
+          
+            <option value="2">62, WEST PARK, SELBY, YO8 4JN</option>
+          
+        
+          
+            <option value="3">63, WEST PARK, SELBY, YO8 4JN</option>
+          
+        
+          
+            <option value="4">64, WEST PARK, SELBY, YO8 4JN</option>
+          
+        
+          
+            <option value="5">65, WEST PARK, SELBY, YO8 4JN</option>
+          
+        
+          
+            <option value="6">66, WEST PARK, SELBY, YO8 4JN</option>
+          
+        
+          
+            <option value="7">67, WEST PARK, SELBY, YO8 4JN</option>
+          
+        
+          
+            <option value="8">68, WEST PARK, SELBY, YO8 4JN</option>
+          
+        
+          
+            <option value="9">69, WEST PARK, SELBY, YO8 4JN</option>
+          
+        
+          
+            <option value="10">70, WEST PARK, SELBY, YO8 4JN</option>
+          
+        
+          
+            <option value="11">71, WEST PARK, SELBY, YO8 4JN</option>
+          
+        
+          
+            <option value="12">72, WEST PARK, SELBY, YO8 4JN</option>
+          
+        
+          
+            <option value="13">73, WEST PARK, SELBY, YO8 4JN</option>
+          
+        
+          
+            <option value="14">74, WEST PARK, SELBY, YO8 4JN</option>
+          
+        
+          
+            <option value="15">75, WEST PARK, SELBY, YO8 4JN</option>
+          
+        
+          
+            <option value="16">76, WEST PARK, SELBY, YO8 4JN</option>
+          
+        
+          
+            <option value="17">77, WEST PARK, SELBY, YO8 4JN</option>
+
+        </select>
+        </div>
+
+        <a href="{{ data['results'] }}" role="button" class="govuk-button govuk-button--primary govuk-!-margin-top-2 govuk-!-margin-bottom-8">Continue</a>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+{% endblock %} {% if useAutoStoreData %} {% block footer %}
+{{
+  govukFooter({
+    meta: {
+      items: [
+        {
+          href: "https://govuk-prototype-kit.herokuapp.com/",
+          text: "GOV.UK Flooding " + releaseVersion
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+      ]
+    }
+  })
+}}
+{% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
+"includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
+<!-- GOV.UK Flooding {{releaseVersion}} -->
+{% endblock %}

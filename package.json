@@ -1,15 +1,21 @@
 {
   "scripts": {
-    "dev": "govuk-prototype-kit dev",
+    "dev": "npm run build && govuk-prototype-kit dev",
     "serve": "govuk-prototype-kit serve",
-    "start": "govuk-prototype-kit start"
+    "start": "govuk-prototype-kit start",
+    "build": "webpack --config webpack.config.js"
   },
   "name": "cyltfr-prototype",
   "dependencies": {
     "@govuk-prototype-kit/step-by-step": "^2.1.0",
+    "dotenv-webpack": "^8.0.1",
     "govuk-frontend": "^4.6.0",
     "govuk-prototype-kit": "^13.7.0",
     "jquery": "^3.7.0",
-    "notifications-node-client": "^5.2.3"
+    "notifications-node-client": "^5.2.3",
+    "ol": "^7.3.0",
+    "proj4": "^2.9.0",
+    "webpack": "^5.83.1",
+    "webpack-cli": "^5.1.1"
   }
 }
