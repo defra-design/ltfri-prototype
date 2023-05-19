@@ -31,10 +31,14 @@ body { margin:0; padding:0; }
 }
 
 
-
+// small map version 1
 
 body { margin: 0; padding:0;}
 .map-small { position:absolute; top: 400px; bottom:0px; left: 315px; right: 300px; width:1180px; height: 760px; }
+
+.bottom-footer {
+  margin-top: 800px;
+}
 
 .risk-rating {
    font-weight: normal;
@@ -201,8 +205,6 @@ margin-bottom: 30px;
 .govuk-\!-margin-bottom-8.custom{
   margin-top: 0px!important;
 }
-
-
 
 .gem-c-contents-list__list-item--numbered .gem-c-contents-list__link {
   display: table; }
