@@ -8,7 +8,7 @@ module.exports = {
   plugins: [
     new Dotenv()
   ],
-  mode: process.env.NODE_ENV === 'dev' ? 'dev' : 'production',
+  mode: process.env.NODE_ENV === 'dev' ? 'development' : 'production',
   entry: { 
     
   main : './app/assets/javascripts/main.js', 
