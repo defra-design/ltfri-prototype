@@ -228,7 +228,7 @@ var rStyle = new Style ({
 zIndex: 2
 });
 
-// Marker style with img src
+// Marker style
 
  var mStyle = new Style({ 
   image: new Icon({ 
@@ -240,6 +240,7 @@ zIndex: 2
 zIndex: 2
 }); 
 
+// Address window style
 var wStyle = new Style({ 
   image: new Icon({ 
   anchor: [0.5, 110],
@@ -249,7 +250,7 @@ var wStyle = new Style({
 })
 }); 
 
-// window (will include image)
+// Address window var
 
  var address = new Feature({
   geometry: new Point([-2.0159323734242225,
@@ -258,7 +259,7 @@ var wStyle = new Style({
   name: 'something'
 }); 
  
-// marker (will include image)
+// Marker var
 
 var marker = new Feature({
   geometry: new Point([-2.0159323734242225,
@@ -276,7 +277,7 @@ var radius = new Feature({
   name: 'something'
 });
 
-// split vectorLayer into radius/marker/window as they will have different styling
+// Create vector layers for markers
 
  var addressLayer = new VectorLayer({
   minZoom: 10,
@@ -306,11 +307,8 @@ marker.setStyle(mStyle);
 address.setStyle(wStyle);
 
 
-
-
-
-
 //the map
+
 const map = new Map({
   layers: [ base ],
   target: 'maphigh',
@@ -415,7 +413,6 @@ removeLayers();
   else if (scenario == '5' || scenario == '11' || scenario == '14' || scenario == '18' ) {
    x=2 
   }
-
 
   if (pathname == '/map/surface-water'){
     map.addLayer(surfaceWater(x))
