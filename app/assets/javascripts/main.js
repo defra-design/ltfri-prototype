@@ -75,9 +75,9 @@ function setCenter(){
 
 
 //map colours
-const lightBlue = '219,222,255,255'
-const midBlue = '154,160,222,255'
-const darkBlue = '85,92,157,255'
+const lightBlue = '219,222,255,235'
+const midBlue = '154,160,222,235'
+const darkBlue = '85,92,157,235'
 const layerColors = [lightBlue, midBlue, darkBlue] 
 
 
