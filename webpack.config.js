@@ -6,14 +6,18 @@ const Dotenv = require('dotenv-webpack');
 module.exports = {
   
   plugins: [
-    new Dotenv()
+    new Dotenv(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        OS_API_KEY: JSON.stringify(process.env.OS_API_KEY)
+      }
+    }),
   ],
-  mode: process.env.NODE_ENV === 'dev' ? 'development' : 'production',
-  entry: { 
-    
-  main : './app/assets/javascripts/main.js', 
-  small : './app/assets/javascripts/main-small.js'  
-},
+  mode: process.env.NODE_ENV === 'development' ? 'development' : 'production',
+  entry: {
+    main : './app/assets/javascripts/main.js', 
+    small : './app/assets/javascripts/main-small.js'  
+          },
   output: {
     path: __dirname,
     filename: './app/assets/javascripts/[name].bundle.js'
