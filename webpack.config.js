@@ -20,7 +20,7 @@ module.exports = {
           },
   output: {
     path: __dirname,
-    filename: './app/assets/javascripts/[name].bundle.js'
+    filename: './app/assets/javascripts/bundles/[name].bundle.js'
   },
 };
 
