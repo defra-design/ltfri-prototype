@@ -2,7 +2,7 @@
   "scripts": {
     "dev": "npm run build && govuk-prototype-kit dev",
     "serve": "govuk-prototype-kit serve",
-    "start": "npm run build:maps && govuk-prototype-kit start",
+    "start": "govuk-prototype-kit start",
     "build": "webpack --config webpack.config.js"
   },
   "name": "cyltfr-prototype",

@@ -6,7 +6,7 @@ const Dotenv = require('dotenv-webpack');
 module.exports = {
   
   plugins: [
-    new Dotenv({ systemvars: true }),
+    new Dotenv(),
     new webpack.DefinePlugin({
       'process.env': {
         OS_API_KEY: JSON.stringify(process.env.OS_API_KEY)
@@ -20,7 +20,7 @@ module.exports = {
           },
   output: {
     path: __dirname,
-    filename: './app/assets/javascripts/bundles/[name].bundle.js'
+    filename: './app/assets/javascripts/[name].bundle.js'
   },
 };
 
