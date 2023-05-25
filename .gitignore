@@ -21,5 +21,6 @@ node_modules/
 /cypress/temp
 tmp/
 #stop API key being uploaded
-/app/assets/javascripts/main.bundle.js
-/app/assets/javascripts/small.bundle.js
+/app/assets/javascripts/bundles/main.bundle.js
+/app/assets/javascripts/bundles/small.bundle.js
+/app/assets/javascripts/bundles/mapv2.bundle.js

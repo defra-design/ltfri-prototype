@@ -15,12 +15,13 @@ module.exports = {
   ],
   mode: process.env.NODE_ENV === 'development' ? 'development' : 'production',
   entry: {
-    main : './app/assets/javascripts/main.js', 
-    small : './app/assets/javascripts/main-small.js'  
+    main : './app/assets/javascripts/map-v1.js', 
+    small : './app/assets/javascripts/map-v1-small.js',
+    mapv2 : './app/assets/javascripts/map-v2.js'    
           },
   output: {
     path: __dirname,
-    filename: './app/assets/javascripts/[name].bundle.js'
+    filename: './app/assets/javascripts/bundles/[name].bundle.js'
   },
 };
 
