@@ -1,0 +1,154 @@
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+
+    {{ govukBackLink ({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">
+      Managing flood risk
+    </h1>
+
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <p class="govuk-body">
+      Our climate is changing and one of the risks is an increase in flooding. Extreme weather events could happen more often.
+    <p>
+
+    <p class="govuk-body">
+      You can still be at risk of flooding even if your area has not flooded in the past.
+    <p>
+
+    <h2 class="govuk-heading-m" id="check">
+      Check flood warnings
+    </h2>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a href="https://check-for-flooding.service.gov.uk/" class="govuk-link">View live flood warnings</a>
+      </li>
+      <li>
+        <a href="https://www.gov.uk/sign-up-for-flood-warnings" class="govuk-link">Sign up for flood warnings</a>
+      </li>
+    </ul>
+
+    <h2 class="govuk-heading-m" id="plan">
+      Plan ahead
+    </h2>
+
+    <p class="govuk-body">
+      Plan how you’ll respond to a flood by making a:
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a href="https://www.gov.uk/government/publications/personal-flood-plan" class="govuk-link">personal flood plan </a>
+      </li>
+      <li>
+        <a href="https://www.gov.uk/government/publications/flood-plan-guidance-for-communities-and-groups" class="govuk-link">community or group flood plan</a>
+      </li>
+      <li>
+        <a href="https://www.gov.uk/government/publications/preparing-your-business-for-flooding" class="govuk-link">business flood plan</a>
+      </li>
+    </ul>
+
+    <h2 class="govuk-heading-m" id="protect">
+      Protect your property
+    </h2>
+
+    <p class="govuk-body">
+      Take action to ensure your property has the best available protection against flooding:
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a href="https://nationalfloodforum.org.uk/about-flooding/reducing-your-risk/property-protection-advisor/" class="govuk-link">Get advice from The National Flood Forum about how to protect your property</a> and how much this will cost
+      </li>
+      <li>
+        <a href="http://bluepages.org.uk/protecting-my-property/" class="govuk-link">Find flood protection products and services at [Blue Pages]</a>
+      </li>
+      <li>
+        Find out about <a href="https://www.gov.uk/government/collections/flood-risk-management-current-schemes-and-strategies" class="govuk-link">local schemes and strategies to manage flood risk in your area </a>
+      </li>
+      <li>
+        <a href="https://www.gov.uk/guidance/use-nature-based-solutions-to-reduce-flooding-in-your-area" class="govuk-link">Use nature-based solutions to reduce flooding in your area</a>
+      </li>
+    </ul>
+
+    <h2 class="govuk-heading-m" id="insure">
+      Get insurance
+    </h2>
+
+    <p class="govuk-body">
+      Make sure you have insurance that covers you for flood risk.
+    </p>
+
+    <p class="govuk-body">
+      You can:
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a href="https://nationalfloodforum.org.uk/about-flooding/insurance/household-insurance/" class="govuk-link">get insurance advice from The National Flood Forum</a>
+      </li>
+      <li>
+        <a href="https://www.floodre.co.uk/can-flood-re-help-me/" class="govuk-link">find lower-cost home insurance at Flood Re</a> if you’re in a flood-risk area
+      </li>
+      <li>
+        <a href="https://www.biba.org.uk/contact/" class="govuk-link">find a broker at The British Insurance Broker’s Association </a> that specialises in properties that are difficult to insure
+      </li>
+      <li>
+        <a href="https://www.gov.uk/request-flooding-history" class="govuk-link">request a flooding history report</a> to find out if a property is in an area which has been flooded in the past
+      </li>
+      <li>
+        <a href="https://www.gov.uk/prepare-for-flooding/get-insurance" class="govuk-link">request an insurance related report</a> for evidence of your flood risk for insurance purposes
+      </li>
+      <li>
+        <a href="https://www.gov.uk/government/publications/property-flood-protection-flood-risk-report" class="govuk-link">complete a flood risk report</a> to show how the work you have done on your property has reduced your flood risk
+      </li>
+    </ul>
+
+
+
+    <div class="govuk-!-margin-top-8">
+      <a href="where-do-you-want-to-check" role="button" class="govuk-button govuk-!-margin-right-2">
+        Check another area</a>
+    </div>
+
+  </div>
+
+</div>
+
+
+{% endblock %} {% if useAutoStoreData %} {% block footer %}
+{{
+  govukFooter({
+    meta: {
+      items: [
+        {
+          href: "https://govuk-prototype-kit.herokuapp.com/",
+          text: "GOV.UK Flooding " + releaseVersion
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+      ]
+    }
+  })
+}}
+{% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
+"includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
+<!-- GOV.UK Flooding {{releaseVersion}} -->
+{% endblock %}
