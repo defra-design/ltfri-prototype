@@ -9,9 +9,9 @@ const router = govukPrototypeKit.requests.setupRouter()
 // Add your routes here
 
 // Route index page
-router.get('/', function (req, res) {
+/* router.get('/', function (req, res) {
   res.render('./index')
-})
+}) */
 
 // Route for version 3
 router.use('/version_3', require('./views/version_3/_routes.js'))
@@ -26,10 +26,10 @@ module.exports = router
 
 
 // GET SPRINT NAME - useful for relative templates
-/* router.use('/', (req, res, next) => {
+/*  router.use('/', (req, res, next) => {
   res.locals.currentURL = req.originalUrl; //current screen
   res.locals.prevURL = req.get('Referrer'); // previous screen
 console.log('previous page is: ' + res.locals.prevURL + " and current page is " + req.url + " " + res.locals.currentURL );
   next();
-});
- */
+}); */
+ 

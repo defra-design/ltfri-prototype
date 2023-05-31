@@ -16,7 +16,8 @@ module.exports = {
   mode: process.env.NODE_ENV === 'development' ? 'development' : 'production',
   entry: {
     main : './app/assets/javascripts/main.js', 
-    small : './app/assets/javascripts/main-small.js'  
+    small : './app/assets/javascripts/main-small.js',
+    mapv2 : './app/assets/javascripts/map-v2.js'    
           },
   output: {
     path: __dirname,
