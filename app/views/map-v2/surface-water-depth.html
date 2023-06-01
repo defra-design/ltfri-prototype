@@ -35,6 +35,17 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
 <div class="defra-map-key__container">
 
   <div id="maphigh" class="map"></div>
+<!-- Search box -->
+<div class="search-container">
+  <div class="search-wrapper">
+    <input type="text" class="search-input" value="27A Market Street, Hebden Bridge, HX7 6EU" name="search" id="search" placeholder="Search for a location" autocomplete="chrome-off">
+    <button class="search-button"type="submit"><i class="fa fa-search"></i></button>
+    <div class="search-results">
+      <ul>
+      </ul>
+    </div>
+  </div>
+</div>
 
   <div class="defra-map-controls" aria-hidden="false">
     <!--exit map-->
@@ -309,11 +320,11 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
                     <img class="defra-map-key__symbol" src="/public/images/radius-icon.png">
                   <span class="symbol-text">15m radius</span>
                 </span>
-                <br>
+               <!--  <br>
                 <span class="defra-map-key__symbol-container">
                   <img class="defra-map-key__symbol" src="/public/images/address-window-icon.png">
                   <span class="symbol-text">Address window</span>
-                </span>',
+                </span> -->',
                 checked: marker
               }
             ]

@@ -353,12 +353,12 @@ function removeLayers() {
       var checkBox = document.getElementById("toggle");
       $('input[name="ros-map-toggle"]').change(function(){
         if (checkBox.checked == false){
-          map.removeLayer(markerLayer),
-          map.removeLayer(addressLayer);
+          map.removeLayer(markerLayer)/* ,
+          map.removeLayer(addressLayer); */
         } 
         else {
-          map.addLayer(markerLayer),
-          map.addLayer(addressLayer);
+          map.addLayer(markerLayer)/* ,
+          map.addLayer(addressLayer); */
         }
         });
 
@@ -373,41 +373,41 @@ function removeLayers() {
  $('input[name="map-toggle"]').change(function(){
    if (checkBox.checked == false){
      map.removeLayer(markerLayer),
-     map.removeLayer(radiusLayer),
-     map.removeLayer(addressLayer);
+     map.removeLayer(radiusLayer)/* ,
+     map.removeLayer(addressLayer) */;
    } 
    else {
      map.addLayer(radiusLayer),
-     map.addLayer(markerLayer),
-     map.addLayer(addressLayer);
+     map.addLayer(markerLayer)/* ,
+     map.addLayer(addressLayer) */;
    }
    });
 
 
 //add marker and address
 function markerAddress() {
-  map.addLayer(markerLayer),
-  map.addLayer(addressLayer);
+  map.addLayer(markerLayer)/* ,
+  map.addLayer(addressLayer) */;
 };
 
 //remove marker, address and radius
 function removemarkerAddress() {
-  map.removeLayer(markerLayer),
-  map.removeLayer(addressLayer);
+  map.removeLayer(markerLayer)/* ,
+  map.removeLayer(addressLayer) */;
 };
 
 //add marker, address and radius
 function markerAddressRadius() {
   map.addLayer(radiusLayer),
-  map.addLayer(markerLayer),
-  map.addLayer(addressLayer);
+  map.addLayer(markerLayer)/* ,
+  map.addLayer(addressLayer) */;
 };
 
 //remove marker, address and radius
 function removeMarkerAddressRadius() {
   map.removeLayer(radiusLayer),
-  map.removeLayer(markerLayer),
-  map.removeLayer(addressLayer);
+  map.removeLayer(markerLayer)/* ,
+  map.removeLayer(addressLayer) */;
 };
 
 
