@@ -75,10 +75,16 @@ function setCenter(){
 
 
 //map colours
-const lightBlue = '219,222,255,235'
-const midBlue = '154,160,222,235'
+const lightBlue = '219,222,255,255'
+const midBlue = '154,160,222,255'
 const darkBlue = '85,92,157,235'
-const layerColors = [lightBlue, midBlue, darkBlue] 
+
+// testing new colousr
+const lightestBlue = '196,225,255,255'
+/* const lightBlue = '177,180,208,235'
+const midBlue = '119,124,172,255'
+const darkBlue = '85,92,157,235' */
+const layerColors = [darkBlue, midBlue, lightBlue, lightestBlue] 
 
 
 
@@ -90,7 +96,7 @@ const apiKey = process.env.OS_API_KEY
 const base = new TileLayer({
 name: 'base',
  source: new XYZ({
-   url: `https://api.os.uk/maps/raster/v1/zxy/Road_27700/{z}/{x}/{y}.png?key=${apiKey}`,
+   url: `https://api.os.uk/maps/raster/v1/zxy/Outdoor_27700/{z}/{x}/{y}.png?key=${apiKey}`,
    projection: 'EPSG:27700',
   tileGrid: new TileGrid({
    resolutions: [ 896.0, 448.0, 224.0, 112.0, 56.0, 28.0, 14.0, 7.0, 3.5, 1.75 ],
@@ -120,7 +126,7 @@ name: 'base',
       params: {
         'TRANSPARENT': true,
         'FORMAT': 'GIF',
-        'dynamicLayers' : `[{"id":${layerIds[liklihood - 1]},"source":{"type":"mapLayer","mapLayerId":${layerIds[liklihood - 1]}},"drawingInfo":{"renderer":{"type":"simple","symbol":{"color":[${darkBlue}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}}}}]`
+        'dynamicLayers' : `[{"id":${layerIds[liklihood - 1]},"source":{"type":"mapLayer","mapLayerId":${layerIds[liklihood - 1]}},"drawingInfo":{"renderer":{"type":"simple","symbol":{"color":[${layerColors[liklihood - 1]}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}}}}]`
       }
     }),
     minZoom: 8,
@@ -172,9 +178,28 @@ function surfaceWaterSpeed (liklihood) {
   })
 }
 
+// surface water - direction
+function surfaceWaterDirection (liklihood) {
+  const bands = ['RoFSWDirection25m1in30', 'RoFSWDirection25m1in100', 'RoFSWDirection25m1in1000']
+  return new TileLayer({
+    ref: `surfaceWaterDirection${liklihood}`,
+    className: 'defra-map-raster-canvas',
+    layerCodes: `ss${liklihood}`,
+    source: new TileArcGISRest({
+      url: `https://environment.data.gov.uk/arcgis/rest/services/EA/${bands[liklihood - 1]}/MapServer`,
+      projection: 'EPSG:27700',
+      params: {
+        'TRANSPARENT': true,
+        'FORMAT': 'GIF'}}),
+  minZoom: 14,
+  zIndex: 0
+})
+}
+
+
 // reservoir
 function reservoirRiver (state) {
-  const fillColour = state === 'DryDay' ? darkBlue : lightBlue
+  const fillColour = state === 'DryDay' ? darkBlue : midBlue
   return new TileLayer({
     ref: `reservoirRiver${state}`,
     className: 'defra-map-raster-canvas',
@@ -205,7 +230,7 @@ function riverSea (liklihood) {
       params: {
         'TRANSPARENT': true,
         'FORMAT': 'GIF',
-        'dynamicLayers': `[{"id":0,"source":{"type":"mapLayer","mapLayerId":0},"drawingInfo":{"renderer":{"type":"uniqueValue","field1":"prob_4band","uniqueValueInfos":[{"value":"High","symbol":{"color":[${darkBlue}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}},{"value":"Medium","symbol":{"color":[${liklihood > 1 ? darkBlue : '0,0,0,0'}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}},{"value":"Low","symbol":{"color":[${liklihood > 2 ? darkBlue : '0,0,0,0'}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}},{"value":"Very Low","symbol":{"color":[${liklihood > 3 ? darkBlue : '0,0,0,0'}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}}]}}}]`
+        'dynamicLayers': `[{"id":0,"source":{"type":"mapLayer","mapLayerId":0},"drawingInfo":{"renderer":{"type":"uniqueValue","field1":"prob_4band","uniqueValueInfos":[{"value":"High","symbol":{"color":[${liklihood > 0 ? layerColors[liklihood - 1] : '0,0,0,0'}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}},{"value":"Medium","symbol":{"color":[${liklihood > 1 ? layerColors[liklihood - 1] : '0,0,0,0'}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}},{"value":"Low","symbol":{"color":[${liklihood > 2 ? layerColors[liklihood - 1] : '0,0,0,0'}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}},{"value":"Very Low","symbol":{"color":[${liklihood > 3 ? layerColors[liklihood - 1] : '0,0,0,0'}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}}]}}}]`
       }
     }),
     minZoom: 8,
@@ -422,6 +447,7 @@ removeLayers();
     markerAddressRadius();
   } else if (pathname == '/map-v2/surface-water-velocity'){
     map.addLayer(surfaceWaterSpeed(x)),
+    map.addLayer(surfaceWaterDirection(x)),
     markerAddressRadius();
   } else if (pathname == '/map-v2/rivers-sea'){
     map.addLayer(riverSea(x)),
@@ -490,16 +516,19 @@ else if (this.value == '11') {
 }  else   if (this.value == '13') {
   //suraface water speed high risk
   map.addLayer(surfaceWaterSpeed(1)),
+  map.addLayer(surfaceWaterDirection(1)),
   markerAddressRadius()
 }
 else if (this.value == '14') {
   //suraface water speed medium risk
   map.addLayer(surfaceWaterSpeed(2)),
+  map.addLayer(surfaceWaterDirection(2)),
   markerAddressRadius()
 
 } else if (this.value == '15') {
   //suraface water speed low risk
   map.addLayer(surfaceWaterSpeed(3)),
+  map.addLayer(surfaceWaterDirection(3)),
   markerAddressRadius()
 } 
 else if (this.value == '17') {
