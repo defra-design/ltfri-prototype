@@ -1,0 +1,82 @@
+// Day control  
+.defra-map-scenarios-v2 {
+    width:100%;
+    @media screen and (min-width: 938px) {
+      position:absolute;
+      bottom:0px;
+      left:0px;
+      max-width:800px;
+    }
+    padding-top:10px;
+    overflow-x: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    &__container {
+      width:100%;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+    }
+  }
+  .defra-map-scenario-button-v2 {
+    flex: 1 1 auto;
+    @include govuk-font($size: 14);
+    font-size: 14px;
+    border: 0px;
+    border-bottom: 7px solid transparent;
+    margin: 0px;
+    padding: 15px;
+    background-color: white;
+    color: $govuk-text-colour;
+    &::-moz-focus-inner {
+      border: 0;
+    }
+    text-align:left;
+    strong {
+      display: inline-block;
+      @include govuk-font($size: 16, $weight: bold);
+      font-size: 16px;
+      line-height: 1.31579;
+      /* text-decoration: underline; */
+      margin-bottom: 2px;
+      margin-left: 38px;
+      pointer-events: none;
+    }
+    span {
+      display: block;
+      pointer-events: none;
+      line-height: 1.42857;
+    }
+    &[aria-selected=true] {
+      background-color: white;
+      text-decoration: none;
+      strong {
+        text-decoration:none;
+      }
+    }
+    /* &:active {
+      color: $govuk-text-colour;
+    } */
+    &:focus {
+      outline:0px;
+    }
+   /*  &[aria-selected=true] {
+      border-bottom:7px solid govuk-colour('blue');
+    } */
+    /* &:focus[keyboard-focus] strong {
+      outline: 3px solid transparent;
+      color: $govuk-focus-text-colour;
+      background-color: $govuk-focus-colour;
+      -webkit-box-shadow: 0 -2px $govuk-focus-colour,0 4px $govuk-focus-text-colour;
+      box-shadow: 0 -2px $govuk-focus-colour,0 4px $govuk-focus-text-colour;
+      text-decoration: none;
+    } */
+  }
+  .defra-map--risk .defra-map-os-logo {
+    float: left;
+    position: relative;
+    bottom: -20px;
+    @media screen and (min-width: 938px) {
+      bottom: 74px;
+    }
+  }
+  

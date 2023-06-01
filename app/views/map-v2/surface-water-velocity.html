@@ -83,18 +83,25 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
 <!-- Map key -->
 
-<div id="map-scenarios" class="defra-map-scenarios-velocity" style="pointer-events: auto;">
+<div id="map-scenarios" class="defra-map-scenarios-velocity-v2" style="pointer-events: auto;">
   <div class="defra-map-scenarios__container">
-  <button class="defra-map-scenario-button-depth" data-scenario="1" aria-selected="false">
-    <span class="dot dark-blue"></span>
+  <button class="defra-map-scenario-button-depth-v2" data-scenario="1" aria-selected="false">
+    <span class="dot-v2 dark-blue-v2"></span>
       <strong>More than 0.25 m/s</strong>
-      <span class="mps">Metres per second</span>
+      <span class="mps-v2">Metres per second</span>
   </button>
   
-  <button class="defra-map-scenario-button-depth" data-scenario="3" aria-selected="false">
-    <span class="dot light-blue"></span>
-      <strong>Less than 0.25 m/s</strong>
-      <span class="mps">Metres per second</span>
+  <button class="defra-map-scenario-button-depth-v2" data-scenario="3" aria-selected="false">
+    <div class="velocity-context">
+    <span class="dot-v2 light-blue-v2"></span>
+    <strong>Less than 0.25 m/s</strong>
+  </div>
+  </button>
+  <button class="defra-map-scenario-button-depth-v2" data-scenario="3" aria-selected="false">
+    <div class="velocity-context">
+    <img class="key-icon" src="/public/images/arrow.png">
+      <strong>Direction</strong>
+    </div>
   </button>
   
 </div>

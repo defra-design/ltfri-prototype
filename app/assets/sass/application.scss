@@ -5,11 +5,19 @@
 @import "tools/mixins";
 
 // Add extra styles here
+// Map v1
 @import "map/map";
 @import "map/map-key";
-@import "summary/summary";
 @import "map/map-key-left";
 @import "map/map-key-left-depth";
+
+// Map v2
+@import "map-v2/map";
+@import "map-v2/map-key";
+@import "map-v2/map-key-left";
+@import "map-v2/map-key-left-depth";
+
+@import "summary/summary";
 @import "patterns/multiple-search";
 
 // Maps styling

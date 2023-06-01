@@ -75,15 +75,11 @@ function setCenter(){
 
 
 //map colours
-const lightBlue = '219,222,255,255'
+const lightestBlue = '219,222,255,255'
+const lightBlue = '196,225,255,255'
 const midBlue = '154,160,222,255'
 const darkBlue = '85,92,157,235'
 
-// testing new colousr
-const lightestBlue = '196,225,255,255'
-/* const lightBlue = '177,180,208,235'
-const midBlue = '119,124,172,255'
-const darkBlue = '85,92,157,235' */
 const layerColors = [darkBlue, midBlue, lightBlue, lightestBlue] 
 
 
@@ -199,7 +195,7 @@ function surfaceWaterDirection (liklihood) {
 
 // reservoir
 function reservoirRiver (state) {
-  const fillColour = state === 'DryDay' ? darkBlue : midBlue
+  const fillColour = state === 'DryDay' ? darkBlue : lightBlue
   return new TileLayer({
     ref: `reservoirRiver${state}`,
     className: 'defra-map-raster-canvas',
