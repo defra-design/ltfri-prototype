@@ -63,7 +63,7 @@ function setCenter(){
   
 
   if (center == undefined){
-    mapCenter = [ -2.0159323734242225,53.74123069144088]
+    mapCenter = [0.4040511246045124,52.24377500667143]
   } else {
     mapCenter = center.split(',');
   }
@@ -72,7 +72,8 @@ function setCenter(){
 
 };
 
-
+//52.24377500667143, 0.4040511246045124
+// 3 Rockingham Villas, Church Lane, 
 
 //map colours
 const lightestBlue = '219,222,255,255'
@@ -283,8 +284,7 @@ var wStyle = new Style({
 // Marker var
 
 var marker = new Feature({
-  geometry: new Point([-2.0159323734242225,
-    53.74123069144088]),
+  geometry: new Point([0.4040511246045124,52.24377500667143]),
   type: 'test',
   name: 'something'
 });
@@ -292,8 +292,7 @@ var marker = new Feature({
 // radius 
 
 var radius = new Feature({
-  geometry: new Point([-2.0159323734242225,
-    53.74123069144088]),
+  geometry: new Point([0.4040511246045124,52.24377500667143]),
   type: 'test',
   name: 'something'
 });

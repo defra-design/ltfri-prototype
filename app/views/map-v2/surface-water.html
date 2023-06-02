@@ -40,18 +40,21 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
 
   <div id="maphigh" class="map"></div>
  <!-- Search box -->
+ <form action="#">
  <div class="search-container">
   <div class="search-wrapper">
-    <input type="text" class="search-input" value="27A Market Street, Hebden Bridge, HX7 6EU" name="search" id="search" placeholder="Search for a location" autocomplete="chrome-off">
-    <button class="search-button"type="submit"><i class="fa fa-search"></i></button>
+    <input type="text" class="search-input" value="3 Rockingham Villas, Church Lane, Newmarket, CB8 0HL" name="search" id="search" placeholder="Search for a location" autocomplete="chrome-off">
+    <!-- <button type="reset" class="search-reset" value="x" alt="clear search box"><i class="fa fa-times reset"></i></button> -->
+    <button class="search-button" type="submit"><i class="fa fa-search"></i></button>
+  
+
     <div class="search-results">
-      
       <ul>
       </ul>
     </div>
   </div>
 </div>
-
+</form>
 
 
   <div class="defra-map-controls" aria-hidden="false">
@@ -77,7 +80,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
     <div class="defra-map-controls__bottom">
 
       <!-- reset -->
-      <a class="defra-map-reset" aria-controls="viewport" href="#" style="color:#0b0c0c;" ><svg aria-hidden="true" focusable="false" width="20"
+      <a href="/map-v2/surface-water?marker=true&scenario=17&center=0.40549395430366053,52.243703593774285" class="defra-map-reset" aria-controls="viewport" href="#" style="color:#0b0c0c;"><svg aria-hidden="true" focusable="false" width="20"
           height="20" viewBox="0 0 20 20">
           <path d="M2.054,7.871L5.25,1.407L9.25,8.335L2.054,7.871Z" style="fill:currentColor;"></path>
           <path

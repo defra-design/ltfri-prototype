@@ -47,12 +47,12 @@ input::placeholder {
   outline: #3332dd;
 }
 
-button i {
+/* button i {
   width: 100%;
   color: #ffffff;
   line-height: 50px;
   font-size: 20px;
-}
+} */
 
 .search-results {
   padding: 0px;
@@ -74,6 +74,22 @@ button i {
   color:#7c7c7c;
   pointer-events: none;
 }
+
+
+.search-reset {
+  color:#7c7c7c;
+  pointer-events: revert;
+  border: unset;
+  padding: unset;
+  pointer-events: unset;
+}
+.search-reset .reset {
+  pointer-events: auto;
+  margin-left: -55px;
+  font-size: 19px;
+  padding: 6px 18px;
+}
+
 
 .results-icon .marker-icon {
   font-size: 19px;
