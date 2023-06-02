@@ -78,7 +78,7 @@ function setCenter(){
 const lightestBlue = '219,222,255,255'
 const lightBlue = '196,225,255,255'
 const midBlue = '154,160,222,255'
-const darkBlue = '85,92,157,235'
+const darkBlue = '85,92,157,230'
 
 const layerColors = [darkBlue, midBlue, lightBlue, lightestBlue] 
 
