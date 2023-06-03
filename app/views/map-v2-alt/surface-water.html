@@ -1,4 +1,4 @@
-{% extends "layouts/map-v2.html" %}
+{% extends "layouts/map-v2-alt.html" %}
 
 {% block pageTitle %}
 Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
@@ -13,8 +13,12 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
 
 
 
-
-
+{% if data['hide'] == 1 %}
+{% set hideonsmallscreens = "hideonsmallscreens" %}
+{% extends "layouts/map-small.html" %}
+{% else %}
+{% set hideonsmallscreens = "" %}
+{% endif %}
 
 
 
@@ -35,17 +39,24 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
 <div class="defra-map-key__container">
 
   <div id="maphigh" class="map"></div>
-  <!-- Search box -->
-  <div class="search-container">
-    <div class="search-wrapper">
-      <input type="text" class="search-input" value="3 Rockingham Villas, Church Lane, Newmarket, CB8 0HL" name="search" id="search" placeholder="Search for a location" autocomplete="chrome-off">
-      <button class="search-button"type="submit"><i class="fa fa-search"></i></button>
-      <div class="search-results">
-        <ul>
-        </ul>
-      </div>
+ <!-- Search box -->
+ <form action="#">
+ <div class="search-container">
+  <div class="search-wrapper">
+    <input type="text" class="search-input" value="64, West Park, Selby, YO8 4JN" name="search" id="search" placeholder="Search for a location" autocomplete="chrome-off">
+    <!-- <button type="reset" class="search-reset" value="x" alt="clear search box"><i class="fa fa-times reset"></i></button> -->
+    <button class="search-button" type="submit"><i class="fa fa-search"></i></button>
+  
+
+    <div class="search-results">
+      <ul>
+      </ul>
     </div>
   </div>
+</div>
+</form>
+
+
   <div class="defra-map-controls" aria-hidden="false">
     <!--exit map-->
     <a class="defra-map__exit" href="results-hx7.html" style="color:	#0b0c0c;"><svg aria-hidden="true" focusable="false" width="20" height="20"
@@ -69,7 +80,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
     <div class="defra-map-controls__bottom">
 
       <!-- reset -->
-      <a href="/map-v2/surface-water?marker=true&scenario=17&center=0.40549395430366053,52.243703593774285" class="defra-map-reset" aria-controls="viewport" href="#" style="color:#0b0c0c;" ><svg aria-hidden="true" focusable="false" width="20"
+      <a href="/map-v2-alt/surface-water?marker=true&scenario=5" class="defra-map-reset" aria-controls="viewport" href="#" style="color:#0b0c0c;"><svg aria-hidden="true" focusable="false" width="20"
           height="20" viewBox="0 0 20 20">
           <path d="M2.054,7.871L5.25,1.407L9.25,8.335L2.054,7.871Z" style="fill:currentColor;"></path>
           <path
@@ -91,9 +102,10 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
             <rect x="3" y="9" width="14" height="2"></rect>
           </svg><span class="govuk-visually-hidden">Zoom out</span></button>
       </div>
+     
 
-      <!-- Map key-->
-      <div id="map-scenarios" class="defra-map-scenarios-v2" style="pointer-events: auto;">
+      <!-- Key -->
+      <div id="map-scenarios " class="defra-map-scenarios-v2" style="pointer-events: auto;">
         <div class="defra-map-scenarios__container">
         <button class="defra-map-scenario-button-v2" data-scenario="1" aria-selected="false">
           <span class="dot-v2 dark-blue-v2"></span>
@@ -111,13 +123,13 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
             <span class="mps-v2">Between 0.1% and 1% chance</span>
         </button>
         <button class="defra-map-scenario-button-v2" data-scenario="4" aria-selected="false">
-          <span class="dot-v2 ros-very-low-v2"></span>
-          <span class="ros-dot-v2 sw-very-low-v2"></span>
+          <span class="dot-v2 sw-very-low-v2"></span>
             <strong>Very low risk</strong>
             <span class="mps-v2">Less than 0.1% chance</span>
         </button>
     </div>
     </div>
+
       <!-- map info-->
       <button class="defra-map-attribution" aria-controls="viewport"><svg aria-hidden="true" focusable="false"
           width="20" height="20" viewBox="0 0 20 20" onclick="toggle()">
@@ -125,7 +137,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
             d="M10,2.5C11.286,2.5 12.52,2.823 13.701,3.469C14.883,4.116 15.811,5.038 16.487,6.235C17.162,7.433 17.5,8.688 17.5,10C17.5,11.305 17.169,12.551 16.506,13.735C15.844,14.92 14.92,15.844 13.735,16.506C12.551,17.169 11.305,17.5 10,17.5C8.695,17.5 7.449,17.169 6.265,16.506C5.08,15.844 4.156,14.92 3.494,13.735C2.831,12.551 2.5,11.305 2.5,10C2.5,8.688 2.838,7.433 3.513,6.235C4.189,5.038 5.117,4.116 6.299,3.469C7.48,2.823 8.714,2.5 10,2.5ZM10,3.978C8.969,3.978 7.978,4.236 7.028,4.752C6.079,5.268 5.333,6.007 4.791,6.97C4.249,7.932 3.978,8.943 3.978,10C3.978,11.044 4.244,12.043 4.776,12.996C5.308,13.949 6.051,14.692 7.004,15.224C7.957,15.756 8.956,16.022 10,16.022C11.044,16.022 12.043,15.756 12.996,15.224C13.949,14.692 14.692,13.949 15.224,12.996C15.756,12.043 16.022,11.044 16.022,10C16.022,8.949 15.751,7.941 15.209,6.975C14.667,6.008 13.921,5.268 12.972,4.752C12.022,4.236 11.031,3.978 10,3.978ZM11.821,11.116L13.398,11.645C13.149,12.467 12.738,13.097 12.164,13.535C11.589,13.972 10.904,14.191 10.108,14.191C8.992,14.191 8.081,13.825 7.376,13.094C6.671,12.363 6.319,11.354 6.319,10.069C6.319,9.227 6.475,8.476 6.789,7.817C7.102,7.157 7.554,6.664 8.145,6.338C8.735,6.012 9.396,5.849 10.127,5.849C10.93,5.849 11.601,6.039 12.139,6.421C12.678,6.803 13.097,7.405 13.398,8.228L11.811,8.6C11.629,8.123 11.392,7.777 11.102,7.562C10.811,7.347 10.467,7.239 10.069,7.239C9.475,7.239 8.988,7.462 8.61,7.91C8.231,8.357 8.042,9.057 8.042,10.01C8.042,10.963 8.228,11.664 8.6,12.115C8.972,12.565 9.419,12.79 9.941,12.79C10.379,12.79 10.757,12.662 11.077,12.404C11.397,12.146 11.645,11.717 11.821,11.116Z"
             style="fill:currentColor;"></path>
         </svg><span class="govuk-visually-hidden">Copyright information</span></button>
-      <!-- <img class="defra-map-os-logo" alt="Ordnance Survey logo" src="/public/images/map-os-logo.png" width="90"
+     <!--  <img class="defra-map-os-logo" alt="Ordnance Survey logo" src="/public/images/map-os-logo.png" width="90"
         height="24" style="pointer-events: auto; display: block;"> -->
       <div id="map-scenarios" class="defra-map-scenarios" style="pointer-events: auto;">
 
@@ -134,7 +146,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
     </div>
   </div>
-  
+
 
 
   <div class="defra-map-key" id="key" aria-labelledby="mapKeyLabel" tabindex="-1" role="region" aria-hidden="false"
@@ -151,7 +163,6 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
           {{ govukRadios({
             name: "risk-type",
             classes: "govuk-radios--small",
-            
             fieldset: {
             legend: {
             html: '<h3 class="defra-map-key__section-title">Flood risk type</h3>',
@@ -172,9 +183,8 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
             classes: "visible",
             value: "2",
           html: '
-            Rivers and the sea
-          ',
-          checked: true
+           Rivers and the sea
+          '
           },
           {
             id: "reservoir",
@@ -187,33 +197,36 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
           ]
           }) }}
 
+
           {# Scenario switch#}
           {% switch data.scenario %}
-          {% case '4' %}
-              {% set swHigh = true %}
           {% case '10' %}
               {% set swHigh = true %}
           {% case '13' %}
               {% set swHigh = true %}
-          {% case '5' %}
-              {% set swMed = true %}
+              {% case '17' %}
+              {% set swHigh = true %}
           {% case '11' %}
               {% set swMed = true %}
           {% case '14' %}
               {% set swMed = true %}
-          {% case '6' %}
-              {% set swLow = true %}
+              {% case '18' %}
+              {% set swMed = true %}
           {% case '12' %}
               {% set swLow = true %}
           {% case '15' %}
+              {% set swLow = true %}
+              {% case '19' %}
+              {% set swLow = true %}
+          {% case '20' %}
               {% set swLow = true %}
               {% default %}
                   {% set swMed = true %}
       {% endswitch %}
 
-
           {{ govukRadios({
             name: "scenarios",
+            id: "scenarios",
             classes: "govuk-radios--small",
             fieldset: {
             legend: {
@@ -224,45 +237,43 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
           },
           items: [
           {
-            id: "ros-high",
+            id: "sw-high",
             classes: "visible",
-          value: "17",
+          value: "4",
           html: '
             High risk
           ',
+        
           checked: swHigh
         },
           {
-            id: "ros-med",
+            id: "sw-med",
             classes: "visible",
-            value: "18",
+            value: "5",
           html: '
             Medium risk
           ',
           checked: swMed
           },
           {
-            id: "ros-low",
+            id: "sw-low",
             classes: "visible",
-            value: "19",
+            value: "6",
           html: '
             Low risk
           ',
           checked: swLow
-          },
-          {
-            id: "ros-very-low",
-            classes: "visible",
-            value: "20",
-          html: '
-            Very low risk
-          '
           }
           ]
           }) }}
 
+
+    
+        
+
+          
           {{ govukRadios({
-            name: "ros-measurements",
+            name: "measurements",
             classes: "govuk-radios--small",
             fieldset: {
             legend: {
@@ -273,21 +284,37 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
           },
           items: [
           {
-            id: "ros-extent",
+            id: "sw-extent",
             classes: "visible",
-          value: "21",
+          value: "7",
           html: '
             Extent
           ',
         
           checked: true
-        }
+        },
+          {
+            id: "sw-depth",
+            classes: "visible",
+            value: "8",
+          html: '
+            Depth
+          '
+          },
+          {
+            id: "sw-velocity",
+            classes: "visible",
+            value: "9",
+          html: '
+            Velocity
+          '
+          }
           ]
           }) }}
 
 
           <!-- CHECKBOX TOGGLE-->
-          
+     
           {% if data.marker == "true"%}
           {% set marker = true %}
           {% else %}
@@ -295,7 +322,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
           {% endif %}
 
           {{ govukCheckboxes({
-            name: "ros-map-toggle",
+            name: "map-toggle",
             classes: "govuk-checkboxes--small",
             fieldset: {
               legend: {
@@ -312,6 +339,11 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
                   <img class="defra-map-key__symbol" src="/public/images/marker-icon.png">
                   <span class="symbol-text">Marker</span>
                 </span>
+                <br>
+                <span class="defra-map-key__symbol-container">
+                    <img class="defra-map-key__symbol " src="/public/images/radius-icon.png">
+                  <span class="symbol-text">15m radius</span>
+                </span>
                 <!-- <br>
                 <span class="defra-map-key__symbol-container">
                   <img class="defra-map-key__symbol" src="/public/images/address-window-icon.png">
@@ -321,14 +353,18 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
               }
             ]
           }) }}
+           
+
+          
 
         </div>
       </div>
     </div>
   </div>
 
+  
 
-  <div class="defra-map-info" id="info" role="dialog" style="display:none;" aria-modal="true" aria-labelledby="infoLabel"
+  <!-- <div class="defra-map-info" id="info" role="dialog" style="display:none;" aria-modal="true" aria-labelledby="infoLabel"
     aria-describedby="infoDescription" tabindex="-1">
     <h2 id="infoLabel" class="govuk-visually-hidden">Attributions</h2>
     <div class="defra-map-info__container">
@@ -346,7 +382,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
             style="fill:currentColor;stroke:currentColor;stroke-width:0.1px;"></path>
         </svg><span class="govuk-visually-hidden">Close</span></button>
     </div>
-  </div>
+  </div> -->
 
 
 

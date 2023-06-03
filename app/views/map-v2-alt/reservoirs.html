@@ -1,4 +1,4 @@
-{% extends "layouts/map-v2.html" %}
+{% extends "layouts/map-v2-alt.html" %}
 
 {% block pageTitle %}
 Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
@@ -35,10 +35,11 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
 <div class="defra-map-key__container">
 
   <div id="maphigh" class="map"></div>
+
   <!-- Search box -->
   <div class="search-container">
     <div class="search-wrapper">
-      <input type="text" class="search-input" value="3 Rockingham Villas, Church Lane, Newmarket, CB8 0HL" name="search" id="search" placeholder="Search for a location" autocomplete="chrome-off">
+      <input type="text" class="search-input" value="64, West Park, Selby, YO8 4JN" name="search" id="search" placeholder="Search for a location" autocomplete="chrome-off">
       <button class="search-button"type="submit"><i class="fa fa-search"></i></button>
       <div class="search-results">
         <ul>
@@ -46,6 +47,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
     </div>
   </div>
+
   <div class="defra-map-controls" aria-hidden="false">
     <!--exit map-->
     <a class="defra-map__exit" href="results-hx7.html" style="color:	#0b0c0c;"><svg aria-hidden="true" focusable="false" width="20" height="20"
@@ -69,7 +71,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
     <div class="defra-map-controls__bottom">
 
       <!-- reset -->
-      <a href="/map-v2/surface-water?marker=true&scenario=17&center=0.40549395430366053,52.243703593774285" class="defra-map-reset" aria-controls="viewport" href="#" style="color:#0b0c0c;" ><svg aria-hidden="true" focusable="false" width="20"
+      <a href="/map-v2-alt/reservoirs?marker=true" class="defra-map-reset" aria-controls="viewport" href="#" style="color:#0b0c0c;" ><svg aria-hidden="true" focusable="false" width="20"
           height="20" viewBox="0 0 20 20">
           <path d="M2.054,7.871L5.25,1.407L9.25,8.335L2.054,7.871Z" style="fill:currentColor;"></path>
           <path
@@ -92,32 +94,23 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
           </svg><span class="govuk-visually-hidden">Zoom out</span></button>
       </div>
 
-      <!-- Map key-->
-      <div id="map-scenarios" class="defra-map-scenarios-v2" style="pointer-events: auto;">
+      <!-- Map key -->
+
+      <div id="map-scenarios" class="defra-map-scenarios-res-v2" style="pointer-events: auto;">
         <div class="defra-map-scenarios__container">
-        <button class="defra-map-scenario-button-v2" data-scenario="1" aria-selected="false">
+        <button class="defra-map-scenario-button-depth-v2" data-scenario="1" aria-selected="false">
           <span class="dot-v2 dark-blue-v2"></span>
-            <strong>High risk</strong>
-            <span class="mps-v2">More than 3.3% chance</span>
+            <strong>When river levels are normal</strong>
+            
         </button>
-        <button class="defra-map-scenario-button-v2" data-scenario="2" aria-selected="false">
-          <span class="dot-v2 med-blue-v2"></span>
-            <strong>Medium risk</strong>
-            <span class="mps-v2">Between 1% and 3.3% chance</span>
-        </button>
-        <button class="defra-map-scenario-button-v2" data-scenario="3" aria-selected="false">
+        
+        <button class="defra-map-scenario-button-depth-v2" data-scenario="3" aria-selected="false">
           <span class="dot-v2 light-blue-v2"></span>
-            <strong>Low risk</strong>
-            <span class="mps-v2">Between 0.1% and 1% chance</span>
+            <strong>When there is also flooding from rivers</strong>
         </button>
-        <button class="defra-map-scenario-button-v2" data-scenario="4" aria-selected="false">
-          <span class="dot-v2 ros-very-low-v2"></span>
-          <span class="ros-dot-v2 sw-very-low-v2"></span>
-            <strong>Very low risk</strong>
-            <span class="mps-v2">Less than 0.1% chance</span>
-        </button>
-    </div>
-    </div>
+        
+      </div>
+      </div>
       <!-- map info-->
       <button class="defra-map-attribution" aria-controls="viewport"><svg aria-hidden="true" focusable="false"
           width="20" height="20" viewBox="0 0 20 20" onclick="toggle()">
@@ -134,7 +127,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
     </div>
   </div>
-  
+
 
 
   <div class="defra-map-key" id="key" aria-labelledby="mapKeyLabel" tabindex="-1" role="region" aria-hidden="false"
@@ -164,8 +157,8 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
             id: "sw",
             classes: "visible",
           value: "1",
-          html: 'Surface water',
-          checked: true
+          html: 'Surface water'
+          
         },
           {
             id: "ros",
@@ -173,8 +166,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
             value: "2",
           html: '
             Rivers and the sea
-          ',
-          checked: true
+          '
           },
           {
             id: "reservoir",
@@ -182,87 +174,16 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
             value: "3",
           html: '
             Reservoir failure
-          '
+          ',
+          checked: true
           }
           ]
           }) }}
 
-          {# Scenario switch#}
-          {% switch data.scenario %}
-          {% case '4' %}
-              {% set swHigh = true %}
-          {% case '10' %}
-              {% set swHigh = true %}
-          {% case '13' %}
-              {% set swHigh = true %}
-          {% case '5' %}
-              {% set swMed = true %}
-          {% case '11' %}
-              {% set swMed = true %}
-          {% case '14' %}
-              {% set swMed = true %}
-          {% case '6' %}
-              {% set swLow = true %}
-          {% case '12' %}
-              {% set swLow = true %}
-          {% case '15' %}
-              {% set swLow = true %}
-              {% default %}
-                  {% set swMed = true %}
-      {% endswitch %}
-
+         
 
           {{ govukRadios({
-            name: "scenarios",
-            classes: "govuk-radios--small",
-            fieldset: {
-            legend: {
-            html: '<h3 class="defra-map-key__section-title">Risk levels</h3>',
-            isPageHeading: false,
-            classes: "govuk-fieldset__legend--s"
-            }
-          },
-          items: [
-          {
-            id: "ros-high",
-            classes: "visible",
-          value: "17",
-          html: '
-            High risk
-          ',
-          checked: swHigh
-        },
-          {
-            id: "ros-med",
-            classes: "visible",
-            value: "18",
-          html: '
-            Medium risk
-          ',
-          checked: swMed
-          },
-          {
-            id: "ros-low",
-            classes: "visible",
-            value: "19",
-          html: '
-            Low risk
-          ',
-          checked: swLow
-          },
-          {
-            id: "ros-very-low",
-            classes: "visible",
-            value: "20",
-          html: '
-            Very low risk
-          '
-          }
-          ]
-          }) }}
-
-          {{ govukRadios({
-            name: "ros-measurements",
+            name: "res-measurements",
             classes: "govuk-radios--small",
             fieldset: {
             legend: {
@@ -273,14 +194,15 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
           },
           items: [
           {
-            id: "ros-extent",
+            id: "res-extent",
             classes: "visible",
-          value: "21",
+          value: "16",
+          checked: true,
           html: '
             Extent
-          ',
+          '
         
-          checked: true
+          
         }
           ]
           }) }}
