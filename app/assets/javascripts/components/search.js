@@ -1,8 +1,8 @@
 let searchable = [
     "<span class='results-icon'><i class='fa fa-map-marker marker-icon' aria-hidden='true'></i></span><a href='results-hx7.html'>Specific address</a>",
-    "<span class='results-icon'><i class='fa fa-map map-icon' aria-hidden='true'></i></span><a href='/map-v2/rivers-sea?center=-1.9974573597216632,53.7340615444713#'>Hebden Bridge</a>",
-    "<span class='results-icon'><i class='fa fa-map map-icon' aria-hidden='true'></i></span><a href='results-hx7.html'>HX7</a>",
-    "<span class='results-icon'><i class='fa fa-map map-icon' aria-hidden='true'></i></span><a href='results-hx7.html'>HX7 6EU</a>",
+    "<span class='results-icon'><i class='fa-solid fa-map-location-dot map-icon' aria-hidden='true'></i></span><a href='/map-v2/rivers-sea?center=-1.9974573597216632,53.7340615444713#'>Hebden Bridge</a>",
+    "<span class='results-icon'><i class='fa-solid fa-map-location-dot map-icon' aria-hidden='true'></i></span><a href='results-hx7.html'>HX7</a>",
+    "<span class='results-icon'><i class='fa-solid fa-map-location-dot map-icon' aria-hidden='true'></i></span><a href='results-hx7.html'>HX7 6EU</a>",
   ];
   
   const searchInput = document.getElementById('search');
