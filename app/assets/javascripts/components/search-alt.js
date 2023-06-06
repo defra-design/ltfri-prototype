@@ -1,9 +1,11 @@
 let searchable = [
     "<span class='results-icon'><i class='fa fa-map-marker marker-icon' aria-hidden='true'></i></span><a href='#'>64, West Park, Selby, YO8 4JN</a>",
-    "<span class='results-icon'><i class='fa-solid fa-map-location-dot map-icon' aria-hidden='true'></i></span><a href='/map-v2-alt/surface-water?marker=true&scenario=17&center=-2.0123351616190766,53.74081703837396'>Hebden Bridge</a>",
+    "<span class='results-icon'><i class='fa-solid fa-map-location-dot map-icon' aria-hidden='true'></i></span><a href='/map-v2-alt/surface-water?marker=true&scenario=undefined&center=-1.0657164902394267,53.78279878339853'>Selby</a>",
     "<span class='results-icon'><i class='fa-solid fa-map-location-dot map-icon' aria-hidden='true'></i></span><a href='/map-v2-alt/surface-water?marker=true&scenario=undefined&center=-1.0903145024537895,53.77866456981306'>YO8 4JN</a>",
     "<span class='results-icon'><i class='fa fa-map-marker marker-icon' aria-hidden='true'></i></span><a href='/map-v2/surface-water?marker=true&scenario=4'>3 Rockingham Villas, Church Lane, Newmarket, CB8 0HL</a>",
-    "<span class='results-icon'><i class='fa-solid fa-map-location-dot marker-icon' aria-hidden='true'></i></span><a href='/map-v2-alt/surface-water?marker=true&scenario=undefined&center=0.40479826911781025,52.24382656827248'>CB8 0HL</a>",
+    "<span class='results-icon'><i class='fa-solid fa-map-location-dot map-icon' aria-hidden='true'></i></span><a href='/map-v2-alt/surface-water?marker=true&scenario=undefined&center=0.40479826911781025,52.24382656827248'>CB8 0HL</a>",
+    "<span class='results-icon'><i class='fa fa-map-location-dot map-icon' aria-hidden='true'></i></span><a href='/map-v2-alt/surface-water?marker=true&scenario=undefined&center=0.40918842995999904,52.24232698675024'>Newmarket</a>",
+    "<span class='results-icon'><i class='fa-solid fa-map-location-dot map-icon' aria-hidden='true'></i></span><a href='/map-v2-alt/surface-water?marker=true&scenario=17&center=-2.0123351616190766,53.74081703837396'>Hebden Bridge</a>",
   ];
   
   const searchInput = document.getElementById('search');
