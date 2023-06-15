@@ -1,0 +1,154 @@
+.defra-map-scenarios-v3 {
+  width:100%;
+  @media screen and (min-width: 938px) {
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    max-width:720px;
+  }
+  padding-top:10px;
+  overflow-x: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  &__container {
+    width:100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+ 
+  .govuk-radios  {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    background-color: white;
+    padding: 5px 0px 0px 0px;
+  }
+  
+  .govuk-radios__item{
+    flex: 1 1 auto;
+    @include govuk-font($size: 14);
+    font-size: 14px;
+    padding-bottom: 10px;
+    padding-left: 54px;
+    border-bottom: 7px solid transparent;  
+  }
+  
+  .govuk-radios--small .govuk-radios__label{
+  &:before{
+    margin-left: 15px;
+    margin-top: 8px;
+    height: 28px;
+    width: 28px;
+  }
+  &:after{
+    margin-left: 15px;
+    margin-top: 8px;
+    border-width: 7px;
+  }
+}
+  
+  .govuk-radios__item input[type="radio"]:checked + label strong{
+    text-decoration: none;
+  }  
+
+  .govuk-radios--small{
+    strong {
+      display: inline-block;
+      @include govuk-font($size: 16, $weight: bold);
+      font-size: 16px;
+      line-height: 1.31579;
+      margin-bottom: 2px;
+      pointer-events: none;
+      text-decoration: underline;
+    }
+  }
+  .risk-context-v3 {
+    display: block;
+    font-size: 14px;
+    padding-top: 2px;
+    padding-bottom: 0;
+  }
+  
+}
+
+.defra-map-scenarios-v3-res {
+  width:100%;
+  @media screen and (min-width: 938px) {
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    max-width:420px;
+  }
+  padding-top:10px;
+  overflow-x: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  &__container {
+    width:100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+ 
+  .govuk-radios  {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    background-color: white;
+    padding: 5px 0px 0px 0px;
+  }
+  
+  .govuk-radios__item{
+    flex: 1 1 auto;
+    @include govuk-font($size: 14);
+    font-size: 14px;
+    padding-bottom: 10px;
+    padding-left: 54px;
+    border-bottom: 7px solid transparent;  
+  }
+  
+  .govuk-radios--small .govuk-radios__label{
+  &:before{
+    margin-left: 15px;
+    margin-top: 8px;
+    height: 28px;
+    width: 28px;
+  }
+  &:after{
+    margin-left: 15px;
+    margin-top: 8px;
+    border-width: 7px;
+  }
+}
+
+  .govuk-radios__item input[type="radio"]:checked + label strong{
+    text-decoration: none;
+  }  
+
+  .govuk-radios--small{
+    strong {
+      display: inline-block;
+      @include govuk-font($size: 16, $weight: bold);
+      font-size: 16px;
+      line-height: 1.31579;
+      margin-bottom: 2px;
+      pointer-events: none;
+      text-decoration: underline;
+    }
+  }
+  .risk-context-v3 {
+    display: block;
+    font-size: 14px;
+    padding-top: 2px;
+    padding-bottom: 0;
+  }
+  
+}
+
+.defra-map--risk .defra-map-os-logo {
+  float: left;
+  position: relative;
+  bottom: -20px;
+  @media screen and (min-width: 938px) {
+    bottom: 74px;
+  }
+}

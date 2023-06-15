@@ -25,3 +25,4 @@ tmp/
 /app/assets/javascripts/bundles/small.bundle.js
 /app/assets/javascripts/bundles/mapv2.bundle.js
 /app/assets/javascripts/bundles/mapv2alt.bundle.js
+/app/assets/javascripts/bundles/mapv3.bundle.js

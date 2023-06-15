@@ -18,7 +18,8 @@ module.exports = {
     main : './app/assets/javascripts/main.js', 
     small : './app/assets/javascripts/main-small.js',
     mapv2 : './app/assets/javascripts/map-v2.js',
-    mapv2alt : './app/assets/javascripts/map-v2-alt.js'     
+    mapv2alt : './app/assets/javascripts/map-v2-alt.js',
+    mapv3 : './app/assets/javascripts/map-v3.js'       
           },
   output: {
     path: __dirname,

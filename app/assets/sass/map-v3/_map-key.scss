@@ -1,0 +1,171 @@
+// Key
+.defra-map-key__section {
+  display: block;
+  border:0px;
+  margin:0px;
+  padding: 0 0 0 0;
+}
+.defra-map-key__section-title {
+  position:relative;
+  @include govuk-font($size: 16, $weight: bold);
+  display: block;
+  margin:0;
+  padding: 10px 15px 0px;
+  box-sizing: border-box;
+  width: 260px;
+  &:before {
+    position:absolute;
+    content:'';
+    height:1px;
+    top:0px;
+    left:15px;
+    right:0px;
+    border-top:1px solid $govuk-border-colour;
+  }
+}
+// for toggle
+.defra-map-key__section-title-toggle {
+  position:absolute;
+  @include govuk-font($size: 16, $weight: bold);
+  display: block;
+  margin: 0;
+  padding: 15px 15px 0px;
+  box-sizing: border-box;
+  width: 260px;
+  &:before {
+    position:absolute;
+    content:'';
+    height:1px;
+    top:0px;
+    left:15px;
+    right:0px;
+    border-top:1px solid $govuk-border-colour;
+  }
+}
+.defra-map-key ul {
+  margin:0;
+  padding:0;
+}
+
+.govuk-radios--small{
+  padding:0 0 0 15px;
+}
+
+.govuk-checkboxes--small{
+  padding:0 0 0 15px;
+}
+.defra-map-key__item {
+  display:block;
+  margin:0 5px;
+  padding:0 0px;
+  @include govuk-font($size: 16);
+  &-container {
+    margin-top: -2px;
+    padding: 11px 15px 10px 1px;
+  }
+}
+.defra-map-key label {
+  @include govuk-font($size: 16);
+}
+.defra-map-key__item:first-of-type {
+  padding-top:0px;
+  
+}
+.defra-map-key__item:last-child {
+  padding-bottom:10px;
+  
+}
+.defra-map-key__item:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+// Symbols
+.defra-map-key__symbol-container-v3 {
+  position:relative;
+  display:block;
+  // With the symbols indented below each flood risk
+  /* margin-left:34px; */
+  margin-left:0px;
+  &--multi {
+    margin-top:24px;
+    @include mq ($from: tablet) {
+      margin-top:19px;
+    }
+  }
+}
+.symbol-text {
+  padding-left: 5px;
+}
+.defra-map-key__symbol {
+  position:absolute;
+  top:0;
+  left:0;
+  width:28px;
+  height:28px;
+  margin-left:-35px;
+  text-indent:-5000px;
+  @include mq ($from: tablet) {
+    margin-top:-6px;
+  }
+  background-size: 25px;
+  background-repeat: no-repeat;
+  border:0;
+  color: govuk-color('black');
+  svg {
+    display: block;
+  }
+  &[data-display="toggle-image"] svg {
+    display: none;
+  }
+  &--big svg:first-child {
+    display: none;
+  }
+  &--big svg:last-child {
+    display: block;
+  }
+  &--small svg:first-child {
+    display: block;
+  }
+  &--small svg:last-child {
+    display: none;
+  }
+}
+
+// Overides
+.defra-map-key {
+  .govuk-checkboxes__label:before,
+  .govuk-radios__label:before {
+    top:7px;
+  }
+  .govuk-checkboxes__label:after,
+  .govuk-radios__label:after {
+    top:14px;
+  }
+}
+
+.defra-map-key__title {
+  padding-left: 20px;
+  padding-top: px;
+  font-size: 19px;
+  margin-bottom: -10px;
+}
+
+.govuk-form-group {
+  margin: 15px 0 0 0;
+}
+
+.risk-context-v3 {
+  display: block;
+  font-size: 14px;
+  padding-top: 8px;
+  padding-bottom: 0;
+}
+
+.arrow-symbol {
+  padding-top: 5px;
+  padding-left: 6px;
+  height: 18px;
+  width: 18px;
+}
