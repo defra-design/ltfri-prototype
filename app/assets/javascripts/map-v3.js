@@ -76,7 +76,7 @@ function setCenter(){
 // 3 Rockingham Villas, Church Lane, 
 
 //map colours
-const lightestBlue = '0,222,255,255'
+const lightestBlue = '219,222,255,255'
 const lightBlue = '196,225,255,255'
 const midBlue = '154,160,222,255'
 const darkBlue = '85,92,157,230'
@@ -430,7 +430,7 @@ removeLayers();
   let x = 3
   if (scenario == '4' || scenario == '10' || scenario == '13' || scenario == '17' ) {
   x=1 } 
-  else if (scenario == '5' || scenario == '11' || scenario == '14' || scenario == '18' ) {
+  else if (scenario == '5' || scenario == '11' || scenario == '14' || scenario == '18') {
    x=2 
   }
 
@@ -446,6 +446,7 @@ removeLayers();
     markerAddressRadius();
   } else if (pathname == '/version_5/map-v3/rivers-sea'){
     map.addLayer(riverSea(x)),
+    map.addLayer(riverSea(4)),
     markerAddress();
   } else if (pathname == '/version_5/map-v3/reservoirs'){
     map.addLayer(reservoirRiver('DryDay')),
@@ -635,9 +636,7 @@ $('#zoomOut').on('click', function() {
   });
 });
 
-// Add styling to scenario when radio checked
-
-/// new
+// Add blue bottom border to scenario when radio checked
 
 function handleRadioSelection() {
   // Get all the radio buttons within the scenarios ID
@@ -690,3 +689,113 @@ function handleRadioSelection() {
 // Call the function to enable radio button selection handling
 handleRadioSelection();
 
+
+// hide risk in key based on scenario selected
+$(document).ready(function(){
+
+// Surface water
+  // Check if radio is already checked
+
+  if ($('input[name="scenarios"]:checked').val() === "4") {
+      $('#high-risk-sw').show(); 
+      $('#med-risk-sw').hide(); 
+      $('#low-risk-sw').hide(); 
+      $('#vlow-risk-sw').hide(); 
+      }
+      else if ($('input[name="scenarios"]:checked').val() === "5") {
+        $('#med-risk-sw').show(); 
+        $('#high-risk-sw').hide(); 
+        $('#low-risk-sw').hide(); 
+        $('#vlow-risk-sw').hide(); 
+      }
+        else if ($('input[name="scenarios"]:checked').val() === "6") {
+        $('#low-risk-sw').show(); 
+        $('#high-risk-sw').hide(); 
+        $('#med-risk-sw').hide(); 
+        $('#vlow-risk-sw').hide(); 
+      }
+
+// rivers and the sea if radio already selected on page load
+
+    else if ($('input[name="scenarios"]:checked').val() === "17") {
+      $('#high-risk-rs').show(); 
+      $('#med-risk-rs').hide(); 
+      $('#low-risk-rs').hide(); 
+      $('#vlow-risk-rs').hide();
+      $('#v-vlow-risk-rs').hide();  
+    }
+    else if ($('input[name="scenarios"]:checked').val() === "18") {
+    $('#med-risk-rs').show(); 
+    $('#high-risk-rs').hide(); 
+    $('#low-risk-rs').hide(); 
+    $('#vlow-risk-rs').hide();
+    $('#v-vlow-risk-rs').hide();   
+    }
+    else if ($('input[name="scenarios"]:checked').val() === "19") {
+      // Show low and low with defences
+    $('#low-risk-rs').show(); 
+    $('#vlow-risk-rs').show(); 
+    $('#high-risk-rs').hide(); 
+    $('#med-risk-rs').hide(); 
+    $('#v-vlow-risk-rs').hide();  
+    }
+
+  // surface water hide if new radio selected
+    $('input[name="scenarios"]').change(function() {
+      if ($(this).val() === "4") { 
+        $('#high-risk-sw').show(); 
+        $('#med-risk-sw').hide(); 
+        $('#low-risk-sw').hide(); 
+        $('#vlow-risk-sw').hide(); 
+      }
+      else if ($(this).val() === "5"){
+        $('#med-risk-sw').show(); 
+        $('#high-risk-sw').hide(); 
+        $('#low-risk-sw').hide(); 
+        $('#vlow-risk-sw').hide(); 
+      }
+      else if ($(this).val() === "6"){
+        $('#low-risk-sw').show(); 
+        $('#high-risk-sw').hide(); 
+        $('#med-risk-sw').hide(); 
+        $('#vlow-risk-sw').hide(); 
+      }
+      else if ($(this).val() === "20"){
+        $('#low-risk-sw').show(); 
+        $('#high-risk-sw').show(); 
+        $('#med-risk-sw').show(); 
+        $('#vlow-risk-sw').hide(); 
+      }
+
+          // Rivers and the sea hide if new radio selected
+          else if ($(this).val() === "17") { 
+            $('#high-risk-rs').show(); 
+            $('#med-risk-rs').hide(); 
+            $('#low-risk-rs').hide(); 
+            $('#vlow-risk-rs').hide(); 
+            $('#v-vlow-risk-rs').hide();  
+          }  
+          else if ($(this).val() === "18"){
+            $('#med-risk-rs').show(); 
+            $('#high-risk-rs').hide(); 
+            $('#low-risk-rs').hide(); 
+            $('#vlow-risk-rs').hide();
+            $('#v-vlow-risk-rs').hide();   
+          }  
+          else if ($(this).val() === "19"){
+            // Show low risk and low risk defended
+            $('#low-risk-rs').show(); 
+            $('#vlow-risk-rs').show();
+            $('#high-risk-rs').hide(); 
+            $('#med-risk-rs').hide(); 
+            $('#v-vlow-risk-rs').hide();  
+            
+          }  else if ($(this).val() === "30"){
+            $('#low-risk-rs').show(); 
+            $('#high-risk-rs').show(); 
+            $('#med-risk-rs').show(); 
+            $('#vlow-risk-rs').show(); 
+            $('#v-vlow-risk-rs').hide();  
+          }
+  });
+});
