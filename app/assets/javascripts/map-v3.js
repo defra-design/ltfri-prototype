@@ -446,7 +446,6 @@ removeLayers();
     markerAddressRadius();
   } else if (pathname == '/version_5/map-v3/rivers-sea'){
     map.addLayer(riverSea(x)),
-    map.addLayer(riverSea(4)),
     markerAddress();
   } else if (pathname == '/version_5/map-v3/reservoirs'){
     map.addLayer(reservoirRiver('DryDay')),
