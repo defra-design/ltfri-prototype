@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Privacy notice
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+<!-- two thirds column for title and address-->
+  <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        Flood risk for  3 Rockingham Villas, Church Lane, Newmarket, CB8 0HL
+      </h1>
+      <h2 class="govuk-heading-m">
+       
+      </h2>
+    </div>
+    <!-- one third column for contents -->
+      <div class="govuk-grid-column-one-half">
+    
+
+    </div>
+
+</div>
+      <!-- Start of cards -->
+      <div class="govuk-grid-row govuk-!-margin-top-0">
+      <div class="govuk-grid-column-one-half">
+
+    <!-- surface water-->
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper high">
+          <h2 class="govuk-summary-card__title">Surface water<span class="chance-content">High chance of flooding</span></h2>
+         
+        </div>
+        
+      </div>
+
+<!-- Rivers -->
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper medium">
+          <h2 class="govuk-summary-card__title">Rivers and the sea<span class="chance-content">Medium chance of flooding</span></h2>
+         
+        </div>
+       
+      </div>
+   
+<!-- Reservoirs-->
+
+
+  <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper low">
+            <h2 class="govuk-summary-card__title">Reservoirs<span class="chance-content">Extremely unlikely</span></h2>
+           
+          </div>
+         
+        </div>
+
+      <!-- Groundwater -->
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper low">
+          <h2 class="govuk-summary-card__title">Groundwater<span class="chance-content">Possible risk of flooding</span></h2>
+          
+        </div>
+       
+      </div>
+
+      <!-- end of risks -->
+    </div>
+    
+    </div>
+    <button class="govuk-button" data-module="govuk-button">
+      Find out what your results mean
+    </button>
+  </div>
+
+{% endblock %}

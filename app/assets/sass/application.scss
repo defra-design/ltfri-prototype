@@ -48,10 +48,15 @@ body { margin:0; padding:0; }
     box-shadow: inset 10px 0px 0px #F18604;
 }
 
+.govuk-summary-card__title-wrapper.low {
+  box-shadow: inset 10px 0px 0px #f3f2f1;
+}
+
 .chance-content {
-  padding-left: 10px;
+  padding-left: 20px;
   font-weight: normal;
 }
+
 
 
 // small map version 1

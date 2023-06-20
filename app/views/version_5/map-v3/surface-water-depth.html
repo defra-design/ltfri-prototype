@@ -100,27 +100,27 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
     <div class="defra-map-controls__bottom-v3">
       <!-- Scenarios -->
       <div class="defra-map-scenarios-v3_container">
-       <div class="defra-map-scenarios-v3">
+       <div class="defra-map-scenarios-depth-v3">
        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
              <div class="govuk-radios__item">
                <input class="govuk-radios__input" id="sw-high" name="scenarios" type="radio" value="10" {% if swHigh %}checked{% endif %}>
                <label class="govuk-label govuk-radios__label" for="sw-high">
-                       <strong>Most likely</strong>       
-                       <span class="risk-context-v3">3.3% chance</span>
+                       <strong>Most likely,<br> least severe</strong>       
+                       <span class="risk-context-v3">Once every 30 years</span>
            </label>
           </div>
              <div class="govuk-radios__item" aria-selected="true">
                <input class="govuk-radios__input" id="sw-med" name="scenarios" type="radio" value="11" {% if swMed %}checked{% endif %}>
                <label class="govuk-label govuk-radios__label" for="sw-med">
-                 <strong>Less likely</strong>   
-                 <span class="risk-context-v3">1% chance</span>
+                 <strong>Less likely,<br> more severe</strong>   
+                 <span class="risk-context-v3">Once every 100 years</span>
            </label>
              </div>
              <div class="govuk-radios__item">
                <input class="govuk-radios__input" id="sw-low" name="scenarios" type="radio" value="12" {% if swLow %}checked{% endif %}>
                <label class="govuk-label govuk-radios__label" for="sw-low">
-                 <strong>Least likely</strong> 
-                 <span class="risk-context-v3">0.1% chance</span>
+                 <strong>Least likely,<br> most severe</strong> 
+                 <span class="risk-context-v3">Once every 1000 years</span>
            </label>
              </div>
              <div class="govuk-radios__item" id="radio-scenario">

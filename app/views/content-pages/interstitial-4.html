@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Privacy notice
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+<!-- two thirds column for title and address-->
+  <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Flood risk summary for the area around:
+      </h1>
+      <h2 class="govuk-heading-m">
+        3 Rockingham Villas, Church Lane, Newmarket, CB8 0HL
+      </h2>
+    </div>
+    <!-- one third column for contents -->
+      <div class="govuk-grid-column-one-third">
+    
+
+    </div>
+
+</div>
+      <!-- Start of cards -->
+      <div class="govuk-grid-row govuk-!-margin-top-6">
+      <div class="govuk-grid-column-full">
+
+    <!-- surface water-->
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper high">
+          <h2 class="govuk-summary-card__title">Surface water<span class="chance-content">High chance of flooding</span></h2>
+          <ul class="govuk-summary-card__actions">
+            <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+                View more information on surface water flooding<span class="govuk-visually-hidden"></span>
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+        
+      </div>
+
+<!-- Rivers -->
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper medium">
+          <h2 class="govuk-summary-card__title">Rivers and the sea<span class="chance-content">Medium chance of flooding</span></h2>
+          <ul class="govuk-summary-card__actions">
+            <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+                View full details of flooding<span class="govuk-visually-hidden">  View more information on flooding from rivers and the se</span>
+              </a>
+            </li>
+          
+          </ul>
+        </div>
+       
+      </div>
+   
+<!-- Reservoirs-->
+
+
+  <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper low">
+            <h2 class="govuk-summary-card__title">Reservoirs<span class="chance-content">Extremely unlikely</span></h2>
+            <ul class="govuk-summary-card__actions">
+              <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+                  View full details of reservoir flooding<span class="govuk-visually-hidden"> View full details of reservoir flooding</span>
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+         
+        </div>
+
+      <!-- Groundwater -->
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper low">
+          <h2 class="govuk-summary-card__title">Groundwater<span class="chance-content">Possible risk of flooding</span></h2>
+          <ul class="govuk-summary-card__actions">
+            <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+                View full details of groundwater flooding<span class="govuk-visually-hidden"> View full details of groundwater flooding</span>
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+       
+      </div>
+
+      <!-- end of risks -->
+    </div>
+    </div>
+  
+  </div>
+
+{% endblock %}

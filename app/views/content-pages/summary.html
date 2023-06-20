@@ -7,29 +7,44 @@
 {% block content %}
 
 
-<div class="govuk-grid-row">
 
-    <div class="govuk-grid-column-full">
-  
-      <h1 class="govuk-heading-xl">
-        Flood risk summary for the area around
+<div class="govuk-grid-row">
+<!-- two thirds column for title and address-->
+  <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        Flood risk for 3 Rockingham Villas, Church Lane, Newmarket, CB8 0HL
       </h1>
-  
-      <h2 class="govuk-heading-m">
-        64, West Park, Selby, YO8 4JN
-      </h2>
+      <!-- <div class="govuk-inset-text">
+        <p>This service tells you the flood risk of an area, not a specific property.</p>
+      </div> -->
+    </div>
+    <!-- one third column for contents -->
+      <div class="govuk-grid-column-one-third">
+      <h3 class="govuk-heading-s">
+        Contents
+      </h3>
+      <a href class="govuk-link govuk-link--no-underline">Surface water flooding</a><br><br>
+      <a href class="govuk-link govuk-link--no-underline">Rivers and the sea flooding</a><br><br>
+      <a href class="govuk-link govuk-link--no-underline">Reservoir flooding</a><br><br>
+      <a href class="govuk-link govuk-link--no-underline">Groundwater flooding</a>
+
+    </div>
+
+</div>
+      <!-- Start of cards -->
+      <div class="govuk-grid-row govuk-!-margin-top-6">
+      <div class="govuk-grid-column-full">
+
+    <!-- surface water-->
       <div class="govuk-summary-card">
-        <div class="govuk-summary-card__title-wrapper">
+        <div class="govuk-summary-card__title-wrapper high">
           <h2 class="govuk-summary-card__title">Surface water<span class="chance-content">High chance of flooding</span></h2>
           <ul class="govuk-summary-card__actions">
             <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
-               View full flood details<span class="govuk-visually-hidden"> of University of Gloucestershire</span>
+                View a map of surface water flooding<span class="govuk-visually-hidden"></span>
               </a>
             </li>
-            <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
-                View map<span class="govuk-visually-hidden"> from University of Gloucestershire</span>
-              </a>
-            </li>
+            
           </ul>
         </div>
         <div class="govuk-summary-card__content">
@@ -39,61 +54,43 @@
                 How often could it flood
               </dt>
               <dd class="govuk-summary-list__value">
-                High chance of flooding means the area could flood more than 3 or 4 times in a 100-year period.
-<br>
+                High chance of flooding means there could be a flood from surface water more than 3 or 4 times in a 100-year period.
+                <br><br>
+                The map shows:
+                <ul class="govuk-list--bullet">
+                  <li>how widespread any flooding could be</li>
+                  <li>an estimation of where any flood water might spread to</li>
+                </ul>
+              </dd>
+             
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                How deep any flooding could be
+              </dt>
+              <dd class="govuk-summary-list__value">
+                If an area floods, the flood water is most likely to reach a maximum of 30cm deep.
+                <br><br>
+                There are 2 other possible scenarios that could affect an area:
+                <ul class="govuk-list--bullet">
+                  <li>Flood water of up to 90cm deep. This type of flooding is less likely but possible.</li>
+                  <li>Flood water of more than 90cm. Flooding of this severity is very unlikely.</li>
+                </ul>
               </dd>
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                What this flood information tells you
+                What this information covers
               </dt>
               <dd class="govuk-summary-list__value">
-                This information tells you the highest chance of flooding on the land around a property. 
-                <br><br>
-                It is not specific to a property. <br><br>
-
-                <details class="govuk-details" data-module="govuk-details">
-                    <summary class="govuk-details__summary">
-                      <span class="govuk-details__summary-text">
-                        What makes an area more likely to flood
-                      </span>
-                    </summary>
-                   It's hard to predict exactly when and how often floods from surface water will happen because they depend on things like:
-                  </details>
-                  
-                  The information is an estimate based on the best data we have available.
+                School name<br>Road, City, SW2 1AA
               </dd>
             </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  How bad could a flood be
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    If this area were to flood, it could face any of the following situations:<br>
-<ul class="govuk-list--bullet">
-                    <li>Most likely but least severe [current high risk]
-                    In this situation, flood water could reach a depth of up to 30cm - about the same as the length of a school ruler.</li>
-                  
-                </ul>
-                  <details class="govuk-details" data-module="govuk-details">
-                    <summary class="govuk-details__summary">
-                      <span class="govuk-details__summary-text">
-                        Other flooding scenarios that could affect you
-                      </span>
-                    </summary>
-                    <ul class="govuk-list--bullet">
-                       
-                        <li>2. Less likely but more severe [current medium risk]
-                            In this situation, flood water could reach a depth of between 30cm and 90cm (just under a metre). </li>
-                        <li>3. Least likely but most severe [current low risk]
-                            In this situation, flood water could reach a depth of over 90cm (almost a metre or more).</li>
-                    </ul>
-                  </details>
-                </dd>
-              </div>
           </dl>
         </div>
       </div>
+
+<!-- Rivers -->
       <div class="govuk-summary-card">
         <div class="govuk-summary-card__title-wrapper medium">
           <h2 class="govuk-summary-card__title">Rivers and the sea<span class="chance-content">Medium chance of flooding</span></h2>
@@ -130,6 +127,46 @@
         </div>
       </div>
    
+<!-- Reservoirs-->
+
+
+<div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper medium">
+          <h2 class="govuk-summary-card__title">Rivers and the sea<span class="chance-content">Medium chance of flooding</span></h2>
+          <ul class="govuk-summary-card__actions">
+            <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+                Delete choice<span class="govuk-visually-hidden"> of University of Bristol</span>
+              </a>
+            </li>
+            <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+                Withdraw<span class="govuk-visually-hidden"> from University of Bristol</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Course
+              </dt>
+              <dd class="govuk-summary-list__value">
+                English (Q3X1)<br>PGCE with QTS full time
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Location
+              </dt>
+              <dd class="govuk-summary-list__value">
+                School name<br>Road, City, SW2 1AA
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <!-- Groundwater -->
     </div>
     </div>
   
