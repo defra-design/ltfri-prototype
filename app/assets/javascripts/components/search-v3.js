@@ -5,7 +5,7 @@ let searchable = [
     "<span class='results-icon'><i class='fa fa-map-location-dot map-icon' aria-hidden='true'></i></span><a href='/version_5/map-v3surface-water?marker=true&scenario=undefined&center=0.40918842995999904,52.24232698675024'>Newmarket</a>",
     "<span class='results-icon'><i class='fa-solid fa-map-location-dot map-icon' aria-hidden='true'></i></span><a href='/version_5/map-v3/surface-water?marker=true&scenario=17&center=-2.0123351616190766,53.74081703837396'>Hebden Bridge</a>",
     "<span class='results-icon'><i class='fa-solid fa-map-location-dot map-icon' aria-hidden='true'></i></span><a href='/version_5/map-v3/rivers-sea?marker=true&scenario=15&center=-0.10796609602530668,51.5123465968953'>London</a>",
-    
+
   ];
   
   const searchInput = document.getElementById('search-v3');

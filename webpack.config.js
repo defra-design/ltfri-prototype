@@ -15,11 +15,12 @@ module.exports = {
   ],
   mode: process.env.NODE_ENV === 'development' ? 'development' : 'production',
   entry: {
-    main : './app/assets/javascripts/main.js', 
-    small : './app/assets/javascripts/main-small.js',
-    mapv2 : './app/assets/javascripts/map-v2.js',
-    mapv2alt : './app/assets/javascripts/map-v2-alt.js',
-    mapv3 : './app/assets/javascripts/map-v3.js'       
+    main : './app/assets/javascripts/maps/main.js', 
+    small : './app/assets/javascripts/maps/main-small.js',
+    mapv2 : './app/assets/javascripts/maps/map-v2.js',
+    mapv2alt : './app/assets/javascripts/maps/map-v2-alt.js',
+    mapv3 : './app/assets/javascripts/maps/map-v3.js',
+    mapv3_2 : './app/assets/javascripts/maps/map-v3-2.js'           
           },
   output: {
     path: __dirname,

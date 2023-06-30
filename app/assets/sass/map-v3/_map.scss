@@ -606,3 +606,17 @@
 .defra-map-raster-canvas {
   mix-blend-mode: multiply;
 }
+
+
+/* Hide map key at 390px width */
+@media (max-width: 390px) {
+  .defra-map-key {
+    display: none;
+  }
+}
+
+/* Show map key when toggled on */
+.defra-map-key.visible {
+  display: block !important;
+  /* Add your desired styles for the visible map key */
+}

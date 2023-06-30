@@ -176,7 +176,7 @@ function surfaceWaterSpeed (liklihood) {
 }
 
 // surface water - direction
- function surfaceWaterDirection (liklihood) {
+  function surfaceWaterDirection (liklihood) {
   const bands = ['RoFSWDirection25m1in30', 'RoFSWDirection25m1in100', 'RoFSWDirection25m1in1000']
   return new TileLayer({
     ref: `surfaceWaterDirection${liklihood}`,
@@ -191,75 +191,8 @@ function surfaceWaterSpeed (liklihood) {
   minZoom: 14,
   zIndex: 0
 })
-} 
-
-/* function surfaceWaterDirection(likelihood) {
-  const bands = ['RoFSWDirection25m1in30', 'RoFSWDirection25m1in100', 'RoFSWDirection25m1in1000'];
-  const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']; 
-
-  return new TileLayer({
-    ref: `surfaceWaterDirection${likelihood}`,
-    className: 'defra-map-raster-canvas',
-    layerCodes: `ss${likelihood}`,
-    source: new TileArcGISRest({
-      url: `https://environment.data.gov.uk/arcgis/rest/services/EA/${bands[likelihood - 1]}/MapServer`,
-      projection: 'EPSG:27700',
-      params: {
-        'TRANSPARENT': true,
-        'FORMAT': 'GIF',
-        'dynamicLayers': `[
-          {
-            "id": 0,
-            "source": { "type": "mapLayer", "mapLayerId": 0 },
-            "drawingInfo": {
-              "renderer": {
-                "type": "uniqueValue",
-                "field1": "flowdir",
-                "uniqueValueInfos": [
-                  {
-                    "symbol": {
-                      "type": "esriPMS",
-                      "url": "/public/images/map-marker-40px.png", 
-                      "contentType": "image/png",
-                      "width": 6,
-                      "height": 7,
-                      "angle": 0,
-                      "xoffset": 0,
-                      "yoffset": 0
-                    },
-                    "value": "N",
-                    "label": "N",
-                    "description": ""
-                  },
-                  {
-                    "symbol": {
-                      "type": "esriPMS",
-                      "url": "NEW_URL_FOR_NE_ICON", 
-                      "contentType": "image/png",
-                      "width": 7,
-                      "height": 7,
-                      "angle": 0,
-                      "xoffset": 0,
-                      "yoffset": 0
-                    },
-                    "value": "NE",
-                    "label": "NE",
-                    "description": ""
-                  },
-              
-                ],
-                "fieldDelimiter": ","
-              },
-              "labelingInfo": null
-            }
-          }
-        ]`
-      }
-    }),
-    minZoom: 14,
-    zIndex: 0
-  });
-} */
+}  
+    
 
 
 // reservoir
