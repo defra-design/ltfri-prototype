@@ -49,8 +49,14 @@ body { margin:0; padding:0; }
 }
 
 .govuk-summary-card__title-wrapper.low {
+  box-shadow: inset 10px 0px 0px #808080;
+}
+
+.govuk-summary-card__title-wrapper.vlow {
   box-shadow: inset 10px 0px 0px #f3f2f1;
 }
+
+
 
 .chance-content {
   padding-left: 20px;

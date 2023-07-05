@@ -20,7 +20,8 @@ module.exports = {
     mapv2 : './app/assets/javascripts/maps/map-v2.js',
     mapv2alt : './app/assets/javascripts/maps/map-v2-alt.js',
     mapv3 : './app/assets/javascripts/maps/map-v3.js',
-    mapv3_2 : './app/assets/javascripts/maps/map-v3-2.js'           
+    mapv3_2 : './app/assets/javascripts/maps/map-v3-2.js',
+    mapv3_3 : './app/assets/javascripts/maps/map-v3-3.js'           
           },
   output: {
     path: __dirname,
