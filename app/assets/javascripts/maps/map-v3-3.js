@@ -132,33 +132,6 @@ function surfaceWater(likelihood) {
   });
 }
 
-function addBorder(feature) {
-  feature.setStyle(new ol.style.Style({
-    stroke: new ol.style.Stroke({
-      color: 'red',
-      width: 2
-    })
-  }));
-}
-
-function removeBorder(feature) {
-  feature.setStyle(null);
-}
-
-function handleClickOnFeature(event) {
-  const clickedFeature = event.target;
-  
-  // Highlight the clicked feature and remove highlight from other features
-  addBorder(clickedFeature);
-  customVectorLayer.getSource().getFeatures().forEach(function(feature) {
-    if (feature !== clickedFeature) {
-      removeBorder(feature);
-    }
-  });
-  
-  console.log('Clicked on feature:', clickedFeature);
-}
-
 
 
 //surface water depth - not inclueded on map at the mo
