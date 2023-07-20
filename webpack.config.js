@@ -23,7 +23,8 @@ module.exports = {
     mapv3_2 : './app/assets/javascripts/maps/map-v3-2.js',
     mapv3_3 : './app/assets/javascripts/maps/map-v3-3.js',
     mapv3_4 : './app/assets/javascripts/maps/map-v3-4.js',
-    mapv3_5 : './app/assets/javascripts/maps/map-v3-5.js'           
+    mapv3_5 : './app/assets/javascripts/maps/map-v3-5.js',
+    mapv4 : './app/assets/javascripts/maps/map-v4.js'           
           },
   output: {
     path: __dirname,

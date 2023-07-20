@@ -328,3 +328,8 @@
   max-width: 250px;
   overflow: auto;
 }
+
+.horizontal-overflow {
+  overflow-x: auto;
+  display: block;
+}
