@@ -76,7 +76,7 @@ function setCenter(){
 // 3 Rockingham Villas, Church Lane, 
 
 //map colours
-const lightestBlue = '219,222,255,255'
+const lightestBlue = '201, 248, 255,255'
 const lightBlue = '196,225,255,255'
 const midBlue = '154,160,222,255'
 const darkBlue = '85,92,157,245'
@@ -287,7 +287,7 @@ zIndex: 2
   anchor: [0.5, 40],
   anchorXUnits: 'fraction',
   anchorYUnits: 'pixels',
-  src: '/public/images/map-marker-40px.png'
+  src: '/public/images/pin.png'
 }),
 zIndex: 2
 }); 
@@ -298,7 +298,7 @@ var wStyle = new Style({
   anchor: [0.5, 110],
   anchorXUnits: 'fraction',
   anchorYUnits: 'pixels',
-  src: '/public/images/window-address.png'
+  src: '/public/images/pin.png'
 })
 }); 
 
@@ -726,39 +726,88 @@ function handleRadioSelection() {
 // Call the function to enable radio button selection handling
 handleRadioSelection();
 
-// Pop up when you click on the map
-// Create the popup overlay
-const popup = new Overlay({
-  element: document.getElementById('popup-content'),
-  positioning: 'bottom-center',
-  stopEvent: false, // Allow map click events to propagate to underlying layers
-});
-map.addOverlay(popup);
-
-// Event listener for map click
-map.on('click', function(event) {
-  // Get the clicked coordinate
-  const clickedCoordinate = event.coordinate;
-  
-  // Set the popup content
-  const popupContent = document.getElementById('popup-content');
-  popupContent.innerHTML = 'Surface water: high risk';
-  
-  // Set the position of the popup
-  popup.setPosition(clickedCoordinate);
+// page load, show key, hide scenarios
+$(document).ready(function() {
+  // Show the map key container on page load
+  $('#defra-map-key__container').css('display', 'block');
+  // Hide the other elements on page load
+  $('#scenarios-controls').css('display', 'none');
+  $('#open-key').css('display', 'none');
+  $('#reset-key').css('display', 'none');
+  $('#att-key').css('display', 'none');
 });
 
-// Copyright overlay
+// close button on mobile map
 
-function toggleControls() {
-  var controls = document.getElementById('controls');
-  var attributionButton = document.querySelector('.defra-map-attribution');
+$('#close-key').on('click', function() {
+  // Hide the map key container when the close button is clicked
+  $('#defra-map-key__container').css('display', 'none');
+  // Show the other elements when the close button is clicked
+  $('#scenarios-controls').css('display', 'block');
+  $('#open-key').css('display', 'block');
+  $('#reset-key').css('display', 'block');
+  $('#att-key').css('display', 'block');
+});
 
-  if (controls.style.display === 'none') {
-    controls.style.display = 'block';
-    attributionButton.setAttribute('aria-expanded', 'true');
-  } else {
-    controls.style.display = 'none';
-    attributionButton.setAttribute('aria-expanded', 'false');
+$(document).on('click', function(e) {
+  // Check if the clicked element is not a child of #defra-map-key__container, open-key, reset-key, or att-key
+  if (
+    !$(e.target).closest('#defra-map-key__container').length &&
+    !$(e.target).closest('#open-key').length &&
+    !$(e.target).closest('#reset-key').length &&
+    !$(e.target).closest('#att-key').length
+  ) {
+    $('#defra-map-key__container').css('display', 'none');
+    // Show the other elements when clicking outside of #defra-map-key__container
+    $('#scenarios-controls').css('display', 'block');
+    $('#open-key').css('display', 'block');
+    $('#reset-key').css('display', 'block');
+    $('#att-key').css('display', 'block');
   }
-}
+});
+
+// open key
+
+$('#open-key').on('click', function() {
+  // Show the map key container when the open button is clicked
+  $('#defra-map-key__container').css('display', 'block');
+  // Hide the other elements when the open button is clicked
+  $('#scenarios-controls').css('display', 'none');
+  $('#open-key').css('display', 'none');
+  $('#reset-key').css('display', 'none');
+  $('#att-key').css('display', 'none');
+});
+
+
+/* $('#open-key').on('click', function() {
+  // Get the current display property of the map key container
+  const mapKeyContainer = $('#defra-map-key__container');
+  const currentDisplay = mapKeyContainer.css('display');
+
+  // Toggle the display property of the map key container
+  mapKeyContainer.css('display', currentDisplay === 'block' ? 'none' : 'block');
+
+  // Toggle the display property of #scenarios-controls based on the state of the map key container
+  const scenariosControls = $('#scenarios-controls');
+  scenariosControls.css('display', currentDisplay === 'block' ? 'none' : 'block');
+}); */
+/* 
+$('#open-key').on('click', function() {
+  // Get the current display property of #defra-map-key__container
+  const mapKeyContainer = $('#defra-map-key__container');
+  const mapKeyDisplay = mapKeyContainer.css('display');
+
+  // Get the current display property of #scenarios-controls
+  const scenariosControls = $('#scenarios-controls');
+  const scenariosControlsDisplay = scenariosControls.css('display');
+
+  // Use an if statement to toggle the display property of both elements
+  if (mapKeyDisplay === 'block') {
+    mapKeyContainer.css('display', 'none');
+    scenariosControls.css('display', 'block');
+  } else if (scenariosControlsDisplay === 'block') {
+    scenariosControls.css('display', 'none');
+    mapKeyContainer.css('display', 'block');
+  }
+}); */
+

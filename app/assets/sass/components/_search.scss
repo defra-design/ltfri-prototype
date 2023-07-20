@@ -121,6 +121,10 @@ input::placeholder {
 .search-container-v3 {
   @include govuk-font($size: 16);
   width: 400px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 
 .search-wrapper-v3 {

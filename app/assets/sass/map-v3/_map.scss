@@ -45,12 +45,12 @@
    }
 }
 .defra-map-key {
-  display:none;
   background-color:white;
   position:absolute;
   z-index:2;
   touch-action: none;
-  max-width: 100%;
+  max-width: 290px;
+  height: 100%;
   @include mq ($from: desktop) {
     display: block;
     right:0px;
@@ -188,10 +188,10 @@
 
 // Map controls - open key
 .defra-map__open-key {
-  float:left;
+  float:right;
   position:relative;
-  margin-left:5px;
-  margin-top:10px;
+  margin-left:0px;
+  margin-top:0px;
   height:40px;
   width:40px;
   padding:0;
@@ -278,7 +278,7 @@
 .defra-map--key-open {
   .defra-map-key {
     @include mq ($until: desktop) {
-      // display: block; // Safari v14 bug needs to be applied with JS
+      //display: block; // Safari v14 bug needs to be applied with JS
       left:0;
       top:0px;
       bottom:0px;
@@ -324,7 +324,7 @@
   padding:0;
   border:0;
   cursor:pointer;
-  background-color: #f33333;
+  background-color: #ffffff;
   color: govuk-colour('black');
   svg {
     display:block;
@@ -376,7 +376,7 @@
   border:0;
   height:40px;
   width:40px;
-  padding:0;
+  margin-top: 45px;
   cursor:pointer;
   background-color: white;
   color: govuk-colour('black');
@@ -607,16 +607,22 @@
   mix-blend-mode: multiply;
 }
 
+@media (max-width: 768px) {
+  .defra-map {
+    /* ... your styles for smaller screens ... */
+  }
 
-/* Hide map key at 390px width */
-@media (max-width: 390px) {
-  .defra-map-key {
+  /* Hide the defra-map-key element */
+  .defra-map-key__section {
     display: none;
   }
+
+  .defra-map-reset {
+    margin-right: -40px;
+}
 }
 
-/* Show map key when toggled on */
-.defra-map-key.visible {
-  display: block !important;
-  /* Add your desired styles for the visible map key */
+// override govuk padding
+.govuk-main-wrapper {
+  padding: 0;
 }
