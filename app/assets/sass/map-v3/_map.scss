@@ -607,7 +607,9 @@
   mix-blend-mode: multiply;
 }
 
-@media (max-width: 768px) {
+// responsive mobile version 
+
+@media (max-width: 769px) {
   .defra-map {
     /* ... your styles for smaller screens ... */
   }
@@ -620,9 +622,13 @@
   .defra-map-reset {
     margin-right: -40px;
 }
-}
 
-// override govuk padding
-.govuk-main-wrapper {
-  padding: 0;
+// to stop 20px top padding on maps
+  .govuk-main-wrapper {
+  padding: 0; 
+}
+// to bring back padding to h1 on mobile on normal gov content pages
+h1{
+  padding-top: 20px;
+}
 }

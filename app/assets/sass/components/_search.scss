@@ -136,11 +136,34 @@ input::placeholder {
 }
 
 .search-wrapper-v4 {
-  margin: 10px 0 0 150px;
+  margin: -30px 0 0 150px;
   float: left;
   background: #ffffff;
   position: relative;
   width: 88%;
+}
+
+@media (max-width: 825px) {
+  .search-container-v3 {
+    width: 340px;
+}
+
+.search-wrapper-v4 {
+ 
+  width: 70%;
+}
+
+.search-button-v3 {
+  width: 30%;
+  
+}
+.search-input {
+  width: 65%;
+  border: none;
+  height: 40px;
+  padding: 0px 40px 0px 15px;
+  font-size: 16px;
+}
 }
 
 .search-wrapper-v3 a{
