@@ -728,15 +728,18 @@ handleRadioSelection();
 
 // page load, show key, hide scenarios
 $(document).ready(function() {
-  // Show the map key container on page load
-  $('#defra-map-key__container').css('display', 'block');
-  // Hide the other elements on page load
-  $('#scenarios-controls').css('display', 'none');
-  $('#open-key').css('display', 'none');
-  $('#reset-key').css('display', 'none');
-  $('#att-key').css('display', 'none');
+  if ($(window).width() < 769) {
+    // Show the map key container on page load
+    $('#defra-map-key__container').css('display', 'block');
+    // Hide the other elements on page load
+    $('#scenarios-controls').css('display', 'none');
+    $('#open-key').css('display', 'none');
+    $('#reset-key').css('display', 'none');
+    $('#att-key').css('display', 'none');
+    $('#zoomIn').css('display', 'none');
+    $('#zoomOut').css('display', 'none');
+  }
 });
-
 // close button on mobile map
 
 $('#close-key').on('click', function() {
@@ -755,7 +758,8 @@ $(document).on('click', function(e) {
     !$(e.target).closest('#defra-map-key__container').length &&
     !$(e.target).closest('#open-key').length &&
     !$(e.target).closest('#reset-key').length &&
-    !$(e.target).closest('#att-key').length
+    !$(e.target).closest('#att-key').length &&
+    ($(window).width() <= 769)
   ) {
     $('#defra-map-key__container').css('display', 'none');
     // Show the other elements when clicking outside of #defra-map-key__container
@@ -778,36 +782,39 @@ $('#open-key').on('click', function() {
   $('#att-key').css('display', 'none');
 });
 
+// attribution button
 
-/* $('#open-key').on('click', function() {
-  // Get the current display property of the map key container
-  const mapKeyContainer = $('#defra-map-key__container');
-  const currentDisplay = mapKeyContainer.css('display');
 
-  // Toggle the display property of the map key container
-  mapKeyContainer.css('display', currentDisplay === 'block' ? 'none' : 'block');
+$('#att-key').on('click', function() {
+  if ($('#scenarios-controls').css('display') === 'block') {
+    // If scenarios-controls is displayed, hide it and show #info
+    $('#scenarios-controls').css('display', 'none');
+    $('#info').css('display', 'block');
 
-  // Toggle the display property of #scenarios-controls based on the state of the map key container
-  const scenariosControls = $('#scenarios-controls');
-  scenariosControls.css('display', currentDisplay === 'block' ? 'none' : 'block');
-}); */
-/* 
-$('#open-key').on('click', function() {
-  // Get the current display property of #defra-map-key__container
-  const mapKeyContainer = $('#defra-map-key__container');
-  const mapKeyDisplay = mapKeyContainer.css('display');
+    // Check if the screen width is 769 pixels or less
+    if ($(window).width() <= 641) {
+      // Add margin-bottom to .defra-map-attribution if the screen width is 769 or less
+      $('.defra-map-attribution').css('margin-bottom', '80px');
+    }
+  } else if ($('#info').css('display') === 'block') {
+    // If #info is displayed, hide it and show scenarios-controls
+    $('#info').css('display', 'none');
+    $('#scenarios-controls').css('display', 'block');
 
-  // Get the current display property of #scenarios-controls
-  const scenariosControls = $('#scenarios-controls');
-  const scenariosControlsDisplay = scenariosControls.css('display');
-
-  // Use an if statement to toggle the display property of both elements
-  if (mapKeyDisplay === 'block') {
-    mapKeyContainer.css('display', 'none');
-    scenariosControls.css('display', 'block');
-  } else if (scenariosControlsDisplay === 'block') {
-    scenariosControls.css('display', 'none');
-    mapKeyContainer.css('display', 'block');
+    // Remove the margin-bottom from .defra-map-attribution
+    $('.defra-map-attribution').css('margin-bottom', '0');
   }
-}); */
+});
+
+  $('.defra-map-info__close').on('click', function() {
+
+      // If #info is displayed, hide it and show scenarios-controls
+      $('#info').css('display', 'none');
+      $('#scenarios-controls').css('display', 'block');
+
+      // Remove the margin-bottom from #info
+      $('.defra-map-attribution').css('margin-bottom', '0');
+    
+  });
+
 
