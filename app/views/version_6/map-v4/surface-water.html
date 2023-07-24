@@ -43,7 +43,7 @@ Map – {{ serviceName }} – GOV.UK Prototype Kit
 
     
 
-      <!--controls on the bottom-->
+  
 
       {# Scenario switch#}
       {% switch data.scenario %}
@@ -69,7 +69,7 @@ Map – {{ serviceName }} – GOV.UK Prototype Kit
               {% set swHigh = true %}
   {% endswitch %}
 
-
+    <!--controls on the bottom-->
     <div class="defra-map-controls__bottom-v3" id="controls">
       <!-- open map on mobile -->
       <button class="defra-map__open-key" id="open-key"><svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20"><path d="M17.215,11.31L19,12.5L10,18.5L1,12.5L2.785,11.31L9.945,16.083C9.978,16.106 10.022,16.106 10.055,16.083L17.215,11.31Z" style="fill:currentColor;"></path><path d="M10,1.5L1,7.5L10,13.5L19,7.5L10,1.5ZM10,3.88L15.43,7.5L10,11.12L4.57,7.5L10,3.88Z" style="fill:currentColor;"></path></svg><span class="govuk-visually-hidden">Open key</span></button>
@@ -110,26 +110,7 @@ Map – {{ serviceName }} – GOV.UK Prototype Kit
    <!--   <img class="defra-map-os-logo" alt="Ordnance Survey logo" src="/public/images/map-os-logo.png" width="90"
       height="24" style="pointer-events: auto; display: block;">  -->
 
-      <div class="defra-map-info" id="info" role="dialog" style="display:none;" aria-modal="true" aria-labelledby="infoLabel" aria-describedby="infoDescription" tabindex="-1">
-        <h2 id="infoLabel" class="govuk-visually-hidden">Attributions</h2>
-        <div class="defra-map-info__container">
-          <div id="infoContent" class="defra-map-info__content">
-            <div id="infoDescription">
-              <div class="ol-attribution ol-unselectable ol-control ol-uncollapsible govuk-!-padding-2">
-                <ul class="govuk-list">
-                  <li class="govuk-!-font-size-14">Contains OS data<br>© Crown copyright and database rights 2023</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <button class="defra-map-info__close">
-            <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
-              <path d="M10,8.6L15.6,3L17,4.4L11.4,10L17,15.6L15.6,17L10,11.4L4.4,17L3,15.6L8.6,10L3,4.4L4.4,3L10,8.6Z" style="fill:currentColor;stroke:currentColor;stroke-width:0.1px;"></path>
-            </svg>
-            <span class="govuk-visually-hidden">Close</span>
-          </button>
-        </div>
-      </div>
+    
     
  <!-- Scenarios -->
 
@@ -171,16 +152,33 @@ Map – {{ serviceName }} – GOV.UK Prototype Kit
 </div>
 
       
-      
- 
-        
-
       </div>
     </div>
   </div>
 
+ <!-- attribution start -->
+  <div class="defra-map-info" id="info" role="dialog" style="display:none;" aria-modal="true" aria-labelledby="infoLabel" aria-describedby="infoDescription" tabindex="-1">
+    <h2 id="infoLabel" class="govuk-visually-hidden">Attributions</h2>
+    <div class="defra-map-info__container">
+      <div id="infoContent" class="defra-map-info__content">
+        <div id="infoDescription">
+          <div class="ol-attribution ol-unselectable ol-control ol-uncollapsible govuk-!-padding-2">
+            <ul class="govuk-list">
+              <li class="govuk-!-font-size-14">Contains OS data<br>© Crown copyright and database rights 2023</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <button class="defra-map-info__close">
+        <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
+          <path d="M10,8.6L15.6,3L17,4.4L11.4,10L17,15.6L15.6,17L10,11.4L4.4,17L3,15.6L8.6,10L3,4.4L4.4,3L10,8.6Z" style="fill:currentColor;stroke:currentColor;stroke-width:0.1px;"></path>
+        </svg>
+        <span class="govuk-visually-hidden">Close</span>
+      </button>
+    </div>
+  </div>
 
-
+  <!-- attribution end -->
   <div class="defra-map-key" id="key" aria-labelledby="mapKeyLabel" tabindex="-1" role="region" aria-hidden="false"
     style="display: block;">
     <div class="defra-map-key__container" id="defra-map-key__container">
@@ -375,7 +373,10 @@ Map – {{ serviceName }} – GOV.UK Prototype Kit
 
         </div>
       </div>
+
+      
     </div>
+    
   </div>
 
   

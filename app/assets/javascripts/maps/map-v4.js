@@ -740,8 +740,8 @@ $(document).ready(function() {
     $('#zoomOut').css('display', 'none');
   }
 });
-// close button on mobile map
 
+// close button on mobile map
 $('#close-key').on('click', function() {
   // Hide the map key container when the close button is clicked
   $('#defra-map-key__container').css('display', 'none');
@@ -759,6 +759,7 @@ $(document).on('click', function(e) {
     !$(e.target).closest('#open-key').length &&
     !$(e.target).closest('#reset-key').length &&
     !$(e.target).closest('#att-key').length &&
+    !$(e.target).closest('#info').length &&
     ($(window).width() <= 769)
   ) {
     $('#defra-map-key__container').css('display', 'none');
@@ -767,6 +768,7 @@ $(document).on('click', function(e) {
     $('#open-key').css('display', 'block');
     $('#reset-key').css('display', 'block');
     $('#att-key').css('display', 'block');
+    $('.defra-map-attribution').css('margin-bottom', '0');
   }
 });
 
@@ -780,6 +782,7 @@ $('#open-key').on('click', function() {
   $('#open-key').css('display', 'none');
   $('#reset-key').css('display', 'none');
   $('#att-key').css('display', 'none');
+  $('#info').css('display', 'none');
 });
 
 // attribution button
@@ -794,7 +797,7 @@ $('#att-key').on('click', function() {
     // Check if the screen width is 769 pixels or less
     if ($(window).width() <= 641) {
       // Add margin-bottom to .defra-map-attribution if the screen width is 769 or less
-      $('.defra-map-attribution').css('margin-bottom', '80px');
+      $('.defra-map-attribution').css('margin-bottom', '70px');
     }
   } else if ($('#info').css('display') === 'block') {
     // If #info is displayed, hide it and show scenarios-controls
