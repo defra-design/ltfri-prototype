@@ -122,7 +122,7 @@ input::placeholder {
   @include govuk-font($size: 16);
   width: 400px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 820px) {
     display: none;
   }
 }
@@ -143,10 +143,10 @@ input::placeholder {
   width: 88%;
 }
 
-@media (max-width: 825px) {
+/*  @media (max-width: 825px) {
   .search-container-v3 {
     width: 340px;
-}
+} 
 
 .search-wrapper-v4 {
  
@@ -164,7 +164,7 @@ input::placeholder {
   padding: 0px 40px 0px 15px;
   font-size: 16px;
 }
-}
+} */
 
 .search-wrapper-v3 a{
   color: #0B0C0C;

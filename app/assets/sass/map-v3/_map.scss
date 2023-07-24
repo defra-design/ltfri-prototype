@@ -632,3 +632,17 @@ h1{
   padding-top: 20px;
 }
 }
+
+// depth attribute fix with scenarios container
+@media screen and (min-width: 1049px) and (max-width: 1188px) {
+
+  .attribution-depth {
+    margin-bottom: 115px;
+  }
+}
+
+@media screen and (min-width: 937px) and (max-width: 1048px) {
+  .attribution-depth {
+    margin-bottom: 150px;
+  }
+}
