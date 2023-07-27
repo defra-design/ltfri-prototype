@@ -15,9 +15,9 @@
     padding-right:290px;
   }
   background-color: #A9DDEF;
-  &__title {
+  /* &__title {
   //  @include defra-visually-hidden;
-  }
+  } */
 }
 .defra-map-html {
   height: 10vh;
@@ -610,10 +610,6 @@
 // responsive mobile version 
 
 @media (max-width: 769px) {
-  .defra-map {
-    /* ... your styles for smaller screens ... */
-  }
-
   /* Hide the defra-map-key element */
   .defra-map-key__section {
     display: none;
@@ -646,3 +642,4 @@ h1{
     margin-bottom: 150px;
   }
 }
+

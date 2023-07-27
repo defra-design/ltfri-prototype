@@ -674,7 +674,6 @@ $('#zoomOut').on('click', function() {
 });
 
 // Add blue bottom border to scenario when radio checked
-
 function handleRadioSelection() {
   // Get all the radio buttons within the scenarios ID
   const radioButtons = document.querySelectorAll('.defra-map-scenarios-v3_container input[name="scenarios"]');
@@ -821,3 +820,105 @@ $('#att-key').on('click', function() {
   });
 
 
+
+  // Scenario control arrows 
+
+/*   const btnLeft = document.querySelector(".left-btn");
+  const btnRight = document.querySelector(".right-btn");
+  const scenarioContainer = document.querySelector(".defra-map-scenarios-depth-v4");
+  
+  const IconVisibility = () => {
+  let scrollLeftValue = Math.ceil(scenarioContainer.scrollLeft);
+  let scrollableWidth = scenarioContainer.scrollWidth - scenarioContainer.clientWidth;
+  let isAtLeftEdge = scrollLeftValue < 10; // Check if within 10 pixels of left side
+
+  btnLeft.style.display = isAtLeftEdge ? "none" : "block";
+  btnRight.style.display = scrollableWidth > scrollLeftValue ? "block" : "none";
+}
+  
+  btnLeft.addEventListener("click", () => {
+    scenarioContainer.scrollLeft -= 150;
+    setTimeout(() => IconVisibility(), 50);
+  });
+  
+  btnRight.addEventListener("click", () => {
+    scenarioContainer.scrollLeft += 150;
+    setTimeout(() => IconVisibility(), 50);
+  });
+  
+  // Work with drag interaction
+  
+  let activeDrag = false;
+  
+  scenarioContainer.addEventListener("mousemove", (drag) => {
+    if (!activeDrag) return;
+    scenarioContainer.scrollLeft -= drag.movementX;
+    IconVisibility(); // Update arrow visibility during drag
+    scenarioContainer.classList.add("dragging");
+  });
+  
+  document.addEventListener("mouseup", () => {
+    activeDrag = false;
+    scenarioContainer.classList.remove("dragging");
+  });
+  
+  scenarioContainer.addEventListener("mousedown", () => {
+    activeDrag = true;
+  }); */
+
+const btnLeft = document.querySelector(".left-btn");
+const btnRight = document.querySelector(".right-btn");
+const scenarioContainer = document.querySelector(".defra-map-scenarios-depth-v4");
+
+const IconVisibility = () => {
+  let scrollLeftValue = Math.ceil(scenarioContainer.scrollLeft);
+  let scrollableWidth = scenarioContainer.scrollWidth - scenarioContainer.clientWidth;
+  let isAtLeftEdge = scrollLeftValue < 10; // Check if within 10 pixels of left side
+
+  btnLeft.style.display = isAtLeftEdge ? "none" : "block";
+  btnRight.style.display = scrollableWidth > scrollLeftValue ? "block" : "none";
+}
+
+btnLeft.addEventListener("click", () => {
+  scenarioContainer.scrollLeft -= 150;
+  IconVisibility();
+});
+
+btnRight.addEventListener("click", () => {
+  scenarioContainer.scrollLeft += 150;
+  IconVisibility();
+});
+
+// Listen to the scroll event to update arrow visibility
+scenarioContainer.addEventListener("scroll", () => {
+  IconVisibility();
+});
+
+// Work with drag interaction
+let activeDrag = false;
+
+scenarioContainer.addEventListener("mousedown", (e) => {
+  e.preventDefault(); // Prevent accidental text selection during drag
+  activeDrag = true;
+  startX = e.pageX - scenarioContainer.offsetLeft;
+  scrollLeft = scenarioContainer.scrollLeft;
+});
+
+scenarioContainer.addEventListener("mousemove", (e) => {
+  if (!activeDrag) return;
+  e.preventDefault(); // Prevent accidental text selection during drag
+  const x = e.pageX - scenarioContainer.offsetLeft;
+  const walk = (x - startX) * 2; // Adjust drag sensitivity
+  scenarioContainer.scrollLeft = scrollLeft - walk;
+});
+
+document.addEventListener("mouseup", () => {
+  activeDrag = false;
+});
+
+
+// Fix for CSS, set left arrow to display: none on page load
+
+$(document).ready(function() {
+  $('.left-btn').css('display', 'none');
+});

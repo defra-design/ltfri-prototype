@@ -309,9 +309,18 @@
 .horizontal-overflow {
   overflow-x: auto;
   display: block;
+  scroll-behavior: smooth;
+}
+.search-container-v3 {
+  display: none !important;
+}
+.defra-map-scenarios-depth-v4.dragging {
+  scroll-behavior: unset;
 }
 .defra-map-scenarios-depth-v4 {
- 
+  &::-webkit-scrollbar {
+    display: none;
+  }
   .govuk-radios  {
     display: flex;
     flex-wrap: nowrap;
@@ -319,11 +328,41 @@
     background-color: white;
     padding: 5px 0px 0px 0px;
     width: 800px;
+    }
   }
+
+  // Scenario arrows
+.left-btn, .right-btn {
+  position: absolute;
+  font-size: 1.8em;
+  padding: 30px;
+  cursor: pointer;
+  color:#000000;
+  z-index: 2;
 }
+
+.left-btn {
+  display: none;
+  left: 0;
+  background: linear-gradient(to left, transparent, #ffffff 100%);
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px; 
+  padding-left: 20px;
+}
+
+
+.right-btn {
+  right: 0;
+  background: linear-gradient(to right, transparent, #ffffff 100%);
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding-right: 20px;
+}
+
 }
 
 // version 4
+
 
 .defra-map-scenarios-depth-v4 {
   width:100%;
@@ -395,5 +434,5 @@
     padding-top: 2px;
     padding-bottom: 0;
   }
-  
 }
+

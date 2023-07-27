@@ -126,10 +126,12 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
     <!-- <img class="defra-map-os-logo" alt="Ordnance Survey logo" src="/public/images/map-os-logo.png" width="90"
       height="24" style="pointer-events: auto; display: block;"> -->
       <!-- Scenarios -->
- 
+      
        <div class="defra-map-scenarios-depth-v4 horizontal-overflow">
         <div class="defra-map-scenarios-v3_container" id="scenarios-controls">
        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+        <i class="fa-solid fa-chevron-left left-btn" aria-hidden="true"></i>
+        <i class="fa-solid fa-chevron-right right-btn" aria-hidden="true"></i>
              <div class="govuk-radios__item">
                <input class="govuk-radios__input" id="sw-high" name="scenarios" type="radio" value="10" {% if swHigh %}checked{% endif %}>
                <label class="govuk-label govuk-radios__label" for="sw-high">
@@ -157,6 +159,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
                 <strong>Turn off scenarios</strong> 
                 <span class="risk-context-v3">Display nothing</span>
           </label>
+          
             </div>
            </div>
              <!-- end of radios -->
