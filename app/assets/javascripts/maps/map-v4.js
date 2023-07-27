@@ -916,9 +916,11 @@ document.addEventListener("mouseup", () => {
   activeDrag = false;
 });
 
-
-// Fix for CSS, set left arrow to display: none on page load
+// Fix CSS and display left arrow none + display right button none above tablet width
 
 $(document).ready(function() {
   $('.left-btn').css('display', 'none');
+  if ($(window).width() >= 821) {
+    $('.right-btn').css('display', 'none');
+  }
 });
