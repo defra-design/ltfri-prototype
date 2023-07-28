@@ -341,22 +341,30 @@
   z-index: 2;
 }
 
+/* .circle-behind-btn {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: block;
+} */
+
 .left-btn {
   display: none;
   left: 0;
-  background: linear-gradient(to left, transparent, #ffffff 100%);
+  background: linear-gradient(to left, transparent, #ffffff 50%);
   border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px; 
-  padding-left: 20px;
+  border-bottom-right-radius: 30px;
+  padding-left: 30px;
 }
 
 
 .right-btn {
   right: 0;
-  background: linear-gradient(to right, transparent, #ffffff 100%);
+  background: linear-gradient(to right, transparent, #ffffff 50%);
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
-  padding-right: 20px;
+  padding-right: 30px;
 }
 
 }
@@ -380,7 +388,8 @@
     flex-wrap: nowrap;
     flex-direction: row;
   }
- 
+  
+  
   .govuk-radios  {
     display: flex;
     flex-wrap: nowrap;
@@ -435,3 +444,8 @@
   }
 }
 
+@media screen and (min-width: 821px) {
+  .right-btn {
+    display: none;
+  }
+}

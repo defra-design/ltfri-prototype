@@ -786,7 +786,6 @@ $('#open-key').on('click', function() {
 
 // attribution button
 
-
 $('#att-key').on('click', function() {
   if ($('#scenarios-controls').css('display') === 'block') {
     // If scenarios-controls is displayed, hide it and show #info
@@ -821,50 +820,7 @@ $('#att-key').on('click', function() {
 
 
 
-  // Scenario control arrows 
-
-/*   const btnLeft = document.querySelector(".left-btn");
-  const btnRight = document.querySelector(".right-btn");
-  const scenarioContainer = document.querySelector(".defra-map-scenarios-depth-v4");
-  
-  const IconVisibility = () => {
-  let scrollLeftValue = Math.ceil(scenarioContainer.scrollLeft);
-  let scrollableWidth = scenarioContainer.scrollWidth - scenarioContainer.clientWidth;
-  let isAtLeftEdge = scrollLeftValue < 10; // Check if within 10 pixels of left side
-
-  btnLeft.style.display = isAtLeftEdge ? "none" : "block";
-  btnRight.style.display = scrollableWidth > scrollLeftValue ? "block" : "none";
-}
-  
-  btnLeft.addEventListener("click", () => {
-    scenarioContainer.scrollLeft -= 150;
-    setTimeout(() => IconVisibility(), 50);
-  });
-  
-  btnRight.addEventListener("click", () => {
-    scenarioContainer.scrollLeft += 150;
-    setTimeout(() => IconVisibility(), 50);
-  });
-  
-  // Work with drag interaction
-  
-  let activeDrag = false;
-  
-  scenarioContainer.addEventListener("mousemove", (drag) => {
-    if (!activeDrag) return;
-    scenarioContainer.scrollLeft -= drag.movementX;
-    IconVisibility(); // Update arrow visibility during drag
-    scenarioContainer.classList.add("dragging");
-  });
-  
-  document.addEventListener("mouseup", () => {
-    activeDrag = false;
-    scenarioContainer.classList.remove("dragging");
-  });
-  
-  scenarioContainer.addEventListener("mousedown", () => {
-    activeDrag = true;
-  }); */
+// Scenario control arrows 
 
 const btnLeft = document.querySelector(".left-btn");
 const btnRight = document.querySelector(".right-btn");
