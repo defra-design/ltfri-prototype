@@ -120,8 +120,8 @@ Map – {{ serviceName }} – GOV.UK Prototype Kit
         <div class="govuk-radios__item" id="radio-scenario">
           <input class="govuk-radios__input" id="sw-high" name="scenarios" type="radio" value="4" checked="true">
           <label class="govuk-label govuk-radios__label" for="sw-high">
-                  <strong>Extent of flooding</strong>       
-                  <span class="risk-context-v3">Display flooding scenarios</span>
+                  <strong>Surface water flooding</strong>       
+                  <span class="risk-context-v3">Display extent of flooding</span>
       </label>
      </div>
        <!--  <div class="govuk-radios__item" id="radio-scenario">
@@ -141,7 +141,7 @@ Map – {{ serviceName }} – GOV.UK Prototype Kit
         <div class="govuk-radios__item" id="radio-scenario">
           <input class="govuk-radios__input" id="sw-vlow" name="scenarios" type="radio" value="20" {% if swOff %}checked{% endif %}>
           <label class="govuk-label govuk-radios__label" for="sw-vlow">
-            <strong>Turn off scenarios</strong> 
+            <strong>Turn off layers</strong> 
             <span class="risk-context-v3">Display nothing</span>
       </label>
         </div>
@@ -179,6 +179,8 @@ Map – {{ serviceName }} – GOV.UK Prototype Kit
   </div>
 
   <!-- attribution end -->
+
+  <!-- key -->
   <div class="defra-map-key" id="key" aria-labelledby="mapKeyLabel" tabindex="-1" role="region" aria-hidden="false"
     style="display: block;">
     <div class="defra-map-key__container" id="defra-map-key__container">
