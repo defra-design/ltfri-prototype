@@ -90,7 +90,11 @@ body { margin: 0; padding:0;}
 .link-font {
   font-size: 19px;
 }
-
+@media screen and (max-width: 640px){
+  .link-font {
+    font-size: 16px;
+  }
+ }
 // Code below from before March 2021
 
 .contact {
