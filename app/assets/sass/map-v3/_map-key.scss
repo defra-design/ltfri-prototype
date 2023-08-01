@@ -107,7 +107,7 @@
   margin-left:-35px;
   text-indent:-5000px;
   @include mq ($from: tablet) {
-    margin-top:-6px;
+     margin-top: -6px; 
   }
   background-size: 25px;
   background-repeat: no-repeat;
@@ -170,3 +170,8 @@
   width: 18px;
 }
 
+@media (max-width: 769px) {
+  .defra-map-key__symbol {
+    margin-top: -6px;
+  }
+}
