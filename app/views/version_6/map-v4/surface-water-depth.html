@@ -139,7 +139,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
                        <span class="risk-context-v3">1 in 30 chance<br>each year</span>
            </label>
           </div>
-             <div class="govuk-radios__item" aria-selected="true">
+             <div class="govuk-radios__item">
                <input class="govuk-radios__input" id="sw-med" name="scenarios" type="radio" value="11" {% if swMed %}checked{% endif %}>
                <label class="govuk-label govuk-radios__label" for="sw-med">
                  <strong>Medium risk</strong>   
@@ -153,7 +153,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
                  <span class="risk-context-v3">1 in 1000 chance <br>each year</span>
            </label>
              </div>
-             <div class="govuk-radios__item" id="radio-scenario">
+             <div class="govuk-radios__item last-scenario">
               <input class="govuk-radios__input" id="sw-vlow" name="scenarios" type="radio" value="20" {% if swOff %}checked{% endif %}>
               <label class="govuk-label govuk-radios__label" for="sw-vlow">
                 <strong>Turn off layers</strong> 
