@@ -59,8 +59,12 @@ body { margin:0; padding:0; }
 
 
 .chance-content {
-  padding-left: 20px;
+  padding-left: 10px;
+  border-style: solid;
+  border-width: 0 0 0 1px;
+  border-color: #8b8b8b;
   font-weight: normal;
+  margin-left: 10px;
 }
 
 
@@ -93,15 +97,6 @@ body { margin: 0; padding:0;}
 @media screen and (max-width: 640px){
   .link-font {
     font-size: 16px;
-  }
-
-  .chance-content {
-    padding-left: 10px;
-    border-style: solid;
-    border-width: 0 0 0 1px;
-    border-color: #8b8b8b;
-    font-weight: normal;
-    margin-left: 10px;
   }
 
   .gw-context {
