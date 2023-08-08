@@ -333,13 +333,19 @@ aria-describedby="infoDescription" tabindex="-1">
             classes: "govuk-checkboxes--small",
             fieldset: {
               legend: {
-                html: '<h3 class="defra-map-key__section-title-toggle"></h3>',
-          isPageHeading: false,
-          classes: "govuk-fieldset__legend--s"
-              }
-            },
-            
-            items: [
+                html: '<h3 class="defra-map-key__section-title-toggle-v5">Advanced options</h3>',
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend--s"
+                    }
+                  },
+                  
+                  items: [
+                  {
+                    id: "tech-options",
+                    classes: "visible",
+                    value: "40",
+                  html: 'Add technical features'
+                  },
               {
                 id: "toggle",
                 html: '<span class="defra-map-key__symbol-container">

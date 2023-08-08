@@ -643,3 +643,18 @@ h1{
   }
 }
 
+// version 5
+
+@media screen and (min-width: 938px){
+.btn-margin-bottom {
+  margin-bottom: 95px;
+}
+// move dialog box to the right
+
+.dialog-right {
+  left: auto;
+  right: 0;
+  margin-right: 300px;
+}
+}
+
