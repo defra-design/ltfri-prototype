@@ -26,11 +26,30 @@
 }
 // for toggle
 .defra-map-key__section-title-toggle {
-  position:absolute;
+  position:relative;
   @include govuk-font($size: 16, $weight: bold);
   display: block;
   margin: 0;
-  padding: 15px 15px 0px;
+  padding: 0px 0px 0px;
+  box-sizing: border-box;
+  width: 260px;
+  &:before {
+    position:absolute;
+    content:'';
+    height:1px;
+    top:0px;
+    left:15px;
+    right:0px;
+    border-top:1px solid $govuk-border-colour;
+  }
+}
+// map version 5 with advanced options section
+.defra-map-key__section-title-toggle-v5 {
+  position:relative;
+  @include govuk-font($size: 16, $weight: bold);
+  display: block;
+  margin:0;
+  padding: 10px 15px 0px;
   box-sizing: border-box;
   width: 260px;
   &:before {
