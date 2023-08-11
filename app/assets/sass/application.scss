@@ -55,13 +55,45 @@ body { margin:0; padding:0; }
 .govuk-summary-card__title-wrapper.vlow {
   box-shadow: inset 10px 0px 0px #f3f2f1;
 }
+
+
+// turn off arrows on back link
+.govuk-back-link::before{
+  display: none;
+}
+
+// float search address link on right hand side
 .search-link-right{
   float: right;
+  margin-right: 15px;
+  padding-left: 0;
 }
-.search-link-right::before {
-  /* position:absolute; */
-    /* right:0;
-    text-align:right; */
+
+//indent back link
+.back-link-left{
+  margin-left: 15px;
+  padding-left: 0;
+}
+
+@media screen and (min-width:769px) {
+  .govuk-back-link {
+  margin-bottom: 0;
+}
+}
+// remove padding on desktop and margin-bottom
+@media screen and (min-width:1020px) {
+.search-link-right{
+  margin-right: 0;
+}
+.back-link-left{
+  margin-left: 0;
+}
+}
+
+@media screen and (min-width:769px) {
+  .govuk-back-link {
+  margin-bottom: 0;
+}
 }
 
 .chance-content {
