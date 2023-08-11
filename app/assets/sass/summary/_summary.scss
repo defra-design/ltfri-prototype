@@ -7,3 +7,88 @@
    font-weight: normal;
    padding-left: 5px;
 }
+
+// card summary page tests
+.govuk-summary-card__title-wrapper {
+    padding-left: 25px;
+}
+
+.govuk-summary-card__title-wrapper.high {
+    box-shadow: inset 10px 0px 0px #E3000E;
+}
+
+.govuk-summary-card__title-wrapper.medium {
+    box-shadow: inset 10px 0px 0px #F18604;
+}
+
+.govuk-summary-card__title-wrapper.low {
+  box-shadow: inset 10px 0px 0px #808080;
+}
+
+.govuk-summary-card__title-wrapper.vlow {
+  box-shadow: inset 10px 0px 0px #f3f2f1;
+}
+
+
+// turn off arrows on back link
+.govuk-back-link::before{
+  display: none;
+}
+
+// float search address link on right hand side
+.search-link-right{
+  float: right;
+  margin-right: 15px;
+  padding-left: 0;
+}
+
+//indent back link
+.back-link-left{
+  margin-left: 15px;
+  padding-left: 0;
+}
+
+@media screen and (min-width:769px) {
+  .govuk-back-link {
+  margin-bottom: 0;
+}
+}
+// remove padding on desktop and margin-bottom
+@media screen and (min-width:1020px) {
+.search-link-right{
+  margin-right: 0;
+}
+.back-link-left{
+  margin-left: 0;
+}
+}
+
+@media screen and (min-width:769px) {
+  .govuk-back-link {
+  margin-bottom: 0;
+}
+}
+
+.chance-content {
+  padding-left: 10px;
+  border-style: solid;
+  border-width: 0 0 0 1px;
+  border-color: #8b8b8b;
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+// res and gw starts on new line
+@media screen and (max-width: 640px){
+    .link-font {
+      font-size: 16px;
+    }
+  
+    .gw-context {
+      display: block;
+      padding-left: 0;
+      margin-left: 0;
+      border: none;
+      padding-top: 2px;
+    }
+   }
