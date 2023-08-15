@@ -937,6 +937,7 @@ $(document).ready(function() {
   }
 });
 
+// load less options for each separate map, advanced options can toggle features back on
 
 $(document).ready(function() {
   // Get the current page path
@@ -999,5 +1000,4 @@ $(document).ready(function() {
     // Show/hide content based on checkbox state
     toggleContent(isChecked);
   });
-});
-
+}); 
