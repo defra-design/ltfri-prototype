@@ -1,18 +1,12 @@
 {% extends "layouts/map-v5.html" %}
 
 {% block pageTitle %}
-Map – {{ serviceName }} – GOV.UK Prototype Kit
+Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
-
-
-<!--<meta name="viewport" user-scalable="no">-->
 
 
 
 {% block content %}
-
-<!--map key -->
-
 
 
 
@@ -95,8 +89,6 @@ Map – {{ serviceName }} – GOV.UK Prototype Kit
       </svg>
       <span class="govuk-visually-hidden">Copyright information</span>
     </button>
-   <!--   <img class="defra-map-os-logo" alt="Ordnance Survey logo" src="/public/images/map-os-logo.png" width="90"
-      height="24" style="pointer-events: auto; display: block;">  -->
 
     
     
@@ -142,7 +134,6 @@ Map – {{ serviceName }} – GOV.UK Prototype Kit
       
       </div>
     </div>
-  </div>
 
  <!-- attribution start -->
   <div class="defra-map-info dialog-right" id="info" role="dialog" style="display:none;" aria-modal="true" aria-labelledby="infoLabel" aria-describedby="infoDescription" tabindex="-1">
@@ -235,11 +226,11 @@ Map – {{ serviceName }} – GOV.UK Prototype Kit
           },
           {
             id: "sw-velocity",
-            classes: "visible",
+            classes: "hidden",
             value: "9",
           html: '
-            Velocity
-          '
+          Velocity
+        '
           }
           ]
           }) }}
@@ -339,7 +330,8 @@ Map – {{ serviceName }} – GOV.UK Prototype Kit
               id: "tech-options",
               classes: "visible",
               value: "40",
-            html: 'Add technical features'
+            html: 'Add technical features',
+            checked: false
             },
               {
                 id: "toggle",
@@ -363,30 +355,14 @@ Map – {{ serviceName }} – GOV.UK Prototype Kit
               }
             ]
           }) }}
-           
-
-          
 
         </div>
       </div>
-
-      
     </div>
-    
   </div>
 
-  
-
-  
 
 
 
 </div>
-
-
-
-
-
-
-
 {% endblock %}

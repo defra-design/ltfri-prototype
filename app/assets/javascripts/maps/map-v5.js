@@ -825,7 +825,7 @@ $('#att-key').on('click', function() {
 
 // Scenario control arrows 
 
-const btnLeft = document.querySelector(".left-btn");
+/* const btnLeft = document.querySelector(".left-btn");
 const btnRight = document.querySelector(".right-btn");
 const scenarioContainer = document.querySelector(".defra-map-scenarios-depth-v4");
 
@@ -873,7 +873,60 @@ scenarioContainer.addEventListener("mousemove", (e) => {
 
 document.addEventListener("mouseup", () => {
   activeDrag = false;
-});
+}); */
+
+if (window.location.pathname.includes("/version_6/map-v5/surface-water-depth") || window.location.pathname.includes("/version_6/map-v5/surface-water-velocity")) {
+  const btnLeft = document.querySelector(".left-btn");
+  const btnRight = document.querySelector(".right-btn");
+  const scenarioContainer = document.querySelector(".defra-map-scenarios-depth-v4");
+
+  const IconVisibility = () => {
+    let scrollLeftValue = Math.ceil(scenarioContainer.scrollLeft);
+    let scrollableWidth = scenarioContainer.scrollWidth - scenarioContainer.clientWidth;
+    let isAtLeftEdge = scrollLeftValue < 10; // Check if within 10 pixels of the left side
+
+    btnLeft.style.display = isAtLeftEdge ? "none" : "block";
+    btnRight.style.display = scrollableWidth > scrollLeftValue ? "block" : "none";
+  }
+
+  btnLeft.addEventListener("click", () => {
+    scenarioContainer.scrollLeft -= 150;
+    IconVisibility();
+  });
+
+  btnRight.addEventListener("click", () => {
+    scenarioContainer.scrollLeft += 150;
+    IconVisibility();
+  });
+
+  // Listen to the scroll event to update arrow visibility
+  scenarioContainer.addEventListener("scroll", () => {
+    IconVisibility();
+  });
+
+  // Work with drag interaction
+  let activeDrag = false;
+
+  scenarioContainer.addEventListener("mousedown", (e) => {
+    e.preventDefault(); // Prevent accidental text selection during drag
+    activeDrag = true;
+    startX = e.pageX - scenarioContainer.offsetLeft;
+    scrollLeft = scenarioContainer.scrollLeft;
+  });
+
+  scenarioContainer.addEventListener("mousemove", (e) => {
+    if (!activeDrag) return;
+    e.preventDefault(); // Prevent accidental text selection during drag
+    const x = e.pageX - scenarioContainer.offsetLeft;
+    const walk = (x - startX) * 2; // Adjust drag sensitivity
+    scenarioContainer.scrollLeft = scrollLeft - walk;
+  });
+
+  document.addEventListener("mouseup", () => {
+    activeDrag = false;
+  });
+}
+
 
 // Fix CSS and display left arrow none + display right button none above tablet width
 
@@ -882,4 +935,165 @@ $(document).ready(function() {
   if ($(window).width() >= 821) {
     $('.right-btn').css('display', 'none');
   }
+});
+
+
+// simple map version, hide content depending on which map is open
+
+/* 
+$(document).ready(function() {
+  var currentPath = window.location.pathname;
+  var techOptionsCheckbox = $('#tech-options');
+  var radioInputs = $('.govuk-radios__input[name="risk-type"]');
+  var swVelocityInput = $('#sw-velocity');
+
+  if (currentPath === '/version_6/map-v5/surface-water' || currentPath === '/version_6/map-v5/surface-water-depth') {
+    var formGroup = null; // Declare formGroup outside the loop
+    var swVelocityFormGroup = null; // Declare swVelocityFormGroup
+
+    radioInputs.each(function() {
+      if ($(this).val() === "3" || $(this).val() === "2") {
+        var formGroup = $(this).closest('.govuk-form-group');
+        if (formGroup.length) {
+          formGroup.hide();
+        }
+      }
+    });
+
+    if (swVelocityInput.length) {
+      var swVelocityFormGroup = swVelocityInput.closest('.govuk-radios__item');
+      if (swVelocityFormGroup.length) {
+        swVelocityFormGroup.hide();
+      }
+    }
+  }
+
+  // rivers 
+
+  else if (currentPath === '/version_6/map-v5/rivers-sea') {
+    var swVelocityFormGroup = null; // Declare swVelocityFormGroup
+
+    radioInputs.each(function() {
+      if ($(this).val() === "3") {
+        var resformGroup = $(this).closest('.govuk-form-group');
+        if (resformGroup.length) {
+          resformGroup.hide();
+        }
+      }
+    });
+
+    if (swVelocityInput.length) {
+      var swVelocityFormGroup = swVelocityInput.closest('.govuk-form-group');
+      if (swVelocityFormGroup.length) {
+        swVelocityFormGroup.hide();
+      }
+    }
+  }
+
+  // reservoirs
+
+  else if (currentPath === '/version_6/map-v5/reservoirs') {
+    var formGroup = null; // Declare formGroup outside the loop
+    var swVelocityFormGroup = null; // Declare swVelocityFormGroup
+
+    radioInputs.each(function() {
+      if ($(this).val() === "2") {
+        formGroup = $(this).closest('.govuk-form-group'); // Assign formGroup inside the loop
+        if (formGroup.length) {
+          formGroup.hide();
+        }
+      }
+    });
+
+    if (swVelocityInput.length) {
+      swVelocityFormGroup = swVelocityInput.closest('.govuk-form-group');
+      if (swVelocityFormGroup.length) {
+        swVelocityFormGroup.hide();
+      }
+    }
+  }
+  techOptionsCheckbox.on('change', function() {
+    var isChecked = $(this).prop('checked');
+
+    // Logic to show or hide content based on the checkbox state
+    if (isChecked) {
+      if (formGroup) {
+        formGroup.show();// Show the formGroup
+      }
+      if (swVelocityFormGroup) {
+        swVelocityFormGroup.show(); // Show the swVelocityFormGroup
+      }
+    } else {
+      if (formGroup) {
+        formGroup.hide();// Hide the formGroup
+      }
+      if (swVelocityFormGroup) {
+        swVelocityFormGroup.hide(); // Hide the swVelocityFormGroup
+      }
+    }
+  });
+}); 
+ */
+
+$(document).ready(function() {
+  var currentPath = window.location.pathname;
+  var techOptionsCheckbox = $('#tech-options');
+  var radioInputs = $('.govuk-radios__input[name="risk-type"]');
+  var swVelocityInput = $('#sw-velocity');
+
+  if (currentPath === '/version_6/map-v5/surface-water' || currentPath === '/version_6/map-v5/surface-water-depth') {
+    radioInputs.each(function() {
+      var val = $(this).val();
+      if (val === "3" || val === "2") {
+        $(this).closest('.govuk-form-group').hide();
+      }
+    });
+
+    swVelocityInput.closest('.govuk-radios__item').hide();
+  }
+  else if (currentPath === '/version_6/map-v5/rivers-sea') {
+    radioInputs.each(function() {
+      if ($(this).val() === "3") {
+        $(this).closest('.govuk-form-group').hide();
+      }
+    });
+
+    swVelocityInput.closest('.govuk-form-group').hide();
+  }
+  else if (currentPath === '/version_6/map-v5/reservoirs') {
+    radioInputs.each(function() {
+      if ($(this).val() === "2") {
+        $(this).closest('.govuk-form-group').hide();
+      }
+    });
+
+    swVelocityInput.closest('.govuk-form-group').hide();
+  }
+
+  techOptionsCheckbox.on('change', function() {
+    var isChecked = $(this).prop('checked');
+    var formGroup = null;
+    var swVelocityFormGroup = null;
+
+    if (currentPath === '/version_6/map-v5/surface-water' || currentPath === '/version_6/map-v5/surface-water-depth') {
+      formGroup = radioInputs.filter('[value="3"], [value="2"]').closest('.govuk-form-group');
+      swVelocityFormGroup = swVelocityInput.closest('.govuk-radios__item');
+    }
+    else if (currentPath === '/version_6/map-v5/rivers-sea') {
+      formGroup = radioInputs.filter('[value="3"]').closest('.govuk-form-group');
+      swVelocityFormGroup = swVelocityInput.closest('.govuk-form-group');
+    }
+    else if (currentPath === '/version_6/map-v5/reservoirs') {
+      formGroup = radioInputs.filter('[value="2"]').closest('.govuk-form-group');
+      swVelocityFormGroup = swVelocityInput.closest('.govuk-form-group');
+    }
+
+    if (isChecked) {
+      formGroup.show();
+      swVelocityFormGroup.show();
+    } else {
+      formGroup.hide();
+      swVelocityFormGroup.hide();
+    }
+  });
 });

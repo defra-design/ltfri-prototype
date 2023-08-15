@@ -278,7 +278,7 @@
 .defra-map--key-open {
   .defra-map-key {
     @include mq ($until: desktop) {
-      //display: block; // Safari v14 bug needs to be applied with JS
+      display: block; // Safari v14 bug needs to be applied with JS
       left:0;
       top:0px;
       bottom:0px;
@@ -295,6 +295,12 @@
       display: none;
     }
   }
+  /* .defra-map-key__content {
+  flex: 1;
+  overflow:auto !important;
+  touch-action: pan-y !important;
+  -webkit-overflow-scrolling: touch;
+  } */
 }
 .defra-map-key__title {
   display: block;
@@ -308,6 +314,8 @@
   touch-action: pan-y;
   -webkit-overflow-scrolling: touch;
 }
+
+
 
 // Map controls - close key
 .defra-map-key__close {
