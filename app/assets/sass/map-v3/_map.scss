@@ -295,12 +295,6 @@
       display: none;
     }
   }
-  /* .defra-map-key__content {
-  flex: 1;
-  overflow:auto !important;
-  touch-action: pan-y !important;
-  -webkit-overflow-scrolling: touch;
-  } */
 }
 .defra-map-key__title {
   display: block;
@@ -310,9 +304,9 @@
 }
 .defra-map-key__content {
   flex: 1;
-  overflow:auto;
-  touch-action: pan-y;
-  -webkit-overflow-scrolling: touch;
+  overflow:auto !important;
+  touch-action: pan-y !important;
+  -webkit-overflow-scrolling: touch !important;
 }
 
 
@@ -670,3 +664,12 @@ h1{
 }
 }
 
+@include mq ($until: desktop) {
+
+.defra-map-key__content {
+  flex: 1;
+  overflow-y: scroll !important;
+  touch-action: pan-y !important;
+  -webkit-overflow-scrolling: touch !important;
+  }
+}
