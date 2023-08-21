@@ -24,7 +24,7 @@
 }
 .defra-map-body {
   position: fixed;
-  overflow: hidden;
+  overflow: auto; // was hidden before
   top:0px;
   right:0px;
   bottom:0px;
@@ -113,10 +113,11 @@
     background-color: govuk-colour('light-grey');
   }
   &:focus {
-    outline: none;
+    outline: 3px solid transparent;
+    box-shadow: 0px 0px 0px 2px white, inset 0px 0px 0px 0px #0b0c0c, 0px 0px 0px 5px #0b0c0c, 0px 0px 0px 8px #ffdd00;
   }
   &:focus[keyboard-focus]:after {
-   @include focus;
+    /* @include focus($glow: 5px, $strong: 2px, $background: 0px, $inset: 1px);  */     
   }
   &::-moz-focus-inner {
     border: 0;
@@ -214,10 +215,11 @@
     background-color: govuk-colour('light-grey');
   }
   &:focus {
-    outline: none;
+    outline: 3px solid transparent;
+    box-shadow: 0px 0px 0px 2px white, inset 0px 0px 0px 0px #0b0c0c, 0px 0px 0px 5px #0b0c0c, 0px 0px 0px 8px #ffdd00;
   }
   &:focus[keyboard-focus]:after {
-    @include focus;
+   /*  @include focus; */
   }
   &::-moz-focus-inner {
     border: 0;
@@ -664,12 +666,160 @@ h1{
 }
 }
 
-@include mq ($until: desktop) {
+.defra-map__open-key-v5 {
+  float:right;
+  position:relative;
+  display: inline-block;
+  margin-left:0px;
+  margin-top:0px;
+  height:40px;
+  width:80px;
+  padding:0;
+  border:0;
+  cursor:pointer;
+  background-color:white;
+  @include govuk-font($size: 16);
+  line-height:40px;
+/*   text-indent: -5000px; */
+  color: govuk-colour('black');
+  @include mq ($from: desktop) {
+    display: none;
+  }
+  svg {
+    display: block;
+    margin:10px;
+    vertical-align: middle;
+  }
+  &:hover {
+    background-color: govuk-colour('light-grey');
+  }
+  &:focus {
+    outline: none;
+  }
+  &:focus[keyboard-focus]:after {
+    @include focus;
+  }
+  &::-moz-focus-inner {
+    border: 0;
+  }
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  pointer-events: auto;
+  .button-content {
+    display: flex;
+    align-items: center;
+  }
+  .open-button-text {
+    margin-left: 2px;  
+   }
+}
 
-.defra-map-key__content {
-  flex: 1;
-  overflow-y: scroll !important;
-  touch-action: pan-y !important;
-  -webkit-overflow-scrolling: touch !important;
+
+
+
+
+// Map controls - reset location
+.defra-map-reset-v5 {
+  float:right;
+  position:relative;
+  display: inline-block;
+  border:0;
+  height:40px;
+  width:110px;
+  margin-top: 45px;
+  margin-right: -80px;
+  cursor:pointer;
+  background-color: white;
+  color: govuk-colour('black');
+  @include govuk-font($size: 16);
+  text-decoration: none !important;
+  svg {
+    display: block;
+    margin:10px;
+    vertical-align: middle;
+  }
+  &::-moz-focus-inner {
+    border: 0;
+  }
+  &:hover {
+    background-color: govuk-colour('light-grey');
+  }
+  &:focus {
+    outline: none;
+  }
+  &:focus[keyboard-focus]:after {
+    @include focus;
+  }
+  &[disabled] {
+    display: none;
+  }
+  .button-content {
+    display: flex;
+    align-items: center;
+  }
+  .open-button-text {
+    margin-left: 0px;  
+   }
+   @include mq ($from: desktop) {
+    width:40px;
+    margin-right: 0;
+    display:block;
+    .open-button-text {
+      display: none; 
+     }
+  }
+}
+
+
+
+.defra-map-attribution-v5 {
+  float:right;
+  position:relative;
+  display: inline-block;
+  clear: both;
+  @include govuk-font($size: 16);
+  border:0;
+  height:40px;
+  width:115px;
+  padding:0;
+  margin-top: 5px;
+  margin-right: 0px;
+  cursor:pointer;
+  background-color:white;
+  color: govuk-colour('black');
+  svg {
+    display: block;
+    margin: 10px;
+    vertical-align: middle;
+  }
+  &::-moz-focus-inner {
+    border: 0;
+  }
+  &:hover {
+    background-color: govuk-colour('light-grey');
+  }
+  &:focus {
+    outline: none;
+  }
+  &:focus[keyboard-focus]:after {
+    @include focus;
+  }
+  .button-content {
+    display: flex;
+    align-items: center;
+  }
+  .open-button-text {
+    margin-left: 0px;  
+   }
+   @include mq ($from: desktop) {
+    width:40px;
+    margin-right: 0;
+    display:block;
+    .open-button-text {
+      display: none; 
+     }
   }
 }

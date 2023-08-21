@@ -206,3 +206,35 @@ input::placeholder {
     display: none;
   }
 }
+
+// version 5 of maps
+
+.search-container-v5 {
+  @include govuk-font($size: 16);
+  width: 300px;
+  position: relative;
+  float: left;
+  display: flex;
+  margin: 10px 0 0 10px;
+
+}
+
+.search-bar-v5 input {
+ width: 100%;
+ color: white;
+}
+
+.search-button-v5 {
+  width: 15%;
+  background-color: black;
+  padding: 5px;
+  border: 0px solid #0B0C0C;
+  border-left: none;
+  cursor: pointer;
+  svg {
+    color: white;
+    height: 20px;
+    width: 20px;
+    display: block;
+  }
+}

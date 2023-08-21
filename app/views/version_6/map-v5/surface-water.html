@@ -11,7 +11,6 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
 
 
   <div id="maphigh" class="map"></div>
- <!-- Search box -->
 
 
 
@@ -23,6 +22,25 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
           style="fill:currentColor;stroke:currentColor;stroke-width:0.1px"></path>
       </svg><span>Exit map</span></a>
 
+ <!-- Search box -->
+
+<!-- <form action="#">
+  <div class="search-container-v5">
+    <div class="search-bar-v5">
+      <input type="text" class="search-input-v5" value="" name="search" id="search-v5" placeholder="Search for a location" autocomplete="off">
+    </div>
+    <button class="search-button-v5" type="submit"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></button>
+  </div>
+</form> -->
+
+<!-- <form action="#" class="govuk-form">
+  <div class="govuk-form-group">
+    <div class="govuk-search-container">
+      <input type="text" class="govuk-input govuk-input--width-20" name="search" id="search" placeholder="Search for a location">
+      <button type="submit" class="govuk-button"><span class="govuk-visually-hidden">Search</span></button>
+    </div>
+  </div>
+</form> -->
     
 
   
@@ -54,17 +72,27 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
     <!--controls on the bottom-->
     <div class="defra-map-controls__bottom-v3" id="controls">
       <!-- open map on mobile -->
-      <button class="defra-map__open-key" id="open-key"><svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20"><path d="M17.215,11.31L19,12.5L10,18.5L1,12.5L2.785,11.31L9.945,16.083C9.978,16.106 10.022,16.106 10.055,16.083L17.215,11.31Z" style="fill:currentColor;"></path><path d="M10,1.5L1,7.5L10,13.5L19,7.5L10,1.5ZM10,3.88L15.43,7.5L10,11.12L4.57,7.5L10,3.88Z" style="fill:currentColor;"></path></svg><span class="govuk-visually-hidden">Open key</span></button>
+      <button class="defra-map__open-key-v5" focusable="true" id="open-key">
+        <div class="button-content">
+        <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20"><path d="M17.215,11.31L19,12.5L10,18.5L1,12.5L2.785,11.31L9.945,16.083C9.978,16.106 10.022,16.106 10.055,16.083L17.215,11.31Z" style="fill:currentColor;"></path><path d="M10,1.5L1,7.5L10,13.5L19,7.5L10,1.5ZM10,3.88L15.43,7.5L10,11.12L4.57,7.5L10,3.88Z" style="fill:currentColor;"></path></svg>
+        <span class="govuk-visually-hidden">open</span><span class="open-button-text">Key</span>
+      </div>
+      </button>
       <!-- reset -->
-      <a href="surface-water?marker=true&scenario=17&center=0.40549395430366053,52.243703593774285" class="defra-map-reset" id="reset-key" aria-controls="viewport" href="#" style="color:#0b0c0c;"><svg aria-hidden="true" focusable="false" width="20"
+      <a href="surface-water?marker=true&scenario=17&center=0.40549395430366053,52.243703593774285" class="defra-map-reset-v5" id="reset-key" aria-controls="viewport" style="color:#0b0c0c;">
+        <div class="button-content">
+        <svg aria-hidden="true" focusable="false" width="20"
         height="20" viewBox="0 0 20 20">
         <path d="M2.054,7.871L5.25,1.407L9.25,8.335L2.054,7.871Z" style="fill:currentColor;"></path>
         <path
           d="M7.25,4.871C8.206,4.317 9.316,4 10.5,4C14.087,4 17,6.913 17,10.5C17,14.087 14.087,17 10.5,17C6.913,17 4,14.087 4,10.5"
           style="fill:none;fill-rule:nonzero;stroke:currentColor;stroke-width:2px;"></path>
-      </svg><span class="govuk-visually-hidden">Reset location</span></a>
+      </svg><span class="open-button-text">Recentre</span><span class="govuk-visually-hidden">location</span>
+    </div>
+  </a>
       <!-- zoom in -->
-    <div class="defra-map-zoom ol-unselectable ol-control"><button id="zoomIn"  class="defra-map-zoom-in" type="button"
+    <div class="defra-map-zoom ol-unselectable ol-control">
+      <button id="zoomIn"  class="defra-map-zoom-in" type="button"
         aria-controls="viewport"><svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20"
           style="fill:currentColor;fill-rule:evenodd;clip-rule:evenodd;">
           <rect x="3" y="9" width="14" height="2"></rect>
@@ -83,11 +111,13 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
     
 
     <!-- copyright info -->
-    <button class="defra-map-attribution btn-margin-bottom" id="att-key" aria-controls="controls">
+    <button class="defra-map-attribution-v5 btn-margin-bottom" id="att-key" aria-controls="controls">
+      <div class="button-content">
       <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
         <path d="M10,2.5C11.286,2.5 12.52,2.823 13.701,3.469C14.883,4.116 15.811,5.038 16.487,6.235C17.162,7.433 17.5,8.688 17.5,10C17.5,11.305 17.169,12.551 16.506,13.735C15.844,14.92 14.92,15.844 13.735,16.506C12.551,17.169 11.305,17.5 10,17.5C8.695,17.5 7.449,17.169 6.265,16.506C5.08,15.844 4.156,14.92 3.494,13.735C2.831,12.551 2.5,11.305 2.5,10C2.5,8.688 2.838,7.433 3.513,6.235C4.189,5.038 5.117,4.116 6.299,3.469C7.48,2.823 8.714,2.5 10,2.5ZM10,3.978C8.969,3.978 7.978,4.236 7.028,4.752C6.079,5.268 5.333,6.007 4.791,6.97C4.249,7.932 3.978,8.943 3.978,10C3.978,11.044 4.244,12.043 4.776,12.996C5.308,13.949 6.051,14.692 7.004,15.224C7.957,15.756 8.956,16.022 10,16.022C11.044,16.022 12.043,15.756 12.996,15.224C13.949,14.692 14.692,13.949 15.224,12.996C15.756,12.043 16.022,11.044 16.022,10C16.022,8.949 15.751,7.941 15.209,6.975C14.667,6.008 13.921,5.268 12.972,4.752C12.022,4.236 11.031,3.978 10,3.978ZM11.821,11.116L13.398,11.645C13.149,12.467 12.738,13.097 12.164,13.535C11.589,13.972 10.904,14.191 10.108,14.191C8.992,14.191 8.081,13.825 7.376,13.094C6.671,12.363 6.319,11.354 6.319,10.069C6.319,9.227 6.475,8.476 6.789,7.817C7.102,7.157 7.554,6.664 8.145,6.338C8.735,6.012 9.396,5.849 10.127,5.849C10.93,5.849 11.601,6.039 12.139,6.421C12.678,6.803 13.097,7.405 13.398,8.228L11.811,8.6C11.629,8.123 11.392,7.777 11.102,7.562C10.811,7.347 10.467,7.239 10.069,7.239C9.475,7.239 8.988,7.462 8.61,7.91C8.231,8.357 8.042,9.057 8.042,10.01C8.042,10.963 8.228,11.664 8.6,12.115C8.972,12.565 9.419,12.79 9.941,12.79C10.379,12.79 10.757,12.662 11.077,12.404C11.397,12.146 11.645,11.717 11.821,11.116Z" style="fill:currentColor;"></path>
       </svg>
-      <span class="govuk-visually-hidden">Copyright information</span>
+      <span class="open-button-text">Copyright</span><span class="govuk-visually-hidden">information</span>
+    </div>
     </button>
 
     
@@ -196,21 +226,21 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
                 <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#555C9D"></rect></svg>
               </span>
               High risk
-              <span class="risk-context-v3">More than 1 in 30 chance each year</span>
+              <span class="risk-context-v3">More than 3.3% chance each year</span>
             </span>
             <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="med-risk-sw">
               <span class="defra-map-key__symbol">
                 <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#9AA0DE"></rect></svg>
               </span>
               Medium risk
-              <span class="risk-context-v3">Between 1 in 30 and 1 in 100 chance each year</span>
+              <span class="risk-context-v3">Between 3.3% and 1% chance each year</span>
             </span>
             <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="low-risk-sw">
               <span class="defra-map-key__symbol">
                 <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#C4E1FF"></rect></svg>
               </span>
               Low risk
-              <span class="risk-context-v3">Between 1 in 100 and 1 in 1000 chance each year</span>
+              <span class="risk-context-v3">Between 1% and 0.1% chance each year</span>
             </span>
           ',
         
@@ -330,7 +360,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
               id: "tech-options",
               classes: "visible",
               value: "40",
-            html: 'Add technical features',
+            html: 'Add technical layers',
             checked: false
             },
               {

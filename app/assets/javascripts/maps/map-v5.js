@@ -767,7 +767,7 @@ $(document).on('click', function(e) {
     $('#open-key').css('display', 'block');
     $('#reset-key').css('display', 'block');
     $('#att-key').css('display', 'block');
-    $('.defra-map-attribution').css('margin-bottom', '0');
+    $('#att-key').css('margin-bottom', '0');
   }
 });
 
@@ -795,7 +795,7 @@ $('#att-key').on('click', function() {
     // Check if the screen width is 769 pixels or less
     if ($(window).width() <= 641) {
       // Add margin-bottom to .defra-map-attribution if the screen width is 769 or less
-      $('.defra-map-attribution').css('margin-bottom', '70px');
+      $('#att-key').css('margin-bottom', '70px');
     }
   } else if ($('#info').css('display') === 'block') {
     // If #info is displayed, hide it and show scenarios-controls
@@ -803,7 +803,7 @@ $('#att-key').on('click', function() {
     $('#scenarios-controls').css('display', 'block');
     if ($(window).width() <= 641) {
     // Remove the margin-bottom from .defra-map-attribution
-    $('.defra-map-attribution').css('margin-bottom', '0');
+    $('#att-key').css('margin-bottom', '0');
     }
   }
 });
@@ -816,7 +816,7 @@ $('#att-key').on('click', function() {
 
       if ($(window).width() <= 641) {
         // Remove the margin-bottom from .defra-map-attribution
-        $('.defra-map-attribution').css('margin-bottom', '0');
+        $('#att-key').css('margin-bottom', '0');
         }
     
   });
@@ -824,56 +824,6 @@ $('#att-key').on('click', function() {
 
 
 // Scenario control arrows 
-
-/* const btnLeft = document.querySelector(".left-btn");
-const btnRight = document.querySelector(".right-btn");
-const scenarioContainer = document.querySelector(".defra-map-scenarios-depth-v4");
-
-const IconVisibility = () => {
-  let scrollLeftValue = Math.ceil(scenarioContainer.scrollLeft);
-  let scrollableWidth = scenarioContainer.scrollWidth - scenarioContainer.clientWidth;
-  let isAtLeftEdge = scrollLeftValue < 10; // Check if within 10 pixels of left side
-
-  btnLeft.style.display = isAtLeftEdge ? "none" : "block";
-  btnRight.style.display = scrollableWidth > scrollLeftValue ? "block" : "none";
-}
-
-btnLeft.addEventListener("click", () => {
-  scenarioContainer.scrollLeft -= 150;
-  IconVisibility();
-});
-
-btnRight.addEventListener("click", () => {
-  scenarioContainer.scrollLeft += 150;
-  IconVisibility();
-});
-
-// Listen to the scroll event to update arrow visibility
-scenarioContainer.addEventListener("scroll", () => {
-  IconVisibility();
-});
-
-// Work with drag interaction
-let activeDrag = false;
-
-scenarioContainer.addEventListener("mousedown", (e) => {
-  e.preventDefault(); // Prevent accidental text selection during drag
-  activeDrag = true;
-  startX = e.pageX - scenarioContainer.offsetLeft;
-  scrollLeft = scenarioContainer.scrollLeft;
-});
-
-scenarioContainer.addEventListener("mousemove", (e) => {
-  if (!activeDrag) return;
-  e.preventDefault(); // Prevent accidental text selection during drag
-  const x = e.pageX - scenarioContainer.offsetLeft;
-  const walk = (x - startX) * 2; // Adjust drag sensitivity
-  scenarioContainer.scrollLeft = scrollLeft - walk;
-});
-
-document.addEventListener("mouseup", () => {
-  activeDrag = false;
-}); */
 
 if (window.location.pathname.includes("/version_6/map-v5/surface-water-depth") || window.location.pathname.includes("/version_6/map-v5/surface-water-velocity")) {
   const btnLeft = document.querySelector(".left-btn");
@@ -977,7 +927,12 @@ $(document).ready(function() {
     if (isChecked) {
       formGroup.show();
       swVelocityFormGroup.show();
-    } else {
+    } 
+    else if (window.location.pathname.includes("/version_6/map-v5/surface-water-velocity")) {
+      // Redirect to the surface-water page
+      window.location.href = "/version_6/map-v5/surface-water";
+    }
+    else {
       formGroup.hide();
       swVelocityFormGroup.hide();
     }
@@ -1001,3 +956,23 @@ $(document).ready(function() {
     toggleContent(isChecked);
   });
 }); 
+
+/*  // Poor workaround for redirecting to sw extent
+ document.addEventListener("DOMContentLoaded", function () {
+  // Get references to the checkbox and key elements
+  const techOptionsCheckbox = document.getElementById("tech-options");
+  // Add a click event listener to the checkbox
+  techOptionsCheckbox.addEventListener("click", function () {
+      // Check if the current page is the surface-water-velocity page
+      if (window.location.pathname.includes("/version_6/map-v5/surface-water-velocity")) {
+        // Redirect to the surface-water page
+        window.location.href = "/version_6/map-v5/surface-water";
+      }
+  });
+}); 
+ */
+
+
+
+
+
