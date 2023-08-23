@@ -13,6 +13,7 @@
     "govuk-prototype-kit": "^13.7.0",
     "jquery": "^3.7.0",
     "notifications-node-client": "^5.2.3",
+    "nvm": "^0.0.4",
     "ol": "^7.3.0",
     "proj4": "^2.9.0",
     "webpack": "^5.83.1",
