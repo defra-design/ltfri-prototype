@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-<a href="#" class="govuk-back-link back-link-left">Back</a>
+<a href="#" class="govuk-back-link back-link-left">Go back to address selection</a>
 <a href="" class="govuk-back-link search-link-right">Search for another address</a>
 {% endblock %}
 
@@ -23,6 +23,13 @@
         <li class="govuk-body">medium risk of flooding from rivers and the sea</li>
       </ul>
       <p class="govuk-body">This information is not specific to a property.</p>
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <span class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          This address is in the top 10% most prone to flooding within the local authority area.
+        </span>
+      </div>
     </div>
 </div>
 
@@ -33,9 +40,12 @@
     <!-- surface water-->
       <div class="govuk-summary-card govuk-!-margin-top-3" id="surface-water">
         <div class="govuk-summary-card__title-wrapper high">
-          <h2 class="govuk-summary-card__title">Surface water<span class="chance-content">High risk of flooding</span></h2>
+          <h2 class="govuk-summary-card__title">Surface water<span class="chance-content gw-context">High risk of flooding</span></h2>
           <ul class="govuk-summary-card__actions">
-           <li class="govuk-summary-card__action"> <a class="govuk-link" href="surface-water?marker=true&scenario=4">
+            <li class="govuk-summary-card__action"> <a class="govuk-link" href="surface-water?marker=true&scenario=4">
+              View full details<span class="govuk-visually-hidden">of the risk of surface water flooding</span>
+            </a>
+          </li> <li class="govuk-summary-card__action"> <a class="govuk-link" href="surface-water?marker=true&scenario=4">
                 View a map<span class="govuk-visually-hidden">of the risk of surface water flooding</span>
               </a>
             </li> 
@@ -51,6 +61,9 @@
               </dt>
               <dd class="govuk-summary-list__value">
                 Each year there is more than a 3.3% chance of flooding in a high risk area.
+                
+                <br><br>
+                Over time, risk of flooding increases, after 25 years this address would have a 58% chance of flooding.
                 <br><br>
                 <details class="govuk-details" data-module="govuk-details">
                   <summary class="govuk-details__summary">
@@ -116,36 +129,7 @@
               
               </dd>
             </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                What this information covers
-              </dt>
-              <dd class="govuk-summary-list__value">
-                This information tells you the highest chance of flooding on the land 15 metres around a property.
-               
-                It is not specific to a property.
-                <br><br>
-                <details class="govuk-details" data-module="govuk-details">
-                  <summary class="govuk-details__summary">
-                    <span class="govuk-details__summary-text">
-                      What you can use this information for
-                    </span>
-                  </summary>
-                  <div class="govuk-details__text">
-                    The information is an estimate based on the best data we have available. It is suitable for identifying:
-                <ul class="govuk-list--bullet">
-                  <li>which parts of towns or streets are at risk, or have the most risk</li>
-                  <li>the approximate extent and depth of flooding</li>
-                </ul>
-                <p>
-                It's likely to be reliable for a local area but not for identifying individual properties at risk.</p>
-                  </div>
-                  
-                </details>
-                
-              </dd>
-            </div>
-          </dl>
+            
           
         </div>
         
@@ -171,7 +155,7 @@
                How likely a flood is
               </dt>
               <dd class="govuk-summary-list__value">
-                Each year there is between a 1% and 3.3% chance of flooding in a medium risk area.
+                Each year there is between a 3.3% and 1% chance of flooding in a medium risk area.
                 <br><br>
                 <details class="govuk-details" data-module="govuk-details">
                   <summary class="govuk-details__summary">
@@ -300,7 +284,7 @@
                 What this information covers
               </dt>
               <dd class="govuk-summary-list__value">
-               <p class="govuk-body govuk-!-margin-bottom-3">Use the <a href="https://www.gov.uk/check-flooding">'check for flooding'</a> service to check current groundwater levels.</p>
+               <p class="govuk-body govuk-!-margin-bottom-3">There is limited data on groundwater, [link to dataset]?</p>
                 <details class="govuk-details" data-module="govuk-details">
                   <summary class="govuk-details__summary">
                     <span class="govuk-details__summary-text">

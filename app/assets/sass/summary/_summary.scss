@@ -31,6 +31,7 @@
 
 
 // turn off arrows on back link
+
 .govuk-back-link::before{
   display: none;
 }
@@ -73,7 +74,7 @@
   padding-left: 10px;
   border-style: solid;
   border-width: 0 0 0 1px;
-  border-color: #8b8b8b;
+  border-color: #b1b4b6;
   font-weight: normal;
   margin-left: 10px;
 }
