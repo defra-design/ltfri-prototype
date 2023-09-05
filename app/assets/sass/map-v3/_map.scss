@@ -43,6 +43,10 @@
   &:focus[keyboard-focus]:after {
      @include focus($glow: 5px, $strong: 2px, $background: 0px, $inset: 1px);
    }
+   &:focus {
+   outline: 3px solid transparent;
+    box-shadow: 0px 0px 0px 2px white, inset 0px 0px 0px 0px #0b0c0c, 0px 0px 0px 5px #0b0c0c, 0px 0px 0px 8px #ffdd00;
+   }
 }
 .defra-map-key {
   background-color:white;
@@ -443,7 +447,10 @@
   }
   &-in:focus,
   &-out:focus {
-    outline: none;
+   /*  outline: none; */
+   outline: 3px solid transparent;
+   box-shadow: 0px 0px 0px 2px white, inset 0px 0px 0px 0px #0b0c0c, 0px 0px 0px 5px #0b0c0c, 0px 0px 0px 8px #ffdd00;
+    
   }
   &-in:focus[keyboard-focus]:after,
   &-out:focus[keyboard-focus]:after {
@@ -538,14 +545,20 @@
     left:10px;
   }
   &:focus {
-    outline: none;
+    /* outline: none; */
+    outline: 3px solid transparent;
+    box-shadow: 0px 0px 0px 2px white, inset 0px 0px 0px 0px #0b0c0c, 0px 0px 0px 5px #0b0c0c, 0px 0px 0px 8px #ffdd00;
   }
   &:focus[keyboard-focus]:after {
     @include mq ($until: tablet) {
-      @include focus($glow: 5px, $strong: 2px, $background: 0px, $inset: 1px);
+      /* @include focus($glow: 5px, $strong: 2px, $background: 0px, $inset: 1px); */
+      outline: 3px solid transparent;
+    box-shadow: 0px 0px 0px 2px white, inset 0px 0px 0px 0px #0b0c0c, 0px 0px 0px 5px #0b0c0c, 0px 0px 0px 8px #ffdd00;
     }
     @include mq ($from: tablet) {
-      @include focus();
+      /* @include focus(); */
+      outline: 3px solid transparent;
+    box-shadow: 0px 0px 0px 2px white, inset 0px 0px 0px 0px #0b0c0c, 0px 0px 0px 5px #0b0c0c, 0px 0px 0px 8px #ffdd00;
     }
   }
   &__container {
@@ -571,10 +584,14 @@
     background-color: govuk-colour('light-grey');
   }
   &:focus {
-    outline: none;
+    /* outline: none; */
+    outline: 3px solid transparent;
+    box-shadow: 0px 0px 0px 2px white, inset 0px 0px 0px 0px #0b0c0c, 0px 0px 0px 5px #0b0c0c, 0px 0px 0px 8px #ffdd00;
   }
   &:focus[keyboard-focus]:after {
-    @include focus;
+  /*   @include focus; */
+  outline: 3px solid transparent;
+  box-shadow: 0px 0px 0px 2px white, inset 0px 0px 0px 0px #0b0c0c, 0px 0px 0px 5px #0b0c0c, 0px 0px 0px 8px #ffdd00;
   }
   &::-moz-focus-inner {
     border: 0;
@@ -657,6 +674,10 @@ h1{
 .btn-margin-bottom-depth {
   margin-bottom: 115px;
 }
+// version 6 map change
+.btn-margin-bottom-depth-v6 {
+  margin-bottom: 95px;
+}
 // move dialog box to the right
 
 .dialog-right {
@@ -694,10 +715,14 @@ h1{
     background-color: govuk-colour('light-grey');
   }
   &:focus {
-    outline: none;
+    /* outline: none; */
+    outline: 3px solid transparent;
+    box-shadow: 0px 0px 0px 2px white, inset 0px 0px 0px 0px #0b0c0c, 0px 0px 0px 5px #0b0c0c, 0px 0px 0px 8px #ffdd00;
   }
   &:focus[keyboard-focus]:after {
-    @include focus;
+    /* @include focus; */
+    outline: 3px solid transparent;
+    box-shadow: 0px 0px 0px 2px white, inset 0px 0px 0px 0px #0b0c0c, 0px 0px 0px 5px #0b0c0c, 0px 0px 0px 8px #ffdd00;
   }
   &::-moz-focus-inner {
     border: 0;
@@ -748,10 +773,14 @@ h1{
     background-color: govuk-colour('light-grey');
   }
   &:focus {
-    outline: none;
+    /* outline: none; */
+    outline: 3px solid transparent;
+    box-shadow: 0px 0px 0px 2px white, inset 0px 0px 0px 0px #0b0c0c, 0px 0px 0px 5px #0b0c0c, 0px 0px 0px 8px #ffdd00;
   }
   &:focus[keyboard-focus]:after {
-    @include focus;
+   /*  @include focus; */
+   outline: 3px solid transparent;
+    box-shadow: 0px 0px 0px 2px white, inset 0px 0px 0px 0px #0b0c0c, 0px 0px 0px 5px #0b0c0c, 0px 0px 0px 8px #ffdd00;
   }
   &[disabled] {
     display: none;
@@ -802,7 +831,118 @@ h1{
     background-color: govuk-colour('light-grey');
   }
   &:focus {
-    outline: none;
+    /* outline: none; */
+    outline: 3px solid transparent;
+    box-shadow: 0px 0px 0px 2px white, inset 0px 0px 0px 0px #0b0c0c, 0px 0px 0px 5px #0b0c0c, 0px 0px 0px 8px #ffdd00;
+  }
+  &:focus[keyboard-focus]:after {
+   /*  @include focus; */
+   outline: 3px solid transparent;
+    box-shadow: 0px 0px 0px 2px white, inset 0px 0px 0px 0px #0b0c0c, 0px 0px 0px 5px #0b0c0c, 0px 0px 0px 8px #ffdd00;
+  }
+  .button-content {
+    display: flex;
+    align-items: center;
+  }
+  .open-button-text {
+    margin-left: 0px;  
+   }
+   @include mq ($from: desktop) {
+    width:40px;
+    margin-right: 0;
+    display:block;
+    .open-button-text {
+      display: none; 
+     }
+  }
+}
+
+// version 6 of map
+.defra-map__advanced {
+  float: right;
+  position:relative;
+  margin:10px 10px 0px 10px;
+  border:0;
+  padding:0;
+  height:40px;
+  width:40px;
+  cursor:pointer;
+  background-color:white;
+  color: govuk-colour('black');
+  font-size:16px;
+  line-height:40px;
+  color: govuk-colour('black');
+  // render full text 
+  width:auto;
+  padding-right:11px;
+  svg {
+    display: inline-block;
+    margin:10px;
+    vertical-align: top;
+  }
+  span {
+    vertical-align: top;
+  }
+  @include mq ($until: desktop) {
+    span {
+      font-size:14px;
+      padding-left: 0;
+    }
+    }
+    
+  
+  &:hover {
+    background-color: govuk-colour('light-grey');
+  }
+  &:focus {
+    outline: 3px solid transparent;
+    box-shadow: 0px 0px 0px 2px white, inset 0px 0px 0px 0px #0b0c0c, 0px 0px 0px 5px #0b0c0c, 0px 0px 0px 8px #ffdd00;
+  }
+  &:focus[keyboard-focus]:after {
+    /* @include focus($glow: 5px, $strong: 2px, $background: 0px, $inset: 1px);  */     
+  }
+  &::-moz-focus-inner {
+    border: 0;
+  }
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  pointer-events: auto;
+}
+
+.defra-map-attribution-v6 {
+  float:right;
+  position:relative;
+  display: inline-block;
+  clear: both;
+  @include govuk-font($size: 16);
+  border:0;
+  height:40px;
+  width:115px;
+  padding:0;
+  margin-top: 5px;
+  margin-right: 0px;
+  // override scenario controls padding to not create new js
+  cursor:pointer;
+  background-color:white;
+  color: govuk-colour('black');
+  svg {
+    display: block;
+    margin: 10px;
+    vertical-align: middle;
+  }
+  &::-moz-focus-inner {
+    border: 0;
+  }
+  &:hover {
+    background-color: govuk-colour('light-grey');
+  }
+  &:focus {
+    /* outline: none; */
+    outline: 3px solid transparent;
+   box-shadow: 0px 0px 0px 2px white, inset 0px 0px 0px 0px #0b0c0c, 0px 0px 0px 5px #0b0c0c, 0px 0px 0px 8px #ffdd00;
   }
   &:focus[keyboard-focus]:after {
     @include focus;

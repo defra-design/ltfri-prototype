@@ -32,3 +32,4 @@ tmp/
 /app/assets/javascripts/bundles/mapv3_5.bundle.js
 /app/assets/javascripts/bundles/mapv4.bundle.js
 /app/assets/javascripts/bundles/mapv5.bundle.js
+/app/assets/javascripts/bundles/mapv6.bundle.js

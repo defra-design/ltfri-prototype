@@ -461,3 +461,11 @@
   left: auto;
 }
 
+// version 6
+
+.v6-width-fix-depth {
+  max-width: 660px;
+  .govuk-radios{
+    width: 660px;
+  }
+}

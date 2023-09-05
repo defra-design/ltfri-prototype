@@ -31,16 +31,29 @@
 
 
 // turn off arrows on back link
-
 .govuk-back-link::before{
   display: none;
 }
 
 // float search address link on right hand side
 .search-link-right{
-  float: right;
-  margin-right: 15px;
-  padding-left: 0;
+    display: none;
+    @media only screen and (min-width: 385px) {
+    display: block;
+    float: right;
+    margin-right: 15px;
+    padding-left: 0;
+    }
+}
+
+.hidden-search-link {
+    display: none;
+    @media only screen and (max-width: 385px) {
+        display: block;
+        float: left;
+        padding-left: 0;
+        margin: 0;
+    }
 }
 
 //indent back link
