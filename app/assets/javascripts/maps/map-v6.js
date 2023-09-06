@@ -483,6 +483,8 @@ $('input[name="scenarios"]').change(function(){
 
   if ([10, 11, 12, 13, 14, 15].includes(Number(this.value))) {
     // Check the 'display options' checkbox if it's not already checked
+    // To work with display options checkbox if user unchecks box and then presses a scenario
+    // checks the checkbox again, as layers will display
     if (!displayOptionCheckbox.prop('checked')) {
       displayOptionCheckbox.prop('checked', true);
     }
