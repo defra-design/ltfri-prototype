@@ -106,9 +106,6 @@ name: 'base',
  zIndex: -1
 });
 
-
-// Surface water outline on click
-
 //surface water extent
 function surfaceWater(likelihood) {
   const layerIds = [2, 4, 6];
@@ -132,36 +129,7 @@ function surfaceWater(likelihood) {
   });
 }
 
-function addBorder(feature) {
-  feature.setStyle(new ol.style.Style({
-    stroke: new ol.style.Stroke({
-      color: 'red',
-      width: 2
-    })
-  }));
-}
-
-function removeBorder(feature) {
-  feature.setStyle(null);
-}
-
-function handleClickOnFeature(event) {
-  const clickedFeature = event.target;
-  
-  // Highlight the clicked feature and remove highlight from other features
-  addBorder(clickedFeature);
-  customVectorLayer.getSource().getFeatures().forEach(function(feature) {
-    if (feature !== clickedFeature) {
-      removeBorder(feature);
-    }
-  });
-  
-  console.log('Clicked on feature:', clickedFeature);
-}
-
-
-
-//surface water depth - not inclueded on map at the mo
+//surface water depth
  function surfaceWaterDepth (liklihood) {
   const bands = ['RoFSWDepth1in30', 'RoFSWDepth1in100', 'RoFSWDepth1in1000']
   return new TileLayer({
@@ -457,12 +425,15 @@ removeLayers();
 
    //high risk and med risk comparison
    //default to low risk unless a high or med risk scenario selected
-  let x = 3
+  let x = 1
   if (scenario == '4' || scenario == '10' || scenario == '13' || scenario == '17' ) {
   x=1 } 
   else if (scenario == '5' || scenario == '11' || scenario == '14' || scenario == '18') {
    x=2 
   }
+  else if (scenario == '6' || scenario == '12' || scenario == '15' || scenario == '19') {
+    x=3 
+   }
 
   if (pathname == '/version_7/map-v6/surface-water'){
     map.addLayer(surfaceWater(3))
@@ -507,6 +478,15 @@ removeLayers();
 $('input[name="scenarios"]').change(function(){
 
   removeLayers();
+
+  var displayOptionCheckbox = $('#display-option');
+
+  if ([10, 11, 12, 13, 14, 15].includes(Number(this.value))) {
+    // Check the 'display options' checkbox if it's not already checked
+    if (!displayOptionCheckbox.prop('checked')) {
+      displayOptionCheckbox.prop('checked', true);
+    }
+  }
 
 //add back in the layer based on the radio button value
 if (this.value == '4') {
@@ -983,6 +963,8 @@ mapButton.on('click', function () {
   // Toggle the checkbox state
   techOptionsCheckbox.prop('checked', !techOptionsCheckbox.prop('checked'));
 
+// add a way to open key here to show use that the options have changed when in mobile mode
+
   // Update the button text and SVG based on the checkbox state
   updateButtonState();
 
@@ -998,32 +980,88 @@ mapButton.on('click', function () {
 
 $(document).ready(function () {
   // Get the checkbox element
-  var displayLayersCheckbox = $('#display-option'); // Assuming this is the correct ID
-
+  var displayLayersCheckbox = $('#display-option');
+  var currentPath = window.location.pathname;
   // Function to handle the "Display layers on map" checkbox
   function handleDisplayLayersCheckbox() {
     var isChecked = displayLayersCheckbox.prop('checked');
-
+    var scenarioValue = $('input[name="scenarios"]:checked').val();
     // If unchecked, call the removeLayers() function
     if (!isChecked) {
+      if (currentPath === '/version_7/map-v6/surface-water' || currentPath === '/version_7/map-v6/surface-water-depth' || currentPath === '/version_7/map-v6/surface-water-velocity') {
       removeLayers();
       markerAddressRadius();
     }
-  else {
+    else if (currentPath === '/version_7/map-v6/rivers-sea' || currentPath === '/version_7/map-v6/reservoirs')
+      removeLayers();
+      markerAddress();
+    }
+    // end of if that removes layers
+
+    // if checkbox checked again, return correct layers
+    else if (currentPath === '/version_7/map-v6/surface-water') {
     removeLayers();
     map.addLayer(surfaceWater(3)),
     map.addLayer(surfaceWater(2)),
     map.addLayer(surfaceWater(1)),
     markerAddressRadius()
     }
-
-    // Other logic related to the checkbox can go here if needed
+    else if (currentPath === '/version_7/map-v6/rivers-sea') {
+      removeLayers();
+      map.addLayer(riverSea(4)),
+      map.addLayer(riverSea(3)),
+      map.addLayer(riverSea(2)),
+      map.addLayer(riverSea(1)),
+      markerAddress();
+      }
+      else if (currentPath === '/version_7/map-v6/reservoirs') {
+        removeLayers();
+        map.addLayer(reservoirRiver('DryDay')),
+        map.addLayer(reservoirRiver('WetDay')),
+        markerAddress();
+        }
+        else if (currentPath === '/version_7/map-v6/surface-water-depth') {
+          //surface water depth high risk
+           if (scenarioValue == '10') {
+            removeLayers();
+            map.addLayer(surfaceWaterDepth(1));
+            markerAddressRadius();
+          }
+          //surface water depth medium risk
+          else if (scenarioValue == '11') {
+            removeLayers();
+            map.addLayer(surfaceWaterDepth(2));
+            markerAddressRadius();
+            //surface water depth low risk
+          } else if (scenarioValue == '12') {
+            removeLayers();
+            map.addLayer(surfaceWaterDepth(3));
+            markerAddressRadius();
+          } 
+          }
+          else if (currentPath === '/version_7/map-v6/surface-water-velocity') {
+            //surface water velocity high risk
+             if (scenarioValue == '13') {
+              removeLayers();
+              map.addLayer(surfaceWaterSpeed(1));
+              markerAddressRadius();
+            }
+            //surface water velocity medium risk
+            else if (scenarioValue == '14') {
+              removeLayers();
+              map.addLayer(surfaceWaterSpeed(2));
+              markerAddressRadius();
+              //surface water velocity low risk
+            } else if (scenarioValue == '15') {
+              removeLayers();
+              map.addLayer(surfaceWaterSpeed(3));
+              markerAddressRadius();
+            } 
+            }
   }
 
   // Handle checkbox change event by calling the function
   displayLayersCheckbox.on('change', handleDisplayLayersCheckbox);
-
-  // ...
 });
 
 // exit map button
@@ -1039,7 +1077,6 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   var velocityExit = $('#advanced-map-button-velocity');
-
   velocityExit.on('click', function () {
 
     // Navigate to another page
@@ -1047,7 +1084,7 @@ $(document).ready(function () {
   });
 });
 
-// Function to hide form groups based on the previous URL
+// Function to jump to surface water extent if user presses simple map on velocity
 function hideFormGroupsBasedOnPreviousURL() {
   // Check if the current page is '/version_7/map-v6/surface-water'
   if (window.location.pathname === '/version_7/map-v6/surface-water') {
