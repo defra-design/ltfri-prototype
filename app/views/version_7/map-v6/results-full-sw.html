@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Summary
+{% endblock %}
+
+{% block beforeContent %}
+<a href="results-hx7.html" class="govuk-back-link back-link-left">Back to summary</a>
+<!-- <a href="" class="govuk-back-link search-link-right">Search for another address</a> -->
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<div class="govuk-grid-row">
+<!-- two thirds column for title and address-->
+  <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l govuk-!-padding-top-0">
+     More details about surface water flood risk
+      </h1>
+
+      <!-- <ul class="govuk-list--bullet">
+        <li class="govuk-body">high risk of surface water flooding</li>
+        <li class="govuk-body">medium risk of flooding from rivers and the sea</li>
+      </ul> -->
+<!--       <p class="govuk-body">This information is not specific to a property.</p> -->
+  <!--     <a href="" class="govuk-back-link hidden-search-link">Search for another address</a> -->
+    </div>
+</div>
+
+<!-- Start of cards -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+  
+      <!-- surface water-->
+        <div class="govuk-summary-card govuk-!-margin-top-3" id="surface-water">
+          <div class="govuk-summary-card__title-wrapper high">
+            <h2 class="govuk-summary-card__title">Surface water<span class="chance-content">High risk of flooding</span></h2>
+            <ul class="govuk-summary-card__actions">
+             <li class="govuk-summary-card__action"> <a class="govuk-link" href="see-your-risk-map-sw.html?&results=surface-water?marker=true&scenario=4">
+                  See this risk on a map<span class="govuk-visually-hidden">of surface water flooding</span>
+                </a>
+              </li> 
+              
+            </ul>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                 What this information tells you
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  We use the best data available to estimate the surface water flood risk for <strong>an area</strong>.
+                  <br><br>
+                  We cannot tell you whether an individual property will definitely flood.
+                  <br><br>
+                  Neighbouring houses in a street may have different levels of flood risk. This could be because one is on higher land or has higher floor levels.
+                  <br><br>
+                  Predicting flood risk is not an exact science - flood events of any size can happen anywhere at any time.
+                </dd>
+               
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                 What makes an area more likely to flood from surface water
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Surface water flooding is sometimes known as flash flooding. It happens when rainwater cannot drain away through normal drainage systems. It's a problem because:
+                  <ul class="govuk-list--bullet">
+                    <li>it often happens in places you don't expect, like up hills</li>
+                    <li>it's hard to predict, as heavy rain sometimes only affects a small part of an area</li>
+                    <li>where there's lots of tarmac and concrete the water has nowhere to go</li>
+                  </ul>
+                 
+                </dd>
+              </div>
+            
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  What you can do
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <!-- An area can still be at risk of flooding even if it has not flooded in the past. -->
+                  <!-- <br><br> -->
+                  You can <a href="https://www.gov.uk/find-local-council">contact your local council</a> for advice on managing surface water flood risk.
+                  <br><br>
+                 Read <a href="managing-flood-risk#property">more about how to manage your flood risk</a>.
+                 
+                   
+                
+                </dd>
+              </div>
+             
+          
+        </div>
+  
+  <!-- Rivers -->
+      
+      </div>
+      </div>
+    
+    </div>
+  </div>
+  {% endblock %}
+  
