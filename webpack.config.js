@@ -26,7 +26,9 @@ module.exports = {
     mapv3_5 : './app/assets/javascripts/maps/map-v3-5.js',
     mapv4 : './app/assets/javascripts/maps/map-v4.js',
     mapv5 : './app/assets/javascripts/maps/map-v5.js',
-    mapv6 : './app/assets/javascripts/maps/map-v6.js'        
+    mapv6 : './app/assets/javascripts/maps/map-v6.js',
+    mapv7 : './app/assets/javascripts/maps/map-v7.js' 
+
           },
   output: {
     path: __dirname,
