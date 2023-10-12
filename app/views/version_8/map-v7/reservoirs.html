@@ -56,10 +56,12 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
           style="fill:currentColor;stroke:currentColor;stroke-width:0.1px"></path>
       </svg><span>Exit map</span></button>
 
-    <!-- Advanced map toggle -->
-    <button class="defra-map__advanced" id="advanced-map-button" href="#" style="color:	#0b0c0c;">
-      <svg id="map-button-svg" aria-hidden="true" focusable="false"  xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 576 512"><path d="M408 120c0 54.6-73.1 151.9-105.2 192c-7.7 9.6-22 9.6-29.6 0C241.1 271.9 168 174.6 168 120C168 53.7 221.7 0 288 0s120 53.7 120 120zm8 80.4c3.5-6.9 6.7-13.8 9.6-20.6c.5-1.2 1-2.5 1.5-3.7l116-46.4C558.9 123.4 576 135 576 152V422.8c0 9.8-6 18.6-15.1 22.3L416 503V200.4zM137.6 138.3c2.4 14.1 7.2 28.3 12.8 41.5c2.9 6.8 6.1 13.7 9.6 20.6V451.8L32.9 502.7C17.1 509 0 497.4 0 480.4V209.6c0-9.8 6-18.6 15.1-22.3l122.6-49zM327.8 332c13.9-17.4 35.7-45.7 56.2-77V504.3L192 449.4V255c20.5 31.3 42.3 59.6 56.2 77c20.5 25.6 59.1 25.6 79.6 0zM288 152a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>
-    <span id="map-button-text">Go to advanced map</span></button>
+     <!-- Advanced map toggle -->
+     <button class="defra-map__advanced" id="advanced-map-button" href="#" style="color:	#0b0c0c;">
+      <svg viewBox="0 0 24 24" height="24" width="24"xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <path d="m3.485 15.126-.971 1.748 9 5a1 1 0 0 0 .971 0l9-5-.971-1.748L12 19.856ZM20 8V6h2V4h-2V2h-2v2h-2v2h2v2zM2.513 12.833l9.022 5.04a.995.995 0 0 0 .973.001l8.978-5a1 1 0 0 0-.002-1.749l-9.022-5a1 1 0 0 0-.968-.001l-8.978 4.96a1 1 0 0 0-.003 1.749z"/>
+      </svg>
+    <span id="map-button-text">Show advanced options</span></button>
 
       <!--controls on the bottom-->
       <div class="defra-map-controls__bottom-v3" id="controls">
@@ -305,7 +307,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
             classes: "govuk-checkboxes--small",
             fieldset: {
               legend: {
-                html: '<h3 class="defra-map-key__section-title-toggle-v5">Advanced options</h3>',
+                html: '<h3 class="defra-map-key__section-title-toggle-v5">Map details</h3>',
           isPageHeading: false,
           classes: "govuk-fieldset__legend--s"
               }
@@ -316,7 +318,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
               id: "display-option",
               classes: "visible",
               value: "30",
-              html: 'Display flooding',
+              html: 'Show flooding',
               checked: true
             },
               {

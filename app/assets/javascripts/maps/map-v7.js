@@ -934,20 +934,21 @@ $(document).ready(function () {
     toggleContent(isChecked);
   });
 
-  // Function to update button text and SVG based on checkbox state
-function updateButtonState() {
-  // Get the SVG element
-  const svgElement = $('#map-button-svg');
-  if (techOptionsCheckbox.prop('checked')) {
-      // Update the SVG path for "Go to simple map"
-      svgElement.find('path').attr('d', 'M565.6 36.2C572.1 40.7 576 48.1 576 56V392c0 10-6.2 18.9-15.5 22.4l-168 64c-5.2 2-10.9 2.1-16.1 .3L192.5 417.5l-160 61c-7.4 2.8-15.7 1.8-22.2-2.7S0 463.9 0 456V120c0-10 6.1-18.9 15.5-22.4l168-64c5.2-2 10.9-2.1 16.1-.3L383.5 94.5l160-61c7.4-2.8 15.7-1.8 22.2 2.7zM48 136.5V421.2l120-45.7V90.8L48 136.5zM360 422.7V137.3l-144-48V374.7l144 48zm48-1.5l120-45.7V90.8L408 136.5V421.2z'); 
-      $('#map-button-text').text('Go to simple map');
-  } else {
-      // Update the SVG path for "Go to advanced map"
-      svgElement.find('path').attr('d', 'M408 120c0 54.6-73.1 151.9-105.2 192c-7.7 9.6-22 9.6-29.6 0C241.1 271.9 168 174.6 168 120C168 53.7 221.7 0 288 0s120 53.7 120 120zm8 80.4c3.5-6.9 6.7-13.8 9.6-20.6c.5-1.2 1-2.5 1.5-3.7l116-46.4C558.9 123.4 576 135 576 152V422.8c0 9.8-6 18.6-15.1 22.3L416 503V200.4zM137.6 138.3c2.4 14.1 7.2 28.3 12.8 41.5c2.9 6.8 6.1 13.7 9.6 20.6V451.8L32.9 502.7C17.1 509 0 497.4 0 480.4V209.6c0-9.8 6-18.6 15.1-22.3l122.6-49zM327.8 332c13.9-17.4 35.7-45.7 56.2-77V504.3L192 449.4V255c20.5 31.3 42.3 59.6 56.2 77c20.5 25.6 59.1 25.6 79.6 0zM288 152a40 40 0 1 0 0-80 40 40 0 1 0 0 80z'); 
-      $('#map-button-text').text('Go to advanced map');
-  }
+  function updateButtonState() {
+    // Selecting the SVG based on the button it is inside
+    const svgElement = $('#advanced-map-button').find('svg');
+    if (techOptionsCheckbox.prop('checked')) {
+        svgElement.attr('viewBox', '0 0 24 24').attr('width', '24').attr('height', '24');
+        svgElement.find('path').attr('d', 'M20.515 15.126 12 19.856l-8.515-4.73-.971 1.748 9 5a1 1 0 0 0 .971 0l9-5zM16 4h6v2h-6zm5.484 7.125-9.022-5a1 1 0 0 0-.968-.001l-8.978 4.96a1 1 0 0 0-.003 1.749l9.022 5.04a.995.995 0 0 0 .973.001l8.978-5a1 1 0 0 0-.002-1.749z');
+        $('#map-button-text').text('Hide advanced options');
+    } else {
+        svgElement.attr('viewBox', '0 0 24 24').attr('width', '24').attr('height', '24');
+        svgElement.find('path').attr('d', 'm3.485 15.126-.971 1.748 9 5a1 1 0 0 0 .971 0l9-5-.971-1.748L12 19.856ZM20 8V6h2V4h-2V2h-2v2h-2v2h2v2zM2.513 12.833l9.022 5.04a.995.995 0 0 0 .973.001l8.978-5a1 1 0 0 0-.002-1.749l-9.022-5a1 1 0 0 0-.968-.001l-8.978 4.96a1 1 0 0 0-.003 1.749z');
+        $('#map-button-text').text('Show advanced options');
+    }
 }
+
+  
 
 // Check the initial state of the checkbox on page load and update the button accordingly
 $(document).ready(function () {

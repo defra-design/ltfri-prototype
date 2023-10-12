@@ -19,9 +19,13 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
           style="fill:currentColor;stroke:currentColor;stroke-width:0.1px"></path>
       </svg><span>Exit map</span></button>
    <!-- Advanced map toggle -->
-   <button class="defra-map__advanced" id="advanced-map-button-velocity" href="#" style="color:	#0b0c0c;">
-    <svg id="map-button-svg" aria-hidden="true" focusable="false"  xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 576 512"><path d="M565.6 36.2C572.1 40.7 576 48.1 576 56V392c0 10-6.2 18.9-15.5 22.4l-168 64c-5.2 2-10.9 2.1-16.1 .3L192.5 417.5l-160 61c-7.4 2.8-15.7 1.8-22.2-2.7S0 463.9 0 456V120c0-10 6.1-18.9 15.5-22.4l168-64c5.2-2 10.9-2.1 16.1-.3L383.5 94.5l160-61c7.4-2.8 15.7-1.8 22.2 2.7zM48 136.5V421.2l120-45.7V90.8L48 136.5zM360 422.7V137.3l-144-48V374.7l144 48zm48-1.5l120-45.7V90.8L408 136.5V421.2z'"/></svg>
-  <span id="map-button-text">Go to simple map</span></button>
+    <!-- Advanced map toggle -->
+    <button class="defra-map__advanced" id="advanced-map-button-velocity" href="#" style="color:	#0b0c0c;">
+      <svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <path d="M20.515 15.126 12 19.856l-8.515-4.73-.971 1.748 9 5a1 1 0 0 0 .971 0l9-5zM16 4h6v2h-6zm5.484 7.125-9.022-5a1 1 0 0 0-.968-.001l-8.978 4.96a1 1 0 0 0-.003 1.749l9.022 5.04a.995.995 0 0 0 .973.001l8.978-5a1 1 0 0 0-.002-1.749z"/>
+      </svg>
+      <span id="map-button-text">Hide advanced options</span></button>
+
 
       {% switch data.scenario %}
       {% case '4' %}
@@ -315,7 +319,7 @@ aria-describedby="infoDescription" tabindex="-1">
             classes: "govuk-checkboxes--small",
             fieldset: {
               legend: {
-                html: '<h3 class="defra-map-key__section-title-toggle-v5">Advanced options</h3>',
+                html: '<h3 class="defra-map-key__section-title-toggle-v5">Map details</h3>',
                 isPageHeading: false,
                 classes: "govuk-fieldset__legend--s"
                     }
@@ -326,7 +330,7 @@ aria-describedby="infoDescription" tabindex="-1">
                     id: "display-option",
                     classes: "visible",
                     value: "30",
-                    html: 'Display flooding',
+                    html: 'Show flooding',
                     checked: true
                   },
               {
