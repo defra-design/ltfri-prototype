@@ -732,26 +732,32 @@ $('#close-key').on('click', function() {
 });
 
 $(document).on('click', function(e) {
-  // Check if the clicked element is not a child of #defra-map-key__container, open-key, reset-key, or att-key
-  if (
-    !$(e.target).closest('#defra-map-key__container').length &&
-    !$(e.target).closest('#open-key').length &&
-    !$(e.target).closest('#reset-key').length &&
-    !$(e.target).closest('#att-key').length &&
-    !$(e.target).closest('#info').length &&
-    ($(window).width() <= 769)
-  ) {
-    $('#defra-map-key__container').css('display', 'none');
-    // Show the other elements when clicking outside of #defra-map-key__container
-    $('#scenarios-controls').css('display', 'block');
-    $('#open-key').css('display', 'block');
-    $('#reset-key').css('display', 'block');
-    $('#advanced-map-button').css('display', 'block');
-    $('#advanced-map-button-velocity').css('display', 'block');
-    $('#att-key').css('display', 'block');
-    $('#att-key').css('margin-bottom', '0');
+  if ($(window).width() <= 769) {
+    // Check if the clicked element is not a child of #defra-map-key__container, open-key, reset-key, or att-key
+    if (
+      !$(e.target).closest('#defra-map-key__container').length &&
+      !$(e.target).closest('#open-key').length &&
+      !$(e.target).closest('#reset-key').length &&
+      !$(e.target).closest('#att-key').length &&
+      !$(e.target).closest('#info').length
+    ) {
+      $('#defra-map-key__container').css('display', 'none');
+      // Show the other elements when clicking outside of #defra-map-key__container
+      $('#scenarios-controls').css('display', 'block');
+      $('#open-key').css('display', 'block');
+      $('#reset-key').css('display', 'block');
+      $('#advanced-map-button').css('display', 'block');
+      $('#advanced-map-button-velocity').css('display', 'block');
+      $('#att-key').css('display', 'block');
+      $('#att-key').css('margin-bottom', '0');
+    }
+    // not working yet
+  } else if (!$(e.target).is('#advanced-map-button') && !$(e.target).closest('#advanced-map-button').length) {
+    $('#defra-map-key__container').css('display', 'block');
   }
 });
+
+
 
 // open key
 
@@ -764,8 +770,8 @@ $('#open-key').on('click', function() {
   $('#reset-key').css('display', 'none');
   $('#att-key').css('display', 'none');
   $('#info').css('display', 'none');
-  $('#advanced-map-button').css('display', 'none');
-  $('#advanced-map-button-velocity').css('display', 'none');
+  /* $('#advanced-map-button').css('display', 'none');
+  $('#advanced-map-button-velocity').css('display', 'none'); */
 });
 
 // attribution button
@@ -871,6 +877,7 @@ $(document).ready(function() {
   }
 });
 
+// Advanced button
 // load less options for each separate map, advanced options can toggle features back on
 $(document).ready(function () {
   // Get the current page path
@@ -950,25 +957,31 @@ $(document).ready(function () {
 
   
 
-// Check the initial state of the checkbox on page load and update the button accordingly
-$(document).ready(function () {
+  // Check the initial state of the checkbox on page load and update the button accordingly
+  $(document).ready(function () {
   updateButtonState();
-});
+    });
 
-// Attach the click event handler to the button
-mapButton.on('click', function () {
-  // Toggle the checkbox state
-  techOptionsCheckbox.prop('checked', !techOptionsCheckbox.prop('checked'));
+  // Attach the click event handler to the button
+  mapButton.on('click', function () {
+    // Toggle the checkbox state
+    techOptionsCheckbox.prop('checked', !techOptionsCheckbox.prop('checked'));
 
-// add a way to open key here to show use that the options have changed when in mobile mode
+    // Update the button text and SVG based on the checkbox state
+    updateButtonState();
+  
+    // Trigger the checkbox change event to update content visibility
+    techOptionsCheckbox.trigger('change');
 
-  // Update the button text and SVG based on the checkbox state
-  updateButtonState();
-
-  // Trigger the checkbox change event to update content visibility
-  techOptionsCheckbox.trigger('change');
-});
-
+    if (window.innerWidth < 769 && $('#defra-map-key__container').css('display') === 'none') {
+      $('#defra-map-key__container').css('display', 'block');
+      // Uncomment the below lines if you want to also reload the page and return early
+      location.reload(); 
+      return; 
+  }
+  
+  });
+  
 });
 
 
