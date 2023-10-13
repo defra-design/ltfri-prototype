@@ -770,8 +770,8 @@ $('#open-key').on('click', function() {
   $('#reset-key').css('display', 'none');
   $('#att-key').css('display', 'none');
   $('#info').css('display', 'none');
-  /* $('#advanced-map-button').css('display', 'none');
-  $('#advanced-map-button-velocity').css('display', 'none'); */
+  $('#advanced-map-button').css('display', 'none');
+  $('#advanced-map-button-velocity').css('display', 'none');
 });
 
 // attribution button
