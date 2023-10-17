@@ -46,7 +46,7 @@ let mapCenter = []
 //view extent and centre and zoom levels
 const view = new View({
   center: setCenter(),
-  zoom: 16,
+  zoom: 9,
   minZoom: 8,
   maxZoom: 16,
   extent: [ -5.75447, 49.93027, 1.799683, 55.84093],
@@ -435,28 +435,28 @@ removeLayers();
     x=3 
    }
 
-  if (pathname == '/version_8/map-v7/surface-water'){
+  if (pathname == '/version_8/map-v7-direct/surface-water'){
     map.addLayer(surfaceWater(3))
     map.addLayer(surfaceWater(2))
     map.addLayer(surfaceWater(1))
-    markerAddressRadius();
-  } else if (pathname == '/version_8/map-v7/surface-water-depth'){
-    map.addLayer(surfaceWaterDepth(x)),
-    markerAddressRadius();
-  } else if (pathname == '/version_8/map-v7/surface-water-velocity'){
+    /* markerAddressRadius(); */
+  } else if (pathname == '/version_8/map-v7-direct/surface-water-depth'){
+    map.addLayer(surfaceWaterDepth(x))
+   /*  markerAddressRadius(); */
+  } else if (pathname == '/version_8/map-v7-direct/surface-water-velocity'){
     map.addLayer(surfaceWaterSpeed(x)),
-    map.addLayer(surfaceWaterDirection(x)),
-    markerAddressRadius();
-  } else if (pathname == '/version_8/map-v7/rivers-sea'){
+    map.addLayer(surfaceWaterDirection(x))
+/*     markerAddressRadius(); */
+  } else if (pathname == '/version_8/map-v7-direct/rivers-sea'){
     map.addLayer(riverSea(4)),
     map.addLayer(riverSea(3)),
     map.addLayer(riverSea(2)),
-    map.addLayer(riverSea(1)),
-    markerAddress();
-  } else if (pathname == '/version_8/map-v7/reservoirs'){
+    map.addLayer(riverSea(1))
+  /*   markerAddress(); */
+  } else if (pathname == '/version_8/map-v7-direct/reservoirs'){
     map.addLayer(reservoirRiver('DryDay')),
-    map.addLayer(reservoirRiver('WetDay')),
-    markerAddress();
+    map.addLayer(reservoirRiver('WetDay'))
+    /* markerAddress(); */
   }
 
   //remove marker if not checked
@@ -488,88 +488,88 @@ $('input[name="scenarios"]').change(function(){
 if (this.value == '4') {
   map.addLayer(surfaceWater(3)),
   map.addLayer(surfaceWater(2)),
-  map.addLayer(surfaceWater(1)),
-  markerAddressRadius()
+  map.addLayer(surfaceWater(1))/* ,
+  markerAddressRadius() */
 }
   else if (this.value == '5' ) {
 
      //suraface water extent medium risk
-    map.addLayer(surfaceWater(2)),
-    markerAddressRadius()
+    map.addLayer(surfaceWater(2))/* ,
+    markerAddressRadius() */
   }
   else if (this.value == '6' ) {
 
     //suraface water extent low risk
-    map.addLayer(surfaceWater(3)),
-    markerAddressRadius()
+    map.addLayer(surfaceWater(3))/* ,
+    markerAddressRadius() */
   } //add back in the layer based on the radio button value
   else if (this.value == '10') {
 
   //suraface water depth high risk
-  map.addLayer(surfaceWaterDepth(1)),
-  markerAddressRadius()
+  map.addLayer(surfaceWaterDepth(1))/* ,
+  markerAddressRadius() */
 }
 else if (this.value == '11') {
 
   //suraface water depth medium risk
-  map.addLayer(surfaceWaterDepth(2)),
-  markerAddressRadius()
+  map.addLayer(surfaceWaterDepth(2))/* ,
+  markerAddressRadius() */
 } else if (this.value == '12') {
 
   //suraface water depth low risk
-  map.addLayer(surfaceWaterDepth(3)),
-  markerAddressRadius()
+  map.addLayer(surfaceWaterDepth(3))/* ,
+  markerAddressRadius() */
 }  else   if (this.value == '13') {
   //suraface water speed high risk
   map.addLayer(surfaceWaterSpeed(1)),
-  map.addLayer(surfaceWaterDirection(1)),
-  markerAddressRadius()
+  map.addLayer(surfaceWaterDirection(1))/* ,
+  markerAddressRadius() */
 }
 else if (this.value == '14') {
   //suraface water speed medium risk
   map.addLayer(surfaceWaterSpeed(2)),
-  map.addLayer(surfaceWaterDirection(2)),
-  markerAddressRadius()
+  map.addLayer(surfaceWaterDirection(2))/* ,
+  markerAddressRadius() */
 
 } else if (this.value == '15') {
   //suraface water speed low risk
   map.addLayer(surfaceWaterSpeed(3)),
-  map.addLayer(surfaceWaterDirection(3)),
-  markerAddressRadius()
+  map.addLayer(surfaceWaterDirection(3))/* ,
+  markerAddressRadius() */
 } 
 else if (this.value == '17') {
   //River and sea high risk
   map.addLayer(riverSea(4)),
   map.addLayer(riverSea(3)),
   map.addLayer(riverSea(2)),
-  map.addLayer(riverSea(1)),
-  markerAddress();
+  map.addLayer(riverSea(1))/* ,
+  markerAddress(); */
 }
 else if (this.value == '18') {
   //River and sea medium risk
-  map.addLayer(riverSea(2)),
-  markerAddress();
+  map.addLayer(riverSea(2))/* ,
+  markerAddress(); */
 } else if (this.value == '19') {
   //River and sea low risk
   map.addLayer(riverSea(4)),
-  map.addLayer(riverSea(3)),
-  markerAddress();
+  map.addLayer(riverSea(3))/* ,
+  markerAddress(); */
 }
   else if (this.value == '31') {
     // Reservoirs scenario on
     map.addLayer(reservoirRiver('DryDay')),
-    map.addLayer(reservoirRiver('WetDay')),
-    markerAddress();
+    map.addLayer(reservoirRiver('WetDay'))/* ,
+    markerAddress(); */
 }
  else if (this.value == '20') {
   // Base map only selection for surface water
   removeLayers();
-  markerAddressRadius();
+  /* markerAddressRadius(); */
 } 
 else if (this.value == '30') {
   // Base map only selection for others
   removeLayers();
-  markerAddress();
+ /*  markerAddress(); */
 }
   //remove marker if not checked
   if(checkBox.checked == false) {
@@ -593,16 +593,16 @@ var setCheckbox = document.getElementById("toggle").checked;
       if (this.value == '1') {
 
         //surface water
-      window.location.href = "/version_8/map-v7/surface-water?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
+      window.location.href = "/version_8/map-v7-direct/surface-water?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
     }
     else if (this.value == '2') {
 
       // rivers and sea
-      window.location.href = "/version_8/map-v7/rivers-sea?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
+      window.location.href = "/version_8/map-v7-direct/rivers-sea?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
     } else if (this.value == '3') {
     
       //reservoirs
-      window.location.href = "/version_8/map-v7/reservoirs?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
+      window.location.href = "/version_8/map-v7-direct/reservoirs?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
       
     } 
   });
@@ -619,18 +619,18 @@ $('input[name="measurements"]').change(function(){
   if (this.value == '7') {
 
   //Surface water extent
-  window.location.href = "/version_8/map-v7/surface-water?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
+  window.location.href = "/version_8/map-v7-direct/surface-water?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
 
 }
 else if (this.value == '8') {
 
   //Surface water depth
-  window.location.href = "/version_8/map-v7/surface-water-depth?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
+  window.location.href = "/version_8/map-v7-direct/surface-water-depth?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
 
 } else if (this.value == '9') {
 
   //Surface water speed
-  window.location.href = "/version_8/map-v7/surface-water-velocity?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
+  window.location.href = "/version_8/map-v7-direct/surface-water-velocity?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
 } 
 });
   
@@ -815,7 +815,7 @@ $('#att-key').on('click', function() {
 
 // Scenario control arrows 
 
-if (window.location.pathname.includes("/version_8/map-v7/surface-water-depth") || window.location.pathname.includes("/version_8/map-v7/surface-water-velocity")) {
+if (window.location.pathname.includes("/version_8/map-v7-direct/surface-water-depth") || window.location.pathname.includes("/version_8/map-v7-direct/surface-water-velocity")) {
   const btnLeft = document.querySelector(".left-btn");
   const btnRight = document.querySelector(".right-btn");
   const scenarioContainer = document.querySelector(".defra-map-scenarios-depth-v4");
@@ -901,13 +901,13 @@ $(document).ready(function () {
     var swVelocityFormGroup = null;
 
     // Determine which form groups to target based on the current page path
-    if (currentPath === '/version_8/map-v7/surface-water' || currentPath === '/version_8/map-v7/surface-water-depth') {
+    if (currentPath === '/version_8/map-v7-direct/surface-water' || currentPath === '/version_8/map-v7-direct/surface-water-depth') {
       formGroup = radioInputs.filter('[value="3"], [value="2"]').closest('.govuk-form-group');
       swVelocityFormGroup = swVelocityInput.closest('.govuk-radios__item');
-    } else if (currentPath === '/version_8/map-v7/rivers-sea') {
+    } else if (currentPath === '/version_8/map-v7-direct/rivers-sea') {
       formGroup = radioInputs.filter('[value="3"]').closest('.govuk-form-group');
       swVelocityFormGroup = swVelocityInput.closest('.govuk-form-group');
-    } else if (currentPath === '/version_8/map-v7/reservoirs') {
+    } else if (currentPath === '/version_8/map-v7-direct/reservoirs') {
       formGroup = radioInputs.filter('[value="2"]').closest('.govuk-form-group');
       swVelocityFormGroup = swVelocityInput.closest('.govuk-form-group');
     }
@@ -998,74 +998,74 @@ $(document).ready(function () {
     var scenarioValue = $('input[name="scenarios"]:checked').val();
     // If unchecked, call the removeLayers() function
     if (!isChecked) {
-      if (currentPath === '/version_8/map-v7/surface-water' || currentPath === '/version_8/map-v7/surface-water-depth' || currentPath === '/version_8/map-v7/surface-water-velocity') {
+      if (currentPath === '/version_8/map-v7-direct/surface-water' || currentPath === '/version_8/map-v7-direct/surface-water-depth' || currentPath === '/version_8/map-v7-direct/surface-water-velocity') {
       removeLayers();
-      markerAddressRadius();
+      /* markerAddressRadius(); */
     }
-    else if (currentPath === '/version_8/map-v7/rivers-sea' || currentPath === '/version_8/map-v7/reservoirs')
+    else if (currentPath === '/version_8/map-v7-direct/rivers-sea' || currentPath === '/version_8/map-v7-direct/reservoirs')
       removeLayers();
-      markerAddress();
+      /* markerAddress(); */
     }
     // end of if that removes layers
 
     // if checkbox checked again, return correct layers
-    else if (currentPath === '/version_8/map-v7/surface-water') {
+    else if (currentPath === '/version_8/map-v7-direct/surface-water') {
     removeLayers();
     map.addLayer(surfaceWater(3)),
     map.addLayer(surfaceWater(2)),
-    map.addLayer(surfaceWater(1)),
-    markerAddressRadius()
+    map.addLayer(surfaceWater(1))/* ,
+    markerAddressRadius() */
     }
-    else if (currentPath === '/version_8/map-v7/rivers-sea') {
+    else if (currentPath === '/version_8/map-v7-direct/rivers-sea') {
       removeLayers();
       map.addLayer(riverSea(4)),
       map.addLayer(riverSea(3)),
       map.addLayer(riverSea(2)),
-      map.addLayer(riverSea(1)),
-      markerAddress();
+      map.addLayer(riverSea(1))/* ,
+      markerAddress(); */
       }
-      else if (currentPath === '/version_8/map-v7/reservoirs') {
+      else if (currentPath === '/version_8/map-v7-direct/reservoirs') {
         removeLayers();
         map.addLayer(reservoirRiver('DryDay')),
-        map.addLayer(reservoirRiver('WetDay')),
-        markerAddress();
+        map.addLayer(reservoirRiver('WetDay'))/* ,
+        markerAddress(); */
         }
-        else if (currentPath === '/version_8/map-v7/surface-water-depth') {
+        else if (currentPath === '/version_8/map-v7-direct/surface-water-depth') {
           //surface water depth high risk
            if (scenarioValue == '10') {
             removeLayers();
             map.addLayer(surfaceWaterDepth(1));
-            markerAddressRadius();
+            /* markerAddressRadius(); */
           }
           //surface water depth medium risk
           else if (scenarioValue == '11') {
             removeLayers();
             map.addLayer(surfaceWaterDepth(2));
-            markerAddressRadius();
+            /* markerAddressRadius(); */
             //surface water depth low risk
           } else if (scenarioValue == '12') {
             removeLayers();
             map.addLayer(surfaceWaterDepth(3));
-            markerAddressRadius();
+            /* markerAddressRadius(); */
           } 
           }
-          else if (currentPath === '/version_8/map-v7/surface-water-velocity') {
+          else if (currentPath === '/version_8/map-v7-direct/surface-water-velocity') {
             //surface water velocity high risk
              if (scenarioValue == '13') {
               removeLayers();
               map.addLayer(surfaceWaterSpeed(1));
-              markerAddressRadius();
+              /* markerAddressRadius(); */
             }
             //surface water velocity medium risk
             else if (scenarioValue == '14') {
               removeLayers();
               map.addLayer(surfaceWaterSpeed(2));
-              markerAddressRadius();
+              /* markerAddressRadius(); */
               //surface water velocity low risk
             } else if (scenarioValue == '15') {
               removeLayers();
               map.addLayer(surfaceWaterSpeed(3));
-              markerAddressRadius();
+              /* markerAddressRadius(); */
             } 
             }
   }
@@ -1080,7 +1080,7 @@ $(document).ready(function () {
 
   exitButton.on('click', function () {
     // Navigate to another page
-    window.location.href = 'results-hx7.html';
+    window.location.href = '/version_8/map-v7/where-do-you-want-to-check.html?address=select-an-address-dn19.html&results=results-hx7.html';
   });
 });
 
@@ -1097,7 +1097,7 @@ $(document).ready(function () {
 // Function to jump to surface water extent if user presses simple map on velocity
 function hideFormGroupsBasedOnPreviousURL() {
   // Check if the current page is '/version_7/map-v6/surface-water'
-  if (window.location.pathname === '/version_8/map-v7/surface-water') {
+  if (window.location.pathname === '/version_8/map-v7-direct/surface-water') {
     var previousURL = localStorage.getItem('previousURL');
     var radioInputs = $('.govuk-radios__input[name="risk-type"]');
     var swVelocityInput = $('#sw-velocity');
@@ -1106,7 +1106,7 @@ function hideFormGroupsBasedOnPreviousURL() {
     // Check if the checkbox was previously unchecked
     var storedCheckboxState = localStorage.getItem('techOptionsCheckboxState');
     
-    if (previousURL === '/version_8/map-v7/surface-water-velocity') {
+    if (previousURL === '/version_8/map-v7-direct/surface-water-velocity') {
       // Uncheck the tech-options checkbox
       techOptionsCheckbox.prop('checked', false);
 
