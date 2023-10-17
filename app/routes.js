@@ -14,7 +14,7 @@ const router = govukPrototypeKit.requests.setupRouter()
 }) */
 
 // Route for version 3
-router.use('/version_3', require('./views/version_3/_routes.js'))
+
 
 module.exports = router
 
