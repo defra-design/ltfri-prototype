@@ -490,12 +490,7 @@
   }
 }
 
-// OS copyright logo
-.defra-map-os-logo {
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-}
+
 
 // Map controls - Base map
 .defra-map-background {
@@ -962,4 +957,64 @@ h1{
       display: none; 
      }
   }
+}
+
+// map v7
+
+.defra-map-attribution-v7 {
+  float:right;
+  clear: both;
+  @include mq ($until: tablet) {
+    float:left;
+    clear: none;
+    margin-top: 0px;
+  }
+  position: relative;
+  @include govuk-font($size: 19);
+  border:0;
+  height:40px;
+  width:40px;
+  padding:0;
+  margin-top: 5px;
+  cursor:pointer;
+  background-color:white;
+  color: govuk-colour('black');
+  svg {
+    display: block;
+    margin: 10px;
+  }
+  &::-moz-focus-inner {
+    border: 0;
+  }
+  &:hover {
+    background-color: govuk-colour('light-grey');
+  }
+  &:focus {
+    outline: none;
+  }
+  &:focus[keyboard-focus]:after {
+    @include focus;
+  }
+}
+
+@media screen and (min-width: 769px){
+  // move dialog box to the right on extents 
+  
+  .dialog-right-extent {
+    left: auto;
+    right: 0;
+    margin-right: 350px;
+  }
+  }
+
+
+  // OS copyright logo
+.defra-map-os-logo {
+  position: absolute;
+  @media screen and (max-width: 769px) {
+  left: 10px;
+  top: 60px;
+  }
+  bottom: 10px;
+  left: 10px;
 }

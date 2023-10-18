@@ -739,7 +739,8 @@ $(document).on('click', function(e) {
       !$(e.target).closest('#open-key').length &&
       !$(e.target).closest('#reset-key').length &&
       !$(e.target).closest('#att-key').length &&
-      !$(e.target).closest('#info').length
+      !$(e.target).closest('#info').length &&
+      !$(e.target).closest('#advanced-map-button').length
     ) {
       $('#defra-map-key__container').css('display', 'none');
       // Show the other elements when clicking outside of #defra-map-key__container
@@ -750,11 +751,9 @@ $(document).on('click', function(e) {
       $('#advanced-map-button-velocity').css('display', 'block');
       $('#att-key').css('display', 'block');
       $('#att-key').css('margin-bottom', '0');
+      $('#open-key').css('margin-bottom', '0');
     }
-    // not working yet
-  } else if (!$(e.target).is('#advanced-map-button') && !$(e.target).closest('#advanced-map-button').length) {
-    $('#defra-map-key__container').css('display', 'block');
-  }
+  } 
 });
 
 
@@ -785,7 +784,7 @@ $('#att-key').on('click', function() {
     // Check if the screen width is 769 pixels or less
     if ($(window).width() <= 641) {
       // Add margin-bottom to .defra-map-attribution if the screen width is 769 or less
-      $('#att-key').css('margin-bottom', '70px');
+      $('#att-key').css('margin-bottom', '60px');
     }
   } else if ($('#info').css('display') === 'block') {
     // If #info is displayed, hide it and show scenarios-controls
@@ -794,6 +793,7 @@ $('#att-key').on('click', function() {
     if ($(window).width() <= 641) {
     // Remove the margin-bottom from .defra-map-attribution
     $('#att-key').css('margin-bottom', '0');
+    $('#info').css('display', 'none');
     }
   }
 });
