@@ -965,9 +965,9 @@ h1{
   float:right;
   clear: both;
   @include mq ($until: tablet) {
-    float:left;
-    clear: none;
-    margin-top: 0px;
+    /* float:left;
+    clear: none; */
+    margin-top: 5px;
   }
   position: relative;
   @include govuk-font($size: 19);
