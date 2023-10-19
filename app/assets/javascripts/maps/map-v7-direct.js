@@ -785,7 +785,7 @@ $('#att-key').on('click', function() {
     // Check if the screen width is 769 pixels or less
     if ($(window).width() <= 641) {
       // Add margin-bottom to .defra-map-attribution if the screen width is 769 or less
-      $('#att-key').css('margin-bottom', '70px');
+      $('#att-key').css('margin-bottom', '60px');
     }
   } else if ($('#info').css('display') === 'block') {
     // If #info is displayed, hide it and show scenarios-controls

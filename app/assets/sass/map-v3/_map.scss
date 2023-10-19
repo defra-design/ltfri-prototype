@@ -990,7 +990,8 @@ h1{
     background-color: govuk-colour('light-grey');
   }
   &:focus {
-    outline: none;
+    outline: 3px solid transparent;
+    box-shadow: 0px 0px 0px 2px white, inset 0px 0px 0px 0px #0b0c0c, 0px 0px 0px 5px #0b0c0c, 0px 0px 0px 8px #ffdd00;
   }
   &:focus[keyboard-focus]:after {
     @include focus;
@@ -1011,7 +1012,7 @@ h1{
   // OS copyright logo
 .defra-map-os-logo {
   position: absolute;
-  @media screen and (max-width: 769px) {
+  @media screen and (max-width: 1063px) {
   left: 10px;
   top: 60px;
   }
