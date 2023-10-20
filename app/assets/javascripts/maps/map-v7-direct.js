@@ -1137,3 +1137,28 @@ $(window).on('beforeunload', function () {
   localStorage.setItem('previousURL', window.location.pathname);
 });
 
+// add viewport styling to map
+
+// Get the viewport element of the map
+var viewport = map.getViewport();
+
+// Add a CSS class to the viewport
+viewport.classList.add('defra-map-viewport');
+
+// Set the tabindex attribute to 0
+/* viewport.setAttribute('tabindex', '0'); */
+
+
+
+// remove skip link so first focus is map, then next focus is exit map
+
+// Get elements with the ".govuk-skip-link" class
+var skipLinkElements = document.querySelectorAll('.govuk-skip-link');
+
+// Check if any elements with the class exist
+if (skipLinkElements.length > 0) {
+  // Loop through the elements and add a CSS class to each of them
+  skipLinkElements.forEach(function(element) {
+    element.classList.add('defra-map-visibility-hidden');
+  });
+}

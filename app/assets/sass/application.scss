@@ -22,12 +22,28 @@
 @import "map-v3/map";
 @import "map-v3/map-key";
 @import "map-v3/map-scenarios";
+//Open layers
+@import "map-v3/ol";
 
 @import "summary/summary";
 @import "patterns/multiple-search";
 
 //Ant's little IA testing stuff
 @import "ia-stuff/ia";
+
+
+//global styling
+// global styles for <a> and <p> tags
+$govuk-global-styles: true;
+$govuk-new-link-styles: true;
+
+// Tablet/desktop overide to address modern iPads 
+$govuk-breakpoints: (
+  mobile:  320px,
+  tablet:  641px,
+  desktop: 835px
+) !default;
+
 
 // Maps styling
 body { margin:0; padding:0; }
@@ -36,9 +52,7 @@ body { margin:0; padding:0; }
   top:0; 
   bottom:0; 
   width:100%;
-  
  }
-
  .map:focus{
     outline: 3px solid transparent;
     box-shadow: 0px 0px 0px 2px white, inset 0px 0px 0px 0px #0b0c0c, 0px 0px 0px 5px #0b0c0c, 0px 0px 0px 8px #ffdd00;
@@ -97,7 +111,13 @@ body { margin: 0; padding:0;}
 .link{
   display: block;
 }
-//Under this line are styles for the original work
+
+
+
+
+
+
+//Under this line are styles for the original work around 2019-2021
 
 .no-margin {
   margin: 0 0 10px 0!important;
