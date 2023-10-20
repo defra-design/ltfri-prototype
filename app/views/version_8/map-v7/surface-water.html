@@ -8,9 +8,8 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
 
 {% block content %}
 
-  <div id="maphigh" class="map"></div>
-
-
+  <div id="maphigh" class="map" tabindex="0" aria-hidden="false"></div>
+  <h1 id="mapLabel" class="defra-map__title" aria-hidden="false">Flood risk map</h1>
   <div class="defra-map-controls" aria-hidden="false">
     <!--exit map-->
     <button class="defra-map__exit" id="exit-map" style="color:	#0b0c0c;"><svg aria-hidden="true" focusable="false" width="20" height="20"
@@ -24,7 +23,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
           <path d="m3.485 15.126-.971 1.748 9 5a1 1 0 0 0 .971 0l9-5-.971-1.748L12 19.856ZM20 8V6h2V4h-2V2h-2v2h-2v2h2v2zM2.513 12.833l9.022 5.04a.995.995 0 0 0 .973.001l8.978-5a1 1 0 0 0-.002-1.749l-9.022-5a1 1 0 0 0-.968-.001l-8.978 4.96a1 1 0 0 0-.003 1.749z"/>
         </svg>
       <span id="map-button-text">Show advanced options</span></button>
-      
+
       <img class="defra-map-os-logo" alt="Ordnance Survey logo" src="/public/images/map-os-logo.png" width="90"
     height="24" style="pointer-events: auto; display: block;">
 

@@ -1137,3 +1137,10 @@ $(window).on('beforeunload', function () {
   localStorage.setItem('previousURL', window.location.pathname);
 });
 
+
+// add styling to map
+// Get the viewport element of the map
+var viewport = map.getViewport();
+
+// Add a CSS class to the viewport
+viewport.classList.add('defra-map-viewport');
