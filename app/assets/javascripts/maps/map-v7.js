@@ -1146,12 +1146,15 @@ var viewport = map.getViewport();
 // Add a CSS class to the viewport
 viewport.classList.add('defra-map-viewport');
 
+
+// cannot get focus state to work effectively with the ol-viewport
 // Set the tabindex attribute to 0
-/* viewport.setAttribute('tabindex', '0'); */
+/* viewport.setAttribute('tabindex', '0');
 
+// Set the width attribute to 100%
+viewport.style.width = '90%'; */
 
-
-// remove skip link so first focus is map, then next focus is exit map
+// remove skip link on map
 
 // Get elements with the ".govuk-skip-link" class
 var skipLinkElements = document.querySelectorAll('.govuk-skip-link');
@@ -1163,3 +1166,24 @@ if (skipLinkElements.length > 0) {
     element.classList.add('defra-map-visibility-hidden');
   });
 }
+
+var skipLinkElements = document.querySelectorAll('.govuk-template');
+
+// Check if any elements with the class exist
+if (skipLinkElements.length > 0) {
+  // Loop through the elements and add a CSS class to each of them
+  skipLinkElements.forEach(function(element) {
+    element.classList.add('defra-map-html');
+  });
+}
+
+var skipLinkElements = document.querySelectorAll('.govuk-template__body');
+
+// Check if any elements with the class exist
+if (skipLinkElements.length > 0) {
+  // Loop through the elements and add a CSS class to each of them
+  skipLinkElements.forEach(function(element) {
+    element.classList.add('defra-map-body');
+  });
+}
+
