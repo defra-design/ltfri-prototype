@@ -1,0 +1,143 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Summary
+{% endblock %}
+
+{% block beforeContent %}
+<a href="results-hx7.html" class="govuk-back-link back-link-left">Back to summary</a>
+<!-- <a href="" class="govuk-back-link search-link-right">Search for another address</a> -->
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<div class="govuk-grid-row">
+<!-- two thirds column for title and address-->
+  <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l govuk-!-padding-top-0">
+     More details about other flood risks
+      </h1>
+
+      <!-- <ul class="govuk-list--bullet">
+        <li class="govuk-body">high risk of surface water flooding</li>
+        <li class="govuk-body">medium risk of flooding from rivers and the sea</li>
+      </ul> -->
+<!--       <p class="govuk-body">This information is not specific to a property.</p> -->
+  <!--     <a href="" class="govuk-back-link hidden-search-link">Search for another address</a> -->
+    </div>
+</div>
+
+<!-- Start of cards -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+  
+    <!-- gw -->
+<div class="govuk-summary-card" id="groundwater">
+  <div class="govuk-summary-card__title-wrapper vlow">
+    <h2 class="govuk-summary-card__title">Groundwater<span class="chance-content gw-context">Flooding is possible when groundwater levels are high</span></h2>
+    <ul class="govuk-summary-card__actions">
+      <!-- <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+          Withdraw<span class="govuk-visually-hidden"> from University of Bristol</span>
+        </a>
+      </li> -->
+    </ul>
+  </div>
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          What groundwater is
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Groundwater is the water that is usually held in rocks and soil underground. 
+          <br><br>
+          Groundwater flooding happens when this water rises and flows above the surface.
+          
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          How we check an area's risk
+        </dt>
+        <dd class="govuk-summary-list__value">
+          We use flood alert data to check the risk of flooding from groundwater..
+          <br><br>
+
+          
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         What you can do
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Use the <a class="govuk-link" href="">'check for flooding' service</a> to check current groundwater levels.          
+
+          
+        </dd>
+      </div>
+      
+    </dl>
+  </div>
+</div>
+
+<!-- res -->
+<div class="govuk-summary-card" id="reservoirs">
+  <div class="govuk-summary-card__title-wrapper vlow">
+    <h2 class="govuk-summary-card__title">Reservoirs<span class="chance-content gw-context">Flooding from reservoirs is extremely unlikely</span></h2>
+    <ul class="govuk-summary-card__actions">
+    
+      <!-- <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+          Withdraw<span class="govuk-visually-hidden"> from University of Bristol</span>
+        </a>
+      </li> -->
+    </ul>
+  </div>
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          What is a reservoir
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Reservoirs are large natural or artificial lakes which collect and store water. 
+          <br><br>
+          They're built with safety measures in place to prevent overflow and flooding.
+          
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          How we check an area's risk
+        </dt>
+        <dd class="govuk-summary-list__value">
+          We use predicted scenarios to understand the risk of flooding from reservoirs.
+          <br><br>
+          An area is considered to be at risk when people's lives could be in danger if a dam or reservoir breaks.
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          What you can do
+        </dt>
+        <dd class="govuk-summary-list__value">
+          View the map of the risk of reservoir flooding to see information on where any flood water might spread to:
+          <ul class="govuk-list--bullet">
+            <li>when river levels are normal</li>
+            <li>when there is also flooding from nearby rivers
+            </li>
+          </ul>
+        </dd>
+      </div>
+      
+    </dl>
+  </div>
+</div>
+</div>
+</div>
+    
+    </div>
+  </div>
+  {% endblock %}
+  

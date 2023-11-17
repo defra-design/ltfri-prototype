@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Summary
+{% endblock %}
+
+{% block beforeContent %}
+<a href="results-hx7.html" class="govuk-back-link back-link-left">Back to summary</a>
+<!-- <a href="" class="govuk-back-link search-link-right">Search for another address</a> -->
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<div class="govuk-grid-row">
+<!-- two thirds column for title and address-->
+  <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l govuk-!-padding-top-0">
+       More details about flood risk from rivers and the sea
+      </h1>
+      <!-- <p class="govuk-body"> This address is in the top 10% most prone to flooding within the local authority area.</p>
+      <ul class="govuk-list--bullet">
+        <li class="govuk-body">high risk of surface water flooding</li>
+        <li class="govuk-body">medium risk of flooding from rivers and the sea</li>
+      </ul> -->
+      <!-- <p class="govuk-body">This information is not specific to a property.</p>
+      <a href="" class="govuk-back-link hidden-search-link">Search for another address</a> -->
+    </div>
+</div>
+
+<!-- Start of cards -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+  
+     
+  <!-- Rivers -->
+        <div class="govuk-summary-card" id="rivers-sea">
+          <div class="govuk-summary-card__title-wrapper medium">
+            <h2 class="govuk-summary-card__title">Rivers and the sea<span class="chance-content">Medium risk of flooding</span></h2>
+            <ul class="govuk-summary-card__actions">
+              <li class="govuk-summary-card__action"> <a class="govuk-link" href="see-your-risk-map-ros.html?&results=rivers-sea?marker=true&scenario=17">
+                   See this risk on a map<span class="govuk-visually-hidden">of rivers and the sea flooding</span> 
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                 What this information tells you
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  We use the best data available to estimate the rivers and sea flood risk for <strong>an area</strong>.
+                  <br><br>
+                  We cannot tell you whether an individual property will definitely flood.
+                  <br><br>
+                  The information takes into account any flood defences. They can help reduce the chance of flooding but cannot completely prevent it because:
+
+                  <ul class="govuk-list--bullet">
+                    <li>they can fail</li>
+                    <li>water could spill over the top if it is deep enough</li>
+                  </ul> 
+                 
+                  Neighbouring houses in a street may have different levels of flood risk. This could be because one is on higher land or has higher floor levels.
+                  <br><br>
+                  Predicting flood risk is not an exact science - flood events of any size can happen anywhere at any time.
+                </dd>
+               
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  What makes an area more likely to flood from rivers and the sea
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Low-lying areas that are close to rivers or the sea are more likely to flood when water levels rise.
+  
+                </dd>
+              </div>
+             
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  What you can do
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  
+                   Read <a href="">more about how to manage your flood risk</a>
+               
+                
+                
+                 
+                </dd>
+              </div>
+            
+        </div>
+     
+  <!-- Reservoirs-->
+  
+  
+    
+    </div>
+  </div>
+  {% endblock %}
+  

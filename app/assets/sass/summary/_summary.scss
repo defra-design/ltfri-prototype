@@ -58,21 +58,26 @@ a.search-link-left{
 
 a.search-link-right-v2{
   display: none;
-  @media only screen and (min-width: 385px) {
+  font-size: 16px;
+  @media only screen and (min-width: 400px) {
   display: block;
   float: right;
   margin-top: 15px;
   padding-left: 0;
   color: #0b0c0c;
+  
   }
   @media only screen and (max-width: 1020px) {
     margin-right: 15px;
     }
+    @media only screen and (max-width: 640px) {
+      font-size: 14px;
+      }
 }
 
 .hidden-search-link {
     display: none;
-    @media only screen and (max-width: 385px) {
+    @media only screen and (max-width: 400px) {
         display: block;
         float: left;
         padding-left: 0;
@@ -141,3 +146,28 @@ a.search-link-right-v2{
       margin-bottom: 0;
     }
    }
+
+
+   .risk-label-group {
+     margin-top: 10px;
+     display: flex;
+     justify-content: flex-start;
+     gap: 10px;
+   }
+
+   .label-orange {
+     background-color:#FFDEBF;
+   }
+
+   .label-mod {
+     padding: 10px 12px 9px 12px;
+     white-space: nowrap;
+     @include mq ($until: 710px) {
+      padding: 5px 8px 4px 8px;
+    }
+    @include mq ($until: 426px) {
+      padding: 5px 6px 4px 6px;
+      font-size: 12px;
+    }
+   }
+  
