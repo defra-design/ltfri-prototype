@@ -27,6 +27,23 @@
     </div>
 </div>
 
+<nav aria-label="Pages with more detail on this service" class="gem-c-contents-list" role="navigation">
+  <h2 class="gem-c-contents-list__title">
+    Contents
+</h2>
+  <ol class="gem-c-contents-list__list">
+      <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+        <a class="gem-c-contents-list__link govuk-link" href="results-full-sw.html">Surface water details</a>
+      </li>
+      <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active" aria-current="true">
+        <strong>Rivers and the sea details</strong>
+       </li>
+      <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+        <a class="gem-c-contents-list__link govuk-link" href="results-full-other-flood.html">Other flood risk details</a>
+      </li>
+  </ol>
+</nav>
+
 <!-- Start of cards -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
@@ -34,19 +51,89 @@
      
   <!-- Rivers -->
         <div class="govuk-summary-card" id="rivers-sea">
-          <div class="govuk-summary-card__title-wrapper medium">
-            <h2 class="govuk-summary-card__title">Rivers and the sea<span class="chance-content">Medium risk of flooding</span></h2>
-            <ul class="govuk-summary-card__actions">
-              <li class="govuk-summary-card__action"> <a class="govuk-link" href="see-your-risk-map-ros.html?&results=rivers-sea?marker=true&scenario=17">
-                   See this risk on a map<span class="govuk-visually-hidden">of rivers and the sea flooding</span> 
-                </a>
-              </li>
-              
-            </ul>
+          <div class="govuk-summary-card__title-wrapper vlow card-padding-left">
+            <h2 class="govuk-summary-card__title">Medium chance of flooding from rivers and the sea
+              <div class="risk-label-group" aria-hidden="true">
+                <strong class="govuk-tag govuk-tag--grey label-mod">
+                  Very low
+                </strong><strong class="govuk-tag govuk-tag--grey label-mod">
+                  Low
+                </strong><strong class="govuk-tag govuk-tag--orange label-orange label-mod">
+                  Medium
+                </strong><strong class="govuk-tag govuk-tag--grey label-mod">
+                  High
+                </strong>
+              </div>
+            </h2>
           </div>
           <div class="govuk-summary-card__content">
             <dl class="govuk-summary-list">
-              
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                 How likely a flood is
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  The chance of flooding from rivers or the sea is between 1% and 3.3% each year
+                </dd>
+               
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                 Climate change prediction
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+                    Very low
+                  </strong>
+                  <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+                    Low
+                  </strong>
+                  <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+                    Medium
+                  </strong>
+                  <strong class="govuk-tag govuk-tag--red label-mod">
+                    High<span class="govuk-visually-hidden">chance of flooding from surface water</span>
+                  </strong>
+                  <p class="govuk-body">Context</p>
+               </div>
+               <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                 How deep flooding could be
+                </dt>
+                <dd class="govuk-summary-list__value">
+                 
+                  <a href="results-full-sw-depth.html">View depth levels</a> for information on:
+                  <ul class="govuk-list--bullet">
+                    
+                    <li>where any flood water might spread to (extent)</li>
+                    <li>how deep any flood water could be (depth)</li>
+                    <li>the speed and direction of any flood water (velocity)</li>
+                  </ul>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                 See surface water flood risk on a map
+                </dt>
+                <dd class="govuk-summary-list__value">
+                 
+                  <a href="surface-water?marker=true&scenario=4">View a map of surface water flood risk</a> for information on:
+                  <ul class="govuk-list--bullet">
+                    
+                    <li>where any flood water might spread to (extent)</li>
+                    <li>how deep any flood water could be (depth)</li>
+                    <li>the speed and direction of any flood water (velocity)</li>
+                  </ul>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  What you can do
+                </dt>
+                <dd class="govuk-summary-list__value">
+                   Read <a href="">more about how to manage your flood risk</a>
+                </dd>
+              </div>
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
                  What this information tells you
@@ -75,31 +162,28 @@
                 </dt>
                 <dd class="govuk-summary-list__value">
                   Low-lying areas that are close to rivers or the sea are more likely to flood when water levels rise.
-  
                 </dd>
               </div>
-             
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  What you can do
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  
-                   Read <a href="">more about how to manage your flood risk</a>
-               
-                
-                
-                 
-                </dd>
-              </div>
-            
         </div>
-     
-  <!-- Reservoirs-->
-  
-  
-    
     </div>
+     <!-- end of reservoirs-->
+
+    <nav class="govuk-pagination govuk-pagination--block" role="navigation" aria-label="results">
+      <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link" href="results-full-sw.html" rel="prev">
+          <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+          </svg>
+          <span class="govuk-pagination__link-title">Previous</span><span class="govuk-visually-hidden">:</span>
+          <span class="govuk-pagination__link-label">Surface water details</span></a>
+      </div>
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="results-full-other-flood.html" rel="next"> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+          </svg> <span class="govuk-pagination__link-title">Next</span><span class="govuk-visually-hidden">:</span>
+          <span class="govuk-pagination__link-label">Other flood risks details</span></a>
+      </div>
+    </nav>
   </div>
   {% endblock %}
   

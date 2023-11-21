@@ -22,79 +22,113 @@
 <!-- two thirds column for title and address-->
   <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l govuk-!-padding-top-0">
-       The area around 3 Rockingham Villas, Church Lane, Newmarket, CB8 0HL has a:
+        3 Rockingham Villas, Church Lane, Newmarket, CB8 0HL 
       </h1>
-   <!--    <p class="govuk-body"> This address is in the top 10% most prone to flooding within the local authority area.</p> -->
-     <!--  <ul class="govuk-list--bullet">
+    <p class="govuk-body">This information tells you the flood risk of an area, not a specific property.</p>
+
+    <!-- <p class="govuk-body">Information to check etc:</p>
+      <ul class="govuk-list--bullet">
         <li class="govuk-body">high risk of surface water flooding</li>
         <li class="govuk-body">medium risk of flooding from rivers and the sea</li>
       </ul> -->
       
-      <div class="govuk-inset-text override-inset">
+     <!--  <div class="govuk-inset-text override-inset">
         We cannot tell you whether an individual property will definitely flood. 
-      </div>
+      </div> -->
       <a href="" class="govuk-back-link hidden-search-link">Search for another address</a>
     </div>
 </div>
 
 <!-- Start of cards -->
 <div class="govuk-grid-row">
-<div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-column-full">
     <!-- surface water-->
       <div class="govuk-summary-card govuk-!-margin-top-3" id="surface-water">
-        <div class="govuk-summary-card__title-wrapper high">
-          <h2 class="govuk-summary-card__title">Surface water<span class="chance-content gw-context">High chance of flooding</span></h2>
+        <div class="govuk-summary-card__title-wrapper vlow card-padding-left">
+          <h2 class="govuk-summary-card__title">High chance of surface water flooding
+            <div class="risk-label-group" aria-hidden="true">
+              <strong class="govuk-tag govuk-tag--grey label-mod">
+                Very low
+              </strong>
+              <strong class="govuk-tag govuk-tag--grey label-mod">
+                Low
+              </strong>
+              <strong class="govuk-tag govuk-tag--grey label-mod">
+                Medium
+              </strong>
+              <strong class="govuk-tag govuk-tag--red label-mod">
+                High
+              </strong>
+           </div>
+         </h2>
           <ul class="govuk-summary-card__actions">
             <li class="govuk-summary-card__action"><a class="govuk-link" href="results-full-sw.html">
-             View more details<span class="govuk-visually-hidden">about the risk of surface water flooding</span>
+             Read more details on surface water flooding
             </a>
-          </li> 
+            </li>
           </ul>
         </div>
         <div class="govuk-summary-card__content">
           <dl class="govuk-summary-list">
-           <!--  <div class="govuk-summary-list__row">
+            <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
                How likely a flood is
               </dt>
               <dd class="govuk-summary-list__value">
-                The chance of surface water (or flash) flooding at this location is more than 3.3% each year.
+                The chance of surface water (or flash) flooding is more than 3.3% each year
                 <br><br>
                 
                 
               </dd>
              
-            </div> -->
+            </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-               What do we cover / What else can you find out
+               Climate change prediction
               </dt>
               <dd class="govuk-summary-list__value">
-                - How likely a flood<br>
-                - How deep flooding could be<br>
-                - How we model etc<br>
-                - Depth<br>
-                
-              
-               
+                <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+                  Very low
+                </strong>
+                <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+                  Low
+                </strong>
+                <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+                  Medium
+                </strong>
+                <strong class="govuk-tag govuk-tag--red label-mod">
+                  High<span class="govuk-visually-hidden">chance of flooding from surface water</span>
+                </strong>
+             </div>
+             <!-- end of row -->
               </dd>
             </div>
-           
-            
-          
-        </div>
+        
         
       </div>
 
-<!-- Rivers -->
+<!-- Rivers --> 
       <div class="govuk-summary-card" id="rivers-sea">
-        <div class="govuk-summary-card__title-wrapper medium">
-          <h2 class="govuk-summary-card__title">Rivers and the sea<span class="chance-content gw-context">Medium risk of flooding</span></h2>
+        <div class="govuk-summary-card__title-wrapper vlow card-padding-left">
+          <h2 class="govuk-summary-card__title">Medium chance of flooding from rivers and the sea
+            <div class="risk-label-group" aria-hidden="true">
+              <strong class="govuk-tag govuk-tag--grey label-mod">
+                Very low
+              </strong><strong class="govuk-tag govuk-tag--grey label-mod">
+                Low
+              </strong><strong class="govuk-tag govuk-tag--orange label-orange label-mod">
+                Medium
+              </strong><strong class="govuk-tag govuk-tag--grey label-mod">
+                High
+              </strong>
+            </div>
+          </h2>
           <ul class="govuk-summary-card__actions">
-            <li class="govuk-summary-card__action"> <a class="govuk-link" href="results-full-ros.html">
-              View more details<span class="govuk-visually-hidden">about the risk of rivers and the sea flooding</span>
+            <li class="govuk-summary-card__action">
+              <a class="govuk-link" href="results-full-ros.html">
+              Read more details on rivers and the sea flooding
             </a>
-          </li>    
+            </li>
           </ul>
         </div>
         <div class="govuk-summary-card__content">
@@ -105,102 +139,47 @@
                How likely a flood is
               </dt>
               <dd class="govuk-summary-list__value">
-                The chance of flooding from rivers or the sea at this location is between 1% and 3.3%.
-              
-              
+                The chance of flooding from rivers or the sea is between 1% and 3.3% each year
               </dd>
              
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Find out more information
+               Climate change prediction
               </dt>
               <dd class="govuk-summary-list__value">
-                - Depth<br>
-                - How we model this data<br>
-                - Depth<br>
-                - Depth<br>
+                <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+                  Very low
+                </strong>
+                <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+                  Low
+                </strong>
+                <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+                  Medium
+                </strong>
+                <strong class="govuk-tag govuk-tag--red label-mod">
+                  High<span class="govuk-visually-hidden">chance of flooding from surface water</span>
+                </strong>
+             </div>
               </dd>
-            </div>
+            </div> 
           
             
         </div>
       </div>
-   
- <!-- Climate change -->
- <!-- <div class="govuk-summary-card" id="reservoirs">
-  <div class="govuk-summary-card__title-wrapper vlow">
-    <h2 class="govuk-summary-card__title">Climate change<span class="chance-content gw-context">Climate change is increasing the risk of flooding</span></h2>
-    <ul class="govuk-summary-card__actions">
-    
-     
-    </ul>
-  </div>
-  <div class="govuk-summary-card__content">
-    <dl class="govuk-summary-list">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          See this risk on a map
-        </dt>
-        <dd class="govuk-summary-list__value">
-          To see how climate change could affect your flood risk, view the surface water and rivers and sea maps.
-        </dd>
-      </div>
-      
-    </dl>
-  </div>
 </div>
-</div>
-</div> -->
-<!-- Manage -->
-     <!--  <div class="govuk-summary-card" id="groundwater">
-        <div class="govuk-summary-card__title-wrapper vlow">
-          <h2 class="govuk-summary-card__title">Manage your flood risk</h2>
-          <ul class="govuk-summary-card__actions">
-            <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
-                More details<span class="govuk-visually-hidden">about how to manage your flood risk</span>
-              </a>
-            </li> 
-          </ul>
-        </div>
-        <div class="govuk-summary-card__content">
-          <dl class="govuk-summary-list">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                What you can do
-              </dt>
-              <dd class="govuk-summary-list__value">
-              An area can still be at risk of flooding even if it has not flooded in the past.
-              <br><br>
-              It's a good idea to check your flood risk regularly because the information may change.
-              <br><br>
-              You can also:
-              <ul class="govuk-list--bullet">
-                <li>find out how to <a href="">protect your property</a></li>
-                <li><a href="https://www.gov.uk/sign-up-for-flood-warnings">sign up to receive rivers and sea flood warnings</a> by phone, text or email</li>
-              </ul>
-              </dd>
-            </div>
-            
-          </dl>
-        </div>
-      </div> -->
-
+  
       
 <!-- Other flood risks-->
-
-
- <!-- surface water-->
  <div class="govuk-summary-card govuk-!-margin-top-3" id="surface-water">
-  <div class="govuk-summary-card__title-wrapper vlow">
+  <div class="govuk-summary-card__title-wrapper vlow card-padding-left">
     <h2 class="govuk-summary-card__title">Other flood risks<!-- <span class="chance-content gw-context">High risk of flooding</span> --></h2>
     <ul class="govuk-summary-card__actions">
-      <li class="govuk-summary-card__action"><a class="govuk-link" href="results-full-other-flood.html">
-       More details<span class="govuk-visually-hidden">of the risk of surface water flooding</span>
+      <li class="govuk-summary-card__action">
+        <a class="govuk-link" href="results-full-other-flood.html">
+       Read more details on other flood risks
       </a>
-    </li> 
-   
-      
+      </li>
     </ul>
   </div>
   <div class="govuk-summary-card__content">
@@ -211,32 +190,9 @@
          Groundwater
         </dt>
         <dd class="govuk-summary-list__value">
-          Flooding is possible when groundwater levels are high.
+          Flooding is possible when groundwater levels are high
           <br><br>
-          <!-- This address is in the top 10% most prone to flooding within the local authority area.
-           -->
-        
-       
-          
-          <!-- <details class="govuk-details" data-module="govuk-details">
-            <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">
-                What makes an area more likely to flood from surface water
-              </span>
-            </summary>
-            <div class="govuk-details__text">
-             <p> Surface water flooding is sometimes known as flash flooding. It happens when rainwater cannot drain away through normal drainage systems.</p>
-             <p> It can:</p>
-          <ul class="govuk-list--bullet">
-            <li>be difficult to predict as it depends on how much it rains and where</li>
-            <li>happen up hills and away from rivers</li>
-            <li>be worse in areas which have harder surfaces, like concrete</li>
-          </ul>
-            </div>
-          </details> -->
-          
         </dd>
-       
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -244,21 +200,14 @@
         </dt>
         <dd class="govuk-summary-list__value">
           Flooding from reservoirs is extremely unlikely
-          
-        
-         
         </dd>
       </div>
-     
-      
-    
   </div>
-  
 </div>
      
   
   </div>
-  <div class="govuk-grid-column-one-third">
+ <!--  <div class="govuk-grid-column-one-third">
 
     <div class="app-step-nav-related app-step-nav-related--singular">
       <h2 class="app-step-nav-related__heading">
@@ -410,7 +359,7 @@
 
         </li>
       </ol>
-    </div>
+    </div> -->
 
 
   </div>

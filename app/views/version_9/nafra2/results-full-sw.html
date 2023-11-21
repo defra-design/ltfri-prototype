@@ -27,15 +27,33 @@
     </div>
 </div>
 
+<nav aria-label="Pages with more detail on this service" class="gem-c-contents-list" role="navigation">
+  <h2 class="gem-c-contents-list__title">
+    Contents
+</h2>
+  <ol class="gem-c-contents-list__list">
+    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active" aria-current="true">
+     <strong>Surface water details</strong>
+    </li>
+      <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+        <a class="gem-c-contents-list__link govuk-link" href="results-full-ros.html">Rivers and the sea details</a>
+      </li>
+     
+      <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+        <a class="gem-c-contents-list__link govuk-link" href="results-full-other-flood.html">Other flood risk details</a>
+      </li>
+  </ol>
+</nav>
+
 <!-- Start of cards -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
   
       <!-- surface water-->
         <div class="govuk-summary-card govuk-!-margin-top-3" id="surface-water">
-          <div class="govuk-summary-card__title-wrapper vlow">
+          <div class="govuk-summary-card__title-wrapper vlow card-padding-left">
             <h2 class="govuk-summary-card__title">High chance of surface water flooding
-              <div class="risk-label-group">
+              <div class="risk-label-group" aria-hidden="true">
                 <strong class="govuk-tag govuk-tag--grey label-mod">
                   Very low
                 </strong>
@@ -60,17 +78,34 @@
                 </dt>
                 <dd class="govuk-summary-list__value">
                   High risk means that this area has a chance of flooding of greater than 3.3% each year.
-                
                 </dd>
-               
               </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                 Climate change prediction
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+                    Very low
+                  </strong>
+                  <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+                    Low
+                  </strong>
+                  <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+                    Medium
+                  </strong>
+                  <strong class="govuk-tag govuk-tag--red label-mod">
+                    High<span class="govuk-visually-hidden">chance of flooding from surface water</span>
+                  </strong>
+                  <p class="govuk-body">More context</p>
+               </div>
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
                  How deep flooding could be
                 </dt>
                 <dd class="govuk-summary-list__value">
                  
-                  <a href="surface-water?marker=true&scenario=4">View depth levels</a> for information on:
+                  <a href="results-full-sw-depth.html">View depth levels</a> for information on:
                   <ul class="govuk-list--bullet">
                     
                     <li>where any flood water might spread to (extent)</li>
@@ -138,15 +173,19 @@
                  
                 </dd>
               </div>
-            
-            
-             
-          
         </div>
-  
-  <!-- Rivers -->
-      
       </div>
+        <!-- End of full details -->
+
+      <nav class="govuk-pagination govuk-pagination--block" role="navigation" aria-label="results">
+        <div class="govuk-pagination__next">
+          <a class="govuk-link govuk-pagination__link" href="results-full-ros.html" rel="next"> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+            </svg> <span class="govuk-pagination__link-title">Next</span><span class="govuk-visually-hidden">:</span>
+            <span class="govuk-pagination__link-label">Rivers and the sea details</span></a>
+        </div>
+      </nav>
+      <!-- end of nav -->
       </div>
     
     </div>
