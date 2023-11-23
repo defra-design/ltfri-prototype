@@ -69,7 +69,7 @@
     }
     &__container {
         padding-bottom:10px;
-        border-bottom:1px solid $govuk-border-colour;
+        /* border-bottom:1px solid $govuk-border-colour; */
         @include mq ($from: tablet) {
             padding-right:28%;
             padding-bottom:15px;
@@ -131,12 +131,7 @@
      padding: 5px 8px 4px 8px;
    }
   }
-
-  .depth-gauge-border-left {
-    border-left: 2px solid $govuk-border-colour;
-  }
-
-
+  
   .cc-depth-margin-top {
       margin-top: 225px;
   }
@@ -147,4 +142,18 @@
 
 .cc-depth-margin-top-3 {
     margin-top: 105px;
+}
+
+.key-mod {
+    width: 2.5em;
+}
+
+.hide-comparison {
+    @include mq ($until: tablet){
+        display: none;
+    }
+}
+
+.column-width-mod {
+    width:35%;
 }

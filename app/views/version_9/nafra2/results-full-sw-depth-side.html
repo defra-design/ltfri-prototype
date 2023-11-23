@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-<a href="results-full-sw.html" class="govuk-back-link back-link-left">Back to surface water details</a>
+<a href="results-full-sw.html" class="govuk-back-link back-link-left">Back to surface water</a>
 <!-- <a href="" class="govuk-back-link search-link-right">Search for another address</a> -->
 {% endblock %}
 
@@ -16,7 +16,7 @@
 <!-- two thirds column for title and address-->
   <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">
-     The predicted depth levels of surface water flooding
+        How deep any flood water could be
       </h1>
 
       <!-- <ul class="govuk-list--bullet">
@@ -33,18 +33,18 @@
 <!-- depth gauge -->
 <!-- Present day -->
 <div class="govuk-grid-row ">
-  <div class="govuk-grid-column-one-half">
-    <h2 class="govuk-heading-s govuk-!-margin-bottom-4">Depth levels present day</h2>
+  <div class="govuk-grid-column-one-half column-width-mod">
+    <h2 class="govuk-heading-s govuk-!-margin-bottom-4">Current predicted depth levels</h2>
     <dl class="defra-flood-impact-list cc-depth-margin-top-3">
       <div class="defra-flood-impact-list__row">
-        <dt class="defra-flood-impact-list__key">
+        <dt class="defra-flood-impact-list__key key-mod">
            60cm
             <span class="lower-case">(2ft)</span>
         </dt>
         <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
-          <div class="defra-flood-impact-list__container govuk-!-padding-left-1">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
             <strong class="govuk-tag govuk-tag--yellow label-mod-depth govuk-!-margin-bottom-3">
-              Low chance
+              Low
             </strong><span class="depth-chance-info"></span>
           
             <!-- <details class="govuk-details govuk-!-margin-top-3 govuk-!-margin-bottom-3" data-module="govuk-details">
@@ -60,15 +60,15 @@
           </div>
         </dd>
       </div>
-      <div class="defra-flood-impact-list__row ">
-        <dt class="defra-flood-impact-list__key">
+      <div class="defra-flood-impact-list__row">
+        <dt class="defra-flood-impact-list__key key-mod">
           <span aria-label="measurement depth level 30 centimetres">30cm<span>
             <span class="lower-case">(1ft)</span>
         </dt>
         <dd class="defra-flood-impact-list__value">
-          <div class="defra-flood-impact-list__container govuk-!-padding-left-1">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
            <strong class="govuk-tag govuk-tag--orange label-orange label-mod-depth govuk-!-margin-bottom-3">
-              Medium chance
+              Medium
             </strong><span class="depth-chance-info">
             </span>
           
@@ -86,14 +86,14 @@
         </dd>
       </div>
       <div class="defra-flood-impact-list__row  defra-flood-impact-list__row--current">
-        <dt class="defra-flood-impact-list__key">
+        <dt class="defra-flood-impact-list__key key-mod">
             15cm
             <span class="lower-case">(6in)</span>
         </dt>
         <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
-          <div class="defra-flood-impact-list__container govuk-!-padding-left-1">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
             <strong class="govuk-tag govuk-tag--red label-mod-depth govuk-!-margin-bottom-3">
-              High chance
+              High
             </strong>
             <span class="depth-chance-info"></span>
           <!--   <p class="govuk-body govuk-!-margin-top-3">At 15cm, flood water can:</p>
@@ -117,7 +117,7 @@
       </div>
     </dl>
     <a href="results-full-sw-depth.html" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-      Hide comparison of present day and climate change
+      Hide comparison
     </a>
   </div>
 
@@ -126,17 +126,17 @@
 
 <!-- Climate change -->
   <div class="govuk-grid-column-one-half">
-    <h2 class="govuk-heading-s govuk-!-margin-bottom-4">Depth levels in 2050</h2>
+    <h2 class="govuk-heading-s govuk-!-margin-bottom-4">Predicted depth levels by 2050</h2>
     <dl class="defra-flood-impact-list">
       <div class="defra-flood-impact-list__row">
-        <dt class="defra-flood-impact-list__key">
+        <dt class="defra-flood-impact-list__key key-mod">
            90cm
             <span class="lower-case">(3ft)</span>
         </dt>
         <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
-          <div class="defra-flood-impact-list__container govuk-!-padding-left-1">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
             <strong class="govuk-tag govuk-tag--yellow label-mod-depth govuk-!-margin-bottom-3">
-              Low chance
+              Low
             </strong><span class="depth-chance-info"></span>
           
            <!--  <details class="govuk-details govuk-!-margin-top-3 govuk-!-margin-bottom-3" data-module="govuk-details">
@@ -153,14 +153,14 @@
         </dd>
       </div>
       <div class="defra-flood-impact-list__row">
-        <dt class="defra-flood-impact-list__key">
+        <dt class="defra-flood-impact-list__key key-mod">
            60cm
             <span class="lower-case">(2ft)</span>
         </dt>
         <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
-          <div class="defra-flood-impact-list__container govuk-!-padding-left-1">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
             <strong class="govuk-tag govuk-tag--orange label-orange label-mod-depth govuk-!-margin-bottom-3">
-              Medium chance
+              Medium
             </strong><span class="depth-chance-info"></span>
           
             <!-- <details class="govuk-details govuk-!-margin-top-3 govuk-!-margin-bottom-3" data-module="govuk-details">
@@ -177,14 +177,14 @@
         </dd>
       </div>
       <div class="defra-flood-impact-list__row defra-flood-impact-list__row--current">
-        <dt class="defra-flood-impact-list__key">
+        <dt class="defra-flood-impact-list__key key-mod">
           <span aria-label="measurement depth level 30 centimetres">30cm<span>
             <span class="lower-case">(1ft)</span>
         </dt>
         <dd class="defra-flood-impact-list__value">
-          <div class="defra-flood-impact-list__container govuk-!-padding-left-1">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
            <strong class="govuk-tag govuk-tag--red label-mod-depth govuk-!-margin-bottom-3">
-              High chance
+              High
             </strong><span class="depth-chance-info"></span>
             <!-- <p class="govuk-body govuk-!-margin-top-3">At 30cm, flood water can:</p>
             <ul class="govuk-list govuk-list--bullet">
@@ -207,14 +207,14 @@
         </dd>
       </div>
       <div class="defra-flood-impact-list__row defra-flood-impact-list__row--current">
-        <dt class="defra-flood-impact-list__key">
+        <dt class="defra-flood-impact-list__key key-mod">
             15cm
             <span class="lower-case">(6in)</span>
         </dt>
         <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
-          <div class="defra-flood-impact-list__container govuk-!-padding-left-1">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
             <strong class="govuk-tag govuk-tag--red label-mod-depth govuk-!-margin-bottom-3">
-              High chance
+              High
             </strong>
             <span class="depth-chance-info"></span>
             <!-- <details class="govuk-details govuk-!-margin-top-3 cc-depth-padding-bottom" data-module="govuk-details">
