@@ -1,4 +1,4 @@
-{% extends "layouts/map-v7.html" %}
+{% extends "layouts/map-v8.html" %}
 
 {% block pageTitle %}
 Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
@@ -12,17 +12,17 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
   <h1 id="mapLabel" class="defra-map__title" aria-hidden="false">Flood risk map</h1>
   <div class="defra-map-controls" aria-hidden="false">
     <!--exit map-->
-    <button class="defra-map__exit" id="exit-map" style="color:	#0b0c0c;"><svg aria-hidden="true" focusable="false" width="20" height="20"
+    <button class="defra-map__exit" id="exit-map-sw" style="color:	#0b0c0c;"><svg aria-hidden="true" focusable="false" width="20" height="20"
         viewBox="0 0 20 20">
         <path d="M4.828,11L12.314,18.485L10.899,19.899L1,10L10.899,0.101L12.314,1.515L4.828,9L19,9L19,11L4.828,11Z"
           style="fill:currentColor;stroke:currentColor;stroke-width:0.1px"></path>
       </svg><span>Exit map</span></button>
       <!-- Advanced map toggle -->
-      <button class="defra-map__advanced" id="advanced-map-button" href="#" style="color:	#0b0c0c;">
+     <!--  <button class="defra-map__advanced" id="advanced-map-button" href="#" style="color:	#0b0c0c;">
         <svg viewBox="0 0 24 24" height="24" width="24"xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
           <path d="m3.485 15.126-.971 1.748 9 5a1 1 0 0 0 .971 0l9-5-.971-1.748L12 19.856ZM20 8V6h2V4h-2V2h-2v2h-2v2h2v2zM2.513 12.833l9.022 5.04a.995.995 0 0 0 .973.001l8.978-5a1 1 0 0 0-.002-1.749l-9.022-5a1 1 0 0 0-.968-.001l-8.978 4.96a1 1 0 0 0-.003 1.749z"/>
         </svg>
-      <span id="map-button-text">Show advanced options</span></button>
+      <span id="map-button-text">Show advanced options</span></button> -->
 
       <img class="defra-map-os-logo" alt="Ordnance Survey logo" src="/public/images/map-os-logo.png" width="90"
     height="24" style="pointer-events: auto; display: block;">
@@ -197,8 +197,8 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
     style="display: block;">
     <div class="defra-map-key__container" id="defra-map-key__container">
       <h2 id="mapKeyLabel" class="defra-map-key__title">
-        <span role="text">Key <span class="govuk-visually-hidden">for
-            map features</span></span></h2>
+        <span role="text">Surface water <span class="govuk-visually-hidden">
+          map with options for flood risk currently and by 2050</span></span></h2>
             <button class="defra-map-key__close" id="close-key">
               <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20"><path d="M10,8.6L15.6,3L17,4.4L11.4,10L17,15.6L15.6,17L10,11.4L4.4,17L3,15.6L8.6,10L3,4.4L4.4,3L10,8.6Z" fill="" style="fill:currentColor;stroke:currentColor;stroke-width:0.1px;"></path>
               </svg>
@@ -212,7 +212,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
             classes: "govuk-radios--small",
             fieldset: {
             legend: {
-            html: '<h3 class="defra-map-key__section-title">Surface water</h3>',
+            html: '<h3 class="defra-map-key__section-title">Current likelihood of flooding</h3>',
             isPageHeading: false,
             classes: "govuk-fieldset__legend--s"
             }
@@ -223,26 +223,26 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
             classes: "visible",
           value: "7",
           html: '
-            Extent
+            Flood area (extent)
             <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="high-risk-sw">
               <span class="defra-map-key__symbol">
                 <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#555C9D"></rect></svg>
               </span>
-              High risk
+              High chance
               <span class="risk-context-v3">More than 3.3% chance each year</span>
             </span>
             <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="med-risk-sw">
               <span class="defra-map-key__symbol">
                 <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#9AA0DE"></rect></svg>
               </span>
-              Medium risk
+              Medium chance
               <span class="risk-context-v3">Between 3.3% and 1% chance each year</span>
             </span>
             <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="low-risk-sw">
               <span class="defra-map-key__symbol">
                 <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#C4E1FF"></rect></svg>
               </span>
-              Low risk
+              Low chance
               <span class="risk-context-v3">Between 1% and 0.1% chance each year</span>
             </span>
           ',
@@ -251,19 +251,15 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
         },
           {
             id: "sw-depth",
-            classes: "visible",
+            classes: "hidden",
             value: "8",
-          html: '
-            Depth
-          '
+          html: ''
           },
           {
             id: "sw-velocity",
             classes: "hidden",
             value: "9",
-          html: '
-          Velocity
-        '
+          html: ''
           }
           ]
           }) }}
@@ -274,7 +270,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
             classes: "govuk-radios--small",
             fieldset: {
             legend: {
-            html: '<h3 class="defra-map-key__section-title">Rivers and the sea</h3>',
+            html: '<h3 class="defra-map-key__section-title">Likelihood of flooding by 2050</h3>',
             isPageHeading: false,
             classes: "govuk-fieldset__legend--s"
             }
@@ -284,15 +280,13 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
             id: "sw",
             classes: "visible",
           value: "1",
-          html: ''
+          html: 'Flood area (extent)'
         },
           {
             id: "ros",
             classes: "visible",
             value: "2",
-          html: '
-           Extent
-          ',
+          html: '',
           checked: false
           },
           {
@@ -306,7 +300,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
 
           <!-- reservoirs -->
 
-          {{ govukRadios({
+         <!--  {{ govukRadios({
             name: "risk-type",
             classes: "govuk-radios--small",
             fieldset: {
@@ -338,7 +332,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
           '
           }
           ]
-          }) }}
+          }) }} -->
           <!-- CHECKBOX TOGGLE-->
      
           {% if data.marker == "true"%}
@@ -375,14 +369,6 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
                      </svg>
                   </span>
                   Selected address
-                </span>
-                <span class="defra-map-key__symbol-container defra-map-key__symbol-container--multi">
-                  <span class="defra-map-key__symbol">
-                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="#ede72e">
-                      <circle cx="50" cy="50" r="40" />
-                    </svg>
-                  </span>
-                  15m boundary
                 </span>',
                 checked: marker
               },

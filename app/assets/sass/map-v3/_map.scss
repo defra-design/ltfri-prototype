@@ -1026,3 +1026,19 @@ h1{
 
 
 
+
+
+// version 8 of map
+
+.map-btn-group {
+ float: right;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-end;
+ gap: 0px;
+}
+
+
+.res-btn {
+  width: 130px;
+}

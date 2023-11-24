@@ -1,0 +1,246 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Summary
+{% endblock %}
+
+{% block beforeContent %}
+<a href="results-full-ros.html" class="govuk-back-link back-link-left">Back to rivers and the sea</a>
+<!-- <a href="" class="govuk-back-link search-link-right">Search for another address</a> -->
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  
+<div class="govuk-grid-row">
+<!-- two thirds column for title and address-->
+  <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        How deep any flood water could be
+      </h1>
+
+      <!-- <ul class="govuk-list--bullet">
+        <li class="govuk-body">high risk of surface water flooding</li>
+        <li class="govuk-body">medium risk of flooding from rivers and the sea</li>
+      </ul> -->
+<!--       <p class="govuk-body">This information is not specific to a property.</p> -->
+  <!--     <a href="" class="govuk-back-link hidden-search-link">Search for another address</a> -->
+    </div>
+</div>
+
+
+
+<!-- depth gauge -->
+<!-- Present day -->
+<div class="govuk-grid-row ">
+  <div class="govuk-grid-column-one-half column-width-mod">
+    <h2 class="govuk-heading-s govuk-!-margin-bottom-4">Current predicted depth levels</h2>
+    <dl class="defra-flood-impact-list cc-depth-margin-top-3">
+      <div class="defra-flood-impact-list__row">
+        <dt class="defra-flood-impact-list__key key-mod">
+           60cm
+            <span class="lower-case">(2ft)</span>
+        </dt>
+        <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
+            <strong class="govuk-tag govuk-tag--yellow label-mod-depth govuk-!-margin-bottom-3">
+              Low
+            </strong><span class="depth-chance-info"></span>
+          
+            <!-- <details class="govuk-details govuk-!-margin-top-3 govuk-!-margin-bottom-3" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  What can happen if flood water reaches 60cm
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+              </div>
+            </details> -->
+          </div>
+        </dd>
+      </div>
+      <div class="defra-flood-impact-list__row">
+        <dt class="defra-flood-impact-list__key key-mod">
+          <span aria-label="measurement depth level 30 centimetres">30cm<span>
+            <span class="lower-case">(1ft)</span>
+        </dt>
+        <dd class="defra-flood-impact-list__value">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
+           <strong class="govuk-tag govuk-tag--orange label-orange label-mod-depth govuk-!-margin-bottom-3">
+              Medium
+            </strong><span class="depth-chance-info">
+            </span>
+          
+           <!--  <details class="govuk-details govuk-!-margin-top-3 govuk-!-margin-bottom-3" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  What can happen if flood water reaches 30cm
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+              </div>
+            </details> -->
+          </div>
+        </dd>
+      </div>
+      <div class="defra-flood-impact-list__row  defra-flood-impact-list__row--current">
+        <dt class="defra-flood-impact-list__key key-mod">
+            15cm
+            <span class="lower-case">(6in)</span>
+        </dt>
+        <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
+            <strong class="govuk-tag govuk-tag--red label-mod-depth govuk-!-margin-bottom-3">
+              High
+            </strong>
+            <span class="depth-chance-info"></span>
+          <!--   <p class="govuk-body govuk-!-margin-top-3">At 15cm, flood water can:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>get into some homes and buildings, especially those with basements</li>
+              <li>block roads</li>
+              <li>damage your car or cause a breakdown</li>
+            </ul>
+          </div> -->
+         <!--  <details class="govuk-details govuk-!-margin-top-3 cc-depth-padding-bottom" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                What can happen if flood water reaches 15cm
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+            </div>
+          </details> -->
+        </dd>
+      </div>
+    </dl>
+    <a href="results-full-ros-depth.html" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Hide comparison
+    </a>
+  </div>
+
+  
+
+
+<!-- Climate change -->
+  <div class="govuk-grid-column-one-half">
+    <h2 class="govuk-heading-s govuk-!-margin-bottom-4">Predicted depth levels by 2050</h2>
+    <dl class="defra-flood-impact-list">
+      <div class="defra-flood-impact-list__row">
+        <dt class="defra-flood-impact-list__key key-mod">
+           90cm
+            <span class="lower-case">(3ft)</span>
+        </dt>
+        <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
+            <strong class="govuk-tag govuk-tag--yellow label-mod-depth govuk-!-margin-bottom-3">
+              Low
+            </strong><span class="depth-chance-info"></span>
+          
+           <!--  <details class="govuk-details govuk-!-margin-top-3 govuk-!-margin-bottom-3" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  What can happen if flood water reaches 90cm
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+              </div>
+            </details> -->
+          </div>
+        </dd>
+      </div>
+      <div class="defra-flood-impact-list__row">
+        <dt class="defra-flood-impact-list__key key-mod">
+           60cm
+            <span class="lower-case">(2ft)</span>
+        </dt>
+        <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
+            <strong class="govuk-tag govuk-tag--orange label-orange label-mod-depth govuk-!-margin-bottom-3">
+              Medium
+            </strong><span class="depth-chance-info"></span>
+          
+            <!-- <details class="govuk-details govuk-!-margin-top-3 govuk-!-margin-bottom-3" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  What can happen if flood water reaches 60cm
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+              </div>
+            </details> -->
+          </div>
+        </dd>
+      </div>
+      <div class="defra-flood-impact-list__row defra-flood-impact-list__row--current">
+        <dt class="defra-flood-impact-list__key key-mod">
+          <span aria-label="measurement depth level 30 centimetres">30cm<span>
+            <span class="lower-case">(1ft)</span>
+        </dt>
+        <dd class="defra-flood-impact-list__value">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
+           <strong class="govuk-tag govuk-tag--red label-mod-depth govuk-!-margin-bottom-3">
+              High
+            </strong><span class="depth-chance-info"></span>
+            <!-- <p class="govuk-body govuk-!-margin-top-3">At 30cm, flood water can:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>get into some homes and buildings, especially those with basements</li>
+              <li>block roads</li>
+              <li>damage your car or cause a breakdown</li>
+            </ul> -->
+            <!-- <details class="govuk-details govuk-!-margin-top-3 cc-depth-padding-bottom" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  What can happen if flood water reaches 30cm
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+              </div>
+            </details> -->
+            
+          </div>
+        </dd>
+      </div>
+      <div class="defra-flood-impact-list__row defra-flood-impact-list__row--current">
+        <dt class="defra-flood-impact-list__key key-mod">
+            15cm
+            <span class="lower-case">(6in)</span>
+        </dt>
+        <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
+            <strong class="govuk-tag govuk-tag--red label-mod-depth govuk-!-margin-bottom-3">
+              High
+            </strong>
+            <span class="depth-chance-info"></span>
+            <!-- <details class="govuk-details govuk-!-margin-top-3 cc-depth-padding-bottom" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  What can happen if flood water reaches 15cm
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+              </div>
+            </details> -->
+          </div>
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+  <!-- End of depth -->
+  
+
+
+      </div>
+      </div>
+    
+    </div>
+  </div>
+  {% endblock %}
+  
