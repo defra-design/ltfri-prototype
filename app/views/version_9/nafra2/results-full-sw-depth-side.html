@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-<a href="results-full-sw.html" class="govuk-back-link back-link-left">Back to surface water</a>
+<!-- <a href="results-full-sw.html" class="govuk-back-link back-link-left">Back to surface water</a> -->
 <!-- <a href="" class="govuk-back-link search-link-right">Search for another address</a> -->
 {% endblock %}
 
@@ -35,7 +35,20 @@
 <div class="govuk-grid-row ">
   <div class="govuk-grid-column-one-half column-width-mod">
     <h2 class="govuk-heading-s govuk-!-margin-bottom-4">Current predicted depth levels</h2>
-    <dl class="defra-flood-impact-list cc-depth-margin-top-3">
+    <dl class="defra-flood-impact-list">
+      <div class="defra-flood-impact-list__row">
+        <dt class="defra-flood-impact-list__key key-mod">
+           90cm
+            <span class="lower-case">(3ft)</span>
+        </dt>
+        <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
+            <strong class="govuk-tag govuk-tag--green label-mod-depth govuk-!-margin-bottom-3">
+              Very low
+            </strong><span class="depth-chance-info"></span>
+          </div>
+        </dd>
+      </div>
       <div class="defra-flood-impact-list__row">
         <dt class="defra-flood-impact-list__key key-mod">
            60cm
@@ -46,17 +59,6 @@
             <strong class="govuk-tag govuk-tag--yellow label-mod-depth govuk-!-margin-bottom-3">
               Low
             </strong><span class="depth-chance-info"></span>
-          
-            <!-- <details class="govuk-details govuk-!-margin-top-3 govuk-!-margin-bottom-3" data-module="govuk-details">
-              <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text">
-                  What can happen if flood water reaches 60cm
-                </span>
-              </summary>
-              <div class="govuk-details__text">
-                We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
-              </div>
-            </details> -->
           </div>
         </dd>
       </div>

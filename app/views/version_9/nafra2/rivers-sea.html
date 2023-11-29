@@ -256,31 +256,31 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
              id: "ros",
              classes: "visible",
              value: "2",
-           html: 'Flood area (extent)
+           html: 'Flood area (predicted extent)
             <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="high-risk-rs">
               <span class="defra-map-key__symbol">
-                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#555C9D"></rect></svg>
+                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#682D62"></rect></svg>
               </span>
               High chance
               <span class="risk-context-v3">More than 3.3% chance each year</span>
             </span>
             <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="med-risk-rs">
               <span class="defra-map-key__symbol">
-                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#9AA0DE"></rect></svg>
+                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#B352A9"></rect></svg>
               </span>
               Medium chance
               <span class="risk-context-v3">Between 3.3% and 1% chance each year</span>
             </span>
             <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="low-risk-rs">
               <span class="defra-map-key__symbol">
-                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#C4E1FF"></rect></svg>
+                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#F0ACE9"></rect></svg>
               </span>
               Low chance
               <span class="risk-context-v3">Between 1% and 0.1% chance each year</span>
             </span>
             <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="vlow-risk-rs">
               <span class="defra-map-key__symbol">
-                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#c9f8ff"></rect></svg>
+                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#B4B2B2; stroke:#0b0c0c; stroke-width: 1;"></rect></svg>
               </span>
               Very low chance
               <span class="risk-context-v3">Less than 0.1% chance each year</span>
@@ -326,7 +326,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
              classes: "visible",
              value: "3",
            html: '
-             Flood area (extent)
+             Flood area (predicted extent)
            '
            }
            ]
@@ -362,7 +362,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
                  id: "toggle",
                  html: '<span class="defra-map-key__symbol-container">
                   <span class="defra-map-key__symbol">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f54545" class="w-6 h-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#160000" class="w-6 h-6">
                       <path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
                      </svg>
                   </span>
@@ -374,7 +374,8 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
                 id: "tech-option",
                 classes: "visible, hidden",
                 value: "40",
-              html: ''
+              html: '',
+              checked: true
               }
              ]
            }) }}

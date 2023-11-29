@@ -83,9 +83,24 @@ function setCenter(){
 const lightestBlue = '201, 248, 255,255'
 const lightBlue = '196,225,255,255'
 const midBlue = '154,160,222,255'
-const darkBlue = '85,92,157,245'
+const darkBlue = '85,92,157,255'
 
 const layerColors = [darkBlue, midBlue, lightBlue, lightestBlue] 
+
+/* const lightestGreen = '116, 255, 179, 255'
+const lightGreen = '132, 227, 175, 255'
+const midGreen = '45, 173, 103, 255'
+const darkGreen = '23, 95, 55, 255'
+
+const layerColorsG = [darkGreen, midGreen, lightGreen, lightestGreen]  */
+
+const lightestP = '255, 190, 248, 255'
+const lightP = '240, 172, 233, 255'
+const midP = '179, 82, 169, 255'
+const darkP = '104, 45, 98, 255'
+
+/* const layerColorsP = [darkP, midP, lightP, lightestP]  */
+
 
 
 
@@ -148,6 +163,28 @@ function surfaceWater(likelihood) {
         'TRANSPARENT': true,
         'FORMAT': 'GIF',
         'dynamicLayers' : `[{"id":0,"source":{"type":"mapLayer","mapLayerId":0},"drawingInfo":{"renderer":{"type":"uniqueValue","field1":"depth","uniqueValueInfos":[{"value":"0.00 - 0.15","symbol":{"type":"esriSFS","style":"esriSFSSolid","color":[${lightBlue}],"outline":{"type":"esriSLS","width":0}}},{"value":"0.15 - 0.30","symbol":{"type":"esriSFS","style":"esriSFSSolid","color":[${lightBlue}],"outline":{"type":"esriSLS","width":0}}},{"value":"0.30 - 0.60","symbol":{"type":"esriSFS","style":"esriSFSSolid","color":[${midBlue}],"outline":{"type":"esriSLS","width":0}}},{"value":"0.60 - 0.90","symbol":{"type":"esriSFS","style":"esriSFSSolid","color":[${midBlue}],"outline":{"type":"esriSLS","width":0}}},{"value":"0.90 - 1.20","symbol":{"type":"esriSFS","style":"esriSFSSolid","color":[${darkBlue}],"outline":{"type":"esriSLS","width":0}}},{"value":"> 1.20","symbol":{"type":"esriSFS","style":"esriSFSSolid","color":[${darkBlue}],"outline":{"type":"esriSLS","width":0}}}]},"transparency":0}}]`
+      }
+    }),
+    minZoom: 8,
+    zIndex: 0
+  })
+}
+
+//Rivers and the sea version 9 extent and CC extent - to test green colour
+ function surfaceWaterDepthRos (liklihood) {
+  const bands = ['RoFSWDepth1in30', 'RoFSWDepth1in100', 'RoFSWDepth1in1000']
+  return new TileLayer({
+    ref: `surfaceWaterDepth${liklihood}`,
+    name: `surfaceWaterDepth${liklihood}`,
+    className: 'defra-map-raster-canvas',
+    layerCodes: `sd${liklihood}`,
+    source: new TileArcGISRest({
+      url: `https://environment.data.gov.uk/arcgis/rest/services/EA/${bands[liklihood - 1]}/MapServer`,
+      projection: 'EPSG:27700',
+      params: {
+        'TRANSPARENT': true,
+        'FORMAT': 'GIF',
+        'dynamicLayers' : `[{"id":0,"source":{"type":"mapLayer","mapLayerId":0},"drawingInfo":{"renderer":{"type":"uniqueValue","field1":"depth","uniqueValueInfos":[{"value":"0.00 - 0.15","symbol":{"type":"esriSFS","style":"esriSFSSolid","color":[${lightP}],"outline":{"type":"esriSLS","width":0}}},{"value":"0.15 - 0.30","symbol":{"type":"esriSFS","style":"esriSFSSolid","color":[${lightP}],"outline":{"type":"esriSLS","width":0}}},{"value":"0.30 - 0.60","symbol":{"type":"esriSFS","style":"esriSFSSolid","color":[${midP}],"outline":{"type":"esriSLS","width":0}}},{"value":"0.60 - 0.90","symbol":{"type":"esriSFS","style":"esriSFSSolid","color":[${midP}],"outline":{"type":"esriSLS","width":0}}},{"value":"0.90 - 1.20","symbol":{"type":"esriSFS","style":"esriSFSSolid","color":[${darkP}],"outline":{"type":"esriSLS","width":0}}},{"value":"> 1.20","symbol":{"type":"esriSFS","style":"esriSFSSolid","color":[${darkP}],"outline":{"type":"esriSLS","width":0}}}]},"transparency":0}}]`
       }
     }),
     minZoom: 8,
@@ -229,7 +266,7 @@ function riverSea (liklihood) {
       params: {
         'TRANSPARENT': true,
         'FORMAT': 'GIF',
-        'dynamicLayers': `[{"id":0,"source":{"type":"mapLayer","mapLayerId":0},"drawingInfo":{"renderer":{"type":"uniqueValue","field1":"prob_4band","uniqueValueInfos":[{"value":"High","symbol":{"color":[${liklihood > 0 ? layerColors[liklihood - 1] : '0,0,0,0'}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}},{"value":"Medium","symbol":{"color":[${liklihood > 1 ? layerColors[liklihood - 1] : '0,0,0,0'}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}},{"value":"Low","symbol":{"color":[${liklihood > 2 ? layerColors[liklihood - 1] : '0,0,0,0'}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}},{"value":"Very Low","symbol":{"color":[${liklihood > 3 ? layerColors[liklihood - 1] : '0,0,0,0'}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}}]}}}]`
+        'dynamicLayers': `[{"id":0,"source":{"type":"mapLayer","mapLayerId":0},"drawingInfo":{"renderer":{"type":"uniqueValue","field1":"prob_4band","uniqueValueInfos":[{"value":"High","symbol":{"color":[${liklihood > 0 ? layerColorsG[liklihood - 1] : '0,0,0,0'}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}},{"value":"Medium","symbol":{"color":[${liklihood > 1 ? layerColorsG[liklihood - 1] : '0,0,0,0'}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}},{"value":"Low","symbol":{"color":[${liklihood > 2 ? layerColorsG[liklihood - 1] : '0,0,0,0'}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}},{"value":"Very Low","symbol":{"color":[${liklihood > 3 ? layerColorsG[liklihood - 1] : '0,0,0,0'}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}}]}}}]`
       }
     }),
     minZoom: 8,
@@ -259,7 +296,7 @@ zIndex: 2
   anchor: [0.5, 40],
   anchorXUnits: 'fraction',
   anchorYUnits: 'pixels',
-  src: '/public/images/pin.png'
+  src: '/public/images/marker-black.png'
 }),
 zIndex: 2
 }); 
@@ -455,7 +492,7 @@ removeLayers();
     map.addLayer(surfaceWaterDirection(x)),
     markerAddress();
   } else if (pathname == '/version_9/nafra2/rivers-sea'){
-    map.addLayer(surfaceWaterDepth(1)),
+    map.addLayer(surfaceWaterDepthRos(1)),
     /* map.addLayer(riverSea(4)),
     map.addLayer(riverSea(3)),
     map.addLayer(riverSea(2)),
@@ -463,7 +500,7 @@ removeLayers();
     markerAddress();
   }
   else if (pathname == '/version_9/nafra2/rivers-sea-cc'){
-    map.addLayer(surfaceWaterDepth(2)),
+    map.addLayer(surfaceWaterDepthRos(2)),
     /* map.addLayer(riverSea(4)),
     map.addLayer(riverSea(3)),
     map.addLayer(riverSea(2)),
@@ -1050,7 +1087,7 @@ $(document).ready(function () {
       }
     else if (currentPath === '/version_9/nafra2/rivers-sea') {
       removeLayers();
-      map.addLayer(surfaceWaterDepth(1));
+      map.addLayer(surfaceWaterDepthRos(1));
      /*  map.addLayer(riverSea(4)),
       map.addLayer(riverSea(3)),
       map.addLayer(riverSea(2)),
@@ -1059,7 +1096,7 @@ $(document).ready(function () {
       }
       else if (currentPath === '/version_9/nafra2/rivers-sea-cc') {
         removeLayers();
-        map.addLayer(surfaceWaterDepth(2));
+        map.addLayer(surfaceWaterDepthRos(2));
        /*  map.addLayer(riverSea(4)),
         map.addLayer(riverSea(3)),
         map.addLayer(riverSea(2)),
