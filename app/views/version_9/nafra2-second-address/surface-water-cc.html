@@ -1,4 +1,4 @@
-{% extends "layouts/map-v8.html" %}
+{% extends "layouts/map-v8-1.html" %}
 
 {% block pageTitle %}
 Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
@@ -223,31 +223,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
             classes: "visible",
           value: "7",
           html: '
-            Flood area (predicted extent)
-            <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="high-risk-sw">
-              <span class="defra-map-key__symbol">
-                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#682D62"></rect></svg>
-              </span>
-              High chance
-              <span class="risk-context-v3">More than 3.3% chance each year</span>
-            </span>
-            <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="med-risk-sw">
-              <span class="defra-map-key__symbol">
-                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#B352A9"></rect></svg>
-              </span>
-              Medium chance
-              <span class="risk-context-v3">Between 3.3% and 1% chance each year</span>
-            </span>
-            <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="low-risk-sw">
-              <span class="defra-map-key__symbol">
-                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#F0ACE9"></rect></svg>
-              </span>
-              Low chance
-              <span class="risk-context-v3">Between 1% and 0.1% chance each year</span>
-            </span>
-          ',
-        
-          checked: true
+            Flood area (predicted extent)'
         },
           {
             id: "sw-depth",
@@ -280,7 +256,29 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
             id: "sw",
             classes: "visible",
           value: "1",
-          html: 'Flood area (predicted extent)'
+          html: 'Flood area (predicted extent)
+          <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="high-risk-sw">
+            <span class="defra-map-key__symbol">
+              <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#682D62"></rect></svg>
+            </span>
+            High chance
+            <span class="risk-context-v3">More than 3.3% chance each year</span>
+          </span>
+          <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="med-risk-sw">
+            <span class="defra-map-key__symbol">
+              <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#B352A9"></rect></svg>
+            </span>
+            Medium chance
+            <span class="risk-context-v3">Between 3.3% and 1% chance each year</span>
+          </span>
+          <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="low-risk-sw">
+            <span class="defra-map-key__symbol">
+              <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#F0ACE9"></rect></svg>
+            </span>
+            Low chance
+            <span class="risk-context-v3">Between 1% and 0.1% chance each year</span>
+          </span>',
+          checked: true
         },
           {
             id: "ros",
@@ -377,7 +375,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
                 classes: "visible, hidden",
                 value: "40",
               html: '',
-              checked: true
+              checked: false
               }
             ]
           }) }}

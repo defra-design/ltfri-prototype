@@ -30,7 +30,9 @@ module.exports = {
     mapv7 : './app/assets/javascripts/maps/map-v7.js',
     mapv7direct : './app/assets/javascripts/maps/map-v7-direct.js',
     mapv8 : './app/assets/javascripts/maps/map-v8.js',
-    mapv8direct : './app/assets/javascripts/maps/map-v8-direct.js'  
+    mapv8direct : './app/assets/javascripts/maps/map-v8-direct.js',
+    mapv8_1 : './app/assets/javascripts/maps/map-v8-1.js',
+    mapv8direct_1 : './app/assets/javascripts/maps/map-v8-direct-1.js'
 
           },
   output: {
