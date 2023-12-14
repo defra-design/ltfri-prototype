@@ -468,12 +468,6 @@ removeLayers();
 });
 
 
-
-
-
-
-
-
 // Scenarios change on surface water
 $('input[name="scenarios"]').change(function(){
 

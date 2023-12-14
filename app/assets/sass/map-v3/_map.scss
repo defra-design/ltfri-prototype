@@ -1046,3 +1046,43 @@ h1{
 .sw-btn {
   width: 160px;
 }
+
+// version 9
+
+.defra-map-key-v10 {
+  background-color:white;
+  position:absolute;
+  z-index:2;
+  touch-action: none;
+  max-width: 285px;
+  height: 175px;
+  right: 0px;
+  top: 0px;
+  margin: 10px 10px 0 0;
+  @include mq ($from: desktop) {
+    display: block;
+    right:0px;
+    top:0px;
+    bottom:0px;
+    width:290px;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    width:100%;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:focus[open="true"][keyboard-focus]:after {
+    outline: 3px solid transparent;
+    box-shadow: 0px 0px 0px 2px white, inset 0px 0px 0px 0px #0b0c0c, 0px 0px 0px 5px #0b0c0c, 0px 0px 0px 8px #ffdd00;
+  }
+}
+
+
+.symbol-margin-top {
+  margin-top: 12px;
+}
+

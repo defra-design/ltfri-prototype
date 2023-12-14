@@ -196,6 +196,19 @@
   }
 }
 
+// version 6
+// hide checkbox that is used for advanced toggle
 #tech-option {
   display: none;
+}
+
+// version 9
+
+.padding-chance {
+  padding: 0 10px 0 10px;
+  
+}
+
+.padding-key-title {
+  width: 170px;
 }
