@@ -83,6 +83,9 @@ a.search-link-right-v2{
         padding-left: 0;
         margin: 0;
     }
+    &::before{
+      display: none;
+    }
 }
 
 //indent back link
