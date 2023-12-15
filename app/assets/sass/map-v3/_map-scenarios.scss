@@ -471,11 +471,16 @@
 }
 
 
-.v9-mob-depth{
+.v10-mob-depth{
+  display: none;
   .govuk-radios{
     width: 520px;
   }
   max-width: 520px;
+  @include mq ($until: tablet) {
+    display: block;
+  }
+
 }
 
 .arrow-padding {
