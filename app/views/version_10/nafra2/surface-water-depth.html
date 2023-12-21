@@ -1,4 +1,4 @@
-{% extends "layouts/map-v8.html" %}
+{% extends "layouts/map-v9.html" %}
 
 {% block pageTitle %}
 Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
@@ -139,49 +139,69 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
           style="fill:currentColor;"></path>
       </svg> <span class="govuk-visually-hidden">copyright information</span>
     </div></button>
-    <!-- <img class="defra-map-os-logo" alt="Ordnance Survey logo" src="/public/images/map-os-logo.png" width="90"
-      height="24" style="pointer-events: auto; display: block;"> -->
-      <!-- Scenarios -->
-      
-       <div class="defra-map-scenarios-depth-v4 horizontal-overflow scenario-float-right v6-width-fix-depth v9-mob-depth">
+
+    <!-- Scenarios -->
+    <div class="tabs">
+      <div class="tab" id="tab1">Extent</div>
+      <div class="tab tab-inactive" id="tab2">Depth</div>
+  </div>
+    
+    <div class="tab-content" id="tabContent1">
+      <div class="defra-map-scenarios-depth-v4 horizontal-overflow scenario-float-right v6-width-fix-depth v10-mob-depth">
         <div class="defra-map-scenarios-v3_container" id="scenarios-controls">
        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
         <i class="fa-solid fa-chevron-left left-btn arrow-padding" aria-hidden="true"></i>
         <i class="fa-solid fa-chevron-right right-btn arrow-padding" aria-hidden="true"></i>
              <div class="govuk-radios__item">
-               <input class="govuk-radios__input" id="sw-high" name="scenarios" type="radio" value="10" {% if swHigh %}checked{% endif %}>
+               <input class="govuk-radios__input" id="sw-high" name="scenarios" type="radio" value="11" {% if swHigh %}checked{% endif %} checked="true">
                <label class="govuk-label govuk-radios__label" for="sw-high">
                        <strong>Current likelihood</strong>       
-                       <span class="risk-context-v3">Flood area</span>
+                       <span class="risk-context-v3">Extent of flooding</span>
            </label>
           </div>
              <div class="govuk-radios__item">
-               <input class="govuk-radios__input" id="sw-med" name="scenarios" type="radio" value="11" {% if swMed %}checked{% endif %}>
+               <input class="govuk-radios__input" id="sw-med" name="scenarios" type="radio" value="12" {% if swMed %}checked{% endif %} checked="true">
                <label class="govuk-label govuk-radios__label" for="sw-med">
                  <strong>Predicted likelihood by 2050</strong>   
-                 <span class="risk-context-v3">Flood area</span>
+                 <span class="risk-context-v3">Extent of flooding</span>
            </label>
              </div>
-            <!--  <div class="govuk-radios__item">
-               <input class="govuk-radios__input" id="sw-low" name="scenarios" type="radio" value="12" {% if swLow %}checked{% endif %}>
-               <label class="govuk-label govuk-radios__label" for="sw-low">
-                 <strong>Low risk</strong> 
-                 <span class="risk-context-v3">0.1% chance each year</span>
-           </label>
-             </div> -->
-             <!-- <div class="govuk-radios__item last-scenario">
-              <input class="govuk-radios__input" id="sw-vlow" name="scenarios" type="radio" value="20" {% if swOff %}checked{% endif %}>
-              <label class="govuk-label govuk-radios__label" for="sw-vlow">
-                <strong>Turn off layers</strong> 
-                <span class="risk-context-v3">Display nothing</span>
-          </label>
-            </div> -->
            </div>
             
-     </div>
-     </div>
+      </div>
+      </div>
       <!-- end of radios -->
+    </div>
+    
+    <div class="tab-content" id="tabContent2" style="display: none;">
+      <div class="defra-map-scenarios-depth-v4 horizontal-overflow scenario-float-right v6-width-fix-depth v10-mob-depth">
+        <div class="defra-map-scenarios-v3_container" id="scenarios-controls">
+       <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+        <i class="fa-solid fa-chevron-left left-btn arrow-padding" aria-hidden="true"></i>
+        <i class="fa-solid fa-chevron-right right-btn arrow-padding" aria-hidden="true"></i>
+             <div class="govuk-radios__item">
+               <input class="govuk-radios__input" id="sw--depth-high" name="scenarios" type="radio" value="13" {% if swHigh %}checked{% endif %} checked="true">
+               <label class="govuk-label govuk-radios__label" for="sw-high">
+                       <strong>Current likelihood</strong>       
+                       <span class="risk-context-v3">Depth</span>
+           </label>
+          </div>
+             <div class="govuk-radios__item">
+               <input class="govuk-radios__input" id="sw-depth-med" name="scenarios" type="radio" value="14" {% if swMed %}checked{% endif %}>
+               <label class="govuk-label govuk-radios__label" for="sw-med">
+                 <strong>Predicted likelihood by 2050</strong>   
+                 <span class="risk-context-v3">Depth</span>
+           </label>
+             </div>
+           </div>
+            
+      </div>
+      </div>
       
+    </div>
+    <!-- end of second tab -->
+    <!-- end of radios -->
+     
       
     </div>
     </div>

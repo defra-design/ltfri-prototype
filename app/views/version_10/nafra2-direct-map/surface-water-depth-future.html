@@ -36,7 +36,6 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
 
     
 
-
       {# Scenario switch#}
       {% switch data.scenario %}
       {% case '10' %}
@@ -107,19 +106,19 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
     
   <!-- Scenarios -->
   <div class="tabs">
-    <div class="tab" id="tab1">Extent</div>
+    <div class="tab tab-inactive" id="tab1">Extent</div>
     <div class="tab tab-inactive" id="tab2">Depth: currently</div>
-    <div class="tab tab-inactive" id="tab3">Depth: by 2050</div>
+    <div class="tab" id="tab3">Depth: by 2050</div>
 </div>
   
-  <div class="tab-content" id="tabContent1">
+ <!--  <div class="tab-content" id="tabContent1">
     <div class="defra-map-scenarios-depth-v4 horizontal-overflow scenario-float-right v6-width-fix-depth v10-mob-depth">
       <div class="defra-map-scenarios-v3_container" id="scenarios-controls">
      <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
       <i class="fa-solid fa-chevron-left left-btn arrow-padding" aria-hidden="true"></i>
       <i class="fa-solid fa-chevron-right right-btn arrow-padding" aria-hidden="true"></i>
            <div class="govuk-radios__item">
-             <input class="govuk-radios__input" id="sw-high" name="scenarios" type="radio" value="11" {% if swHigh %}checked{% endif %}>
+             <input class="govuk-radios__input" id="sw-high" name="scenarios" type="radio" value="11" {% if swHigh %}checked{% endif %} checked="true">
              <label class="govuk-label govuk-radios__label" for="sw-high">
                      <strong>Current likelihood</strong>       
                      <span class="risk-context-v3">Extent of flooding</span>
@@ -137,9 +136,10 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
     </div>
     </div>
 
-  </div>
+  </div> -->
   <!-- end of tab1 -->
-  <div class="tab-content" id="tabContent2" style="display: none;">
+
+  <div class="tab-content" id="tabContent2">
     <div class="defra-map-scenarios-depth-v4 horizontal-overflow scenario-float-right v6-width-fix-depth v10-mob-depth">
       <div class="defra-map-scenarios-v3_container" id="scenarios-controls">
      <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
@@ -181,47 +181,6 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
     
   </div>
   <!-- end of second tab -->
-  <div class="tab-content" id="tabContent3" style="display: none;">
-    <div class="defra-map-scenarios-depth-v4 horizontal-overflow scenario-float-right v6-width-fix-depth v10-mob-depth">
-      <div class="defra-map-scenarios-v3_container" id="scenarios-controls">
-     <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
-      <i class="fa-solid fa-chevron-left left-btn arrow-padding" aria-hidden="true"></i>
-      <i class="fa-solid fa-chevron-right right-btn arrow-padding" aria-hidden="true"></i>
-           <div class="govuk-radios__item">
-             <input class="govuk-radios__input" id="sw-depth-high" name="scenarios" type="radio" value="12" {% if swHigh %}checked{% endif %}>
-             <label class="govuk-label govuk-radios__label" for="sw-high">
-                     <strong>20cm</strong>       
-                     <span class="risk-context-v3">8in</span>
-         </label>
-        </div>
-           <div class="govuk-radios__item">
-             <input class="govuk-radios__input" id="sw-depth-med" name="scenarios" type="radio" value="11" {% if swMed %}checked{% endif %}>
-             <label class="govuk-label govuk-radios__label" for="sw-med">
-               <strong>30cm</strong>   
-               <span class="risk-context-v3">1ft</span>
-         </label>
-           </div>
-           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="sw-depth-med" name="scenarios" type="radio" value="10" {% if swLow %}checked{% endif %}>
-            <label class="govuk-label govuk-radios__label" for="sw-med">
-              <strong>60cm</strong>   
-              <span class="risk-context-v3">2ft</span>
-        </label>
-          </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="sw-depth-med" name="scenarios" type="radio" value="20" {% if swLow %}checked{% endif %}>
-            <label class="govuk-label govuk-radios__label" for="sw-med">
-              <strong>90cm</strong>   
-              <span class="risk-context-v3">3ft</span>
-        </label>
-          </div>
-
-
-         </div>
-    </div>
-    </div>
-    
-  </div>
   <!-- end of radios -->
 </div>
 

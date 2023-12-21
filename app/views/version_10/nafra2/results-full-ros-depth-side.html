@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-<!-- <a href="results-full-ros.html" class="govuk-back-link back-link-left">Back to rivers and the sea</a> -->
+<a href="results-full-ros.html" class="govuk-back-link back-link-left">Back to rivers and the sea</a>
 <!-- <a href="" class="govuk-back-link search-link-right">Search for another address</a> -->
 {% endblock %}
 
@@ -16,18 +16,28 @@
 <!-- two thirds column for title and address-->
   <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">
-        How deep any rivers and the sea flooding could be
+        Rivers and the sea: compare the predicted depth levels
       </h1>
 
-      <!-- <ul class="govuk-list--bullet">
-        <li class="govuk-body">high risk of surface water flooding</li>
-        <li class="govuk-body">medium risk of flooding from rivers and the sea</li>
-      </ul> -->
-<!--       <p class="govuk-body">This information is not specific to a property.</p> -->
-  <!--     <a href="" class="govuk-back-link hidden-search-link">Search for another address</a> -->
+      <nav aria-label="Pages with more detail on this service" class="gem-c-contents-list" role="navigation">
+        <!--  <h2 class="gem-c-contents-list__title">
+           Contents
+       </h2> -->
+         <ol class="gem-c-contents-list__list">
+          <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+            <a class="gem-c-contents-list__link govuk-link" href="results-full-ros-depth-current.html">Current predicted depth levels</a>
+          </li>
+             <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+               <a class="gem-c-contents-list__link govuk-link" href="results-full-ros-depth-future.html">Predicted depth levels by 2050</a>
+             </li>
+             <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active" aria-current="true">
+              <strong>Compare the predicted depth levels</strong>
+             </li>
+         </ol>
+       </nav>
+       <p class="govuk-body govuk-!-margin-bottom-7">Flood protection measures are usually effective up to 60cm. Read about how you can <a class="govuk-link" href="https://www.gov.uk/guidance/adapting-your-home-or-business-to-the-risk-of-flooding">adapt your home or business to the risk of flooding</a>.</p>
     </div>
 </div>
-
 
 
 <!-- depth gauge -->
@@ -39,7 +49,7 @@
       <div class="defra-flood-impact-list__row">
         <dt class="defra-flood-impact-list__key key-mod">
            60cm
-            <span class="lower-case">(2ft)</span>
+            <span class="unbold-depth">(2ft)</span>
         </dt>
         <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
           <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
@@ -63,7 +73,7 @@
       <div class="defra-flood-impact-list__row">
         <dt class="defra-flood-impact-list__key key-mod">
           <span aria-label="measurement depth level 30 centimetres">30cm<span>
-            <span class="lower-case">(1ft)</span>
+            <span class="unbold-depth">(1ft)</span>
         </dt>
         <dd class="defra-flood-impact-list__value">
           <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
@@ -87,8 +97,8 @@
       </div>
       <div class="defra-flood-impact-list__row  defra-flood-impact-list__row--current">
         <dt class="defra-flood-impact-list__key key-mod">
-            15cm
-            <span class="lower-case">(6in)</span>
+            20cm
+            <span class="unbold-depth">(8in)</span>
         </dt>
         <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
           <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
@@ -116,9 +126,7 @@
         </dd>
       </div>
     </dl>
-    <a href="results-full-ros-depth.html" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-      Hide comparison
-    </a>
+
   </div>
 
   
@@ -131,7 +139,7 @@
       <div class="defra-flood-impact-list__row">
         <dt class="defra-flood-impact-list__key key-mod">
            60cm
-            <span class="lower-case">(2ft)</span>
+            <span class="unbold-depth">(2ft)</span>
         </dt>
         <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
           <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
@@ -144,7 +152,7 @@
       <div class="defra-flood-impact-list__row defra-flood-impact-list__row--current">
         <dt class="defra-flood-impact-list__key key-mod">
           <span aria-label="measurement depth level 30 centimetres">30cm<span>
-            <span class="lower-case">(1ft)</span>
+            <span class="unbold-depth">(1ft)</span>
         </dt>
         <dd class="defra-flood-impact-list__value">
           <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
@@ -173,8 +181,8 @@
       </div>
       <div class="defra-flood-impact-list__row defra-flood-impact-list__row--current">
         <dt class="defra-flood-impact-list__key key-mod">
-            15cm
-            <span class="lower-case">(6in)</span>
+            20cm
+            <span class="unbold-depth">(8in)</span>
         </dt>
         <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
           <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
@@ -199,7 +207,18 @@
   </div>
 </div>
   <!-- End of depth -->
-  
+   <!-- end of details -->
+   <nav class="govuk-pagination govuk-pagination--block" role="navigation" aria-label="results">
+    <div class="govuk-pagination__prev">
+      <a class="govuk-link govuk-pagination__link" href="results-full-ros-depth-future.html" rel="prev">
+        <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+          <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+        </svg>
+        <span class="govuk-pagination__link-title">Previous</span><span class="govuk-visually-hidden">:</span>
+        <span class="govuk-pagination__link-label">Predicted depth levels by 2050</span></a>
+    </div>
+  </nav>
+  <!-- end of nav -->
 
 
       </div>

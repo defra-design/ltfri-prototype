@@ -486,3 +486,31 @@
 .arrow-padding {
   padding: 28px;
 }
+
+/* Add styles for tabs */
+.tabs {
+  display: flex;
+  position: absolute;
+  margin-top: 46px;
+  @include govuk-font($size: 19);
+}
+
+.tab {
+  cursor: pointer;
+  padding: 15px;
+  background-color: white;
+}
+
+.tab-inactive {
+  background-color: #F3F2F1;
+  text-decoration: underline;
+}
+
+.tab-inactive:hover {
+  text-decoration-line:underline;
+  text-decoration-thickness: 2.5px;
+}
+
+.tab-content {
+  margin-top: 10px;
+}

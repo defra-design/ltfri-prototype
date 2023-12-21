@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-<a href="results-full-sw.html" class="govuk-back-link back-link-left">Back to surface water</a>
+<a href="results-full-ros.html" class="govuk-back-link back-link-left">Back to rivers and the sea</a>
 <!-- <a href="" class="govuk-back-link search-link-right">Search for another address</a> -->
 {% endblock %}
 
@@ -15,7 +15,7 @@
 <!-- two thirds column for title and address-->
   <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l govuk-!-padding-top-0">
-     Surface water: predicted depth levels by 2050
+     Rivers and the sea: predicted depth levels by 2050
       </h1>
       <nav aria-label="Pages with more detail on this service" class="gem-c-contents-list" role="navigation">
         <!--  <h2 class="gem-c-contents-list__title">
@@ -23,13 +23,13 @@
        </h2> -->
          <ol class="gem-c-contents-list__list">
           <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-            <a class="gem-c-contents-list__link govuk-link" href="results-full-sw-depth-current.html">Current predicted depth levels</a>
+            <a class="gem-c-contents-list__link govuk-link" href="results-full-ros-depth-current.html">Current predicted depth levels</a>
           </li>
            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active" aria-current="true">
             <strong>Predicted depth levels by 2050</strong>
            </li>
              <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-               <a class="gem-c-contents-list__link govuk-link" href="results-full-sw-depth-side.html">Compare the predicted depth levels</a>
+               <a class="gem-c-contents-list__link govuk-link" href="results-full-ros-depth-side.html">Compare the predicted depth levels</a>
              </li>
          </ol>
        </nav>
@@ -37,37 +37,11 @@
   </div>
   </div>
   <!-- depth gauge -->
-  
-<!-- Climate change -->
-<div class="govuk-grid-row">
+ <!-- Climate change -->
+ <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
- <!--    <h2 class="govuk-heading-s govuk-!-margin-bottom-4">Predicted depth levels by 2050</h2> -->
     <dl class="defra-flood-impact-list">
-      <div class="defra-flood-impact-list__row">
-        <dt class="defra-flood-impact-list__key">
-           90cm
-            <span class="unbold-depth">(3ft)</span>
-        </dt>
-        <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
-          <div class="defra-flood-impact-list__container govuk-!-padding-left-1">
-            <strong class="govuk-tag govuk-tag--yellow label-mod-depth">
-              Low
-            </strong><span class="depth-chance-info">0.1% to 1% chance of flooding up to 90cm</span>
-          
-            <details class="govuk-details govuk-!-margin-top-3 govuk-!-margin-bottom-3" data-module="govuk-details">
-              <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text">
-                  What can happen if flood water reaches 90cm
-                </span>
-              </summary>
-              <div class="govuk-details__text">
-                <p class="govuk-body">You should not try and keep flood water out of buildings if it's 90cm or more. It can cause collapse or permanent structural damage.</p>
-                <p class="govuk-body">Read about what you can do to <a class="govuk-link" href="https://www.gov.uk/prepare-for-flooding">prepare for flooding</a>.</p>
-              </div>
-            </details>
-          </div>
-        </dd>
-      </div>
+      
       <div class="defra-flood-impact-list__row">
         <dt class="defra-flood-impact-list__key">
            60cm
@@ -129,11 +103,11 @@
             <details class="govuk-details govuk-!-margin-top-3 cc-depth-padding-bottom" data-module="govuk-details">
               <summary class="govuk-details__summary">
                 <span class="govuk-details__summary-text">
-                  What can happen if flood water reaches 20cm
+                  What can happen if flood water reaches 15cm
                 </span>
               </summary>
               <div class="govuk-details__text">
-                <p class="govuk-body">At 20cm, flood water can:</p>
+                <p class="govuk-body">At 15cm, flood water can:</p>
                 <ul class="govuk-list govuk-list--bullet">
                   <li>get into some homes and buildings, especially those with basements</li>
                   <li>block roads</li>
@@ -151,7 +125,7 @@
   <!-- End of depth -->
   <nav class="govuk-pagination govuk-pagination--block" role="navigation" aria-label="results">
     <div class="govuk-pagination__prev">
-      <a class="govuk-link govuk-pagination__link" href="results-full-sw-depth-current.html" rel="prev">
+      <a class="govuk-link govuk-pagination__link" href="results-full-ros-depth-current.html" rel="prev">
         <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
           <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
         </svg>
@@ -159,7 +133,7 @@
         <span class="govuk-pagination__link-label">Current predicted depth levels</span></a>
     </div>
     <div class="govuk-pagination__next">
-      <a class="govuk-link govuk-pagination__link" href="results-full-sw-depth-side.html" rel="next"> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+      <a class="govuk-link govuk-pagination__link" href="results-full-ros-depth-side.html" rel="next"> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
           <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
         </svg> <span class="govuk-pagination__link-title">Next</span><span class="govuk-visually-hidden">:</span>
         <span class="govuk-pagination__link-label">Compare the predicted depth levels</span></a>
