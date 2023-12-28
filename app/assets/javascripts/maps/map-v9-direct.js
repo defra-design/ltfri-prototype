@@ -48,12 +48,18 @@ let mapCenter = []
 //view extent and centre and zoom levels
 const view = new View({
   center: setCenter(),
-  zoom: 16,
+  zoom: setStoredZoom() || 9, // Set the zoom level from sessionStorage or use a default value (e.g., 9)
   minZoom: 8,
   maxZoom: 16,
   extent: [ -5.75447, 49.93027, 1.799683, 55.84093],
 });
 
+// Function to get stored zoom level from sessionStorage
+function setStoredZoom() {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  return urlParams.get('zoom');
+}
 
 //set center of map
 function setCenter(){
@@ -472,44 +478,44 @@ removeLayers();
 
   if (pathname == '/version_10/nafra2-direct-map/surface-water'){
     // nafra2-direct-map to show less risk (current)
-    map.addLayer(surfaceWaterDepth(2)),
-    markerAddress();
+    map.addLayer(surfaceWaterDepth(2));
     /* map.addLayer(surfaceWater(3))
     map.addLayer(surfaceWater(2))
     map.addLayer(surfaceWater(1))
     markerAddress(); */
-  } else if (pathname == '/version_10/nafra2-direct-map/surface-water-depth'){
-    map.addLayer(surfaceWaterDepthRos(1)),
-    markerAddress();
-  } else if (pathname == '/version_10/nafra2-direct-map/surface-water-velocity'){
-    map.addLayer(surfaceWaterSpeed(x)),
-    map.addLayer(surfaceWaterDirection(x)),
-    markerAddress();
-  } else if (pathname == '/version_10/nafra2-direct-map/rivers-sea'){
-    map.addLayer(surfaceWaterDepthRos(1)),
-    /* map.addLayer(riverSea(4)),
-    map.addLayer(riverSea(3)),
-    map.addLayer(riverSea(2)),
-    map.addLayer(riverSea(1)), */
-    markerAddress();
-  }
-  else if (pathname == '/version_10/nafra2-direct-map/rivers-sea-cc'){
-    map.addLayer(surfaceWaterDepthRos(2)),
-    /* map.addLayer(riverSea(4)),
-    map.addLayer(riverSea(3)),
-    map.addLayer(riverSea(2)),
-    map.addLayer(riverSea(1)), */
-    markerAddress();
-  } else if (pathname == '/version_10/nafra2-direct-map/reservoirs'){
-    map.addLayer(reservoirRiver('DryDay')),
-    map.addLayer(reservoirRiver('WetDay')),
-    markerAddress();
   }
   else if (pathname == '/version_10/nafra2-direct-map/surface-water-cc'){
     // nafra2-direct-map to show more risk (2050)
-    map.addLayer(surfaceWaterDepth(3)),
-    markerAddress();
+    map.addLayer(surfaceWaterDepth(3));
   }
+  else if (pathname == '/version_10/nafra2-direct-map/surface-water-depth'){
+    map.addLayer(surfaceWaterDepth(3));
+  }
+  else if (pathname == '/version_10/nafra2-direct-map/surface-water-depth-future'){
+      map.addLayer(surfaceWaterDepth(3));
+  } 
+  else if (pathname == '/version_10/nafra2-direct-map/surface-water-velocity'){
+    map.addLayer(surfaceWaterSpeed(x)),
+    map.addLayer(surfaceWaterDirection(x));
+  } 
+  else if (pathname == '/version_10/nafra2-direct-map/rivers-sea'){
+    map.addLayer(surfaceWaterDepthRos(1));
+  }
+  else if (pathname == '/version_10/nafra2-direct-map/rivers-sea-cc'){
+    map.addLayer(surfaceWaterDepthRos(2));
+  }
+  else if (pathname == '/version_10/nafra2-direct-map/rivers-sea-depth'){
+    map.addLayer(surfaceWaterDepthRos(3));
+  }
+  else if (pathname == '/version_10/nafra2-direct-map/rivers-sea-depth-future'){
+      map.addLayer(surfaceWaterDepthRos(3));
+  }
+  else if (pathname == '/version_10/nafra2-direct-map/reservoirs'){
+    map.addLayer(reservoirRiver('DryDay')),
+    map.addLayer(reservoirRiver('WetDay'));
+    
+  }
+  
 
   //remove marker if not checked
   if(checkBox.checked == false) {
@@ -538,89 +544,76 @@ $('input[name="scenarios"]').change(function(){
 
 //add back in the layer based on the radio button value
 if (this.value == '4') {
-  map.addLayer(surfaceWaterDepth(1)),
+  map.addLayer(surfaceWaterDepth(1));
   /* map.addLayer(surfaceWater(3)),
   map.addLayer(surfaceWater(2)),
   map.addLayer(surfaceWater(1)), */
-  markerAddress();
+  /* markerAddress(); */
 }
   else if (this.value == '5' ) {
 
      //suraface water extent medium risk
-    map.addLayer(surfaceWater(2)),
-    markerAddress();
+    map.addLayer(surfaceWater(2));
   }
   else if (this.value == '6' ) {
 
     //suraface water extent low risk
-    map.addLayer(surfaceWater(3)),
-    markerAddress();
+    map.addLayer(surfaceWater(3));
   } //add back in the layer based on the radio button value
   else if (this.value == '10') {
 
   //suraface water depth high risk
-  map.addLayer(surfaceWaterDepth(1)),
-  markerAddress();
+  map.addLayer(surfaceWaterDepth(1));
 }
 else if (this.value == '11') {
 
   //suraface water depth medium risk
-  map.addLayer(surfaceWaterDepth(2)),
-  markerAddress();
+  map.addLayer(surfaceWaterDepth(2));
 } else if (this.value == '12') {
 
   //suraface water depth low risk
-  map.addLayer(surfaceWaterDepth(3)),
-  markerAddress();
+  map.addLayer(surfaceWaterDepth(3));
 }  else   if (this.value == '13') {
   // rivers current (depth)
-  map.addLayer(surfaceWaterDepthRos(1)),
-  markerAddress();
+  map.addLayer(surfaceWaterDepthRos(1));
 }
 else if (this.value == '14') {
   // rivers future (depth sw)
-  map.addLayer(surfaceWaterDepthRos(2)),
-  markerAddress();
+  map.addLayer(surfaceWaterDepthRos(2));
 
 } else if (this.value == '15') {
   //suraface water speed low risk
-  map.addLayer(surfaceWaterSpeed(3)),
-  map.addLayer(surfaceWaterDirection(3)),
-  markerAddress();
+  map.addLayer(surfaceWaterDepthRos(3));
 } 
 else if (this.value == '17') {
   //River and sea high risk
   map.addLayer(riverSea(4)),
   map.addLayer(riverSea(3)),
   map.addLayer(riverSea(2)),
-  map.addLayer(riverSea(1)),
-  markerAddress();
+  map.addLayer(riverSea(1));
 }
 else if (this.value == '18') {
   //River and sea medium risk
-  map.addLayer(riverSea(2)),
-  markerAddress();
+  map.addLayer(riverSea(2));
 } else if (this.value == '19') {
   //River and sea low risk
   map.addLayer(riverSea(4)),
-  map.addLayer(riverSea(3)),
-  markerAddress();
+  map.addLayer(riverSea(3));
 }
   else if (this.value == '31') {
     // Reservoirs scenario on
     map.addLayer(reservoirRiver('DryDay')),
-    map.addLayer(reservoirRiver('WetDay')),
-    markerAddress();
+    map.addLayer(reservoirRiver('WetDay'));
 }
  else if (this.value == '20') {
   // Base map only selection for surface water
   removeLayers();
-  markerAddress();
+  
 } 
 else if (this.value == '30') {
   // Base map only selection for others
   removeLayers();
-  markerAddress();
+  
 }
   //remove marker if not checked
   if(checkBox.checked == false) {
@@ -638,23 +631,28 @@ var setCheckbox = document.getElementById("toggle").checked;
   var setRadio =  $('input[name="scenarios"]:checked').val()
 //get Center of map
   let center = map.getView().getCenter()
+  var zoom = map.getView().getZoom(); // Get the current zoom level
 
-
-
-      if (this.value == '1') {
+      if (this.value == '32') {
 
         //surface water
         // v8 this now goes to the cc page
-      window.location.href = "/version_10/nafra2-direct-map/surface-water-cc?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
+      window.location.href = "/version_10/nafra2-direct-map/surface-water-cc?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
     }
-    else if (this.value == '2') {
-
-      // rivers and sea
-      window.location.href = "/version_10/nafra2-direct-map/rivers-sea?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
-    } else if (this.value == '3') {
+    else if (this.value == '33') {
     
-      //reservoirs
-      window.location.href = "/version_10/nafra2-direct-map/rivers-sea-cc?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
+      window.location.href = "/version_10/nafra2-direct-map/surface-water-depth-future?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
+      
+    } 
+    // rivers and the sea 2050 
+    else if (this.value == '34') {
+    
+      window.location.href = "/version_10/nafra2-direct-map/rivers-sea-cc?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
+      
+    } 
+    else if (this.value == '35') {
+    
+      window.location.href = "/version_10/nafra2-direct-map/rivers-sea-depth-future?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
       
     } 
   });
@@ -667,22 +665,28 @@ $('input[name="measurements"]').change(function(){
   var setRadio =  $('input[name="scenarios"]:checked').val()
  //get Center of map
  let center = map.getView().getCenter()
+ var zoom = map.getView().getZoom(); // Get the current zoom level
 
   if (this.value == '7') {
 
   //Surface water extent
-  window.location.href = "/version_10/nafra2-direct-map/surface-water?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
+  window.location.href = "/version_10/nafra2-direct-map/surface-water?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
 
 }
 else if (this.value == '8') {
 
   //Surface water depth
-  window.location.href = "/version_10/nafra2-direct-map/surface-water-depth?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
+  window.location.href = "/version_10/nafra2-direct-map/surface-water-depth?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
 
 } else if (this.value == '9') {
 
   //Surface water speed
-  window.location.href = "/version_10/nafra2-direct-map/surface-water-velocity?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
+  window.location.href = "/version_10/nafra2-direct-map/rivers-sea?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
+} 
+else if (this.value == '10') {
+
+  //Surface water speed
+  window.location.href = "/version_10/nafra2-direct-map/rivers-sea-depth?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
 } 
 });
   
@@ -753,6 +757,8 @@ function handleRadioSelection() {
 // Call the function to enable radio button selection handling
 handleRadioSelection();
 
+
+
 // page load, show key, hide scenarios
 $(document).ready(function() {
   if ($(window).width() < 769) {
@@ -762,6 +768,10 @@ $(document).ready(function() {
     $('#reset-key').css('display', 'none');
     $('#zoomIn').css('display', 'none');
     $('#zoomOut').css('display', 'none');
+    $('#rivers-btn').css('margin-top', '195px');
+    $('#sw-btn').css('margin-top', '235px');
+    $('#rivers-btn-res').css('margin-top', '170px');
+    $('#sw-btn-res').css('margin-top', '10px');
   }
 });
 
@@ -773,6 +783,10 @@ $('#close-key').on('click', function() {
   $('#scenarios-controls').css('display', 'block');
   $('#open-key').css('display', 'block');
   $('#att-key').css('display', 'block'); 
+  $('#rivers-btn').css('margin-top', '10px');
+  $('#sw-btn').css('margin-top', '10px');
+  $('#rivers-btn-res').css('margin-top', '10px');
+  $('#sw-btn-res').css('margin-top', '10px');
 });
 
 
@@ -782,10 +796,18 @@ $('#open-key').on('click', function() {
   if ($('#defra-map-key__container').css('display') === 'none') {
   // Show the map key container when the open button is clicked
   $('#defra-map-key__container').css('display', 'block');
+  $('#rivers-btn').css('margin-top', '195px');
+  $('#sw-btn').css('margin-top', '235px');
+  $('#rivers-btn-res').css('margin-top', '170px');
+  $('#sw-btn-res').css('margin-top', '10px');
   // Hide the other elements when the open button is clicked
   }
   else if ($('#defra-map-key__container').css('display') === 'block') {
     $('#defra-map-key__container').css('display', 'none');
+    $('#rivers-btn').css('margin-top', '10px');
+    $('#sw-btn').css('margin-top', '10px');
+    $('#rivers-btn-res').css('margin-top', '10px');
+    $('#sw-btn-res').css('margin-top', '10px');
   }
 });
 
@@ -795,6 +817,7 @@ $('#att-key').on('click', function() {
   if ($('#scenarios-controls').css('display') === 'block') {
     // If scenarios-controls is displayed, hide it and show #info
     $('#scenarios-controls').css('display', 'none');
+    $('#tabs-group').css('display', 'none');
     $('#info').css('display', 'block');
 
     // Check if the screen width is 769 pixels or less
@@ -806,6 +829,7 @@ $('#att-key').on('click', function() {
     // If #info is displayed, hide it and show scenarios-controls
     $('#info').css('display', 'none');
     $('#scenarios-controls').css('display', 'block');
+    $('#tabs-group').css('display', 'flex');
     if ($(window).width() <= 641) {
     // Remove the margin-bottom from .defra-map-attribution
     $('#att-key').css('margin-bottom', '0');
@@ -908,13 +932,11 @@ $(document).ready(function () {
     var scenarioValue = $('input[name="scenarios"]:checked').val();
     // If unchecked, call the removeLayers() function
     if (!isChecked) {
-      if (currentPath === '/version_10/nafra2-direct-map/surface-water' || currentPath === '/version_10/nafra2-direct-map/surface-water-cc' || currentPath === '/version_10/nafra2-direct-map/surface-water-velocity' || currentPath === '/version_10/nafra2-direct-map/surface-water-depth') {
+      if (currentPath === '/version_10/nafra2-direct-map/surface-water' || currentPath === '/version_10/nafra2-direct-map/surface-water-cc' || currentPath === '/version_10/nafra2-direct-map/surface-water-velocity' || currentPath === '/version_10/nafra2-direct-map/surface-water-depth' || currentPath === '/version_10/nafra2-direct-map/surface-water-depth-future' || currentPath === '/version_10/nafra2-direct-map/rivers-sea-depth' || currentPath === '/version_10/nafra2-direct-map/rivers-sea-depth-future') {
       removeLayers();
-      markerAddress();
     }
     else if (currentPath === '/version_10/nafra2-direct-map/rivers-sea' || currentPath === '/version_10/nafra2-direct-map/reservoirs' || currentPath === '/version_10/nafra2-direct-map/rivers-sea-cc')
       removeLayers();
-      markerAddress();
     }
     // end of if that removes layers
 
@@ -925,7 +947,6 @@ $(document).ready(function () {
     /* map.addLayer(surfaceWater(3)),
     map.addLayer(surfaceWater(2)),
     map.addLayer(surfaceWater(1)), */
-    markerAddress();
     }
     else if (currentPath === '/version_10/nafra2-direct-map/surface-water-cc') {
       removeLayers();
@@ -933,7 +954,7 @@ $(document).ready(function () {
       /* map.addLayer(surfaceWater(3)),
       map.addLayer(surfaceWater(2)),
       map.addLayer(surfaceWater(1)), */
-      markerAddress();
+      
       }
     else if (currentPath === '/version_10/nafra2-direct-map/rivers-sea') {
       removeLayers();
@@ -942,7 +963,7 @@ $(document).ready(function () {
       map.addLayer(riverSea(3)),
       map.addLayer(riverSea(2)),
       map.addLayer(riverSea(1)), */
-      markerAddress();
+  
       }
       else if (currentPath === '/version_10/nafra2-direct-map/rivers-sea-cc') {
         removeLayers();
@@ -951,52 +972,90 @@ $(document).ready(function () {
         map.addLayer(riverSea(3)),
         map.addLayer(riverSea(2)),
         map.addLayer(riverSea(1)), */
-        markerAddress();
+        
         }
       else if (currentPath === '/version_10/nafra2-direct-map/reservoirs') {
         removeLayers();
-        map.addLayer(reservoirRiver('DryDay')),
-        map.addLayer(reservoirRiver('WetDay')),
-        markerAddress();
+        map.addLayer(reservoirRiver('DryDay'));
+        map.addLayer(reservoirRiver('WetDay'));
+        
         }
         else if (currentPath === '/version_10/nafra2-direct-map/surface-water-depth') {
           //surface water depth high risk
            if (scenarioValue == '10') {
             removeLayers();
             map.addLayer(surfaceWaterDepth(1));
-            markerAddress();
+            
           }
           //surface water depth medium risk
           else if (scenarioValue == '11') {
             removeLayers();
             map.addLayer(surfaceWaterDepth(2));
-            markerAddress();
+            
             //surface water depth low risk
           } else if (scenarioValue == '12') {
             removeLayers();
             map.addLayer(surfaceWaterDepth(3));
-            markerAddress();
+            
           } 
           }
-          else if (currentPath === '/version_10/nafra2-direct-map/surface-water-velocity') {
+          else if (currentPath === '/version_10/nafra2-direct-map/surface-water-depth-future') {
+            //surface water depth high risk
+             if (scenarioValue == '10') {
+              removeLayers();
+              map.addLayer(surfaceWaterDepth(1));
+              
+            }
+            //surface water depth medium risk
+            else if (scenarioValue == '11') {
+              removeLayers();
+              map.addLayer(surfaceWaterDepth(2));
+              
+              //surface water depth low risk
+            } else if (scenarioValue == '12') {
+              removeLayers();
+              map.addLayer(surfaceWaterDepth(3));
+              
+            } 
+            }
+          else if (currentPath === '/version_10/nafra2-direct-map/rivers-sea-depth') {
             //surface water velocity high risk
              if (scenarioValue == '13') {
               removeLayers();
               map.addLayer(surfaceWaterSpeed(1));
-              markerAddress();
+              
             }
             //surface water velocity medium risk
             else if (scenarioValue == '14') {
               removeLayers();
               map.addLayer(surfaceWaterSpeed(2));
-              markerAddress();
+              
               //surface water velocity low risk
             } else if (scenarioValue == '15') {
               removeLayers();
               map.addLayer(surfaceWaterSpeed(3));
-              markerAddress();
+              
             } 
             }
+            else if (currentPath === '/version_10/nafra2-direct-map/rivers-sea-depth-future') {
+              //surface water velocity high risk
+               if (scenarioValue == '13') {
+                removeLayers();
+                map.addLayer(surfaceWaterSpeed(1));
+                
+              }
+              //surface water velocity medium risk
+              else if (scenarioValue == '14') {
+                removeLayers();
+                map.addLayer(surfaceWaterSpeed(2));
+                
+                //surface water velocity low risk
+              } else if (scenarioValue == '15') {
+                removeLayers();
+                map.addLayer(surfaceWaterSpeed(3));
+                
+              } 
+              }
   }
   // Handle checkbox change event by calling the function
   displayLayersCheckbox.on('change', handleDisplayLayersCheckbox);
@@ -1004,44 +1063,39 @@ $(document).ready(function () {
 
 // exit map button
 $(document).ready(function () {
-  var exitButton = $('#exit-map');
 
-  exitButton.on('click', function () {
-    // Navigate to another page
+  // exit map button
+  $('#exit-map').on('click', function () {
     window.location.href = '/version_10/nafra2/where-do-you-want-to-check.html.html';
   });
-});
 
-
-// rivers map button
-$(document).ready(function () {
-  var exitButton = $('#rivers-btn');
-
-  exitButton.on('click', function () {
-    // Navigate to another page
+  // rivers map button
+  $('#rivers-btn').on('click', function () {
     window.location.href = '/version_10/nafra2-direct-map/rivers-sea.html';
   });
-});
 
-// reservoir map button
-$(document).ready(function () {
-  var exitButton = $('#res-btn');
+  // rivers map button on res
+  $('#rivers-btn-res').on('click', function () {
+    window.location.href = '/version_10/nafra2-direct-map/rivers-sea.html';
+  });
 
-  exitButton.on('click', function () {
-    // Navigate to another page
+  // reservoir map button
+  $('#res-btn').on('click', function () {
     window.location.href = '/version_10/nafra2-direct-map/reservoirs.html';
   });
-});
 
-// surface water map button
-$(document).ready(function () {
-  var exitButton = $('#sw-btn');
-
-  exitButton.on('click', function () {
-    // Navigate to another page
+  // surface water map button
+  $('#sw-btn').on('click', function () {
     window.location.href = '/version_10/nafra2-direct-map/surface-water.html';
   });
+
+  // surface water map button on res
+  $('#sw-btn-res').on('click', function () {
+    window.location.href = '/version_10/nafra2-direct-map/surface-water.html';
+  });
+
 });
+
 
 // Check the previous URL on page load and hide form groups if needed
 /* $(document).ready(function () {
@@ -1135,144 +1189,74 @@ $(document).ready(function () {
   });
 }); */
 
-// surface water map button
-/* $(document).ready(function () {
-  var tab1 = $('#tab1');
-  var tab2 = $('#tab2');
-  var tab3 = $('#tab3');
-
-  tab1.on('click', function () {
-    // Navigate to another page
-    window.location.href = '/version_10/nafra2-direct-map/surface-water.html';
-  });
-
-  tab2.on('click', function () {
-    // Navigate to another page
-    window.location.href = '/version_10/nafra2-direct-map/surface-water-depth.html';
-  });
-  tab3.on('click', function () {
-    // Navigate to another page
-    window.location.href = '/version_10/nafra2-direct-map/surface-water-depth-future.html';
-  });
-});
- */
-
+// For the surface water map button tabs
 $(document).ready(function () {
   var tab1 = $('#tab1');
   var tab2 = $('#tab2');
   var tab3 = $('#tab3');
 
-  function updateRadioButtons(tabContentId) {
-      // Reset borders
-      $('.govuk-radios__item input').css('border-bottom', 'none');
-
-      // Check radio buttons based on the tab content
-      if (tabContentId === 'tabContent1') {
-          $('#sw-high').prop('checked', true);
-          $('#sw--depth-high').prop('checked', true);
-          $('#sw-high').css('border-bottom', '2px solid black');
-          $('#sw-depth-high').css('border-bottom', '2px solid black');
-      } else if (tabContentId === 'tabContent2') {
-          $('#sw-med').prop('checked', true);
-          $('#sw-depth-med').prop('checked', true);
-          $('#sw-med').css('border-bottom', '2px solid black');
-          $('#sw-depth-med').css('border-bottom', '2px solid black');
-      }
-      else if (tabContentId === 'tabContent3') {
-        $('#sw-med').prop('checked', true);
-        $('#sw-depth-med').prop('checked', true);
-        $('#sw-med').css('border-bottom', '2px solid black');
-        $('#sw-depth-med').css('border-bottom', '2px solid black');
-    }
-  }
-
+  
   tab1.on('click', function () {
-      // Hide tabContent2
-      $('#tabContent2').css('display', 'none');
-      $('#tab2').addClass('tab-inactive');
-      $('#tabContent3').css('display', 'none');
-      $('#tab3').addClass('tab-inactive');
-
-      // Show tabContent1
-      $('#tabContent1').css('display', 'block');
-      $('#tab1').removeClass('tab-inactive');
-
-      // Update radio buttons
-      updateRadioButtons('tabContent1');
+      // Fetch the current center and zoom when the tab is clicked
+      let center = map.getView().getCenter();
+      var zoom = map.getView().getZoom();
+      
+      // Navigate to the surface water page with updated center and zoom values
+      window.location.href = "/version_10/nafra2-direct-map/surface-water.html?center=" + center + "&zoom=" + zoom;
   });
 
   tab2.on('click', function () {
-      // Hide tabContent1
-      $('#tabContent1').css('display', 'none');
-      $('#tab1').addClass('tab-inactive');
-      $('#tabContent3').css('display', 'none');
-      $('#tab3').addClass('tab-inactive');
+      // Fetch the current center and zoom when the tab is clicked
+      let center = map.getView().getCenter();
+      var zoom = map.getView().getZoom();
 
-      // Show tabContent2
-      $('#tabContent2').css('display', 'block');
-      $('#tab2').removeClass('tab-inactive');
-
-      // Update radio buttons
-      updateRadioButtons('tabContent2');
+      // Navigate to the surface water depth page with updated center and zoom values
+      window.location.href = "/version_10/nafra2-direct-map/surface-water-depth.html?center=" + center + "&zoom=" + zoom;
   });
+
   tab3.on('click', function () {
-    // Hide tabContent1
-    $('#tabContent1').css('display', 'none');
-    $('#tab1').addClass('tab-inactive');
-    $('#tabContent2').css('display', 'none');
-    $('#tab2').addClass('tab-inactive');
+      // Fetch the current center and zoom when the tab is clicked
+      let center = map.getView().getCenter();
+      var zoom = map.getView().getZoom();
 
-    // Show tabContent2
-    $('#tabContent3').css('display', 'block');
-    $('#tab3').removeClass('tab-inactive');
-
-    // Update radio buttons
-    updateRadioButtons('tabContent3');
+      // Navigate to the surface water depth future page with updated center and zoom values
+      window.location.href = "/version_10/nafra2-direct-map/surface-water-depth-future.html?center=" + center + "&zoom=" + zoom;
+  });
 });
 
-  // Initial setup
-  updateRadioButtons('tabContent1');
-});
-
-
-// when clicked check both radio buttons, if 11 is checked, also check 13, if 12 is checked, check 14
-// add a black 2 px bottom border to which ever to both 11 and 13, if they are checked and 12 and 14 if they are checked
-
-// hide tabs when cc button is clicked
-// show when clicked again
-
-
-// If this doesn't work, just make the tabs links and create another page.
-
-
-
-/* $(document).ready(function () {
-  var selectedOption;
-
-  // Function to update selectedOption when a radio button in the first tab is clicked
-  function updateSelectedOption() {
-      selectedOption = $('input[name="scenarios"]:checked').val();
+$(document).ready(function () {
+  var tab1 = $('#tab1-rs');
+  var tab2 = $('#tab2-rs');
+  var tab3 = $('#tab3-rs');
+  
+  function convertCenterToString(center) {
+    return center.join(','); // Convert array [x, y] to string "x,y"
   }
 
-  // Attach change event handler to radio buttons in the first tab
-  $('#tabContent1 input[name="scenarios"]').on('change', function () {
-      updateSelectedOption();
-      // Add or remove the 'checked' class based on the checked state
-      $(this).parent('.govuk-radios__item').toggleClass('checked', $(this).prop('checked'));
+  tab1.on('click', function () {
+    let center = map.getView().getCenter();
+    var zoom = map.getView().getZoom(); 
+    let centerString = convertCenterToString(center); // Convert center to string format
+    console.log("Tab 1 clicked - Center:", centerString, "Zoom:", zoom);
+    window.location.href = "/version_10/nafra2-direct-map/rivers-sea.html?center=" + centerString + "&zoom=" + zoom;
   });
 
-  // Switch tabs and transfer the selected value and styling
-  $('.tabs .tab').on('click', function () {
-      // Switch tabs
-      $('.tab-content').hide();
-      $('#' + $(this).attr('id').replace('tab', 'tabContent')).show();
-
-      // Transfer the selected value and styling if it exists
-      if (selectedOption) {
-          // Uncheck other radio buttons in the second tab
-          $('#tabContent2 input[name="scenarios"]').prop('checked', false);
-          // Add or remove the 'checked' class based on the stored value
-          $('#tabContent2 input[name="scenarios"][value="' + selectedOption + '"]').parent('.govuk-radios__item').toggleClass('checked', true);
-      }
+  tab2.on('click', function () {
+    let center = map.getView().getCenter();
+    var zoom = map.getView().getZoom(); 
+    let centerString = convertCenterToString(center); // Convert center to string format
+    console.log("Tab 2 clicked - Center:", centerString, "Zoom:", zoom);
+    window.location.href = "/version_10/nafra2-direct-map/rivers-sea-depth.html?center=" + centerString + "&zoom=" + zoom;
   });
-}); */
+
+  tab3.on('click', function () {
+    let center = map.getView().getCenter();
+    var zoom = map.getView().getZoom(); 
+    let centerString = convertCenterToString(center); // Convert center to string format
+    console.log("Tab 3 clicked - Center:", centerString, "Zoom:", zoom);
+    window.location.href = "/version_10/nafra2-direct-map/rivers-sea-depth-future.html?center=" + centerString + "&zoom=" + zoom;
+  });
+});
+
+
+

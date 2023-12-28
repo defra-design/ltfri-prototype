@@ -46,19 +46,19 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
       {% case '17' %}
           {% set swHigh = true %}
       {% case '11' %}
-          {% set swHigh = true %}
+          {% set swMed = true %}
       {% case '14' %}
           {% set swMed = true %}
           {% case '18' %}
           {% set swMed = true %}
       {% case '12' %}
-          {% set swMed = true %}
+          {% set swLow = true %}
       {% case '15' %}
           {% set swLow = true %}
           {% case '19' %}
           {% set swLow = true %}
           {% default %}
-              {% set swHigh = true %}
+              {% set swMed = true %}
   {% endswitch %}
 
     <!--controls on the bottom-->
@@ -106,10 +106,10 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
     
     
   <!-- Scenarios -->
-  <div class="tabs">
-    <div class="tab" id="tab1">Extent</div>
-    <div class="tab tab-inactive" id="tab2">Depth: currently</div>
-    <div class="tab tab-inactive" id="tab3">Depth: by 2050</div>
+  <div class="tabs" id="tabs-group">
+    <button class="tab" id="tab1">Extent</button>
+    <button class="tab tab-inactive" id="tab2">Depth: currently</button>
+    <button class="tab tab-inactive" id="tab3">Depth: by 2050</button>
 </div>
   
   <div class="tab-content" id="tabContent1">
@@ -119,15 +119,15 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
       <i class="fa-solid fa-chevron-left left-btn arrow-padding" aria-hidden="true"></i>
       <i class="fa-solid fa-chevron-right right-btn arrow-padding" aria-hidden="true"></i>
            <div class="govuk-radios__item">
-             <input class="govuk-radios__input" id="sw-high" name="scenarios" type="radio" value="11" {% if swHigh %}checked{% endif %}>
-             <label class="govuk-label govuk-radios__label" for="sw-high">
+             <input class="govuk-radios__input" name="scenarios" type="radio" value="11" checked="true">
+             <label class="govuk-label govuk-radios__label">
                      <strong>Current likelihood</strong>       
                      <span class="risk-context-v3">Extent of flooding</span>
          </label>
         </div>
            <div class="govuk-radios__item">
-             <input class="govuk-radios__input" id="sw-med" name="scenarios" type="radio" value="12" {% if swMed %}checked{% endif %}>
-             <label class="govuk-label govuk-radios__label" for="sw-med">
+             <input class="govuk-radios__input" name="scenarios" type="radio" value="12">
+             <label class="govuk-label govuk-radios__label">
                <strong>Predicted likelihood by 2050</strong>   
                <span class="risk-context-v3">Extent of flooding</span>
          </label>
@@ -139,13 +139,13 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
 
   </div>
   <!-- end of tab1 -->
-  <div class="tab-content" id="tabContent2" style="display: none;">
+  <!-- <div class="tab-content" id="tabContent2" style="display: none;">
     <div class="defra-map-scenarios-depth-v4 horizontal-overflow scenario-float-right v6-width-fix-depth v10-mob-depth">
       <div class="defra-map-scenarios-v3_container" id="scenarios-controls">
      <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
       <i class="fa-solid fa-chevron-left left-btn arrow-padding" aria-hidden="true"></i>
       <i class="fa-solid fa-chevron-right right-btn arrow-padding" aria-hidden="true"></i>
-           <div class="govuk-radios__item">
+           <div class="govuk-radios__item" id="tab2-scenarios-controls">
              <input class="govuk-radios__input" id="sw-depth-high" name="scenarios" type="radio" value="12" {% if swHigh %}checked{% endif %}>
              <label class="govuk-label govuk-radios__label" for="sw-high">
                      <strong>20cm</strong>       
@@ -179,15 +179,15 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
     </div>
     </div>
     
-  </div>
+  </div> -->
   <!-- end of second tab -->
-  <div class="tab-content" id="tabContent3" style="display: none;">
+  <!-- <div class="tab-content" id="tabContent3" style="display: none;">
     <div class="defra-map-scenarios-depth-v4 horizontal-overflow scenario-float-right v6-width-fix-depth v10-mob-depth">
       <div class="defra-map-scenarios-v3_container" id="scenarios-controls">
      <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
       <i class="fa-solid fa-chevron-left left-btn arrow-padding" aria-hidden="true"></i>
       <i class="fa-solid fa-chevron-right right-btn arrow-padding" aria-hidden="true"></i>
-           <div class="govuk-radios__item">
+           <div class="govuk-radios__item" id="tab3-scenarios-controls">
              <input class="govuk-radios__input" id="sw-depth-high" name="scenarios" type="radio" value="12" {% if swHigh %}checked{% endif %}>
              <label class="govuk-label govuk-radios__label" for="sw-high">
                      <strong>20cm</strong>       
@@ -221,7 +221,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
     </div>
     </div>
     
-  </div>
+  </div> -->
   <!-- end of radios -->
 </div>
 
@@ -254,38 +254,38 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
   <!-- attribution end -->
 
   <!-- mobile key -->
-  <div class="defra-map-key-v10" id="key" aria-labelledby="mapKeyLabel" tabindex="-1" role="region" aria-hidden="false"
-    style="display: block;">
+  <div class="defra-map-key-v10" id="key" aria-labelledby="mapKeyLabel" tabindex="-1" role="region" aria-hidden="false">
     <div class="defra-map-key__container" id="defra-map-key__container">
       <h2 id="mapKeyLabel" class="defra-map-key__title padding-key-title"><span role="text">Surface water<span class="govuk-visually-hidden">for
             map features</span></span></h2>
             <button class="defra-map-key__close" id="close-key"><svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20"><path d="M10,8.6L15.6,3L17,4.4L11.4,10L17,15.6L15.6,17L10,11.4L4.4,17L3,15.6L8.6,10L3,4.4L4.4,3L10,8.6Z" fill="" style="fill:currentColor;stroke:currentColor;stroke-width:0.1px;"></path></svg><span class="govuk-visually-hidden">Close key</span></button>
             <div class="defra-map-key__content">
-      <div class="defra-map-key__section">
-        <div class="defra-map-key__item">
-        <span class="defra-map-key__symbol-container defra-map-key__symbol-container--multi padding-chance symbol-margin-top" id="high-risk-sw">
-              <span class="defra-map-key__symbol padding-chance">
-                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#682D62"></rect></svg>
-              </span>
-              High chance
-              
-            </span>
-            <span class="defra-map-key__symbol-container defra-map-key__symbol-container--multi padding-chance" id="med-risk-sw">
-              <span class="defra-map-key__symbol padding-chance">
-                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#B352A9"></rect></svg>
-              </span>
-              Medium chance
-             
-            </span>
-            <span class="defra-map-key__symbol-container defra-map-key__symbol-container--multi padding-chance" id="low-risk-sw">
-              <span class="defra-map-key__symbol padding-chance">
-                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#F0ACE9"></rect></svg>
-              </span>
-              Low chance
+              <div class="defra-map-key__section">
+                <div class="defra-map-key__item">
+                <span class="defra-map-key__symbol-container defra-map-key__symbol-container--multi padding-chance symbol-margin-top" id="high-risk-sw">
+                      <span class="defra-map-key__symbol padding-chance">
+                        <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#99004d"></rect></svg>
+                      </span>
+                      High chance
+                      
+                    </span>
+                    <span class="defra-map-key__symbol-container defra-map-key__symbol-container--multi padding-chance" id="med-risk-sw">
+                      <span class="defra-map-key__symbol padding-chance">
+                        <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#e6772e"></rect></svg>
+                      </span>
+                      Medium chance
+                     
+                    </span>
+                    <span class="defra-map-key__symbol-container defra-map-key__symbol-container--multi padding-chance" id="low-risk-sw">
+                      <span class="defra-map-key__symbol padding-chance">
+                        <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#ffbfc9"></rect></svg>
+                      </span>
+                      Low chance
+                
+                    </span>
         
-            </span>
-        </div>
-      </div>
+                </div>
+              </div>
     </div>
   </div>
 </div>
@@ -322,24 +322,24 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
             Extent
             <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="high-risk-sw">
               <span class="defra-map-key__symbol">
-                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#682D62"></rect></svg>
+                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#99004d"></rect></svg>
               </span>
               High chance
               <span class="risk-context-v3">More than 3.3% chance each year</span>
             </span>
             <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="med-risk-sw">
               <span class="defra-map-key__symbol">
-                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#B352A9"></rect></svg>
+                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#e6772e"></rect></svg>
               </span>
               Medium chance
-              <span class="risk-context-v3">Between 3.3% and 1% chance each year</span>
+              <span class="risk-context-v3">Between 1% and 3.3% chance each year</span>
             </span>
             <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="low-risk-sw">
               <span class="defra-map-key__symbol">
-                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#F0ACE9"></rect></svg>
+                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#ffbfc9"></rect></svg>
               </span>
               Low chance
-              <span class="risk-context-v3">Between 1% and 0.1% chance each year</span>
+              <span class="risk-context-v3">Between 0.1% and 1% chance each year</span>
             </span>
           ',
         
@@ -352,12 +352,6 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
           html: '
             Depth
           '
-          },
-          {
-            id: "sw-velocity",
-            classes: "hidden",
-            value: "9",
-          html: ''
           }
           ]
           }) }}
@@ -383,7 +377,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
           {
             id: "ros",
             classes: "visible",
-            value: "2",
+            value: "32",
           html: '
            Extent
           ',
@@ -392,7 +386,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
           {
             id: "reservoir",
             classes: "visible",
-            value: "3",
+            value: "33",
           html: 'Depth'
           }
           ]

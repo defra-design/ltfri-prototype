@@ -107,9 +107,9 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
   <!-- Scenarios -->
   <div class="tabs" id="tabs-group">
     <button class="tab tab-inactive" id="tab1-rs">Extent</button>
-    <button class="tab" id="tab2-rs">Depth: currently</button>
-    <button class="tab tab-inactive" id="tab3-rs">Depth: by 2050</button>
-  </div>
+    <button class="tab tab-inactive" id="tab2-rs">Depth: currently</button>
+    <button class="tab" id="tab3-rs">Depth: by 2050</button>
+</div>
   
  <!--  <div class="tab-content" id="tabContent1">
     <div class="defra-map-scenarios-depth-v4 horizontal-overflow scenario-float-right v6-width-fix-depth v10-mob-depth">
@@ -153,7 +153,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
          </label>
         </div>
            <div class="govuk-radios__item">
-             <input class="govuk-radios__input"  name="scenarios" type="radio" value="14">
+             <input class="govuk-radios__input" name="scenarios" type="radio" value="14">
              <label class="govuk-label govuk-radios__label">
                <strong>30cm</strong>   
                <span class="risk-context-v3">1ft</span>
@@ -288,7 +288,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
           value: "9",
           html: '
             Extent
-           
+          
           '
         },
           {
@@ -297,37 +297,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
             value: "10",
           html: '
             Depth
-            <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="high-risk-rs">
-              <span class="defra-map-key__symbol">
-                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#0066cc"></rect></svg>
-              </span>
-              High chance
-              <span class="risk-context-v3">More than 3.3% chance each year</span>
-            </span>
-            <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="med-risk-rs">
-              <span class="defra-map-key__symbol">
-                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#599eff"></rect></svg>
-              </span>
-              Medium chance
-              <span class="risk-context-v3">Between 1% and 3.3% chance each year</span>
-            </span>
-            <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="low-risk-rs">
-              <span class="defra-map-key__symbol">
-                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#bfc5ff"></rect></svg>
-              </span>
-              Low chance
-              <span class="risk-context-v3">Between 0.1% and 1% chance each year</span>
-            </span>
-              <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="vlow-risk-rs">
-                <span class="defra-map-key__symbol">
-                  <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#6b78ff"></rect></svg>
-                </span>
-                Very low chance
-                <span class="risk-context-v3">Less than 0.1% chance each year</span>
-              </span>
-          ',
-        
-          checked: true
+          '
           }
           ]
           }) }}
@@ -363,7 +333,36 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
             id: "reservoir",
             classes: "visible",
             value: "35",
-          html: 'Depth'
+          html: 'Depth
+          <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="high-risk-rs">
+            <span class="defra-map-key__symbol">
+              <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#0066cc"></rect></svg>
+            </span>
+            High chance
+            <span class="risk-context-v3">More than 3.3% chance each year</span>
+          </span>
+          <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="med-risk-rs">
+            <span class="defra-map-key__symbol">
+              <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#599eff"></rect></svg>
+            </span>
+            Medium chance
+            <span class="risk-context-v3">Between 1% and 3.3% chance each year</span>
+          </span>
+          <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="low-risk-rs">
+            <span class="defra-map-key__symbol">
+              <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#bfc5ff"></rect></svg>
+            </span>
+            Low chance
+            <span class="risk-context-v3">Between 0.1% and 1% chance each year</span>
+          </span>
+            <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="vlow-risk-rs">
+              <span class="defra-map-key__symbol">
+                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#6b78ff"></rect></svg>
+              </span>
+              Very low chance
+              <span class="risk-context-v3">Less than 0.1% chance each year</span>
+            </span>',
+          checked: true
           }
           ]
           }) }}
