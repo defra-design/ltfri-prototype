@@ -48,12 +48,18 @@ let mapCenter = []
 //view extent and centre and zoom levels
 const view = new View({
   center: setCenter(),
-  zoom: 16,
+  zoom: setStoredZoom() || 16, // Set the zoom level from sessionStorage
   minZoom: 8,
   maxZoom: 16,
   extent: [ -5.75447, 49.93027, 1.799683, 55.84093],
 });
 
+// Function to get stored zoom level from sessionStorage
+function setStoredZoom() {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  return urlParams.get('zoom');
+}
 
 //set center of map
 function setCenter(){
@@ -663,8 +669,9 @@ $('input[name="risk-type"]').change(function(){
 var setCheckbox = document.getElementById("toggle").checked;
 //get radio value
   var setRadio =  $('input[name="scenarios"]:checked').val()
-//get Center of map
+  //get Center of map
   let center = map.getView().getCenter()
+  var zoom = map.getView().getZoom(); // Get the current zoom level
 
 
 
@@ -672,16 +679,16 @@ var setCheckbox = document.getElementById("toggle").checked;
 
         //surface water
         // v8 this now goes to the cc page
-      window.location.href = "/version_10/nafra2/surface-water-cc?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
+      window.location.href = "/version_10/nafra2/surface-water-cc?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
     }
     else if (this.value == '2') {
 
       // rivers and sea
-      window.location.href = "/version_10/nafra2/rivers-sea?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
+      window.location.href = "/version_10/nafra2/rivers-sea?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
     } else if (this.value == '3') {
     
       //reservoirs
-      window.location.href = "/version_10/nafra2/rivers-sea-cc?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
+      window.location.href = "/version_10/nafra2/rivers-sea-cc?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
       
     } 
   });
@@ -694,22 +701,23 @@ $('input[name="measurements"]').change(function(){
   var setRadio =  $('input[name="scenarios"]:checked').val()
  //get Center of map
  let center = map.getView().getCenter()
+ var zoom = map.getView().getZoom(); // Get the current zoom level
 
   if (this.value == '7') {
 
   //Surface water extent
-  window.location.href = "/version_10/nafra2/surface-water?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
+  window.location.href = "/version_10/nafra2/surface-water?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
 
 }
 else if (this.value == '8') {
 
   //Surface water depth
-  window.location.href = "/version_10/nafra2/surface-water-depth?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
+  window.location.href = "/version_10/nafra2/surface-water-depth?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
 
 } else if (this.value == '9') {
 
   //Surface water speed
-  window.location.href = "/version_10/nafra2/surface-water-velocity?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
+  window.location.href = "/version_10/nafra2/surface-water-velocity?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
 } 
 });
   
