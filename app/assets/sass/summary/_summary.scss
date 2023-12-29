@@ -192,3 +192,8 @@ a.search-link-right-v2{
      outline: solid 3px #0b0c0c;
    }
   
+   .h1-gap {
+    @include mq ($until: 769px) {
+     margin-top: 20px;
+   }
+  }
