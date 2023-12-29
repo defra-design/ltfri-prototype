@@ -155,12 +155,16 @@ a.search-link-right-v2{
      margin-top: 10px;
      display: flex;
      justify-content: flex-start;
+     flex-wrap: wrap;
      gap: 10px;
    }
+
+
    .risk-label-group-2 {
-    margin-top: 5px;
+    margin-top: 10px;
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
     gap: 10px;
   }
 
@@ -174,10 +178,10 @@ a.search-link-right-v2{
      @include mq ($until: 710px) {
       padding: 5px 8px 4px 8px;
     }
-    @include mq ($until: 426px) {
+    /* @include mq ($until: 426px) {
       padding: 5px 6px 4px 6px;
-      font-size: 12px;
-    }
+      font-size: 14px;
+    } */
    }
 
    .card-padding-left {
