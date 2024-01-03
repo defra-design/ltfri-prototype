@@ -829,10 +829,11 @@ $('#att-key').on('click', function() {
     // If #info is displayed, hide it and show scenarios-controls
     $('#info').css('display', 'none');
     $('#scenarios-controls').css('display', 'block');
-    $('#tabs-group').css('display', 'flex');
+    
     if ($(window).width() <= 641) {
     // Remove the margin-bottom from .defra-map-attribution
     $('#att-key').css('margin-bottom', '0');
+    $('#tabs-group').css('display', 'flex');
     $('#info').css('display', 'none');
     }
   }
@@ -847,6 +848,7 @@ $('#att-key').on('click', function() {
       if ($(window).width() <= 641) {
         // Remove the margin-bottom from .defra-map-attribution
         $('#att-key').css('margin-bottom', '0');
+        $('#tabs-group').css('display', 'flex');
         }
     
   });
