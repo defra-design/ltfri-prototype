@@ -1,10 +1,16 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Summary
+Rivers and the sea: compare the predicted depth levels
 {% endblock %}
 
 {% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
 <a href="results-full-ros.html" class="govuk-back-link back-link-left">Back to rivers and the sea</a>
 <!-- <a href="" class="govuk-back-link search-link-right">Search for another address</a> -->
 {% endblock %}

@@ -1,10 +1,16 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Summary
+  Understand your flood risk: groundwater and reservoirs
 {% endblock %}
 
 {% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
 <a href="results-hx7.html" class="govuk-back-link back-link-left">Back to summary</a>
 <!-- <a href="" class="govuk-back-link search-link-right">Search for another address</a> -->
 {% endblock %}
