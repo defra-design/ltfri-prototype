@@ -15,16 +15,22 @@
 @import "map-v2/map-key";
 @import "map-v2/map-key-left";
 @import "map-v2/map-key-left-depth";
+
+// Map v3
+@import "map-v3/map";
+@import "map-v3/map-key";
+@import "map-v3/map-scenarios";
+
 // Search
 @import "components/search";
 
 // depth gauge
 @import "components/depth-gauge";
 
-// Map v3
-@import "map-v3/map";
-@import "map-v3/map-key";
-@import "map-v3/map-scenarios";
+// toggletips
+@import "components/toggletip";
+@import "components/toggletip-display";
+
 //Open layers
 @import "map-v3/ol";
 
