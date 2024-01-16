@@ -16,10 +16,9 @@
     color: #fff;
     @include govuk-font($size: 16, $weight: regular);
   }
+
   
-  /* boilerplate; nothing really to see here */
-  
-  button {
+  /* button {
     width: 26px;
     height: 26px;
     border-radius: 50%;
@@ -33,4 +32,4 @@
         box-shadow:  0px 0px 0px 4px #ffdd00;
     }
     cursor: help;
-  } 
+  }  */
