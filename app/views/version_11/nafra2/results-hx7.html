@@ -68,7 +68,7 @@
           <dl class="govuk-summary-list">
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Current likelihood of flooding
+                Current chance of flooding
               </dt>
               <dd class="govuk-summary-list__value">
                 <div class="risk-label-group-2 govuk-!-margin-bottom-3">
@@ -87,10 +87,11 @@
                     
                    
                   </strong>
-                  <p data-toggletip>
+                  <!-- Toggletip test -->
+                  <!-- <p data-toggletip>
                     The chance of flooding in this area is more than 3.3% each year.
                   </p>
-                   
+                    -->
                  
                   
                 </div>
@@ -104,7 +105,7 @@
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Predicted likelihood of flooding by the year 2050
+                Predicted chance of flooding by the year 2050
                 </dt>
               <dd class="govuk-summary-list__value">
                 <div class="risk-label-group-2">
@@ -156,6 +157,7 @@
         
       </div>
 
+     
 <!-- Rivers --> 
       <div class="govuk-summary-card" id="rivers-sea">
         <div class="govuk-summary-card__title-wrapper vlow card-padding-left">
@@ -225,7 +227,22 @@
       </div>
 </div>
   
-      
+<details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      What chances of flooding mean
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <p class="govuk-body">High chance - more than 3.3% each year.</p>
+
+    <p class="govuk-body">Medium chance - between 1% and 3.3% each year.</p>
+
+    <p class="govuk-body">Low chance - between 0.1% and 1% each year.</p>
+
+    <p class="govuk-body">Very low chance - less than 0.1% each year.</p>
+  </div>
+</details>
 <!-- Other flood risks-->
  <div class="govuk-summary-card govuk-!-margin-top-3" id="surface-water">
   <div class="govuk-summary-card__title-wrapper vlow card-padding-left">
