@@ -25,8 +25,8 @@ Surface water: compare the predicted depth levels
         Surface water: how deep any flood water could be
       </h1>
 
-<p class="govuk-body">If there was any flooding at <strong>3 Rockingham Villas, Church Lane, Newmarket, CB8 0HL</strong>, this information tells you whether any flood water could reach different levels.</p>
-   
+<p class="govuk-body">This information tells you how deep any water could be if there was flooding at <strong>3 Rockingham Villas, Church Lane, Newmarket, CB8 0HL</strong>.</p>
+<p class="govuk-body">It shows the chances of flooding up to 20cm, 30cm, 60cm and 90cm, on a scale of high to very low chance.</p>
     </div>
 </div>
 
@@ -96,8 +96,8 @@ Surface water: compare the predicted depth levels
         </dt>
         <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
           <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
-            <strong class="govuk-tag govuk-tag--red label-mod-depth govuk-!-margin-bottom-3">
-              High
+            <strong class="govuk-tag govuk-tag--red label-mod-depth govuk-!-margin-bottom-3 label-border">
+             High<span class="govuk-visually-hidden">which is the highest likelihood</span>
             </strong>
             <span class="depth-chance-info"></span>
           <!--   <p class="govuk-body govuk-!-margin-top-3">At 15cm, flood water can:</p>
@@ -185,7 +185,7 @@ Surface water: compare the predicted depth levels
         </dt>
         <dd class="defra-flood-impact-list__value">
           <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
-           <strong class="govuk-tag govuk-tag--red label-mod-depth govuk-!-margin-bottom-3">
+           <strong class="govuk-tag govuk-tag--red label-mod-depth govuk-!-margin-bottom-3 label-border">
               High
             </strong><span class="depth-chance-info"></span>
             <!-- <p class="govuk-body govuk-!-margin-top-3">At 30cm, flood water can:</p>
@@ -238,32 +238,45 @@ Surface water: compare the predicted depth levels
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h3 class="govuk-heading-s govuk-!-margin-top-3">What can happen if flooding reaches different levels</h3>
-    <p class="govuk-body govuk-!-margin-top-3">At 20cm, flood water can:</p>
-    <ul class="govuk-list govuk-list--bullet">
-      <li>get into some homes and buildings, especially those with basements</li>
-      <li>block roads</li>
-      <li>damage your car or cause a breakdown</li>
-    </ul>
-      <p class="govuk-body">At 30cm, flood water can:</p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>get into some homes and buildings</li>
-        <li>move a car</li>
-        <li>damage roads and cause major traffic disruption</li>
-      </ul>
-    <p class="govuk-body">At 60cm, flood water can:</p>
-    <ul class="govuk-list govuk-list--bullet">
-      <li>get into some homes and buildings</li>
-      <li>float most vehicles, including 4x4s</li>
-    </ul>
-    <p class="govuk-body">You should not try and keep flood water out of buildings if it's 90cm or more. It can cause collapse or permanent structural damage.</p>
+    <h3 class="govuk-heading-s govuk-!-margin-top-3">What can happen to buildings and vehicles in a flood</h3>
+
+    <p class="govuk-body">At 20cm, flood water can get into some homes and buildings, especially if the property has a basement. At this level, water can also damage your car or cause a breakdown.</p>
+   
+      <p class="govuk-body">At 30cm, flood water can get into homes and buildings. Water at this level can also move a car, damage roads and cause major traffic disruption.</p>
+   
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            What can happen if flood water reaches 60cm
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          At 60cm, flood water can float most vehicles, including 4x4s.
+        </div>
+      </details>
+    <!-- <p class="govuk-body">At 60cm, flood water can float most vehicles, including 4x4s.</p> -->
+  
+
 <h3 class="govuk-heading-s govuk-!-margin-top-3">What you can do</h3>
-<p class="govuk-body govuk-!-margin-bottom-7">Flood protection measures are usually effective up to 60cm. Read about how you can <a class="govuk-link" href="https://www.gov.uk/guidance/adapting-your-home-or-business-to-the-risk-of-flooding">adapt your home or business to the risk of flooding</a>.</p>
+<p class="govuk-body">You cannot completely protect your home or business against flooding, but there's a lot you can do to reduce:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>the amount of flood water that gets in</li>
+      <li>the damage from flood water</li>
+      <li>the cost and time of cleaning up after a flood</li>
+    </ul>
+
+    <p class="govuk-body">
+      Flood protection measures are usually effective up to 60cm. You should not try and keep flood water out of buildings if it's over 90cm. Water at this level can cause collapse or permanent structural damage.</p>
+<p class="govuk-body">
+  Read about how you can <a class="govuk-link" href="https://www.gov.uk/guidance/adapting-your-home-or-business-to-the-risk-of-flooding">adapt your home or business to the risk of flooding</a>.</p>
+
+
+  
 </div>
 </div>
   <!-- End of depth -->
    <!-- end of details -->
-   <nav class="govuk-pagination govuk-pagination--block" role="navigation" aria-label="results">
+  <!--  <nav class="govuk-pagination govuk-pagination--block" role="navigation" aria-label="results">
     <div class="govuk-pagination__prev">
       <a class="govuk-link govuk-pagination__link" href="results-full-sw-depth-future.html" rel="prev">
         <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
@@ -272,7 +285,7 @@ Surface water: compare the predicted depth levels
         <span class="govuk-pagination__link-title">Previous</span><span class="govuk-visually-hidden">:</span>
         <span class="govuk-pagination__link-label">Predicted depth levels by 2050</span></a>
     </div>
-  </nav>
+  </nav> -->
   <!-- end of nav -->
 
 
