@@ -1,0 +1,123 @@
+{% extends "layout-nafra2.html" %}
+
+{% block pageTitle %}
+Enter a postcode
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+
+ <div class="govuk-grid-column-two-thirds">
+
+   
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-heading-xl">
+            Find a location
+          </h1>
+          <div class="govuk-inset-text">
+
+            <p>
+              This service will tell you the flood risk of an area, not a specific property.
+            </p>
+      
+          </div>
+        </legend>
+        <div id="contact-hint" class="govuk-hint">
+          Select one option.
+        </div>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+            <label class="govuk-label govuk-radios__label" for="contact">
+              Email
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="contact-by-email">
+                Email address
+              </label>
+              <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contactByEmail" type="email" spellcheck="false" autocomplete="email">
+            </div>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+            <label class="govuk-label govuk-radios__label" for="contact-2">
+              Phone
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="contact-by-phone">
+                Phone number
+              </label>
+              <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contactByPhone" type="tel" autocomplete="tel">
+            </div>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-3">
+            <label class="govuk-label govuk-radios__label" for="contact-3">
+              Text message
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="contact-by-text">
+                Mobile phone number
+              </label>
+              <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contactByText" type="tel" autocomplete="tel">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <a href="select-an-address-dn19.html" role="button" class="govuk-button govuk-button--primary govuk-!-margin-bottom-8 govuk-!-margin-top-3">
+      Continue
+    </a>
+
+    
+
+
+
+  </div>
+
+</div>
+
+
+{% endblock %} {% if useAutoStoreData %} {% block footer %}
+{{
+  govukFooter({
+    meta: {
+      items: [
+        {
+          href: "https://govuk-prototype-kit.herokuapp.com/",
+          text: "GOV.UK Flooding " + releaseVersion
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+      ]
+    }
+  })
+}}
+{% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
+"includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
+<!-- GOV.UK Flooding {{releaseVersion}} -->
+{% endblock %}
