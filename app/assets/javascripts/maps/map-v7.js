@@ -726,7 +726,7 @@ $('#close-key').on('click', function() {
   $('#scenarios-controls').css('display', 'block');
   $('#open-key').css('display', 'block');
   $('#reset-key').css('display', 'block');
-  $('#att-key').css('display', 'block');
+/*   $('#att-key').css('display', 'block'); */
   $('#advanced-map-button').css('display', 'block');
   $('#advanced-map-button-velocity').css('display', 'block');
 });
@@ -749,7 +749,7 @@ $(document).on('click', function(e) {
       $('#reset-key').css('display', 'block');
       $('#advanced-map-button').css('display', 'block');
       $('#advanced-map-button-velocity').css('display', 'block');
-      $('#att-key').css('display', 'block');
+/*       $('#att-key').css('display', 'block'); */
       $('#att-key').css('margin-bottom', '0');
       $('#open-key').css('margin-bottom', '0');
     }

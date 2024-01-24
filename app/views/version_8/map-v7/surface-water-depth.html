@@ -31,7 +31,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
     </svg>
   <span id="map-button-text">Show advanced options</span></button>
 
-  <img class="defra-map-os-logo" alt="Ordnance Survey logo" src="/public/images/map-os-logo.png" width="90"
+  <img class="defra-map-os-logo-depth" alt="Ordnance Survey logo" src="/public/images/map-os-logo.png" width="90"
     height="24" style="pointer-events: auto; display: block;">
          
 
@@ -75,7 +75,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
           style="fill:none;fill-rule:nonzero;stroke:currentColor;stroke-width:2px;"></path>
       </svg> </svg><span class="open-button-text">Recentre</span><span class="govuk-visually-hidden">location</span></div></a> -->
       <!-- zoom in -->
-    <div class="defra-map-zoom ol-unselectable ol-control"><button id="zoomIn"  class="defra-map-zoom-in" type="button"
+    <div class="defra-map-zoom ol-unselectable ol-control btn-margin-bottom-depth-v6"><button id="zoomIn"  class="defra-map-zoom-in" type="button"
         aria-controls="viewport"><svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20"
           style="fill:currentColor;fill-rule:evenodd;clip-rule:evenodd;">
           <rect x="3" y="9" width="14" height="2"></rect>
@@ -94,7 +94,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
 
 
     <!-- map info-->
-    <button class="defra-map-attribution-v7 attribution-depth btn-margin-bottom-depth-v6" id="att-key" aria-controls="viewport">
+    <button class="defra-map-attribution-v7 attribution-depth btn-margin-bottom-depth-v6" id="att-key" aria-controls="viewport" style="display: none;">
       <div class="button-content">
       <svg aria-hidden="true" focusable="false"
         width="20" height="20" viewBox="0 0 20 20">
@@ -371,7 +371,8 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
               }
             ]
           }) }}
-
+        <p class="copyright-text govuk-body" style="font-size: 10px;"><a href="https://check-long-term-flood-risk.service.gov.uk/os-terms">Contains OS data</a><br>© Crown copyright and database rights 2023</p>
+        <p class="copyright-text-mobile govuk-body" style="font-size: 10px;"><a href="https://check-long-term-flood-risk.service.gov.uk/os-terms">Contains OS data</a><br>© Crown copyright and database rights 2023</p>
         </div>
       </div>
     </div>
