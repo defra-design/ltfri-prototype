@@ -1131,16 +1131,18 @@ map.getView().on('change:resolution', function () {
   console.log('Current Zoom Level:', currentZoom);
 
   // Check if the current zoom level is equal to the maxZoom (16 in this case)
-  if (currentZoom === 16) {
+  if (currentZoom >= 16) {
     // Apply your desired class to the element
     elementToStyle.addClass('zoom-disable');
      // Set aria-hidden attribute to true
-     elementToStyle.attr('aria-hidden', 'true');
+     elementToStyle.attr('aria-disabled', 'true');
+     elementToStyle.attr('aria-label', 'Zoom in disabled because max zoom has been reached');
   } else {
      // Remove the class if the zoom level is not maxZoom
      elementToStyle.removeClass('zoom-disable');
      // Set aria-hidden attribute to false
-     elementToStyle.attr('aria-hidden', 'false');
+     elementToStyle.attr('aria-disabled', 'false');
+     elementToStyle.attr('aria-label', 'Zoom in');
   }
 });
 
