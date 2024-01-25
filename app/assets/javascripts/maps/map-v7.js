@@ -255,7 +255,7 @@ zIndex: 2
   anchor: [0.5, 40],
   anchorXUnits: 'fraction',
   anchorYUnits: 'pixels',
-  src: '/public/images/pin.png'
+  src: '/public/images/marker-black.png'
 }),
 zIndex: 2
 }); 
