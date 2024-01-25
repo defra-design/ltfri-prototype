@@ -48,7 +48,7 @@ let mapCenter = []
 //view extent and centre and zoom levels
 const view = new View({
   center: setCenter(),
-  zoom: setStoredZoom() || 16, // Set the zoom level from sessionStorage
+  zoom: setStoredZoom() || 15, // Set the zoom level from sessionStorage
   minZoom: 8,
   maxZoom: 16,
   extent: [ -5.75447, 49.93027, 1.799683, 55.84093],
@@ -720,14 +720,8 @@ else if (this.value == '8') {
   window.location.href = "/version_10/nafra2/surface-water-velocity?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
 } 
 });
-  
-//Zoom controls
-$('#zoomIn').on('click', function() {
-  map.getView().animate({
-    zoom: map.getView().getZoom() + 1,
-     duration: 200
-   });
-});
+
+// zoom out button
 
 $('#zoomOut').on('click', function() {
   map.getView().animate({
@@ -1127,4 +1121,40 @@ if (skipLinkElements.length > 0) {
   });
 }
 
+// disable zoom in on max zoom
+const elementToStyle = $('#zoomIn');
 
+// Listen for the "change:resolution" event, triggered when the zoom level changes
+map.getView().on('change:resolution', function () {
+  const currentZoom = map.getView().getZoom();
+  // Log the current zoom level to the console
+  console.log('Current Zoom Level:', currentZoom);
+
+  // Check if the current zoom level is equal to the maxZoom (16 in this case)
+  if (currentZoom === 16) {
+    // Apply your desired class to the element
+    elementToStyle.addClass('zoom-disable');
+     // Set aria-hidden attribute to true
+     elementToStyle.attr('aria-hidden', 'true');
+  } else {
+     // Remove the class if the zoom level is not maxZoom
+     elementToStyle.removeClass('zoom-disable');
+     // Set aria-hidden attribute to false
+     elementToStyle.attr('aria-hidden', 'false');
+  }
+});
+
+
+// Zoom controls
+$('#zoomIn').on('click', function() {
+  // Check the current zoom level
+  const currentZoom = map.getView().getZoom();
+
+  // Only allow zooming in if the current zoom level is less than 16
+  if (currentZoom < 16) {
+    map.getView().animate({
+      zoom: currentZoom + 1,
+      duration: 200
+    });
+  }
+});
