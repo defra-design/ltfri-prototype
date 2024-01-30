@@ -1069,7 +1069,7 @@ h1{
   position: absolute;
   @media screen and (max-width: 1063px) {
   left: 10px;
-  bottom: 110px;
+  bottom: 105px;
   }
   bottom: 10px;
   left: 10px;
@@ -1176,4 +1176,86 @@ h1{
 
 .symbol-margin-top {
   margin-top: 12px;
+}
+
+// V8 and forward fix after OS map requirement
+
+.scenario-remove-spacing {
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.btn-spacing {
+  right: 10px;
+}
+
+.copyright-container {
+
+}
+.copyright-text {
+  display: none;
+  @include mq ($from: 769px) {
+  display: block;
+  position: relative;
+  bottom: -5px;
+  right: auto;
+}
+}
+
+/* os-api-branding.css v0.3.1 */
+
+@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+.os-api-branding {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  display: block;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.os-api-branding.logo {
+  left: 0;
+  padding: 8px;
+  width: 90px;
+  height: 24px;
+  background-image: url(./img/os-logo-maps.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: content-box;
+}
+.os-api-branding.logo.white {
+  background-image: url(./img/os-logo-maps-white.svg);
+}
+
+.os-api-branding.copyright {
+  right: 0;
+  padding: 0 4px;
+  font: 10px 'Source Sans Pro', Arial, sans-serif;
+  line-height: 16px;
+  background: rgba(255, 255, 255, 0.7);
+}
+.os-api-branding.copyright span {
+  margin: 0 4px;
+}
+.os-api-branding.copyright a:link,
+.os-api-branding.copyright a:visited,
+.os-api-branding.copyright a:hover,
+.os-api-branding.copyright a:active {
+  color: #0071bc;
+  text-decoration: none;
+  pointer-events: all;
+  cursor: pointer;
+}
+.os-api-branding.copyright a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 420px) {
+  /* max-width 420px, mobile-only styles */
+  .os-api-branding.copyright {
+    display: none;
+  }
 }
