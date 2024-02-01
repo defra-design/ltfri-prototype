@@ -1,18 +1,4 @@
-{% extends "layout-nafra2.html" %}
-
-{% block pageTitle %}
-Select an address
-{% endblock %}
-
-{% block beforeContent %}
-{{ govukPhaseBanner({
-  tag: {
-    text: "Beta"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
-<a href="where-do-you-want-to-check.html" class="govuk-back-link back-link-left">Back to enter a postcode</a>
-{% endblock %}
+{% extends "layout.html" %}
 
 {% block content %}
 
@@ -46,7 +32,7 @@ Select an address
           <span class="govuk-label">Postcode</span>
 
           <p class="govuk-body">
-            <strong style="text-transform: uppercase;">PO31 7RT</strong>
+            <strong style="text-transform: uppercase;">CB8 0HL</strong>
             <a href="where-do-you-want-to-check" class="govuk-link">Change</a>
           </p>
 
@@ -65,17 +51,33 @@ Select an address
           
         
           
-            <option value="0">Marvins Estate Agents, 41-41A, High Street, Cowes, PO31 7RT</option>
+            <option value="0">1 ROCKINGHAM VILLAS, CHURCH LANE, NEWMARKET, CB8 0HL</option>
           
         
           
+            <option value="1">2 ROCKINGHAM VILLAS, CHURCH LANE, NEWMARKET, CB8 0HL</option>
           
+        
+          
+            <option value="2">3 ROCKINGHAM VILLAS, CHURCH LANE, NEWMARKET, CB8 0HL</option>
+          
+        
+          
+            <option value="3">4 ROCKINGHAM VILLAS, CHURCH LANE, NEWMARKET, CB8 0HL</option>
+          
+        
+          
+            <option value="4">CHURCH COTTAGE, CHURCH LANE, NEWMARKET, CB8 0HL</option>
+          
+        
+          
+            <option value="5">TURNER HALL, CHURCH LANE, NEWMARKET, CB8 0HL</option>
           
         
         </select>
         </div>
 
-        <a href="results-hx7.html" role="button" class="govuk-button govuk-button--primary govuk-!-margin-top-2 govuk-!-margin-bottom-8">Continue</a>
+        <a href="{{ data['results'] }}" role="button" class="govuk-button govuk-button--primary govuk-!-margin-top-2 govuk-!-margin-bottom-8">Continue</a>
 
       </form>
 
