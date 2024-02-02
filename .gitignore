@@ -43,5 +43,7 @@ tmp/
 /app/assets/javascripts/bundles/mapv9direct.bundle.js
 /app/assets/javascripts/bundles/mapv9_2.bundle.js
 /app/assets/javascripts/bundles/mapv9direct_2.bundle.js
-
-
+/app/assets/javascripts/bundles/mapv10.bundle.js
+/app/assets/javascripts/bundles/mapv10_b.bundle.js
+/app/assets/javascripts/bundles/mapv10direct.bundle.js
+/app/assets/javascripts/bundles/mapv10direct_b.bundle.js

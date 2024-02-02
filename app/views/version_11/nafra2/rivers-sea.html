@@ -1,4 +1,4 @@
-{% extends "layouts/map-v9.html" %}
+{% extends "layouts/map-v10.html" %}
 
 {% block pageTitle %}
 Rivers and the sea map
@@ -71,10 +71,10 @@ Rivers and the sea map
   {% endswitch %}
 
 <!--controls on the bottom-->
-<div class="defra-map-controls__bottom-v3" id="controls">
+<div class="defra-map-controls__bottom-v3 scenario-remove-spacing" id="controls">
 
    <!-- open map on mobile -->
-   <button class="defra-map__open-key" id="open-key" tabindex="4"><div class="button-content">
+   <button class="defra-map__open-key btn-spacing" id="open-key" tabindex="4"><div class="button-content">
     <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 23 24" fill="none">
       <path d="M4.43301 9.75C4.3437 9.5953 4.17863 9.5 4 9.5C3.82137 9.5 3.6563 9.5953 3.56699 9.75L0.968911 14.25C0.879595 14.4047 0.879595 14.5953 0.968911 14.75C1.05823 14.9047 1.22329 15 1.40192 15H6.59808C6.77671 15 6.94177 14.9047 7.03109 14.75C7.12041 14.5953 7.12041 14.4047 7.03109 14.25L4.43301 9.75Z" fill="#0B0C0C" stroke="#0B0C0C" stroke-linejoin="round"/>
       <rect x="1.5" y="18.5" width="5" height="5" fill="#0B0C0C" stroke="#0B0C0C" stroke-linejoin="round"/>
@@ -103,7 +103,7 @@ Rivers and the sea map
 
 
 <!-- map info-->
-<button class="defra-map-attribution-v7" id="att-key" tabindex="5" aria-controls="viewport">
+<button class="defra-map-attribution-v7" style="display: none;" id="att-key" tabindex="5" aria-controls="viewport">
   <div class="button-content"><svg aria-hidden="true" focusable="false"
     width="20" height="20" viewBox="0 0 20 20">
     <path

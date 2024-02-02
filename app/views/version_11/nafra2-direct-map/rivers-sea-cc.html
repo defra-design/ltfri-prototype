@@ -1,4 +1,4 @@
-{% extends "layouts/map-v9-direct.html" %}
+{% extends "layouts/map-v10-direct.html" %}
 
 {% block pageTitle %}
 Rivers and the sea map
@@ -65,14 +65,7 @@ Rivers and the sea map
     <div class="defra-map-controls__bottom-v3" id="controls">
       <!-- open map on mobile -->
       <button class="defra-map__open-key" id="open-key"><div class="button-content">
-        <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 23 24" fill="none">
-          <path d="M4.43301 9.75C4.3437 9.5953 4.17863 9.5 4 9.5C3.82137 9.5 3.6563 9.5953 3.56699 9.75L0.968911 14.25C0.879595 14.4047 0.879595 14.5953 0.968911 14.75C1.05823 14.9047 1.22329 15 1.40192 15H6.59808C6.77671 15 6.94177 14.9047 7.03109 14.75C7.12041 14.5953 7.12041 14.4047 7.03109 14.25L4.43301 9.75Z" fill="#0B0C0C" stroke="#0B0C0C" stroke-linejoin="round"/>
-          <rect x="1.5" y="18.5" width="5" height="5" fill="#0B0C0C" stroke="#0B0C0C" stroke-linejoin="round"/>
-          <circle cx="4" cy="4" r="2.5" fill="#0B0C0C" stroke="#0B0C0C"/>
-          <path d="M12 4H22" stroke="#0B0C0C" stroke-width="2" stroke-linecap="round"/>
-          <path d="M12 12H22" stroke="#0B0C0C" stroke-width="2" stroke-linecap="round"/>
-          <path d="M12 21H22" stroke="#0B0C0C" stroke-width="2" stroke-linecap="round"/>
-        </svg>
+        <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20"><path d="M17.215,11.31L19,12.5L10,18.5L1,12.5L2.785,11.31L9.945,16.083C9.978,16.106 10.022,16.106 10.055,16.083L17.215,11.31Z" style="fill:currentColor;"></path><path d="M10,1.5L1,7.5L10,13.5L19,7.5L10,1.5ZM10,3.88L15.43,7.5L10,11.12L4.57,7.5L10,3.88Z" style="fill:currentColor;"></path></svg>
         <span class="govuk-visually-hidden">open key</span><span class="open-button-text"></span>
       </div></button>
      
@@ -94,7 +87,7 @@ Rivers and the sea map
     </div>
 
     <!-- copyright info -->
-    <button class="defra-map-attribution-v7" id="att-key" aria-controls="controls">
+    <button class="defra-map-attribution-v7" id="att-key" aria-controls="controls" style="display: none;">
       <div class="button-content">
       <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
         <path d="M10,2.5C11.286,2.5 12.52,2.823 13.701,3.469C14.883,4.116 15.811,5.038 16.487,6.235C17.162,7.433 17.5,8.688 17.5,10C17.5,11.305 17.169,12.551 16.506,13.735C15.844,14.92 14.92,15.844 13.735,16.506C12.551,17.169 11.305,17.5 10,17.5C8.695,17.5 7.449,17.169 6.265,16.506C5.08,15.844 4.156,14.92 3.494,13.735C2.831,12.551 2.5,11.305 2.5,10C2.5,8.688 2.838,7.433 3.513,6.235C4.189,5.038 5.117,4.116 6.299,3.469C7.48,2.823 8.714,2.5 10,2.5ZM10,3.978C8.969,3.978 7.978,4.236 7.028,4.752C6.079,5.268 5.333,6.007 4.791,6.97C4.249,7.932 3.978,8.943 3.978,10C3.978,11.044 4.244,12.043 4.776,12.996C5.308,13.949 6.051,14.692 7.004,15.224C7.957,15.756 8.956,16.022 10,16.022C11.044,16.022 12.043,15.756 12.996,15.224C13.949,14.692 14.692,13.949 15.224,12.996C15.756,12.043 16.022,11.044 16.022,10C16.022,8.949 15.751,7.941 15.209,6.975C14.667,6.008 13.921,5.268 12.972,4.752C12.022,4.236 11.031,3.978 10,3.978ZM11.821,11.116L13.398,11.645C13.149,12.467 12.738,13.097 12.164,13.535C11.589,13.972 10.904,14.191 10.108,14.191C8.992,14.191 8.081,13.825 7.376,13.094C6.671,12.363 6.319,11.354 6.319,10.069C6.319,9.227 6.475,8.476 6.789,7.817C7.102,7.157 7.554,6.664 8.145,6.338C8.735,6.012 9.396,5.849 10.127,5.849C10.93,5.849 11.601,6.039 12.139,6.421C12.678,6.803 13.097,7.405 13.398,8.228L11.811,8.6C11.629,8.123 11.392,7.777 11.102,7.562C10.811,7.347 10.467,7.239 10.069,7.239C9.475,7.239 8.988,7.462 8.61,7.91C8.231,8.357 8.042,9.057 8.042,10.01C8.042,10.963 8.228,11.664 8.6,12.115C8.972,12.565 9.419,12.79 9.941,12.79C10.379,12.79 10.757,12.662 11.077,12.404C11.397,12.146 11.645,11.717 11.821,11.116Z" style="fill:currentColor;"></path>
@@ -103,132 +96,53 @@ Rivers and the sea map
     </div>
     </button>
 
-    
-    
-  <!-- Scenarios -->
-  <div class="tabs" id="tabs-group">
-    <button class="tab" id="tab1-rs">Extent</button>
-    <button class="tab tab-inactive" id="tab2-rs">Depth: currently</button>
-    <button class="tab tab-inactive" id="tab3-rs">Depth: by 2050</button>
-</div>
+    <div class="defra-map-scenarios-depth-v4 horizontal-overflow scenario-float-right v6-width-fix-depth v10-mob-depth-tech depth-display" style="display: none;">
+      <div class="defra-map-scenarios-v3_container" id="scenarios-controls" >
+     <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+      <i class="fa-solid fa-chevron-left left-btn arrow-padding" aria-hidden="true"></i>
+      <i class="fa-solid fa-chevron-right right-btn arrow-padding" aria-hidden="true"></i>
+           <div class="govuk-radios__item">
+             <input class="govuk-radios__input" name="scenarios" type="radio" value="12" checked="true">
+             <label class="govuk-label govuk-radios__label">
+                     <strong>Up to 20cm</strong>       
+                     <span class="risk-context-v3">(8in)</span>
+         </label>
+        </div>
+           <div class="govuk-radios__item">
+             <input class="govuk-radios__input"  name="scenarios" type="radio" value="11">
+             <label class="govuk-label govuk-radios__label">
+               <strong>Up to 30cm</strong>   
+               <span class="risk-context-v3">(1ft)</span>
+         </label>
+           </div>
+           <div class="govuk-radios__item">
+            <input class="govuk-radios__input" name="scenarios" type="radio" value="10">
+            <label class="govuk-label govuk-radios__label">
+              <strong>Up to 60cm</strong>   
+              <span class="risk-context-v3">(2ft)</span>
+        </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input"  name="scenarios" type="radio" value="20">
+            <label class="govuk-label govuk-radios__label">
+              <strong>Up to 90cm</strong>   
+              <span class="risk-context-v3">(3ft)</span>
+        </label>
+          </div>
   
-  <div class="tab-content" id="tabContent1">
-    <div class="defra-map-scenarios-depth-v4 horizontal-overflow scenario-float-right v6-width-fix-depth v10-mob-depth">
-      <div class="defra-map-scenarios-v3_container" id="scenarios-controls">
-     <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
-      <i class="fa-solid fa-chevron-left left-btn arrow-padding" aria-hidden="true"></i>
-      <i class="fa-solid fa-chevron-right right-btn arrow-padding" aria-hidden="true"></i>
-           <div class="govuk-radios__item">
-             <input class="govuk-radios__input" name="scenarios" type="radio" value="11" checked="true">
-             <label class="govuk-label govuk-radios__label">
-                     <strong>Current likelihood</strong>       
-                     <span class="risk-context-v3">Extent of flooding</span>
-         </label>
-        </div>
-           <div class="govuk-radios__item">
-             <input class="govuk-radios__input" name="scenarios" type="radio" value="12">
-             <label class="govuk-label govuk-radios__label">
-               <strong>Predicted likelihood by 2050</strong>   
-               <span class="risk-context-v3">Extent of flooding</span>
-         </label>
-           </div>
+  
          </div>
-          
     </div>
     </div>
-
+    
   </div>
-  <!-- end of tab1 -->
-  <!-- <div class="tab-content" id="tabContent2" style="display: none;">
-    <div class="defra-map-scenarios-depth-v4 horizontal-overflow scenario-float-right v6-width-fix-depth v10-mob-depth">
-      <div class="defra-map-scenarios-v3_container" id="scenarios-controls">
-     <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
-      <i class="fa-solid fa-chevron-left left-btn arrow-padding" aria-hidden="true"></i>
-      <i class="fa-solid fa-chevron-right right-btn arrow-padding" aria-hidden="true"></i>
-           <div class="govuk-radios__item" id="tab2-scenarios-controls">
-             <input class="govuk-radios__input" id="sw-depth-high" name="scenarios" type="radio" value="12" {% if swHigh %}checked{% endif %}>
-             <label class="govuk-label govuk-radios__label" for="sw-high">
-                     <strong>20cm</strong>       
-                     <span class="risk-context-v3">8in</span>
-         </label>
-        </div>
-           <div class="govuk-radios__item">
-             <input class="govuk-radios__input" id="sw-depth-med" name="scenarios" type="radio" value="11" {% if swMed %}checked{% endif %}>
-             <label class="govuk-label govuk-radios__label" for="sw-med">
-               <strong>30cm</strong>   
-               <span class="risk-context-v3">1ft</span>
-         </label>
-           </div>
-           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="sw-depth-med" name="scenarios" type="radio" value="10" {% if swLow %}checked{% endif %}>
-            <label class="govuk-label govuk-radios__label" for="sw-med">
-              <strong>60cm</strong>   
-              <span class="risk-context-v3">2ft</span>
-        </label>
-          </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="sw-depth-med" name="scenarios" type="radio" value="20" {% if swLow %}checked{% endif %}>
-            <label class="govuk-label govuk-radios__label" for="sw-med">
-              <strong>90cm</strong>   
-              <span class="risk-context-v3">3ft</span>
-        </label>
-          </div>
-
-
-         </div>
-    </div>
-    </div>
-    
-  </div> -->
   <!-- end of second tab -->
-  <!-- <div class="tab-content" id="tabContent3" style="display: none;">
-    <div class="defra-map-scenarios-depth-v4 horizontal-overflow scenario-float-right v6-width-fix-depth v10-mob-depth">
-      <div class="defra-map-scenarios-v3_container" id="scenarios-controls">
-     <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
-      <i class="fa-solid fa-chevron-left left-btn arrow-padding" aria-hidden="true"></i>
-      <i class="fa-solid fa-chevron-right right-btn arrow-padding" aria-hidden="true"></i>
-           <div class="govuk-radios__item" id="tab3-scenarios-controls">
-             <input class="govuk-radios__input" id="sw-depth-high" name="scenarios" type="radio" value="12" {% if swHigh %}checked{% endif %}>
-             <label class="govuk-label govuk-radios__label" for="sw-high">
-                     <strong>20cm</strong>       
-                     <span class="risk-context-v3">8in</span>
-         </label>
-        </div>
-           <div class="govuk-radios__item">
-             <input class="govuk-radios__input" id="sw-depth-med" name="scenarios" type="radio" value="11" {% if swMed %}checked{% endif %}>
-             <label class="govuk-label govuk-radios__label" for="sw-med">
-               <strong>30cm</strong>   
-               <span class="risk-context-v3">1ft</span>
-         </label>
-           </div>
-           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="sw-depth-med" name="scenarios" type="radio" value="10" {% if swLow %}checked{% endif %}>
-            <label class="govuk-label govuk-radios__label" for="sw-med">
-              <strong>60cm</strong>   
-              <span class="risk-context-v3">2ft</span>
-        </label>
-          </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="sw-depth-med" name="scenarios" type="radio" value="20" {% if swLow %}checked{% endif %}>
-            <label class="govuk-label govuk-radios__label" for="sw-med">
-              <strong>90cm</strong>   
-              <span class="risk-context-v3">3ft</span>
-        </label>
-          </div>
-
-
-         </div>
-    </div>
-    </div>
-    
-  </div> -->
   <!-- end of radios -->
-</div>
-
+  </div>
+  
       
       </div>
     </div>
-
  <!-- attribution start -->
   <div class="defra-map-info dialog-right-extent" id="info" role="dialog" style="display:none;" aria-modal="true" aria-labelledby="infoLabel" aria-describedby="infoDescription" tabindex="-1">
     <h2 id="infoLabel" class="govuk-visually-hidden">Attributions</h2>
@@ -252,55 +166,9 @@ Rivers and the sea map
   </div>
 
   <!-- attribution end -->
-<!-- Mobile key -->
-<div class="defra-map-key-v10-rs" id="key" aria-labelledby="mapKeyLabel" tabindex="2" role="region" aria-hidden="false" focussable="true">
-  <div class="defra-map-key__container" id="defra-map-key__container">
-    <h2 id="mapKeyLabel" class="defra-map-key__title padding-key-title-rs"><span role="text">Rivers and the sea<span class="govuk-visually-hidden">key</span></span></h2>
-    <button class="defra-map-info__close" id="close-key" tabindex="3">
-      <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
-        <path d="M10,8.6L15.6,3L17,4.4L11.4,10L17,15.6L15.6,17L10,11.4L4.4,17L3,15.6L8.6,10L3,4.4L4.4,3L10,8.6Z" style="fill:currentColor;stroke:currentColor;stroke-width:0.1px;"></path>
-      </svg>
-      <span class="govuk-visually-hidden">Close</span>
-    </button>
-          <div class="defra-map-key__content">
-    <div class="defra-map-key__section">
-      <div class="defra-map-key__item">
-      <span class="defra-map-key__symbol-container defra-map-key__symbol-container--multi padding-chance symbol-margin-top" id="high-risk-sw">
-            <span class="defra-map-key__symbol padding-chance">
-              <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#0066cc"></rect></svg>
-            </span>
-            High chance
-          </span>
-          <span class="defra-map-key__symbol-container defra-map-key__symbol-container--multi padding-chance" id="med-risk-sw">
-            <span class="defra-map-key__symbol padding-chance">
-              <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#599eff"></rect></svg>
-            </span>
-            Medium chance
-           
-          </span>
-          <span class="defra-map-key__symbol-container defra-map-key__symbol-container--multi padding-chance" id="low-risk-sw">
-            <span class="defra-map-key__symbol padding-chance">
-              <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#bfc5ff"></rect></svg>
-            </span>
-            Low chance
-      
-          </span>
-          <span class="defra-map-key__symbol-container defra-map-key__symbol-container--multi padding-chance" id="low-risk-sw">
-            <span class="defra-map-key__symbol padding-chance">
-              <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#6b78ff"></rect></svg>
-            </span>
-            Very low chance
-      
-          </span>
-
-      </div>
-    </div>
-  </div>
-</div>
-      </div>
 
 <!-- key desktop -->
-  <div class="defra-map-key" id="key" aria-labelledby="mapKeyLabel" tabindex="-1" role="region" aria-hidden="false">
+  <div class="defra-map-key" id="key" aria-labelledby="mapKeyLabel" tabindex="-1" role="region" aria-hidden="false" style="display: block;">
     <div class="defra-map-key__container" id="defra-map-key__container">
       <h2 id="mapKeyLabel" class="defra-map-key__title">
         <span role="text">Rivers and the sea <span class="govuk-visually-hidden">map with options for flood risk currently and by 2050</span></span></h2>
