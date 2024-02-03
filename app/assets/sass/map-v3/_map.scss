@@ -1213,3 +1213,53 @@ h1{
 .zoom-margin-depth {
   margin-bottom: 95px;
 }
+
+// v12
+
+#info-panel {
+  @include mq ($until: 520px){
+    display: block;
+  }
+  display: none;
+  width: 100%;
+  background-color: #ffffff; /* Adjust background color */
+  padding: 18px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 110px;
+  left: 0;
+  border-bottom: solid #242424 1px;
+  @include govuk-font($size: 16);
+}
+
+.info-title {
+  font-size: 18px; /* Adjust font size */
+  font-weight: bold;
+  margin-bottom: 0px; /* Adjust margin as needed */
+  text-align: left; /* Align title to the left */
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 0 15px 0 15px;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Center text */
+  margin-top: 15px; /* Adjust margin between title and the row of boxes */
+}
+
+.svg-square {
+  width: 40px; /* Adjust square size */
+  height: 40px; /* Adjust square size */
+  margin-bottom: 10px;
+}
+
+.red { background-color: #ff0000; }
+.green { background-color: #00ff00; }
+.blue { background-color: #0000ff; }

@@ -1,4 +1,4 @@
-{% extends "layouts/map-v10.html" %}
+{% extends "layouts/map-v10-b.html" %}
 
 {% block pageTitle %}
 Surface water map
@@ -58,7 +58,7 @@ Surface water map
     <!--controls on the bottom-->
     <div class="defra-map-controls__bottom-v3 scenario-remove-spacing" id="controls">
       <!-- open map on mobile -->
-      <button class="defra-map__open-key btn-spacing" id="open-key" tabindex="4" style="display: none;"><div class="button-content">
+      <button class="defra-map__open-key btn-spacing" id="open-key" tabindex="4"><div class="button-content">
         <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 23 24" fill="none">
           <path d="M4.43301 9.75C4.3437 9.5953 4.17863 9.5 4 9.5C3.82137 9.5 3.6563 9.5953 3.56699 9.75L0.968911 14.25C0.879595 14.4047 0.879595 14.5953 0.968911 14.75C1.05823 14.9047 1.22329 15 1.40192 15H6.59808C6.77671 15 6.94177 14.9047 7.03109 14.75C7.12041 14.5953 7.12041 14.4047 7.03109 14.25L4.43301 9.75Z" fill="#0B0C0C" stroke="#0B0C0C" stroke-linejoin="round"/>
           <rect x="1.5" y="18.5" width="5" height="5" fill="#0B0C0C" stroke="#0B0C0C" stroke-linejoin="round"/>
@@ -101,15 +101,11 @@ Surface water map
     
 
  <!-- Scenarios -->     
- 
-
-<!-- new scenario control -->
-
-<div class="defra-map-scenarios-depth-v4 v10-mob-depth">
-  <div class="defra-map-scenarios__container" id="scenarios-controls">
+ <div class="defra-map-scenarios-depth-v4 horizontal-overflow scenario-float-right v6-width-fix-depth v10-mob-depth">
+  <div class="defra-map-scenarios-v3_container" id="scenarios-controls">
  <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
-  <i class="fa-solid fa-chevron-left left-btn arrow-padding" aria-hidden="true" style="display: none;"></i>
-  <i class="fa-solid fa-chevron-right right-btn arrow-padding" aria-hidden="true" style="display: none;"></i>
+  <i class="fa-solid fa-chevron-left left-btn arrow-padding" aria-hidden="true"></i>
+  <i class="fa-solid fa-chevron-right right-btn arrow-padding" aria-hidden="true"></i>
        <div class="govuk-radios__item">
          <input class="govuk-radios__input" id="sw-high" name="scenarios" type="radio" value="11" {% if swHigh %}checked{% endif %}>
          <label class="govuk-label govuk-radios__label" for="sw-high">
@@ -124,7 +120,20 @@ Surface water map
            <span class="risk-context-v3">Flood area</span>
      </label>
        </div>
-      
+      <!--  <div class="govuk-radios__item">
+         <input class="govuk-radios__input" id="sw-low" name="scenarios" type="radio" value="12" {% if swLow %}checked{% endif %}>
+         <label class="govuk-label govuk-radios__label" for="sw-low">
+           <strong>Low risk</strong> 
+           <span class="risk-context-v3">0.1% chance each year</span>
+     </label>
+       </div> -->
+       <!-- <div class="govuk-radios__item last-scenario">
+        <input class="govuk-radios__input" id="sw-vlow" name="scenarios" type="radio" value="20" {% if swOff %}checked{% endif %}>
+        <label class="govuk-label govuk-radios__label" for="sw-vlow">
+          <strong>Turn off layers</strong> 
+          <span class="risk-context-v3">Display nothing</span>
+    </label>
+      </div> -->
      </div>
       
 </div>
@@ -136,6 +145,8 @@ Surface water map
 
       
       </div>
+
+
  <!-- attribution start -->
   <div class="defra-map-info dialog-right-extent" id="info" role="dialog" style="display:none;" aria-modal="true" aria-labelledby="infoLabel" aria-describedby="infoDescription" tabindex="5">
     <h2 id="infoLabel" class="govuk-visually-hidden">Attributions</h2>
@@ -159,31 +170,47 @@ Surface water map
   </div>
 
   <!-- attribution end -->
-<!-- Mobile key --> 
-              <div id="info-panel">
-                  <div class="info-title">Surface Water</div>
-                
-                  <div class="info-row">
-                    <div class="info-box">
-                      <div class="svg-square">
-                        <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#99004d"></rect></svg>
-                      </div>
-                      <span>High chance</span>
-                    </div>
-                    <div class="info-box">
-                      <div class="svg-square">
-                        <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#e6772e"></rect></svg>
-                      </div>
-                      <span>Medium chance</span>
-                    </div>
-                    <div class="info-box">
-                      <div class="svg-square">
-                        <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#ffbfc9"></rect></svg>
-                      </div>
-                      <span>Low chance</span>
-                    </div>
-                  </div>
-                </div>
+<!-- Mobile key -->
+<div class="defra-map-key-v10" id="key" aria-labelledby="mapKeyLabel" tabindex="2"  aria-modal="true" focussable="true">
+    <div class="defra-map-key__container" id="defra-map-key__container">
+      <h2 id="mapKeyLabel" class="defra-map-key__title padding-key-title"><span role="text">Surface water<span class="govuk-visually-hidden">for
+            map features</span></span></h2>
+            <button class="defra-map-info__close" id="close-key" tabindex="3">
+              <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
+                <path d="M10,8.6L15.6,3L17,4.4L11.4,10L17,15.6L15.6,17L10,11.4L4.4,17L3,15.6L8.6,10L3,4.4L4.4,3L10,8.6Z" style="fill:currentColor;stroke:currentColor;stroke-width:0.1px;"></path>
+              </svg>
+              <span class="govuk-visually-hidden">Close</span>
+            </button>
+            <div class="defra-map-key__content">
+      <div class="defra-map-key__section">
+        <div class="defra-map-key__item">
+        <span class="defra-map-key__symbol-container defra-map-key__symbol-container--multi padding-chance symbol-margin-top" id="high-risk-sw">
+              <span class="defra-map-key__symbol padding-chance">
+                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#99004d"></rect></svg>
+              </span>
+              High chance
+              
+            </span>
+            <span class="defra-map-key__symbol-container defra-map-key__symbol-container--multi padding-chance" id="med-risk-sw">
+              <span class="defra-map-key__symbol padding-chance">
+                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#e6772e"></rect></svg>
+              </span>
+              Medium chance
+             
+            </span>
+            <span class="defra-map-key__symbol-container defra-map-key__symbol-container--multi padding-chance" id="low-risk-sw">
+              <span class="defra-map-key__symbol padding-chance">
+                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#ffbfc9"></rect></svg>
+              </span>
+              Low chance
+        
+            </span>
+
+        </div>
+      </div>
+    </div>
+  </div>
+        </div>
 
   <!-- key desktop -->
   <div class="defra-map-key" aria-labelledby="mapKeyLabel" tabindex="-1" role="region" aria-hidden="false">

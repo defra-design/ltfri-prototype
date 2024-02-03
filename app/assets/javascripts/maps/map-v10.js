@@ -735,7 +735,7 @@ $('#zoomOut').on('click', function() {
 // Add blue bottom border to scenario when radio checked
 function handleRadioSelection() {
   // Get all the radio buttons within the scenarios ID
-  const radioButtons = document.querySelectorAll('.defra-map-scenarios-v3_container input[name="scenarios"]');
+  const radioButtons = document.querySelectorAll('.defra-map-scenarios__container input[name="scenarios"]');
 
   // Store the initially checked radio button
   let initiallyCheckedRadioButton = null;
