@@ -167,7 +167,7 @@
     display: none;
     @include mq ($until: 760px){
     display: flex;
-    gap: 30px;
+    gap: 25px;
   }
   
   .gauge-container {
