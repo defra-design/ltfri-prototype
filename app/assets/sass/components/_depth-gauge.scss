@@ -161,3 +161,23 @@
 .unbold-depth {
     font-weight: normal;
 }
+
+
+.flex-container-gauge {
+    display: none;
+    @include mq ($until: 760px){
+    display: flex;
+    gap: 30px;
+  }
+  
+  .gauge-container {
+    flex: 1;
+  }
+}
+
+.desktop-container-gauge {
+    display: none;
+    @include mq ($from: 760px){
+        display: block;
+    }
+}
