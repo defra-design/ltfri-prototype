@@ -1,4 +1,4 @@
-{% extends "layouts/map-v11.html" %}
+{% extends "layouts/map-v10.html" %}
 
 {% block pageTitle %}
 Surface water map
@@ -101,25 +101,15 @@ Surface water map
     
 
  <!-- Scenarios -->     
+ 
 
-<!--  <div id="map-scenarios-depth-v4" class="defra-map-scenarios" style="pointer-events: auto;">
-  <div class="defra-map-scenarios__container">
-  <button class="defra-map-scenario-button" data-scenario="1" aria-selected="true">
-      <strong>Current likelihood</strong>
-      <span>Flood area</span>
-  </button>
-  <button class="defra-map-scenario-button" data-scenario="2" aria-selected="false">
-      <strong>Predicted by 2050</strong>
-      <span>Flood area</span>
-  </button>
-  
-</div>
-</div> -->
+<!-- new scenario control -->
 
- <div class="defra-map-scenarios-depth-v4 v10-mob-depth">
+<div class="defra-map-scenarios-depth-v4 v10-mob-depth">
   <div class="defra-map-scenarios__container" id="scenarios-controls">
  <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
-
+  <i class="fa-solid fa-chevron-left left-btn arrow-padding" aria-hidden="true" style="display: none;"></i>
+  <i class="fa-solid fa-chevron-right right-btn arrow-padding" aria-hidden="true" style="display: none;"></i>
        <div class="govuk-radios__item">
          <input class="govuk-radios__input" id="sw-high" name="scenarios" type="radio" value="11" {% if swHigh %}checked{% endif %}>
          <label class="govuk-label govuk-radios__label" for="sw-high">
@@ -146,8 +136,6 @@ Surface water map
 
       
       </div>
-
-
  <!-- attribution start -->
   <div class="defra-map-info dialog-right-extent" id="info" role="dialog" style="display:none;" aria-modal="true" aria-labelledby="infoLabel" aria-describedby="infoDescription" tabindex="5">
     <h2 id="infoLabel" class="govuk-visually-hidden">Attributions</h2>
@@ -171,15 +159,9 @@ Surface water map
   </div>
 
   <!-- attribution end -->
-<!-- Mobile key -->
-
-           <!--      <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#99004d"></rect></svg>
-          
-                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#e6772e"></rect></svg>
- 
-                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#ffbfc9"></rect></svg> -->
-
-                <div id="info-panel">
+  
+<!-- Mobile key --> 
+              <div id="info-panel">
                   <div class="info-title">Surface Water</div>
                 
                   <div class="info-row">
@@ -203,8 +185,7 @@ Surface water map
                     </div>
                   </div>
                 </div>
-                
-          
+
   <!-- key desktop -->
   <div class="defra-map-key" aria-labelledby="mapKeyLabel" tabindex="-1" role="region" aria-hidden="false">
     <div class="defra-map-key__container" id="defra-map-key__container">
@@ -224,7 +205,7 @@ Surface water map
             classes: "govuk-radios--small",
             fieldset: {
             legend: {
-            html: '<h3 class="defra-map-key__section-title">Current likelihood of flooding</h3>',
+            html: '<h3 class="defra-map-key__section-title">Chance of flooding each year</h3>',
             isPageHeading: false,
             classes: "govuk-fieldset__legend--s"
             }
@@ -282,7 +263,7 @@ Surface water map
             classes: "govuk-radios--small",
             fieldset: {
             legend: {
-            html: '<h3 class="defra-map-key__section-title">Likelihood of flooding by 2050</h3>',
+            html: '<h3 class="defra-map-key__section-title">Predicted yearly chance of flooding by 2050</h3>',
             isPageHeading: false,
             classes: "govuk-fieldset__legend--s"
             }

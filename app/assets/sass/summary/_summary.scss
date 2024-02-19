@@ -197,3 +197,24 @@ a.search-link-right-v2{
      margin-top: 20px;
    }
   }
+
+  // v12
+  .card-title__font-size {
+    font-size: 22px;
+    @include mq ($until: tablet) {
+      font-size: 19px;
+    }
+  }
+
+  .summary-grid-width {
+    @include mq ($from: tablet) {
+      width: 100%
+    }
+    @include mq ($from: 960px) {
+      width: 66.6%;
+    }
+  }
+ 
+  .summary-card__wrapper-mod {
+    padding: 5px 20px;
+  }
