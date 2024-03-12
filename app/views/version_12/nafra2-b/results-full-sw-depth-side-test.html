@@ -1,0 +1,350 @@
+{% extends "layout-nafra2.html" %}
+
+{% block pageTitle %}
+Surface water: compare the predicted depth levels
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<a href="results-full-sw.html" class="govuk-back-link back-link-left">Back to surface water</a>
+<!-- <a href="" class="govuk-back-link search-link-right">Search for another address</a> -->
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  
+<div class="govuk-grid-row">
+<!-- two thirds column for title and address-->
+  <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l h1-gap">
+        Surface water: how deep any flood water could be
+      </h1>
+
+<p class="govuk-body">This information tells you how deep any flood water could be <!-- if there was flooding -->at <strong>41A, High Street, Cowes, PO31 7RT</strong>.</p>
+<p class="govuk-body">It shows the chances of flooding up to 20cm, 30cm, 60cm and 90cm, on a scale of high to very low chance.</p>
+    </div>
+</div>
+
+
+
+<!-- depth gauge -->
+<!-- Present day -->
+<div class="govuk-grid-row desktop-container-gauge">
+  <div class="govuk-grid-column-one-half column-width-mod">
+    <h2 class="govuk-heading-s govuk-!-margin-bottom-4">Possible flood levels</h2>
+    <dl class="defra-flood-impact-list">
+   <!--    <div class="defra-flood-impact-list__row">
+        <dt class="defra-flood-impact-list__key key-mod">
+           90cm
+            <span class="unbold-depth">(3ft)</span>
+        </dt>
+        <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
+           <span class="depth-chance-info"></span>
+          </div>
+        </dd>
+      </div> -->
+      <div class="defra-flood-impact-list__row">
+        <dt class="defra-flood-impact-list__key key-mod">
+           60cm
+            <span class="unbold-depth">(2ft)</span>
+        </dt>
+        <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
+          <!--   <strong class="govuk-tag govuk-tag--green label-mod-depth govuk-!-margin-bottom-3">
+              Very low
+            </strong> --><span class="depth-chance-info"></span>
+          </div>
+        </dd>
+      </div>
+      <div class="defra-flood-impact-list__row">
+        <dt class="defra-flood-impact-list__key key-mod">
+          <span aria-label="measurement depth level 30 centimetres">30cm<span>
+            <span class="unbold-depth">(1ft)</span>
+        </dt>
+        <dd class="defra-flood-impact-list__value">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
+         <!--   <strong class="govuk-tag govuk-tag--yellow label-mod-depth govuk-!-margin-bottom-3">
+              Low
+            </strong> --><span class="depth-chance-info">
+            </span>
+          
+       
+          </div>
+        </dd>
+      </div>
+      <div class="defra-flood-impact-list__row  defra-flood-impact-list__row--current">
+        <dt class="defra-flood-impact-list__key key-mod">
+            20cm
+            <span class="unbold-depth">(8in)</span>
+        </dt>
+        <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
+          <!--   <strong class="govuk-tag govuk-tag--orange label-orange label-mod-depth govuk-!-margin-bottom-3 label-border">
+             Medium<span class="govuk-visually-hidden">which is the highest likelihood</span>
+            </strong> -->
+            <span class="depth-chance-info"><strong>Most likely</strong></span>
+        </dd>
+      </div>
+    </dl>
+   
+  </div>
+
+  
+
+
+<!-- Climate change -->
+  <div class="govuk-grid-column-one-half">
+    <h2 class="govuk-heading-s govuk-!-margin-bottom-4">Possible flood levels by the 2050s</h2>
+    <dl class="defra-flood-impact-list">
+      <!-- <div class="defra-flood-impact-list__row">
+        <dt class="defra-flood-impact-list__key key-mod">
+           90cm
+            <span class="unbold-depth">(3ft)</span>
+        </dt>
+        <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
+            <strong class="govuk-tag govuk-tag--yellow label-mod-depth govuk-!-margin-bottom-3">
+              Low 
+            </strong><span class="depth-chance-info"></span>
+ 
+          </div>
+        </dd>
+      </div> -->
+      <div class="defra-flood-impact-list__row">
+        <dt class="defra-flood-impact-list__key key-mod">
+           60cm
+            <span class="unbold-depth">(2ft)</span>
+        </dt>
+        <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
+           <!--  <strong class="govuk-tag govuk-tag--yellow label-mod-depth govuk-!-margin-bottom-3">
+              Low
+            </strong> --><span class="depth-chance-info"></span>
+          
+          </div>
+        </dd>
+      </div>
+      <div class="defra-flood-impact-list__row defra-flood-impact-list__row--current">
+        <dt class="defra-flood-impact-list__key key-mod">
+          <span aria-label="measurement depth level 30 centimetres">30cm<span>
+            <span class="unbold-depth">(1ft)</span>
+        </dt>
+        <dd class="defra-flood-impact-list__value">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
+          <!--  <strong class="govuk-tag govuk-tag--orange label-orange label-mod-depth govuk-!-margin-bottom-3 label-border">
+              Medium
+            </strong> --><span class="depth-chance-info"><strong>Most likely</strong></span>
+           
+          </div>
+        </dd>
+      </div>
+      <div class="defra-flood-impact-list__row defra-flood-impact-list__row--current">
+        <dt class="defra-flood-impact-list__key key-mod">
+            20cm
+            <span class="unbold-depth">(8in)</span>
+        </dt>
+        <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
+           <!--  <strong class="govuk-tag govuk-tag--orange label-orange label-mod-depth govuk-!-margin-bottom-3">
+              Medium
+            </strong> -->
+            <span class="depth-chance-info"></span>
+           
+          </div>
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+
+<!-- Mobile gauge -->
+
+<!-- Present day -->
+<div class="flex-container-gauge">
+  <div class="gauge-container">
+    <h2 class="govuk-heading-s govuk-!-margin-bottom-4">Possible flood <br>levels</h2>
+    <dl class="defra-flood-impact-list">
+      <div class="defra-flood-impact-list__row">
+        <dt class="defra-flood-impact-list__key key-mod">
+           90cm
+            <span class="unbold-depth">(3ft)</span>
+        </dt>
+        <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
+            <strong class="govuk-tag govuk-tag--green label-mod-depth govuk-!-margin-bottom-3">
+              Very low
+            </strong><span class="depth-chance-info"></span>
+          </div>
+        </dd>
+      </div>
+      <div class="defra-flood-impact-list__row">
+        <dt class="defra-flood-impact-list__key key-mod">
+           60cm
+            <span class="unbold-depth">(2ft)</span>
+        </dt>
+        <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
+            <strong class="govuk-tag govuk-tag--green label-mod-depth govuk-!-margin-bottom-3">
+              Very low
+            </strong><span class="depth-chance-info"></span>
+          </div>
+        </dd>
+      </div>
+      <div class="defra-flood-impact-list__row">
+        <dt class="defra-flood-impact-list__key key-mod">
+          <span aria-label="measurement depth level 30 centimetres">30cm<span>
+            <span class="unbold-depth">(1ft)</span>
+        </dt>
+        <dd class="defra-flood-impact-list__value">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
+           <strong class="govuk-tag govuk-tag--yellow label-mod-depth govuk-!-margin-bottom-3">
+              Low
+            </strong><span class="depth-chance-info">
+            </span>
+          
+       
+          </div>
+        </dd>
+      </div>
+      <div class="defra-flood-impact-list__row  defra-flood-impact-list__row--current">
+        <dt class="defra-flood-impact-list__key key-mod">
+            20cm
+            <span class="unbold-depth">(8in)</span>
+        </dt>
+        <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
+            <strong class="govuk-tag govuk-tag--orange label-orange label-mod-depth govuk-!-margin-bottom-3 label-border">
+             Medium<span class="govuk-visually-hidden">which is the highest likelihood</span>
+            </strong>
+            <span class="depth-chance-info"></span>
+        </dd>
+      </div>
+    </dl>
+   
+  </div>
+
+  
+
+
+<!-- Climate change -->
+<div class="gauge-container">
+    <h2 class="govuk-heading-s govuk-!-margin-bottom-4">Possible flood levels<br>by the 2050s</h2>
+    <dl class="defra-flood-impact-list">
+      <div class="defra-flood-impact-list__row">
+        <dt class="defra-flood-impact-list__key key-mod">
+           90cm
+            <span class="unbold-depth">(3ft)</span>
+        </dt>
+        <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
+            <strong class="govuk-tag govuk-tag--yellow label-mod-depth govuk-!-margin-bottom-3">
+              Low 
+            </strong><span class="depth-chance-info"></span>
+ 
+          </div>
+        </dd>
+      </div>
+      <div class="defra-flood-impact-list__row">
+        <dt class="defra-flood-impact-list__key key-mod">
+           60cm
+            <span class="unbold-depth">(2ft)</span>
+        </dt>
+        <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
+            <strong class="govuk-tag govuk-tag--yellow label-mod-depth govuk-!-margin-bottom-3">
+              Low
+            </strong><span class="depth-chance-info"></span>
+          
+          </div>
+        </dd>
+      </div>
+      <div class="defra-flood-impact-list__row defra-flood-impact-list__row--current">
+        <dt class="defra-flood-impact-list__key key-mod">
+          <span aria-label="measurement depth level 30 centimetres">30cm<span>
+            <span class="unbold-depth">(1ft)</span>
+        </dt>
+        <dd class="defra-flood-impact-list__value">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
+           <strong class="govuk-tag govuk-tag--orange label-orange label-mod-depth govuk-!-margin-bottom-3 label-border">
+              Medium<span class="govuk-visually-hidden">, which is the highest flood level you are likely to flood to</span>
+            </strong><span class="depth-chance-info"></span>
+           
+          </div>
+        </dd>
+      </div>
+      <div class="defra-flood-impact-list__row defra-flood-impact-list__row--current">
+        <dt class="defra-flood-impact-list__key key-mod">
+            20cm
+            <span class="unbold-depth">(8in)</span>
+        </dt>
+        <dd class="defra-flood-impact-list__value defra-flood-impact-list__value--latest">
+          <div class="defra-flood-impact-list__container govuk-!-padding-left-4">
+            <strong class="govuk-tag govuk-tag--orange label-orange label-mod-depth govuk-!-margin-bottom-3" aria-hidden="true">
+              Medium
+            </strong>
+            <span class="depth-chance-info"></span>
+           
+          </div>
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h3 class="govuk-heading-s govuk-!-margin-top-3">What can happen in a flood</h3>
+
+    <p class="govuk-body">At 20cm, flood water can get into some homes and buildings, especially if the property has a basement. At this level, water can also damage your car or cause a breakdown.</p>
+   
+      <p class="govuk-body">At 30cm, flood water can get into homes and buildings. Water at this level can also move a car, damage roads and cause major traffic disruption.</p>
+   
+      <p class="govuk-body"> At 60cm, flood water can float most vehicles, including 4x4s.</p>
+   
+  
+
+<h3 class="govuk-heading-s govuk-!-margin-top-3">Adapt your home or business to the risk of flooding</h3>
+<p class="govuk-body">You cannot completely protect your home or business against flooding, but there's a lot you can do to reduce:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>the amount of flood water that gets in</li>
+      <li>the damage from flood water</li>
+      <li>the cost and time of cleaning up after a flood</li>
+    </ul>
+
+    <p class="govuk-body">
+      Flood protection measures are usually effective up to 60cm. You should not try and keep flood water out of buildings if it's over 90cm. Water at this level can cause collapse or permanent structural damage.</p>
+<p class="govuk-body">
+  Read about how you can <a class="govuk-link" href="https://www.gov.uk/guidance/adapting-your-home-or-business-to-the-risk-of-flooding">adapt your home or business to the risk of flooding</a>.</p>
+
+
+  
+</div>
+</div>
+  <!-- End of depth -->
+   <!-- end of details -->
+  <!--  <nav class="govuk-pagination govuk-pagination--block" role="navigation" aria-label="results">
+    <div class="govuk-pagination__prev">
+      <a class="govuk-link govuk-pagination__link" href="results-full-sw-depth-future.html" rel="prev">
+        <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+          <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+        </svg>
+        <span class="govuk-pagination__link-title">Previous</span><span class="govuk-visually-hidden">:</span>
+        <span class="govuk-pagination__link-label">Predicted depth levels by 2050</span></a>
+    </div>
+  </nav> -->
+  <!-- end of nav -->
+
+
+      </div>
+      </div>
+    
+    </div>
+  </div>
+  {% endblock %}
+  
