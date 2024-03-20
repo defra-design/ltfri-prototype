@@ -152,15 +152,15 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
     </div>
 
- <!-- attribution start -->
-  <div class="defra-map-info dialog-right-extent" id="info" role="dialog" style="display:none;" aria-modal="true" aria-labelledby="infoLabel" aria-describedby="infoDescription" tabindex="-1">
+  <!-- attribution start -->
+  <div class="defra-map-info dialog-right-extent" id="info" role="dialog" style="display:block; width: 400px;" aria-modal="true" aria-labelledby="infoLabel" aria-describedby="infoDescription" tabindex="-1">
     <h2 id="infoLabel" class="govuk-visually-hidden">Attributions</h2>
     <div class="defra-map-info__container">
-      <div id="infoContent" class="defra-map-info__content">
+      <div id="infoContent" class="defra-map-info__content" style="width: 350px;">
         <div id="infoDescription">
           <div class="ol-attribution ol-unselectable ol-control ol-uncollapsible govuk-!-padding-2">
             <ul class="govuk-list">
-              <li class="govuk-!-font-size-14"><a href="https://check-long-term-flood-risk.service.gov.uk/os-terms">Contains OS data</a><br>© Crown copyright and database rights 2023</li>
+              <li class="govuk-!-font-size-14"><strong>Pause to updates of flood risk data</strong><br>We have <a href="" class="govuk-link">paused updates to information about flood risk</a> from rivers and the sea and surface waterwhile we get ready for new data.</li>
             </ul>
           </div>
         </div>
@@ -251,7 +251,6 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
           }
           ]
           }) }}
-
           <!-- Rivers and sea-->
           {{ govukRadios({
             name: "risk-type",
