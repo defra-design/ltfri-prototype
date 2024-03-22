@@ -201,6 +201,7 @@
         bottom:-20px;
         background-color: govuk-colour('mid-grey');
         margin-left:-1.5px;
+        margin-bottom: -1px;
         left:8%;
         @include mq ($from: tablet) {
             left:7%;
@@ -300,3 +301,45 @@
         }
     }
   }
+
+  .flex-container-gauge-v13 {
+    display: none;
+    margin: 0 80px 0 50px;
+    @include mq ($until: 760px){
+        margin: 0 80px 0 50px;
+    display: flex;
+    gap:15px;
+    }
+    @include mq ($until: 700px){
+        margin: 0 60px 0 0px;
+  }
+    @include mq ($until: 640px){
+        margin: 0 60px 0 100px;
+  }
+  @include mq ($until: 500px){
+    margin: 0 40px 0 60px;
+}
+@include mq ($until: 400px){
+    margin: 0;
+}
+  
+  .gauge-container {
+    flex: 1;
+  }
+}
+
+.key-mod-v13 {
+    left: -70px;
+}
+
+.arrow-risk-increase {
+    display: inline-block; 
+    height: 18px; 
+    width: 18px; 
+    margin: 0 3px 0 2px;
+    @include mq ($until: 640px){
+        height: 15px; 
+        width: 15px; 
+        margin: 0 2px 0 3px;
+  }
+}
