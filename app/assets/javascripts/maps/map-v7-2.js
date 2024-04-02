@@ -46,12 +46,18 @@ let mapCenter = []
 //view extent and centre and zoom levels
 const view = new View({
   center: setCenter(),
-  zoom: 15,
+  zoom: setStoredZoom() || 15, // Set the zoom level from sessionStorage
   minZoom: 8,
   maxZoom: 16,
   extent: [ -5.75447, 49.93027, 1.799683, 55.84093],
 });
 
+// Function to get stored zoom level from sessionStorage
+function setStoredZoom() {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  return urlParams.get('zoom');
+}
 
 //set center of map
 function setCenter(){
@@ -86,7 +92,7 @@ const layerColors = [darkBlue, midBlue, lightBlue, lightestBlue]
 // Reds
 const lightPink = '255, 191, 201, 255'
 const midOrange = '230, 119, 46, 255'
-const darkRed = '153, 0, 77, 245'
+const darkRed = '153, 0, 77, 240'
 
 const layerColorsRed = [darkRed, midOrange, lightPink, lightestBlue] 
 
@@ -168,7 +174,7 @@ function surfaceWaterSpeed (liklihood) {
       params: {
         'TRANSPARENT': true,
         'FORMAT': 'GIF',
-        'dynamicLayers' : `[{"id":0,"source":{"type":"mapLayer","mapLayerId":0},"drawingInfo":{"renderer":{"type":"uniqueValue","field1":"velocity","uniqueValueInfos":[{"value":"0.00 - 0.25","symbol":{"color":[${lightPink}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}},{"value":"0.25 - 0.50","symbol":{"color":[${darkRed}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}},{"value":"0.50 - 1.00","symbol":{"color":[${darkRed}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}},{"value":"1.00 - 2.00","symbol":{"color":[${darkRed}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}},{"value":"> 2.00","symbol":{"color":[${darkRed}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}}]}}}]`
+        'dynamicLayers' : `[{"id":0,"source":{"type":"mapLayer","mapLayerId":0},"drawingInfo":{"renderer":{"type":"uniqueValue","field1":"velocity","uniqueValueInfos":[{"value":"0.00 - 0.25","symbol":{"color":[${midOrange}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}},{"value":"0.25 - 0.50","symbol":{"color":[${darkRed}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}},{"value":"0.50 - 1.00","symbol":{"color":[${darkRed}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}},{"value":"1.00 - 2.00","symbol":{"color":[${darkRed}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}},{"value":"> 2.00","symbol":{"color":[${darkRed}],"outline":{"width":0,"type":"esriSLS"},"type":"esriSFS","style":"esriSFSSolid"}}]}}}]`
       }
     }),
     minZoom: 8,
@@ -590,24 +596,24 @@ var setCheckbox = document.getElementById("toggle").checked;
 //get radio value
   var setRadio =  $('input[name="scenarios"]:checked').val()
 //get Center of map
-  let center = map.getView().getCenter()
-
+  let center = map.getView().getCenter();
+  var zoom = map.getView().getZoom(); // Get the current zoom level
 
 
       if (this.value == '1') {
 
         //surface water
-      window.location.href = "/version_8-2/map-v7/surface-water?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
+      window.location.href = "/version_8-2/map-v7/surface-water?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
     }
     else if (this.value == '2') {
 
       // rivers and sea
-      window.location.href = "/version_8-2/map-v7/rivers-sea?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
+      window.location.href = "/version_8-2/map-v7/rivers-sea?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center + "&zoom=" + zoom;
     } else if (this.value == '3') {
     
       //reservoirs
       window.location.href = "/version_8-2/map-v7/reservoirs?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
-      
+      + "&zoom=" + zoom;
     } 
   });
 
@@ -618,33 +624,28 @@ $('input[name="measurements"]').change(function(){
 //get radio value
   var setRadio =  $('input[name="scenarios"]:checked').val()
  //get Center of map
- let center = map.getView().getCenter()
+ let center = map.getView().getCenter();
+ var zoom = map.getView().getZoom(); // Get the current zoom level
 
   if (this.value == '7') {
 
   //Surface water extent
   window.location.href = "/version_8-2/map-v7/surface-water?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
-
+  + "&zoom=" + zoom;
 }
 else if (this.value == '8') {
 
   //Surface water depth
-  window.location.href = "/version_8-2/map-v7/surface-water-depth?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
+  window.location.href = "/version_8-2/map-v7/surface-water-depth?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
 
 } else if (this.value == '9') {
 
   //Surface water speed
-  window.location.href = "/version_8-2/map-v7/surface-water-velocity?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center
+  window.location.href = "/version_8-2/map-v7/surface-water-velocity?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
 } 
 });
   
-//Zoom controls
-$('#zoomIn').on('click', function() {
-  map.getView().animate({
-    zoom: map.getView().getZoom() + 1,
-     duration: 200
-   });
-});
+// zoom out
 
 $('#zoomOut').on('click', function() {
   map.getView().animate({
@@ -891,6 +892,7 @@ $(document).ready(function () {
   var techOptionsCheckbox = $('#tech-option');
   var radioInputs = $('.govuk-radios__input[name="risk-type"]');
   var swVelocityInput = $('#sw-velocity');
+  var swDepthInput = $('#sw-depth');
   var mapButton = $('#advanced-map-button');
 
   // Load the stored checkbox state on page load
@@ -903,27 +905,33 @@ $(document).ready(function () {
   function toggleContent(isChecked) {
     var formGroup = null;
     var swVelocityFormGroup = null;
+    var swDepthFormGroup = null;
 
     // Determine which form groups to target based on the current page path
     if (currentPath === '/version_8-2/map-v7/surface-water' || currentPath === '/version_8-2/map-v7/surface-water-depth') {
       formGroup = radioInputs.filter('[value="3"], [value="2"]').closest('.govuk-form-group');
       swVelocityFormGroup = swVelocityInput.closest('.govuk-radios__item');
+      swDepthFormGroup = swDepthInput.closest('.govuk-radios__item');
     } else if (currentPath === '/version_8-2/map-v7/rivers-sea') {
       formGroup = radioInputs.filter('[value="3"]').closest('.govuk-form-group');
       swVelocityFormGroup = swVelocityInput.closest('.govuk-form-group');
+      swDepthFormGroup = swDepthInput.closest('.govuk-radios__item');
     } else if (currentPath === '/version_8-2/map-v7/reservoirs') {
       formGroup = radioInputs.filter('[value="2"]').closest('.govuk-form-group');
       swVelocityFormGroup = swVelocityInput.closest('.govuk-form-group');
+      swDepthFormGroup = swDepthInput.closest('.govuk-radios__item');
     }
 
     // Show or hide content based on the checkbox state
     if (isChecked) {
       formGroup.show();
       swVelocityFormGroup.show();
+      swDepthFormGroup.show();
       } 
      else {
       formGroup.hide();
       swVelocityFormGroup.hide();
+      swDepthFormGroup.hide();
     }
   }
 
@@ -1078,13 +1086,23 @@ $(document).ready(function () {
   displayLayersCheckbox.on('change', handleDisplayLayersCheckbox);
 });
 
-// exit map button
+// exit map button sw
 $(document).ready(function () {
-  var exitButton = $('#exit-map');
+  var exitButton = $('#exit-map-sw');
 
   exitButton.on('click', function () {
     // Navigate to another page
-    window.location.href = 'results-hx7.html';
+    window.location.href = 'results-full-sw.html';
+  });
+});
+
+// exit map button ros
+$(document).ready(function () {
+  var exitButton = $('#exit-map-ros');
+
+  exitButton.on('click', function () {
+    // Navigate to another page
+    window.location.href = 'results-full-ros.html';
   });
 });
 
@@ -1098,6 +1116,17 @@ $(document).ready(function () {
   });
 });
 
+
+// New design to remove depth when clicking hide advanced options
+$(document).ready(function () {
+  var depthExit = $('#advanced-map-button-depth');
+  depthExit.on('click', function () {
+
+    // Navigate to another page
+    window.location.href = 'surface-water.html';
+  });
+});
+
 // Function to jump to surface water extent if user presses simple map on velocity
 function hideFormGroupsBasedOnPreviousURL() {
   // Check if the current page is '/version_7/map-v6/surface-water'
@@ -1105,6 +1134,7 @@ function hideFormGroupsBasedOnPreviousURL() {
     var previousURL = localStorage.getItem('previousURL');
     var radioInputs = $('.govuk-radios__input[name="risk-type"]');
     var swVelocityInput = $('#sw-velocity');
+    var swDepthInput = $('#sw-depth');
     var techOptionsCheckbox = $('#tech-option');
     
     // Check if the checkbox was previously unchecked
@@ -1120,8 +1150,10 @@ function hideFormGroupsBasedOnPreviousURL() {
       // Hide the form groups for this specific URL
       var formGroup = radioInputs.closest('.govuk-form-group');
       var swVelocityFormGroup = swVelocityInput.closest('.govuk-radios__item');
+      var swDepthFormGroup = swDepthInput.closest('.govuk-radios__item');
       formGroup.hide();
       swVelocityFormGroup.hide();
+      swDepthFormGroup.hide();
     } else {
       // Check the checkbox if it was previously unchecked
       if (storedCheckboxState === 'unchecked') {
@@ -1191,3 +1223,44 @@ if (skipLinkElements.length > 0) {
   });
 }
 
+
+
+// disable zoom in on max zoom
+const elementToStyle = $('#zoomIn');
+
+// Listen for the "change:resolution" event, triggered when the zoom level changes
+map.getView().on('change:resolution', function () {
+  const currentZoom = map.getView().getZoom();
+  // Log the current zoom level to the console
+  console.log('Current Zoom Level:', currentZoom);
+
+  // Check if the current zoom level is equal to the maxZoom (16 in this case)
+  if (currentZoom >= 16) {
+    // Apply your desired class to the element
+    elementToStyle.addClass('zoom-disable');
+     // Set aria-hidden attribute to true
+     elementToStyle.attr('aria-disabled', 'true');
+     elementToStyle.attr('aria-label', 'Zoom in disabled because max zoom has been reached');
+  } else {
+     // Remove the class if the zoom level is not maxZoom
+     elementToStyle.removeClass('zoom-disable');
+     // Set aria-hidden attribute to false
+     elementToStyle.attr('aria-disabled', 'false');
+     elementToStyle.attr('aria-label', 'Zoom in');
+  }
+});
+
+
+// Zoom controls
+$('#zoomIn').on('click', function() {
+  // Check the current zoom level
+  const currentZoom = map.getView().getZoom();
+
+  // Only allow zooming in if the current zoom level is less than 16
+  if (currentZoom < 16) {
+    map.getView().animate({
+      zoom: currentZoom + 1,
+      duration: 200
+    });
+  }
+});

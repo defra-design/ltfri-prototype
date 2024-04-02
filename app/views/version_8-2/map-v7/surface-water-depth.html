@@ -19,17 +19,17 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
 
   <div class="defra-map-controls" aria-hidden="false">
     <!--exit map-->
-    <button class="defra-map__exit" id="exit-map" style="color:	#0b0c0c;"><svg aria-hidden="true" focusable="false" width="20" height="20"
+    <button class="defra-map__exit" id="exit-map-sw" style="color:	#0b0c0c;"><svg aria-hidden="true" focusable="false" width="20" height="20"
         viewBox="0 0 20 20">
         <path d="M4.828,11L12.314,18.485L10.899,19.899L1,10L10.899,0.101L12.314,1.515L4.828,9L19,9L19,11L4.828,11Z"
           style="fill:currentColor;stroke:currentColor;stroke-width:0.1px"></path>
       </svg><span>Exit map</span></button>
    <!-- Advanced map toggle -->
-   <button class="defra-map__advanced" id="advanced-map-button" href="#" style="color:	#0b0c0c;">
-    <svg viewBox="0 0 24 24" height="24" width="24"xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-      <path d="m3.485 15.126-.971 1.748 9 5a1 1 0 0 0 .971 0l9-5-.971-1.748L12 19.856ZM20 8V6h2V4h-2V2h-2v2h-2v2h2v2zM2.513 12.833l9.022 5.04a.995.995 0 0 0 .973.001l8.978-5a1 1 0 0 0-.002-1.749l-9.022-5a1 1 0 0 0-.968-.001l-8.978 4.96a1 1 0 0 0-.003 1.749z"/>
+   <button class="defra-map__advanced" id="advanced-map-button-depth" href="#" style="color:	#0b0c0c;">
+    <svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <path d="M20.515 15.126 12 19.856l-8.515-4.73-.971 1.748 9 5a1 1 0 0 0 .971 0l9-5zM16 4h6v2h-6zm5.484 7.125-9.022-5a1 1 0 0 0-.968-.001l-8.978 4.96a1 1 0 0 0-.003 1.749l9.022 5.04a.995.995 0 0 0 .973.001l8.978-5a1 1 0 0 0-.002-1.749z"/>
     </svg>
-  <span id="map-button-text">Show advanced options</span></button>
+    <span id="map-button-text">Hide advanced options</span></button>
 
   <img class="defra-map-os-logo-depth" alt="Ordnance Survey logo" src="/public/images/map-os-logo.png" width="90"
     height="24" style="pointer-events: auto; display: block;">
@@ -212,26 +212,26 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
             value: "8",
           html: '
             Depth
-            <span class="defra-map-key__symbol-container defra-map-key__symbol-container--multi">
+            <span class="defra-map-key__symbol-container defra-map-key__symbol-container--multi" id="high-risk-sw">
               <span class="defra-map-key__symbol">
-                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#555C9D"></rect></svg>
+                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#99004d"></rect></svg>
               </span>
               Above 90cm
-              <span class="risk-context-v3"></span>
+<!--               <span class="risk-context-v3">More than 3.3% chance each year</span> -->
             </span>
-            <span class="defra-map-key__symbol-container defra-map-key__symbol-container--multi">
+            <span class="defra-map-key__symbol-container defra-map-key__symbol-container--multi" id="med-risk-sw">
               <span class="defra-map-key__symbol">
-                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#9AA0DE"></rect></svg>
+                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#e6772e"></rect></svg>
               </span>
               30cm to 90cm
-              <span class="risk-context-v3"></span>
+      <!--         <span class="risk-context-v3">Between 1% and 3.3% chance each year</span> -->
             </span>
-            <span class="defra-map-key__symbol-container defra-map-key__symbol-container--multi">
+            <span class="defra-map-key__symbol-container defra-map-key__symbol-container--multi" id="low-risk-sw">
               <span class="defra-map-key__symbol">
-                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#C4E1FF"></rect></svg>
+                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#ffbfc9"></rect></svg>
               </span>
               Below 30cm
-              <span class="risk-context-v3"></span>
+    <!--           <span class="risk-context-v3">Between 0.1% and 1% chance each year</span> -->
             </span>
           ',
           checked: true
@@ -347,7 +347,7 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
                   id: "toggle",
                   html: '<span class="defra-map-key__symbol-container">
                   <span class="defra-map-key__symbol">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f54545" class="w-6 h-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#160000" class="w-6 h-6">
                       <path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
                      </svg>
                   </span>
@@ -371,8 +371,8 @@ Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
               }
             ]
           }) }}
-        <p class="copyright-text govuk-body" style="font-size: 10px;"><a href="https://check-long-term-flood-risk.service.gov.uk/os-terms">Contains OS data</a><br>© Crown copyright and database rights 2024</p>
-        <p class="copyright-text-mobile govuk-body" style="font-size: 10px;"><a href="https://check-long-term-flood-risk.service.gov.uk/os-terms">Contains OS data</a><br>© Crown copyright and database rights 2024</p>
+        <!-- <p class="copyright-text govuk-body" style="font-size: 10px;"><a href="https://check-long-term-flood-risk.service.gov.uk/os-terms">Contains OS data</a><br>© Crown copyright and database rights 2024</p>
+        <p class="copyright-text-mobile govuk-body" style="font-size: 10px;"><a href="https://check-long-term-flood-risk.service.gov.uk/os-terms">Contains OS data</a><br>© Crown copyright and database rights 2024</p> -->
         </div>
       </div>
     </div>
