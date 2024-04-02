@@ -69,7 +69,7 @@ function setCenter(){
   
 
   if (center == undefined){
-    mapCenter = [0.4040511246045124,52.24377500667143]
+    mapCenter = [-1.2977592816816998, 50.763465355051004]
   } else {
     mapCenter = center.split(',');
   }
@@ -292,7 +292,7 @@ var wStyle = new Style({
 // Marker var
 
 var marker = new Feature({
-  geometry: new Point([0.4040511246045124,52.24377500667143]),
+  geometry: new Point([-1.2977592816816998, 50.763465355051004]),
   type: 'test',
   name: 'something'
 });
@@ -300,7 +300,7 @@ var marker = new Feature({
 // radius 
 
 var radius = new Feature({
-  geometry: new Point([0.4040511246045124,52.24377500667143]),
+  geometry: new Point([-1.2977592816816998, 50.763465355051004]),
   type: 'test',
   name: 'something'
 });
