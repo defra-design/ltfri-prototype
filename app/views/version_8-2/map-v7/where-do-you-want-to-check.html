@@ -1,4 +1,17 @@
-{% extends "layout.html" %}
+{% extends "layout-nafra2.html" %}
+
+{% block pageTitle %}
+Enter a postcode
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
 
 {% block content %}
 
@@ -41,12 +54,14 @@
     </a>
 
     <p>
-      or <a href="">view a map showing areas at risk of flooding</a>.
+      or <a href="/version_8-2/map-v7-direct/surface-water">view a map showing areas at risk of flooding</a>.
     </p>
 
     <p>
       <a href="http://www.royalmail.com/find-a-postcode" target="_blank">Use the Royal Mail postcode finder</a>
     </p>
+ 
+
 
   </div>
 

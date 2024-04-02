@@ -29,6 +29,8 @@ module.exports = {
     mapv6 : './app/assets/javascripts/maps/map-v6.js',
     mapv7 : './app/assets/javascripts/maps/map-v7.js',
     mapv7direct : './app/assets/javascripts/maps/map-v7-direct.js',
+    mapv7_2 : './app/assets/javascripts/maps/map-v7-2.js',
+    mapv7_2direct : './app/assets/javascripts/maps/map-v7-2-direct.js',
     mapv8 : './app/assets/javascripts/maps/map-v8.js',
     mapv8direct : './app/assets/javascripts/maps/map-v8-direct.js',
     mapv8_1 : './app/assets/javascripts/maps/map-v8-1.js',
