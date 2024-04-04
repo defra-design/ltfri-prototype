@@ -1,0 +1,48 @@
+ /* Container styles */
+ .radio-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Radio button styles */
+.radio-container input[type="radio"] {
+    display: none;
+}
+
+.radio-container label {
+    margin-right: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Line styles using :after pseudo-selector */
+.radio-container:after {
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    left: 5px;
+    right: 5px;
+    height: 3px;
+    background-color: grey;
+    z-index: -1;
+}
+
+/* Custom radio button appearance */
+.radio-container input[type="radio"] + label:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    width: 15px;
+    height: 15px;
+    border: 2px solid grey;
+    border-radius: 50%;
+    background-color: white;
+    transform: translateY(-50%);
+}
+
+/* Checked radio button appearance */
+.radio-container input[type="radio"]:checked + label:before {
+    background-color: grey;
+}
