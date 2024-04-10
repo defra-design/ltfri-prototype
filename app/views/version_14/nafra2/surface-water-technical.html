@@ -1,4 +1,4 @@
-{% extends "layouts/map-v12.html" %}
+{% extends "layouts/map-v13.html" %}
 
 {% block pageTitle %}
 Surface water map
@@ -10,7 +10,9 @@ Surface water map
 
   <div id="maphigh" class="map" aria-hidden="false">
   <h1 id="mapLabel" class="defra-map__title" aria-hidden="false">Flood risk map</h1>
-  <div class="defra-map-controls" aria-hidden="false">
+  
+  <div class="defra-map-controls" aria-hidden="false" style="width: 100%;">
+    
     <!--exit map-->
     <button class="defra-map__exit" id="exit-map-sw" tabindex="1" style="color:	#0b0c0c;"><svg aria-hidden="true" focusable="false" width="20" height="20"
         viewBox="0 0 20 20">
@@ -24,8 +26,8 @@ Surface water map
         </svg>
       <span id="map-button-text">Show advanced options</span></button> -->
 
-      <img class="defra-map-os-logo" alt="Ordnance Survey logo" src="/public/images/map-os-logo.png" width="90"
-    height="24" style="pointer-events: auto; display: block;">
+     <!--  <img class="defra-map-os-logo" alt="Ordnance Survey logo" src="/public/images/map-os-logo.png" width="90"
+    height="24" style="pointer-events: auto; display: block;"> -->
 
     
 
@@ -54,22 +56,300 @@ Surface water map
           {% default %}
               {% set swHigh = true %}
   {% endswitch %}
+<!-- mobile key -->
+<div id="mobile-key-panel-bottom">
+  <button class="defra-map-info__close" style="z-index: 5;">
+    <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
+      <path d="M10,8.6L15.6,3L17,4.4L11.4,10L17,15.6L15.6,17L10,11.4L4.4,17L3,15.6L8.6,10L3,4.4L4.4,3L10,8.6Z" style="fill:currentColor;stroke:currentColor;stroke-width:0.1px;"></path>
+    </svg>
+    <span class="govuk-visually-hidden">Close</span>
+  </button>
+<div class="timeline-container" id="timeline">
+  <div class="timeline-btn-grp">
+  <button class="timeline-btn-left" aria-pressed="true" id="timeline-btn-left">
+    <span>Present day</span>
+  </button>
+  <button class="timeline-btn-right" aria-pressed="false" id="timeline-btn-right">
+    <span>2050s</span>
+  </button>
+</div>
+</div>
+<div class="btn-container src-container" id="src-container">
+  <span>Sources of flooding</span>
+  <div class="btn-grp">
+  <button class="panel-btn sw-btn" id="sw-btn" aria-pressed="true">
+    <span>Surface water</span>
+  </button>
+  <button class="panel-btn ros-btn" id="ros-btn" aria-pressed="false">
+    <span>Rivers and sea</span>
+  </button>
+  <button class="panel-btn res-btn" id="res-btn" aria-pressed="false">
+    <span>Reservoirs</span>
+  </button>
+</div>
+</div>
+<div class="btn-container measurement-container" id="measurement-container">
+  <span>Measurements of flooding</span>
+  <div class="btn-grp">
+  <button class="panel-btn ext-btn" id="ext-btn" aria-pressed="true">
+    <span>Extent</span>
+  </button>
+  <button class="panel-btn depth-btn" id="depth-btn" aria-pressed="false">
+    <span>Depth</span>
+  </button>
+</div>
+</div>
+<div class="btn-container depths-container" id="depths-container" style="display: none;">
+  <span>Flooding depths</span>
+  <div class="btn-grp">
+  <button class="panel-btn d20-btn" aria-pressed="true" id="d20-btn">
+    <span>20cm</span>
+  </button>
+  <button class="panel-btn d30-btn" aria-pressed="false" id="d30-btn">
+    <span>30cm</span>
+  </button>
+  <button class="panel-btn d60-btn" aria-pressed="false" id="d60-btn">
+    <span>60cm</span>
+  </button>
+  <button class="panel-btn d90-btn" aria-pressed="false" id="d90-btn">
+    <span>90cm</span>
+  </button>
+</div>
+</div>
+
+<button class="fm-c-btn-more btn-more" id="btn-more" href="#" aria-controls="map-key" aria-label="Show map key" aria-expanded="true"><span class="fm-c-btn-more__chevron"></span><span id="btn-more-text">Hide map key</span></button>
+
+<div class="flood-risk-group sw-key-row" id="sw-key-row" style="display: flex; flex-direction: column; margin-top: 10px;">
+<span>Surface water yearly chance of flooding</span>
+  <div class="info-row">
+    <div class="info-box">
+      <div class="svg-square">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#99004d"></rect></svg>
+      </div>
+      <span>High chance</span>
+    </div>
+    <div class="info-box">
+      <div class="svg-square">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#e6772e"></rect></svg>
+      </div>
+      <span>Medium chance</span>
+    </div>
+    <div class="info-box">
+      <div class="svg-square">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#ffbfc9"></rect></svg>
+      </div>
+      <span>Low chance</span>
+    </div>
+  </div>
+</div>
+
+  
+
+
+<div class="flood-risk-group ros-key-row" id="ros-key-row" style="display: flex; flex-direction: column; margin-top: 10px; display: none;">
+  <span>Rivers and sea yearly chance of flooding</span>
+  <div class="info-row">
+    <div class="info-box">
+      <div class="svg-square">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#0066cc"></rect></svg>
+      </div>
+      <span>High chance</span>
+    </div>
+    <div class="info-box">
+      <div class="svg-square">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#599eff"></rect></svg>
+      </div>
+      <span>Medium chance</span>
+    </div>
+    <div class="info-box">
+      <div class="svg-square">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#bfc5ff"></rect></svg>
+      </div>
+      <span>Low chance</span>
+    </div>
+    <div class="info-box">
+      <div class="svg-square">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#6b78ff"></rect></svg>
+      </div>
+      <span>Very low chance</span>
+    </div>
+  </div>
+  </div>
+
+<div class="flood-risk-group res-key-row" id="res-key-row" style="display: flex; flex-direction: column; margin-top: 10px; display: none;">
+  <span>Reservoirs chance of flooding</span>
+    <div class="info-row">
+      <div class="info-box">
+        <div class="svg-square">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#99004d"></rect></svg>
+        </div>
+        <span>When rivers normal</span>
+      </div>
+      <div class="info-box">
+        <div class="svg-square">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#e6772e"></rect></svg>
+        </div>
+        <span>When rivers flooded</span>
+      </div>
+    </div>
+  </div>
+ 
+ 
+</div>
+<!-- end of mobile -->
+      <!-- desktop key --> 
+  <div class="panel">
+    <div id="mobile-key-panel">
+      <button class="defra-map-info__close" style="z-index: 5;">
+        <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
+          <path d="M10,8.6L15.6,3L17,4.4L11.4,10L17,15.6L15.6,17L10,11.4L4.4,17L3,15.6L8.6,10L3,4.4L4.4,3L10,8.6Z" style="fill:currentColor;stroke:currentColor;stroke-width:0.1px;"></path>
+        </svg>
+        <span class="govuk-visually-hidden">Close</span>
+      </button>
+    <div class="timeline-container" id="timeline">
+      <div class="timeline-btn-grp">
+      <button class="timeline-btn-left" aria-pressed="true" id="timeline-btn-left">
+        <span>Present day</span>
+      </button>
+      <button class="timeline-btn-right" aria-pressed="false" id="timeline-btn-right">
+        <span>2050s</span>
+      </button>
+    </div>
+    </div>
+    <div class="btn-container src-container" id="src-container">
+      <span>Sources of flooding</span>
+      <div class="btn-grp">
+      <button class="panel-btn sw-btn" id="sw-btn" aria-pressed="true">
+        <span>Surface water</span>
+      </button>
+      <button class="panel-btn ros-btn" id="ros-btn" aria-pressed="false">
+        <span>Rivers and sea</span>
+      </button>
+      <button class="panel-btn res-btn" id="res-btn" aria-pressed="false">
+        <span>Reservoirs</span>
+      </button>
+    </div>
+    </div>
+    <div class="btn-container measurement-container" id="measurement-container">
+      <span>Measurements of flooding</span>
+      <div class="btn-grp">
+      <button class="panel-btn ext-btn" id="ext-btn" aria-pressed="true">
+        <span>Extent</span>
+      </button>
+      <button class="panel-btn depth-btn" id="depth-btn" aria-pressed="false">
+        <span>Depth</span>
+      </button>
+    </div>
+    </div>
+    <div class="btn-container depths-container" id="depths-container" style="display: none;">
+      <span>Flooding depths</span>
+      <div class="btn-grp">
+      <button class="panel-btn d20-btn" aria-pressed="true" id="d20-btn">
+        <span>20cm</span>
+      </button>
+      <button class="panel-btn d30-btn" aria-pressed="false" id="d30-btn">
+        <span>30cm</span>
+      </button>
+      <button class="panel-btn d60-btn" aria-pressed="false" id="d60-btn">
+        <span>60cm</span>
+      </button>
+      <button class="panel-btn d90-btn" aria-pressed="false" id="d90-btn">
+        <span>90cm</span>
+      </button>
+    </div>
+    </div>
+    
+    <button class="fm-c-btn-more btn-more" id="btn-more" href="#" aria-controls="map-key" aria-label="Show map key" aria-expanded="true"><span class="fm-c-btn-more__chevron"></span><span id="btn-more-text-desktop">Hide map key</span></button>
+    
+    <div class="flood-risk-group sw-key-row" id="sw-key-row" style="display: flex; flex-direction: column; margin-top: 10px;">
+    <span>Surface water yearly chance of flooding</span>
+      <div class="info-row">
+        <div class="info-box">
+          <div class="svg-square">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#99004d"></rect></svg>
+          </div>
+          <span>High chance</span>
+        </div>
+        <div class="info-box">
+          <div class="svg-square">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#e6772e"></rect></svg>
+          </div>
+          <span>Medium chance</span>
+        </div>
+        <div class="info-box">
+          <div class="svg-square">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#ffbfc9"></rect></svg>
+          </div>
+          <span>Low chance</span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    <div class="flood-risk-group ros-key-row" id="ros-key-row" style="display: flex; flex-direction: column; margin-top: 10px; display: none;">
+      <span>Rivers and sea yearly chance of flooding</span>
+      <div class="info-row">
+        <div class="info-box">
+          <div class="svg-square">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#0066cc"></rect></svg>
+          </div>
+          <span>High chance</span>
+        </div>
+        <div class="info-box">
+          <div class="svg-square">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#599eff"></rect></svg>
+          </div>
+          <span>Medium chance</span>
+        </div>
+        <div class="info-box">
+          <div class="svg-square">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#bfc5ff"></rect></svg>
+          </div>
+          <span>Low chance</span>
+        </div>
+        <div class="info-box">
+          <div class="svg-square">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#6b78ff"></rect></svg>
+          </div>
+          <span>Very low chance</span>
+        </div>
+      </div>
+      </div>
+    
+    <div class="flood-risk-group res-key-row" id="res-key-row" style="display: flex; flex-direction: column; margin-top: 10px; display: none;">
+      <span>Reservoirs chance of flooding</span>
+        <div class="info-row">
+          <div class="info-box">
+            <div class="svg-square">
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#99004d"></rect></svg>
+            </div>
+            <span>When rivers normal</span>
+          </div>
+          <div class="info-box">
+            <div class="svg-square">
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#e6772e"></rect></svg>
+            </div>
+            <span>When rivers flooded</span>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+    </div>
+ 
 
     <!--controls on the bottom-->
     <div class="defra-map-controls__bottom-v3 scenario-remove-spacing" id="controls">
+      
       <!-- open map on mobile -->
-      <button class="defra-map__open-key btn-spacing" id="open-key" tabindex="4" style="display: none;"><div class="button-content">
-        <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 23 24" fill="none">
-          <path d="M4.43301 9.75C4.3437 9.5953 4.17863 9.5 4 9.5C3.82137 9.5 3.6563 9.5953 3.56699 9.75L0.968911 14.25C0.879595 14.4047 0.879595 14.5953 0.968911 14.75C1.05823 14.9047 1.22329 15 1.40192 15H6.59808C6.77671 15 6.94177 14.9047 7.03109 14.75C7.12041 14.5953 7.12041 14.4047 7.03109 14.25L4.43301 9.75Z" fill="#0B0C0C" stroke="#0B0C0C" stroke-linejoin="round"/>
-          <rect x="1.5" y="18.5" width="5" height="5" fill="#0B0C0C" stroke="#0B0C0C" stroke-linejoin="round"/>
-          <circle cx="4" cy="4" r="2.5" fill="#0B0C0C" stroke="#0B0C0C"/>
-          <path d="M12 4H22" stroke="#0B0C0C" stroke-width="2" stroke-linecap="round"/>
-          <path d="M12 12H22" stroke="#0B0C0C" stroke-width="2" stroke-linecap="round"/>
-          <path d="M12 21H22" stroke="#0B0C0C" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-        <span class="govuk-visually-hidden">open key</span><span class="open-button-text"></span>
-      </div></button>
-    
+      <button class="defra-map__open-key-v5 btn-spacing" focusable="true" id="open-key" style="display: none;">
+        <div class="button-content">
+        <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20"><path d="M17.215,11.31L19,12.5L10,18.5L1,12.5L2.785,11.31L9.945,16.083C9.978,16.106 10.022,16.106 10.055,16.083L17.215,11.31Z" style="fill:currentColor;"></path><path d="M10,1.5L1,7.5L10,13.5L19,7.5L10,1.5ZM10,3.88L15.43,7.5L10,11.12L4.57,7.5L10,3.88Z" style="fill:currentColor;"></path></svg>
+        <span class="govuk-visually-hidden">open</span><span class="open-button-text">Key</span>
+      </div>
+      </button>
       <!-- zoom in -->
       
     <div class="defra-map-zoom ol-unselectable ol-control">
@@ -98,19 +378,22 @@ Surface water map
     </button>
     
   
-    
 
- <!-- Scenarios -->     
- 
+
+
+
+   
+ <!-- Scenarios -->    
 
 <!-- new scenario control -->
 
-<div class="defra-map-scenarios-depth-v4 v10-mob-depth">
+<div class="defra-map-scenarios-depth-v4 v10-mob-depth" style="padding: 0;">
   <div class="defra-map-scenarios__container" id="scenarios-controls">
- <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+    
+ <div class="govuk-radios govuk-radios--small" style="padding: 0;" data-module="govuk-radios">
   <i class="fa-solid fa-chevron-left left-btn arrow-padding" aria-hidden="true" style="display: none;"></i>
   <i class="fa-solid fa-chevron-right right-btn arrow-padding" aria-hidden="true" style="display: none;"></i>
-       <div class="govuk-radios__item">
+     <!--   <div class="govuk-radios__item">
          <input class="govuk-radios__input" id="sw-high" name="scenarios" type="radio" value="11" {% if swHigh %}checked{% endif %}>
          <label class="govuk-label govuk-radios__label" for="sw-high">
                  <strong>Yearly chance</strong>       
@@ -123,71 +406,30 @@ Surface water map
            <strong>Yearly chance by the 2050s</strong>   
            <span class="risk-context-v3">Flood area</span>
      </label>
-       </div>
+       </div> -->
       
      </div>
       
 </div>
+ 
+
 </div>
 <!-- end of radios -->
        
 </div>
 </div>
 
+
       
       </div>
- <!-- attribution start -->
-  <div class="defra-map-info dialog-right-extent" id="info" role="dialog" style="display:none;" aria-modal="true" aria-labelledby="infoLabel" aria-describedby="infoDescription" tabindex="5">
-    <h2 id="infoLabel" class="govuk-visually-hidden">Attributions</h2>
-    <div class="defra-map-info__container">
-      <div id="infoContent" class="defra-map-info__content">
-        <div id="infoDescription">
-          <div class="ol-attribution ol-unselectable ol-control ol-uncollapsible govuk-!-padding-2">
-            <ul class="govuk-list">
-              <li class="govuk-!-font-size-14"><a href="https://check-long-term-flood-risk.service.gov.uk/os-terms">Contains OS data</a><br>© Crown copyright and database rights 2023</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <button class="defra-map-info__close">
-        <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
-          <path d="M10,8.6L15.6,3L17,4.4L11.4,10L17,15.6L15.6,17L10,11.4L4.4,17L3,15.6L8.6,10L3,4.4L4.4,3L10,8.6Z" style="fill:currentColor;stroke:currentColor;stroke-width:0.1px;"></path>
-        </svg>
-        <span class="govuk-visually-hidden">Close</span>
-      </button>
     </div>
   </div>
+</div>
 
-  <!-- attribution end -->
-  
-<!-- Mobile key --> 
-              <div id="info-panel">
-                  <div class="info-title">Surface ater</div>
-                
-                  <div class="info-row">
-                    <div class="info-box">
-                      <div class="svg-square">
-                        <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#99004d"></rect></svg>
-                      </div>
-                      <span>High chance</span>
-                    </div>
-                    <div class="info-box">
-                      <div class="svg-square">
-                        <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#e6772e"></rect></svg>
-                      </div>
-                      <span>Medium chance</span>
-                    </div>
-                    <div class="info-box">
-                      <div class="svg-square">
-                        <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#ffbfc9"></rect></svg>
-                      </div>
-                      <span>Low chance</span>
-                    </div>
-                  </div>
-                </div>
+
 
   <!-- key desktop -->
-  <div class="defra-map-key" aria-labelledby="mapKeyLabel" tabindex="-1" role="region" aria-hidden="false">
+  <div class="defra-map-key" aria-labelledby="mapKeyLabel" tabindex="-1" role="region" aria-hidden="false" style="display: none;">
     <div class="defra-map-key__container" id="defra-map-key__container">
       <h2 id="mapKeyLabel" class="defra-map-key__title">
         <span role="text">Surface water <span class="govuk-visually-hidden">

@@ -501,7 +501,7 @@ removeLayers();
     x=3 
    }
 
-  if (pathname == '/version_13/nafra2/surface-water'){
+  if (pathname == '/version_14/nafra2/surface-water'){
     // nafra2 to show less risk (current)
     map.addLayer(surfaceWaterDepth(2)),
     markerAddress();
@@ -509,14 +509,14 @@ removeLayers();
     map.addLayer(surfaceWater(2))
     map.addLayer(surfaceWater(1))
     markerAddress(); */
-  } else if (pathname == '/version_13/nafra2/surface-water-depth'){
+  } else if (pathname == '/version_14/nafra2/surface-water-depth'){
     map.addLayer(surfaceWaterDepth(x)),
     markerAddress();
-  } else if (pathname == '/version_13/nafra2/surface-water-velocity'){
+  } else if (pathname == '/version_14/nafra2/surface-water-velocity'){
     map.addLayer(surfaceWaterSpeed(x)),
     map.addLayer(surfaceWaterDirection(x)),
     markerAddress();
-  } else if (pathname == '/version_13/nafra2/rivers-sea'){
+  } else if (pathname == '/version_14/nafra2/rivers-sea'){
    /*  map.addLayer(surfaceWaterRos(3))
     map.addLayer(surfaceWaterRos(2))
     map.addLayer(surfaceWaterRos(1))
@@ -528,19 +528,19 @@ removeLayers();
     map.addLayer(riverSea(1)), */
     markerAddress();
   }
-  else if (pathname == '/version_13/nafra2/rivers-sea-cc'){
+  else if (pathname == '/version_14/nafra2/rivers-sea-cc'){
     map.addLayer(surfaceWaterDepthRos(2)),
     /* map.addLayer(riverSea(4)),
     map.addLayer(riverSea(3)),
     map.addLayer(riverSea(2)),
     map.addLayer(riverSea(1)), */
     markerAddress();
-  } else if (pathname == '/version_13/nafra2/reservoirs'){
+  } else if (pathname == '/version_14/nafra2/reservoirs'){
     map.addLayer(reservoirRiver('DryDay')),
     map.addLayer(reservoirRiver('WetDay')),
     markerAddress();
   }
-  else if (pathname == '/version_13/nafra2/surface-water-cc'){
+  else if (pathname == '/version_14/nafra2/surface-water-cc'){
     // nafra2 to show more risk (2050)
     map.addLayer(surfaceWaterDepth(3)),
     markerAddress();
@@ -681,16 +681,16 @@ var setCheckbox = document.getElementById("toggle").checked;
 
         //surface water
         // v8 this now goes to the cc page
-      window.location.href = "/version_13/nafra2/surface-water-cc?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
+      window.location.href = "/version_14/nafra2/surface-water-cc?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
     }
     else if (this.value == '2') {
 
       // rivers and sea
-      window.location.href = "/version_13/nafra2/rivers-sea?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
+      window.location.href = "/version_14/nafra2/rivers-sea?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
     } else if (this.value == '3') {
     
       //reservoirs
-      window.location.href = "/version_13/nafra2/rivers-sea-cc?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
+      window.location.href = "/version_14/nafra2/rivers-sea-cc?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
       
     } 
   });
@@ -708,18 +708,18 @@ $('input[name="measurements"]').change(function(){
   if (this.value == '7') {
 
   //Surface water extent
-  window.location.href = "/version_13/nafra2/surface-water?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
+  window.location.href = "/version_14/nafra2/surface-water?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
 
 }
 else if (this.value == '8') {
 
   //Surface water depth
-  window.location.href = "/version_13/nafra2/surface-water-depth?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
+  window.location.href = "/version_14/nafra2/surface-water-depth?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
 
 } else if (this.value == '9') {
 
   //Surface water speed
-  window.location.href = "/version_13/nafra2/surface-water-velocity?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
+  window.location.href = "/version_14/nafra2/surface-water-velocity?marker="+setCheckbox+"&scenario="+setRadio+"&center="+center+ "&zoom=" + zoom;
 } 
 });
 
@@ -784,85 +784,13 @@ function handleRadioSelection() {
 // Call the function to enable radio button selection handling
 handleRadioSelection();
 
-// page load, show key, hide scenarios
-$(document).ready(function() {
-  if ($(window).width() < 769) {
-    // Show the map key container on page load
-    $('#defra-map-key__container').css('display', 'block');
-    // Hide the other elements on page load
-    $('#reset-key').css('display', 'none');
-    $('#zoomIn').css('display', 'none');
-    $('#zoomOut').css('display', 'none');
-  }
-});
 
-// close button on mobile map
-$('#close-key').on('click', function() {
-  // Hide the map key container when the close button is clicked
-  $('#defra-map-key__container').css('display', 'none');
-  // Show the other elements when the close button is clicked
-  $('#scenarios-controls').css('display', 'block');
-  $('#open-key').css('display', 'block');
-  $('#att-key').css('display', 'block'); 
-});
-
-
-
-// open key
-$('#open-key').on('click', function() {
-  if ($('#defra-map-key__container').css('display') === 'none') {
-  // Show the map key container when the open button is clicked
-  $('#defra-map-key__container').css('display', 'block');
-  // Hide the other elements when the open button is clicked
-  }
-  else if ($('#defra-map-key__container').css('display') === 'block') {
-    $('#defra-map-key__container').css('display', 'none');
-  }
-});
-
-// attribution button
-
-$('#att-key').on('click', function() {
-  if ($('#scenarios-controls').css('display') === 'block') {
-    // If scenarios-controls is displayed, hide it and show #info
-    $('#scenarios-controls').css('display', 'none');
-    $('#info').css('display', 'block');
-
-    // Check if the screen width is 769 pixels or less
-    if ($(window).width() <= 641) {
-      // Add margin-bottom to .defra-map-attribution if the screen width is 769 or less
-      $('#att-key').css('margin-bottom', '60px');
-    }
-  } else if ($('#info').css('display') === 'block') {
-    // If #info is displayed, hide it and show scenarios-controls
-    $('#info').css('display', 'none');
-    $('#scenarios-controls').css('display', 'block');
-    if ($(window).width() <= 641) {
-    // Remove the margin-bottom from .defra-map-attribution
-    $('#att-key').css('margin-bottom', '0');
-    $('#info').css('display', 'none');
-    }
-  }
-});
-
-  $('.defra-map-info__close').on('click', function() {
-
-      // If #info is displayed, hide it and show scenarios-controls
-      $('#info').css('display', 'none');
-      $('#scenarios-controls').css('display', 'block');
-
-      if ($(window).width() <= 641) {
-        // Remove the margin-bottom from .defra-map-attribution
-        $('#att-key').css('margin-bottom', '0');
-        }
-    
-  });
 
 
 
 // Scenario control arrows 
 
-if (window.location.pathname.includes("/version_13/nafra2/surface-water") || window.location.pathname.includes("/version_13/nafra2/surface-water-cc") || window.location.pathname.includes("/version_13/nafra2/rivers-sea") || window.location.pathname.includes("/version_13/nafra2/rivers-sea-cc")) {
+if (window.location.pathname.includes("/version_14/nafra2/surface-water") || window.location.pathname.includes("/version_14/nafra2/surface-water-cc") || window.location.pathname.includes("/version_14/nafra2/rivers-sea") || window.location.pathname.includes("/version_14/nafra2/rivers-sea-cc")) {
   const btnLeft = document.querySelector(".left-btn");
   const btnRight = document.querySelector(".right-btn");
   const scenarioContainer = document.querySelector(".defra-map-scenarios-depth-v4");
@@ -939,18 +867,18 @@ $(document).ready(function () {
     var scenarioValue = $('input[name="scenarios"]:checked').val();
     // If unchecked, call the removeLayers() function
     if (!isChecked) {
-      if (currentPath === '/version_13/nafra2/surface-water' || currentPath === '/version_13/nafra2/surface-water-cc' || currentPath === '/version_13/nafra2/surface-water-velocity') {
+      if (currentPath === '/version_14/nafra2/surface-water' || currentPath === '/version_14/nafra2/surface-water-cc' || currentPath === '/version_14/nafra2/surface-water-velocity') {
       removeLayers();
       markerAddress();
     }
-    else if (currentPath === '/version_13/nafra2/rivers-sea' || currentPath === '/version_13/nafra2/reservoirs' || currentPath === '/version_13/nafra2/rivers-sea-cc')
+    else if (currentPath === '/version_14/nafra2/rivers-sea' || currentPath === '/version_14/nafra2/reservoirs' || currentPath === '/version_14/nafra2/rivers-sea-cc')
       removeLayers();
       markerAddress();
     }
     // end of if that removes layers
 
     // if checkbox checked again, return correct layers
-    else if (currentPath === '/version_13/nafra2/surface-water') {
+    else if (currentPath === '/version_14/nafra2/surface-water') {
     removeLayers();
     map.addLayer(surfaceWaterDepth(2));
     /* map.addLayer(surfaceWater(3)),
@@ -958,7 +886,7 @@ $(document).ready(function () {
     map.addLayer(surfaceWater(1)), */
     markerAddress();
     }
-    else if (currentPath === '/version_13/nafra2/surface-water-cc') {
+    else if (currentPath === '/version_14/nafra2/surface-water-cc') {
       removeLayers();
       map.addLayer(surfaceWaterDepth(3));
       /* map.addLayer(surfaceWater(3)),
@@ -966,7 +894,7 @@ $(document).ready(function () {
       map.addLayer(surfaceWater(1)), */
       markerAddress();
       }
-    else if (currentPath === '/version_13/nafra2/rivers-sea') {
+    else if (currentPath === '/version_14/nafra2/rivers-sea') {
       removeLayers();
       map.addLayer(surfaceWaterDepthRos(1));
      /*  map.addLayer(riverSea(4)),
@@ -975,7 +903,7 @@ $(document).ready(function () {
       map.addLayer(riverSea(1)), */
       markerAddress();
       }
-      else if (currentPath === '/version_13/nafra2/rivers-sea-cc') {
+      else if (currentPath === '/version_14/nafra2/rivers-sea-cc') {
         removeLayers();
         map.addLayer(surfaceWaterDepthRos(2));
        /*  map.addLayer(riverSea(4)),
@@ -984,13 +912,13 @@ $(document).ready(function () {
         map.addLayer(riverSea(1)), */
         markerAddress();
         }
-      else if (currentPath === '/version_13/nafra2/reservoirs') {
+      else if (currentPath === '/version_14/nafra2/reservoirs') {
         removeLayers();
         map.addLayer(reservoirRiver('DryDay')),
         map.addLayer(reservoirRiver('WetDay')),
         markerAddress();
         }
-        else if (currentPath === '/version_13/nafra2/surface-water-depth') {
+        else if (currentPath === '/version_14/nafra2/surface-water-depth') {
           //surface water depth high risk
            if (scenarioValue == '10') {
             removeLayers();
@@ -1009,7 +937,7 @@ $(document).ready(function () {
             markerAddress();
           } 
           }
-          else if (currentPath === '/version_13/nafra2/surface-water-velocity') {
+          else if (currentPath === '/version_14/nafra2/surface-water-velocity') {
             //surface water velocity high risk
              if (scenarioValue == '13') {
               removeLayers();
@@ -1196,4 +1124,570 @@ $(document).ready(function () {
       console.log('Right button clicked. aria-pressed: true');
     }
   });
+});
+
+
+// Scenarios change on surface water
+$('.timeline-btn-left, .timeline-btn-right').click(function(){
+
+  removeLayers();
+
+  var displayOptionCheckbox = $('#display-option');
+
+  var selectedValue = $(this).val();
+
+  if ([10, 11, 12, 13, 14, 15].includes(Number(selectedValue))) {
+    // Check the 'display options' checkbox if it's not already checked
+    // To work with display options checkbox if user unchecks box and then presses a scenario
+    // checks the checkbox again, as layers will display
+    if (!displayOptionCheckbox.prop('checked')) {
+      displayOptionCheckbox.prop('checked', true);
+    }
+  }
+
+  //add back in the layer based on the button value
+  if (selectedValue == '4') {
+    map.addLayer(surfaceWaterDepth(1));
+    markerAddress();
+  }
+  else if (selectedValue == '5') {
+    // surface water extent medium risk
+    map.addLayer(surfaceWater(2));
+    markerAddress();
+  }
+  else if (selectedValue == '6') {
+    // surface water extent low risk
+    map.addLayer(surfaceWater(3));
+    markerAddress();
+  }
+  else if (selectedValue == '10') {
+    // surface water depth high risk
+    map.addLayer(surfaceWaterDepth(1));
+    markerAddress();
+  }
+  else if (selectedValue == '11') {
+    // surface water depth medium risk
+    map.addLayer(surfaceWaterDepth(2));
+    markerAddress();
+  }
+  else if (selectedValue == '12') {
+    // surface water depth low risk
+    map.addLayer(surfaceWaterDepth(3));
+    markerAddress();
+  }
+  else if (selectedValue == '13') {
+    // rivers current (depth)
+    map.addLayer(surfaceWaterDepthRos(1));
+    markerAddress();
+  }
+  else if (selectedValue == '14') {
+    // rivers future (depth sw)
+    map.addLayer(surfaceWaterDepthRos(2));
+    markerAddress();
+  }
+  else if (selectedValue == '15') {
+    // surface water speed low risk
+    map.addLayer(surfaceWaterSpeed(3));
+    map.addLayer(surfaceWaterDirection(3));
+    markerAddress();
+  }
+  else if (selectedValue == '17') {
+    // River and sea high risk
+    map.addLayer(riverSea(4));
+    map.addLayer(riverSea(3));
+    map.addLayer(riverSea(2));
+    map.addLayer(riverSea(1));
+    markerAddress();
+  }
+  else if (selectedValue == '18') {
+    // River and sea medium risk
+    map.addLayer(riverSea(2));
+    markerAddress();
+  }
+  else if (selectedValue == '19') {
+    // River and sea low risk
+    map.addLayer(riverSea(4));
+    map.addLayer(riverSea(3));
+    markerAddress();
+  }
+  else if (selectedValue == '31') {
+    // Reservoirs scenario on
+    map.addLayer(reservoirRiver('DryDay'));
+    map.addLayer(reservoirRiver('WetDay'));
+    markerAddress();
+  }
+  else if (selectedValue == '20' || selectedValue == '30') {
+    // Base map only selection
+    removeLayers();
+    markerAddress();
+  }
+
+  // remove marker if not checked
+  if (!displayOptionCheckbox.prop('checked')) {
+    removeMarkerAddress();
+  }
+
+});
+
+
+// close button on mobile map
+$('.defra-map-info__close').on('click', function() {
+  const screenWidth = $(window).width();
+  console.log('something');
+  // Hide the map key container when the close button is clicked
+  $('#mobile-key-panel').css('display', 'none');
+  if (screenWidth < 520) {
+  $('#mobile-key-panel-bottom').css('display', 'none');
+  }
+  $('#open-key').css('display', 'block');
+});
+
+
+
+// open key
+$('#open-key').on('click', function() {
+  const screenWidth = $(window).width();
+  $('#mobile-key-panel').css('display', 'block');
+  if (screenWidth < 520) {
+  $('#mobile-key-panel-bottom').css('display', 'block');
+  }
+  $('#open-key').css('display', 'none');
+});
+
+
+// panel buttons 
+/* $(document).ready(function () {
+  var resButton = $('#res-btn');
+  var rosButton = $('#ros-btn');
+  var swButton = $('#sw-btn');
+  var extentButton = $('#ext-btn')
+  var depthButton = $('#depth-btn')
+  var d20Button = $('#d20-btn')
+  var d30Button = $('#d30-btn')
+  var d60Button = $('#d60-btn')
+  var d90Button = $('#d90-btn')
+  var buttonMore = $('#btn-more');
+
+  resButton.on('click', function () {
+    // Check if the left button is not pressed
+    if (resButton.attr('aria-pressed') === 'false') {
+      // Set aria-pressed to true for the left button
+      resButton.attr('aria-pressed', 'true');
+      
+      // Set aria-pressed to false for other sources
+      rosButton.attr('aria-pressed', 'false');
+      swButton.attr('aria-pressed', 'false');
+
+         // Hide unrelated containers
+         $('#measurement-container').css('display', 'none');
+         $('#sw-key-row').css('display', 'none');
+         $('#ros-key-row').css('display', 'none');
+         $('#timeline').css('display', 'none');
+         $('#btn-more').css('display', 'none');
+
+         // Show reservoir key
+         $('#res-key-row').css('display', 'block');
+         
+
+         //Styling for res panel
+         $('#src-container').css('margin-top', '20px');
+
+      // Log the click event
+      console.log('RES. aria-pressed: true');
+    }
+  });
+
+  rosButton.on('click', function () {
+    // Check if the right button is not pressed
+    if (rosButton.attr('aria-pressed') === 'false') {
+      // Set aria-pressed to true for the right button
+      rosButton.attr('aria-pressed', 'true');
+      
+      // Set aria-pressed to false for the left button
+      resButton.attr('aria-pressed', 'false');
+      swButton.attr('aria-pressed', 'false');
+
+      // Show related containers
+      $('#measurement-container').css('display', 'block');
+      $('#ros-key-row').css('display', 'block');
+      $('#timeline').css('display', 'block');
+      $('#btn-more').css('display', 'block');
+
+       if (buttonMore.attr('aria-expanded') === 'false' && rosButton.attr('aria-pressed') === 'true'){
+        $('#ros-key-row').css('display', 'none');
+      }
+
+      // Hide other key
+      $('#res-key-row').css('display', 'none');
+      $('#sw-key-row').css('display', 'none');
+      //Styling for res panel
+      $('#src-container').css('margin-top', '10px');
+      $('.timeline-btn-right').css('margin-right', '30px');
+
+
+      // Log the click event
+      console.log('ROS aria-pressed: true');
+    }
+  });
+
+  swButton.on('click', function () {
+    // Check if the right button is not pressed
+    if (swButton.attr('aria-pressed') === 'false') {
+      // Set aria-pressed to true for the right button
+      swButton.attr('aria-pressed', 'true');
+      
+      // Set aria-pressed to false for the left button
+      resButton.attr('aria-pressed', 'false');
+      rosButton.attr('aria-pressed', 'false');
+
+      // Show related containers
+      $('#measurement-container').css('display', 'block');
+      $('#sw-key-row').css('display', 'block');
+      $('#timeline').css('display', 'block');
+      $('#btn-more').css('display', 'block');
+
+
+      
+      if (buttonMore.attr('aria-expanded') === 'false' && swButton.attr('aria-pressed') === 'true'){
+            $('#sw-key-row').css('display', 'none');
+        }
+
+      // Hide other key
+      $('#res-key-row').css('display', 'none');
+      $('#ros-key-row').css('display', 'none');
+
+      //Styling for res panel
+      $('#src-container').css('margin-top', '10px');
+      $('.timeline-btn-right').css('margin-right', '30px');
+
+      // Log the click event
+      console.log('SW aria-pressed: true');
+    }
+  });
+
+
+  extentButton.on('click', function () {
+    // Check if the left button is not pressed
+    if (extentButton.attr('aria-pressed') === 'false') {
+      // Set aria-pressed to true for the left button
+      extentButton.attr('aria-pressed', 'true');
+      depthButton.attr('aria-pressed', 'false');
+      // hide depth levels container
+      $('#depths-container').css('display', 'none');
+    }
+    });
+    depthButton.on('click', function () {
+      // Check if the left button is not pressed
+      if (depthButton.attr('aria-pressed') === 'false') {
+        // Set aria-pressed to true for the left button
+        depthButton.attr('aria-pressed', 'true');
+        extentButton.attr('aria-pressed', 'false');
+
+        // show depth levels container
+        $('#depths-container').css('display', 'block');
+      }
+      });
+
+      d20Button.on('click', function () {
+        // Check if the left button is not pressed
+        if (d20Button.attr('aria-pressed') === 'false') {
+          // Set aria-pressed to true for the left button
+          d20Button.attr('aria-pressed', 'true');
+          d30Button.attr('aria-pressed', 'false');
+          d60Button.attr('aria-pressed', 'false');
+          d90Button.attr('aria-pressed', 'false');
+        }
+        });
+
+        d30Button.on('click', function () {
+          // Check if the left button is not pressed
+          if (d30Button.attr('aria-pressed') === 'false') {
+            // Set aria-pressed to true for the left button
+            d30Button.attr('aria-pressed', 'true');
+            d20Button.attr('aria-pressed', 'false');
+            d60Button.attr('aria-pressed', 'false');
+            d90Button.attr('aria-pressed', 'false');
+          }
+          });
+
+          d60Button.on('click', function () {
+            // Check if the left button is not pressed
+            if (d60Button.attr('aria-pressed') === 'false') {
+              // Set aria-pressed to true for the left button
+              d60Button.attr('aria-pressed', 'true');
+              d20Button.attr('aria-pressed', 'false');
+              d30Button.attr('aria-pressed', 'false');
+              d90Button.attr('aria-pressed', 'false');
+            }
+            });
+
+            d90Button.on('click', function () {
+              // Check if the left button is not pressed
+              if (d90Button.attr('aria-pressed') === 'false') {
+                // Set aria-pressed to true for the left button
+                d90Button.attr('aria-pressed', 'true');
+                d20Button.attr('aria-pressed', 'false');
+                d30Button.attr('aria-pressed', 'false');
+                d60Button.attr('aria-pressed', 'false');
+              }
+              });
+  });
+
+  $(document).ready(function() {
+    $('#btn-more').click(function() {
+        $('.fm-c-btn-more__chevron').toggleClass('fm-c-btn-more__chevron--active');
+        var buttonText = $('#btn-more-text').text();
+        var buttonMore = $('#btn-more');
+        var rosButton = $('#ros-btn');
+        var swButton = $('#sw-btn');
+
+        if (buttonText === 'Show map key') {
+            $('#btn-more-text').text('Hide map key');
+        } else {
+            $('#btn-more-text').text('Show map key');
+        }
+
+        if (buttonMore.attr('aria-expanded') === 'false' && swButton.attr('aria-pressed') === 'true')  {
+            $('#sw-key-row').css('display', 'block');
+            buttonMore.attr('aria-expanded', 'true'); // Update aria-expanded attribute
+        } else if (buttonMore.attr('aria-expanded') === 'true' && swButton.attr('aria-pressed') === 'true'){
+            $('#sw-key-row').css('display', 'none');
+            buttonMore.attr('aria-expanded', 'false'); // Update aria-expanded attribute
+        }
+
+        if (buttonMore.attr('aria-expanded') === 'false' && rosButton.attr('aria-pressed') === 'true')  {
+          $('#sw-key-row').css('display', 'none');
+          $('#ros-key-row').css('display', 'block');
+          buttonMore.attr('aria-expanded', 'true'); // Update aria-expanded attribute
+      } else if (buttonMore.attr('aria-expanded') === 'true' && rosButton.attr('aria-pressed') === 'true'){
+          $('#sw-key-row').css('display', 'none');
+          $('#ros-key-row').css('display', 'none');
+          buttonMore.attr('aria-expanded', 'false'); // Update aria-expanded attribute
+      }
+
+    });
+}); */
+
+// Panel buttons
+// Used classes instead of IDs on elements because of shortcut using a mobile panel and a separate desktop panel
+
+$(document).ready(function () {
+  var resButton = $('.res-btn');
+  var rosButton = $('.ros-btn');
+  var swButton = $('.sw-btn');
+  var extentButton = $('.ext-btn')
+  var depthButton = $('.depth-btn')
+  var d20Button = $('.d20-btn')
+  var d30Button = $('.d30-btn')
+  var d60Button = $('.d60-btn')
+  var d90Button = $('.d90-btn')
+  var buttonMore = $('.btn-more');
+
+  resButton.on('click', function () {
+    // Check if the left button is not pressed
+    if (resButton.attr('aria-pressed') === 'false') {
+      // Set aria-pressed to true for the left button
+      resButton.attr('aria-pressed', 'true');
+      
+      // Set aria-pressed to false for other sources
+      rosButton.attr('aria-pressed', 'false');
+      swButton.attr('aria-pressed', 'false');
+
+         // Hide unrelated containers
+         $('.measurement-container').css('display', 'none');
+         $('.sw-key-row').css('display', 'none');
+         $('.ros-key-row').css('display', 'none');
+         $('.timeline').css('display', 'none');
+         $('.btn-more').css('display', 'none');
+         $('.depths-container').css('display', 'none');
+
+         // Show reservoir key
+         $('.res-key-row').css('display', 'block');
+         
+
+         //Styling for res panel
+         $('.src-container').css('margin-top', '20px');
+
+      // Log the click event
+      console.log('RES. aria-pressed: true');
+    }
+  });
+
+  rosButton.on('click', function () {
+    // Check if the right button is not pressed
+    if (rosButton.attr('aria-pressed') === 'false') {
+      // Set aria-pressed to true for the right button
+      rosButton.attr('aria-pressed', 'true');
+      
+      // Set aria-pressed to false for the left button
+      resButton.attr('aria-pressed', 'false');
+      swButton.attr('aria-pressed', 'false');
+
+      // Show related containers
+      $('.measurement-container').css('display', 'block');
+      $('.ros-key-row').css('display', 'block');
+      $('.timeline').css('display', 'block');
+      $('.btn-more').css('display', 'block');
+
+       if (buttonMore.attr('aria-expanded') === 'false' && rosButton.attr('aria-pressed') === 'true'){
+        $('.ros-key-row').css('display', 'none');
+      }
+
+      // Hide other key
+      $('.res-key-row').css('display', 'none');
+      $('.sw-key-row').css('display', 'none');
+      //Styling for res panel
+      $('.src-container').css('margin-top', '10px');
+/*       $('.timeline-btn-right').css('margin-right', '30px'); */
+
+
+      // Log the click event
+      console.log('ROS aria-pressed: true');
+    }
+  });
+
+  swButton.on('click', function () {
+    // Check if the right button is not pressed
+    if (swButton.attr('aria-pressed') === 'false') {
+      // Set aria-pressed to true for the right button
+      swButton.attr('aria-pressed', 'true');
+      
+      // Set aria-pressed to false for the left button
+      resButton.attr('aria-pressed', 'false');
+      rosButton.attr('aria-pressed', 'false');
+
+      // Show related containers
+      $('.measurement-container').css('display', 'block');
+      $('.sw-key-row').css('display', 'block');
+      $('.timeline').css('display', 'block');
+      $('.btn-more').css('display', 'block');
+
+
+      
+      if (buttonMore.attr('aria-expanded') === 'false' && swButton.attr('aria-pressed') === 'true'){
+            $('.sw-key-row').css('display', 'none');
+        }
+
+      // Hide other key
+      $('.res-key-row').css('display', 'none');
+      $('.ros-key-row').css('display', 'none');
+
+      //Styling for res panel
+      $('.src-container').css('margin-top', '10px');
+/*       $('.timeline-btn-right').css('margin-right', '30px'); */
+
+      // Log the click event
+      console.log('SW aria-pressed: true');
+    }
+  });
+
+
+  extentButton.on('click', function () {
+    // Check if the left button is not pressed
+    if (extentButton.attr('aria-pressed') === 'false') {
+      // Set aria-pressed to true for the left button
+      extentButton.attr('aria-pressed', 'true');
+      depthButton.attr('aria-pressed', 'false');
+      // hide depth levels container
+      $('.depths-container').css('display', 'none');
+    }
+    });
+    depthButton.on('click', function () {
+      // Check if the left button is not pressed
+      if (depthButton.attr('aria-pressed') === 'false') {
+        // Set aria-pressed to true for the left button
+        depthButton.attr('aria-pressed', 'true');
+        extentButton.attr('aria-pressed', 'false');
+
+        // show depth levels container
+        $('.depths-container').css('display', 'block');
+      }
+      });
+
+      d20Button.on('click', function () {
+        // Check if the left button is not pressed
+        if (d20Button.attr('aria-pressed') === 'false') {
+          // Set aria-pressed to true for the left button
+          d20Button.attr('aria-pressed', 'true');
+          d30Button.attr('aria-pressed', 'false');
+          d60Button.attr('aria-pressed', 'false');
+          d90Button.attr('aria-pressed', 'false');
+        }
+        });
+
+        d30Button.on('click', function () {
+          // Check if the left button is not pressed
+          if (d30Button.attr('aria-pressed') === 'false') {
+            // Set aria-pressed to true for the left button
+            d30Button.attr('aria-pressed', 'true');
+            d20Button.attr('aria-pressed', 'false');
+            d60Button.attr('aria-pressed', 'false');
+            d90Button.attr('aria-pressed', 'false');
+          }
+          });
+
+          d60Button.on('click', function () {
+            // Check if the left button is not pressed
+            if (d60Button.attr('aria-pressed') === 'false') {
+              // Set aria-pressed to true for the left button
+              d60Button.attr('aria-pressed', 'true');
+              d20Button.attr('aria-pressed', 'false');
+              d30Button.attr('aria-pressed', 'false');
+              d90Button.attr('aria-pressed', 'false');
+            }
+            });
+
+            d90Button.on('click', function () {
+              // Check if the left button is not pressed
+              if (d90Button.attr('aria-pressed') === 'false') {
+                // Set aria-pressed to true for the left button
+                d90Button.attr('aria-pressed', 'true');
+                d20Button.attr('aria-pressed', 'false');
+                d30Button.attr('aria-pressed', 'false');
+                d60Button.attr('aria-pressed', 'false');
+              }
+              });
+  });
+
+  $(document).ready(function() {
+    $('.btn-more').click(function() {
+        $('.fm-c-btn-more__chevron').toggleClass('fm-c-btn-more__chevron--active');
+        var buttonText = $('#btn-more-text').text();
+        var desktopButtonText = $('#btn-more-text-desktop').text();
+        var buttonMore = $('.btn-more');
+        var rosButton = $('.ros-btn');
+        var swButton = $('.sw-btn');
+
+        if (buttonText === 'Show map key') {
+            $('#btn-more-text').text('Hide map key');
+        } else {
+            $('#btn-more-text').text('Show map key');
+        }
+
+        if (desktopButtonText === 'Show map key') {
+          $('#btn-more-text-desktop').text('Hide map key');
+      } else {
+          $('#btn-more-text-desktop').text('Show map key');
+      }
+
+
+        if (buttonMore.attr('aria-expanded') === 'false' && swButton.attr('aria-pressed') === 'true')  {
+            $('.sw-key-row').css('display', 'block');
+            buttonMore.attr('aria-expanded', 'true'); // Update aria-expanded attribute
+        } else if (buttonMore.attr('aria-expanded') === 'true' && swButton.attr('aria-pressed') === 'true'){
+            $('.sw-key-row').css('display', 'none');
+            buttonMore.attr('aria-expanded', 'false'); // Update aria-expanded attribute
+        }
+
+        if (buttonMore.attr('aria-expanded') === 'false' && rosButton.attr('aria-pressed') === 'true')  {
+          $('.sw-key-row').css('display', 'none');
+          $('.ros-key-row').css('display', 'block');
+          buttonMore.attr('aria-expanded', 'true'); // Update aria-expanded attribute
+      } else if (buttonMore.attr('aria-expanded') === 'true' && rosButton.attr('aria-pressed') === 'true'){
+          $('.sw-key-row').css('display', 'none');
+          $('.ros-key-row').css('display', 'none');
+          buttonMore.attr('aria-expanded', 'false'); // Update aria-expanded attribute
+      }
+
+    });
 });

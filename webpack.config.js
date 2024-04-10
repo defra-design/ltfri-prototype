@@ -45,7 +45,8 @@ module.exports = {
     mapv10direct_b : './app/assets/javascripts/maps/map-v10-direct-b.js',
     mapv11 : './app/assets/javascripts/maps/map-v11.js',
     mapv12 : './app/assets/javascripts/maps/map-v12.js',
-    mapv12direct : './app/assets/javascripts/maps/map-v12-direct.js'
+    mapv12direct : './app/assets/javascripts/maps/map-v12-direct.js',
+    mapv13 : './app/assets/javascripts/maps/map-v13.js'
 
           },
   output: {

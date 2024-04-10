@@ -1260,3 +1260,56 @@ h1{
   margin-bottom: 10px;
 }
 
+
+// v14
+
+.panel {
+  @include mq ($from: 520px){
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 450px;
+    display: block;
+    pointer-events: auto;
+  }
+  display: none;
+}
+
+#mobile-key-panel {
+  @include mq ($from: 520px){
+    pointer-events: auto;
+    max-height: 100%;
+    flex-direction: column;
+    position: relative;
+    display: block;
+  }
+  display: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 3px 2px;
+  width: 100%;
+  background-color: #ffffff; /* Adjust background color */
+  padding:  18px 18px 18px;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  @include govuk-font($size: 16);
+ 
+}
+
+
+#mobile-key-panel-bottom {
+  @include mq ($from: 520px){
+    display: none;
+  }
+  display: block;
+  flex-direction: column;
+  position: absolute;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 3px 2px;
+  width: 100%;
+  background-color: #ffffff; /* Adjust background color */
+  padding:  18px 18px 18px;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  @include govuk-font($size: 16);
+  pointer-events: auto;
+}

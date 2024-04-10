@@ -24,8 +24,8 @@ Surface water map
         </svg>
       <span id="map-button-text">Show advanced options</span></button> -->
 
-      <img class="defra-map-os-logo" alt="Ordnance Survey logo" src="/public/images/map-os-logo.png" width="90"
-    height="24" style="pointer-events: auto; display: block;">
+     <!--  <img class="defra-map-os-logo" alt="Ordnance Survey logo" src="/public/images/map-os-logo.png" width="90"
+    height="24" style="pointer-events: auto; display: block;"> -->
 
     
 
@@ -105,12 +105,12 @@ Surface water map
 
 <!-- new scenario control -->
 
-<!-- <div class="defra-map-scenarios-depth-v4 v10-mob-depth">
+<div class="defra-map-scenarios-depth-v4 v10-mob-depth">
   <div class="defra-map-scenarios__container" id="scenarios-controls">
  <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
   <i class="fa-solid fa-chevron-left left-btn arrow-padding" aria-hidden="true" style="display: none;"></i>
   <i class="fa-solid fa-chevron-right right-btn arrow-padding" aria-hidden="true" style="display: none;"></i>
-       <div class="govuk-radios__item">
+     <!--   <div class="govuk-radios__item">
          <input class="govuk-radios__input" id="sw-high" name="scenarios" type="radio" value="11" {% if swHigh %}checked{% endif %}>
          <label class="govuk-label govuk-radios__label" for="sw-high">
                  <strong>Yearly chance</strong>       
@@ -123,12 +123,12 @@ Surface water map
            <strong>Yearly chance by the 2050s</strong>   
            <span class="risk-context-v3">Flood area</span>
      </label>
-       </div>
+       </div> -->
       
      </div>
       
 </div>
-</div> -->
+</div>
 <!-- end of radios -->
        
 </div>
@@ -139,19 +139,15 @@ Surface water map
 
      
  <!-- attribution start -->
-  <div class="defra-map-info dialog-right-extent" id="info" role="dialog" style="display:block; height: 200px;" aria-modal="true" aria-labelledby="infoLabel" aria-describedby="infoDescription" tabindex="5">
-   <!--  <h2 id="infoLabel" class="govuk-visually-hidden">Attributions</h2>
-    <div class="defra-map-info__container">
-      <div id="infoContent" class="defra-map-info__content">
-        <div id="infoDescription">
-          <div class="ol-attribution ol-unselectable ol-control ol-uncollapsible govuk-!-padding-2">
-            <ul class="govuk-list">
-              <li class="govuk-!-font-size-14"><a href="https://check-long-term-flood-risk.service.gov.uk/os-terms">Contains OS data</a><br>© Crown copyright and database rights 2023</li>
-            </ul>
-          </div>
-        </div>
-      </div> -->
-     
+  <!-- <div class="defra-map-info dialog-right-extent" id="info" role="dialog" style="display:block; height: 200px;" aria-modal="true" aria-labelledby="infoLabel" aria-describedby="infoDescription" tabindex="5">
+  
+      <div class="radio-container">
+        <input type="radio" id="radio1" name="radios" />
+        <label for="radio1"></label>
+    
+        <input type="radio" id="radio2" name="radios" />
+        <label for="radio2"></label>
+    </div>
       <div class="info-title" style="padding-top: 30px; padding-left: 20px;">Surface Water</div>
       <div class="info-row">
         <div class="info-box">
@@ -180,23 +176,33 @@ Surface water map
         <span class="govuk-visually-hidden">Close</span>
       </button>
     </div>
-    <div class="radio-container">
-      <input type="radio" id="radio1" name="radios" />
-      <label for="radio1">test</label>
-  
-      <input type="radio" id="radio2" name="radios" />
-      <label for="radio2">test</label>
-  </div>
-    </div>
+   
+    </div> -->
   
 
   <!-- attribution end -->
-  
+
 <!-- Mobile key --> 
-<!-- <div id="info-panel">
-
-  <div class="info-title">Surface Water</div>
-
+<div id="mobile-key-panel" style="padding-top: 0;">
+  <button class="defra-map-info__close">
+    <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
+      <path d="M10,8.6L15.6,3L17,4.4L11.4,10L17,15.6L15.6,17L10,11.4L4.4,17L3,15.6L8.6,10L3,4.4L4.4,3L10,8.6Z" style="fill:currentColor;stroke:currentColor;stroke-width:0.1px;"></path>
+    </svg>
+    <span class="govuk-visually-hidden">Close</span>
+  </button>
+<div class="timeline-container">
+  <div class="timeline-btn-grp">
+  <button class="timeline-btn-left" aria-pressed="true" id="timeline-btn-left">
+    <span>Present day</span>
+  </button>
+  <button class="timeline-btn-right" aria-pressed="false" id="timeline-btn-right">
+    <span>2050s</span>
+  </button>
+</div>
+</div>
+<!-- <div class="info-title">Surface Water</div> -->
+<div class="flood-risk-group" style="display: flex; flex-direction: column; margin-top: 10px;">
+<span>Surface water yearly chance of flooding</span>
   <div class="info-row">
     <div class="info-box">
       <div class="svg-square">
@@ -217,8 +223,9 @@ Surface water map
       <span>Low chance</span>
     </div>
   </div>
+</div>
  
-</div> -->
+</div>
       
 
 

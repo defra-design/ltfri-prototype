@@ -1,48 +1,182 @@
- /* Container styles */
- .radio-container {
+// timeline
+
+.timeline-container {
+    margin: 10px 0 0 0;
     display: flex;
-    align-items: center;
     position: relative;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+    &:after {
+        position: absolute;
+        content: '';
+        left: 0px;
+        right: 0px;
+        bottom: 20px;
+        border-top: 3px solid #e7e7e7;
+        z-index: 0;
+    }
 }
 
-/* Radio button styles */
-.radio-container input[type="radio"] {
-    display: none;
+.timeline-btn-grp {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px 0 15px;
+    z-index: 1;
+    width: 100%;
 }
 
-.radio-container label {
-    margin-right: 20px;
-    position: relative;
-    cursor: pointer;
+.timeline-btn-left {
+    height: 50px;
+    width: 50%;
+    background-color: transparent;
+    margin-bottom: 15px;
+    padding: 0 5px 24px 5px;
+    border: none;
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        left: 25%;
+        top: 59%;
+        margin-left: 0px;
+        bottom: 0px;
+        width: 10px;
+        height: 10px;
+        border: 0;
+        border-radius: 100%;
+        background-color: #e7e7e7;
+        outline: 0;
+    }
+    &:after {
+        
+    }
+    & span {
+        @include govuk-font($size: 19);
+        position: relative;
+        display: block;
+        font-weight: 700;
+        padding: 2px 0;
+        padding-right: 4px;
+        white-space: nowrap;
+        text-decoration: underline;
+        text-underline-offset: 0.1578em;
+        color: #505a5f;
+    }
 }
 
-/* Line styles using :after pseudo-selector */
-.radio-container:after {
-    content: '';
+.timeline-btn-left[aria-pressed="true"] span {
+    text-decoration: none;
+    color: #0b0c0c;
+}
+
+.timeline-btn-left[aria-pressed="true"]:before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        left: 25.80%;
+        top: 52%;
+        margin-left: -9px;
+        bottom: 1px;    
+        width: 18px;
+        height: 18px;
+        border-radius: 100%;
+        background-color: white;
+        border: 2px solid #0b0c0c;
+}
+
+.timeline-btn-left[aria-pressed="true"]:after {
+    content: "";
     position: absolute;
-    bottom: 50%;
-    left: 5px;
-    right: 5px;
-    height: 3px;
-    background-color: grey;
-    z-index: -1;
+    z-index: 2;
+    left: 25.80%;
+    top: 58.40%;
+    margin-left: -5px;
+    bottom: 5px;
+    width: 14px;
+    height: 14px;
+    border: 0;
+    border-radius: 100%;
+    background-color: black;
+    outline: 0;
 }
 
-/* Custom radio button appearance */
-.radio-container input[type="radio"] + label:before {
-    content: '';
+.timeline-btn-right {
+    height: 50px;
+    width: 50%;
+    background-color: transparent;
+    margin-bottom: 15px;
+    padding: 0 5px 24px 5px;
+    border: 0;
+/*     z-index: 3; */
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        @include mq ($from: 520px){
+            left: 52%;
+        }
+        top: 59%;
+        margin-left: 80px;
+        bottom: 0px;
+        width: 10px;
+        height: 10px;
+        border: 0;
+        border-radius: 100%;
+        background-color: #e7e7e7;
+        outline: 0;
+    }
+    &:after {
+        
+    }
+    & span {
+        @include govuk-font($size: 19);
+        position: relative;
+        display: block;
+        font-weight: 700;
+        padding: 2px 0;
+        white-space: nowrap;
+        text-decoration: underline;
+        text-underline-offset: 0.1578em;
+        color: #505a5f;
+    }
+}
+
+.timeline-btn-right[aria-pressed="true"] span {
+    text-decoration: none;
+    color: #0b0c0c;
+}
+
+.timeline-btn-right[aria-pressed="true"]:before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        left: 72%;
+        top: 50%;
+        margin-left: -9px;
+        bottom: 1px;    
+        width: 18px;
+        height: 18px;
+        border-radius: 100%;
+        background-color: white;
+        border: 2px solid #0b0c0c;
+}
+
+.timeline-btn-right[aria-pressed="true"]:after {
+    content: "";
     position: absolute;
-    top: 50%;
-    left: -20px;
-    width: 15px;
-    height: 15px;
-    border: 2px solid grey;
-    border-radius: 50%;
-    background-color: white;
-    transform: translateY(-50%);
-}
-
-/* Checked radio button appearance */
-.radio-container input[type="radio"]:checked + label:before {
-    background-color: grey;
+    z-index: 2;
+    left: 72%;
+    top: 56%;
+    margin-left: -5px;
+    bottom: 5px;
+    width: 14px;
+    height: 14px;
+    border: 0;
+    border-radius: 100%;
+    background-color: black;
+    outline: 0;
 }
