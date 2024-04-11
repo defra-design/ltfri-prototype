@@ -43,7 +43,7 @@
   &:focus[keyboard-focus]:after {
     @include focus($glow: 5px, $strong: 2px, $background: 0px, $inset: 1px);
    }
-   &:focus {
+   &:focus-visible {
     @include focus($glow: 5px, $strong: 2px, $background: 0px, $inset: 1px);
    }
 }
@@ -1273,6 +1273,11 @@ h1{
     pointer-events: auto;
   }
   display: none;
+  border: 2px solid #0b0c0c;
+  &:focus-visible {
+        border: 2px solid #0b0c0c;
+        outline: 3px solid #ffdd00;
+  }
 }
 
 #mobile-key-panel {
@@ -1312,4 +1317,20 @@ h1{
   box-sizing: border-box;
   @include govuk-font($size: 16);
   pointer-events: auto;
+}
+
+.desktop-margin {
+  @include mq ($from: 769px){
+  margin-right: 5px;
+  }
+}
+
+.key-margin {
+  @include mq ($from: 640px){
+    margin-bottom: 5px;
+    }
+}
+
+.v14-box-shadow{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 3px 2px;
 }

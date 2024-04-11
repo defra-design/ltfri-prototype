@@ -1235,23 +1235,24 @@ $('.defra-map-info__close').on('click', function() {
   const screenWidth = $(window).width();
   console.log('something');
   // Hide the map key container when the close button is clicked
-  $('#mobile-key-panel').css('display', 'none');
+  $('.panel').css('display', 'none');
   if (screenWidth < 520) {
   $('#mobile-key-panel-bottom').css('display', 'none');
   }
   $('#open-key').css('display', 'block');
+  $('#open-key').focus();
 });
 
 
-
-// open key
 $('#open-key').on('click', function() {
   const screenWidth = $(window).width();
-  $('#mobile-key-panel').css('display', 'block');
+  $('.panel').css('display', 'block');
   if (screenWidth < 520) {
-  $('#mobile-key-panel-bottom').css('display', 'block');
+    $('#mobile-key-panel-bottom').css('display', 'block');
+    $('.panel').css('display', 'none');
   }
   $('#open-key').css('display', 'none');
+  $('.panel').focus();
 });
 
 
@@ -1506,7 +1507,7 @@ $(document).ready(function () {
          
 
          //Styling for res panel
-         $('.src-container').css('margin-top', '20px');
+         $('.src-container').css('margin-top', '0px');
 
       // Log the click event
       console.log('RES. aria-pressed: true');
@@ -1529,6 +1530,10 @@ $(document).ready(function () {
       $('.timeline').css('display', 'block');
       $('.btn-more').css('display', 'block');
 
+      if (depthButton.attr('aria-pressed') === 'true') {
+        $('.depths-container').css('display', 'block');
+      }
+
        if (buttonMore.attr('aria-expanded') === 'false' && rosButton.attr('aria-pressed') === 'true'){
         $('.ros-key-row').css('display', 'none');
       }
@@ -1538,7 +1543,8 @@ $(document).ready(function () {
       $('.sw-key-row').css('display', 'none');
       //Styling for res panel
       $('.src-container').css('margin-top', '10px');
-/*       $('.timeline-btn-right').css('margin-right', '30px'); */
+
+      $('#mobile-key-panel-bottom .timeline-btn-right').css('margin-right', '30px');
 
 
       // Log the click event
@@ -1562,7 +1568,9 @@ $(document).ready(function () {
       $('.timeline').css('display', 'block');
       $('.btn-more').css('display', 'block');
 
-
+      if (depthButton.attr('aria-pressed') === 'true') {
+        $('.depths-container').css('display', 'block');
+      }
       
       if (buttonMore.attr('aria-expanded') === 'false' && swButton.attr('aria-pressed') === 'true'){
             $('.sw-key-row').css('display', 'none');
@@ -1574,7 +1582,7 @@ $(document).ready(function () {
 
       //Styling for res panel
       $('.src-container').css('margin-top', '10px');
-/*       $('.timeline-btn-right').css('margin-right', '30px'); */
+      $('#mobile-key-panel-bottom .timeline-btn-right').css('margin-right', '30px');
 
       // Log the click event
       console.log('SW aria-pressed: true');
