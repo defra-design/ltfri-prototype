@@ -159,6 +159,9 @@
         position: absolute;
         z-index: 1;
         left: 72%;
+       /*  @include mq ($from: 520px){
+            top: 49%;
+        } */
         top: 50%;
         margin-left: -9px;
         bottom: 1px;    

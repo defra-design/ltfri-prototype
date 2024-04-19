@@ -1317,6 +1317,10 @@ h1{
   box-sizing: border-box;
   @include govuk-font($size: 16);
   pointer-events: auto;
+  &:focus-visible {
+    border-top: 3px solid #0b0c0c;
+    outline: 3px solid #ffdd00;
+}
 }
 
 .desktop-margin {
@@ -1328,9 +1332,17 @@ h1{
 .key-margin {
   @include mq ($from: 640px){
     margin-bottom: 5px;
+    width: 90px;
     }
 }
 
 .v14-box-shadow{
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 3px 2px;
+}
+
+.panel-title {
+  font-size: 19px;
+  @include mq ($until: 640px){
+    font-size: 16px;
+}
 }
