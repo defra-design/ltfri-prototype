@@ -621,6 +621,15 @@ $(document).ready(function () {
   });
 });
 
+$(document).ready(function () {
+  var techExit = $('#exit-map-tech');
+  techExit.on('click', function () {
+
+    // Navigate to another page
+    window.location.href = 'where-do-you-want-to-check.html';
+  });
+});
+
 
 // add viewport styling to map
 
