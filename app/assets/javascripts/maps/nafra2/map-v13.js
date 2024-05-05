@@ -459,6 +459,10 @@ function removeMarkerAddressRadius() {
   map.removeLayer(addressLayer) */;
 };
 
+// Check if the current page is 'technical-map' to not make it appear invisible for users
+if (window.location.pathname === '/version_14/nafra2/technical-map') {
+  markerLayer.setMinZoom(15);
+}
 
 //Add the correct layers on page load
 $( window ).on( "load", function() {
@@ -491,27 +495,21 @@ removeLayers();
     // nafra2 to show less risk (current)
     map.addLayer(surfaceWaterDepth(2)),
     markerAddress();
-  /*   map.addLayer(surfaceWater(3))
-    map.addLayer(surfaceWater(2))
-    map.addLayer(surfaceWater(1))
-    markerAddress(); */
   } 
    else if (pathname == '/version_14/nafra2/rivers-sea'){
-   /*  map.addLayer(surfaceWaterRos(3))
-    map.addLayer(surfaceWaterRos(2))
-    map.addLayer(surfaceWaterRos(1))
-    markerAddress(); */
     map.addLayer(surfaceWaterDepthRos(1)),
-    /* map.addLayer(riverSea(4)),
-    map.addLayer(riverSea(3)),
-    map.addLayer(riverSea(2)),
-    map.addLayer(riverSea(1)), */
     markerAddress();
   }
 
    else if (pathname == '/version_14/nafra2/reservoirs'){
     map.addLayer(reservoirRiver('DryDay')),
     map.addLayer(reservoirRiver('WetDay')),
+    markerAddress();
+  }
+
+  if (pathname == '/version_14/nafra2/technical-map'){
+    // nafra2 to show less risk (current)
+    map.addLayer(surfaceWaterDepth(2)),
     markerAddress();
   }
 
@@ -620,16 +618,6 @@ $(document).ready(function () {
   exitButton.on('click', function () {
     // Navigate to another page
     window.location.href = 'results-full-ros.html';
-  });
-});
-
-
-$(document).ready(function () {
-  var velocityExit = $('#advanced-map-button-velocity');
-  velocityExit.on('click', function () {
-
-    // Navigate to another page
-    window.location.href = 'surface-water.html';
   });
 });
 
@@ -837,6 +825,7 @@ $('#open-key').on('click', function() {
   if (screenWidth < 520) {
     $('#mobile-key-panel-bottom').css('display', 'block');
     $('.panel').css('display', 'none');
+    $('#mobile-key-panel-bottom').focus();
   }
   $('#open-key').css('display', 'none');
   $('.panel').focus();
@@ -915,10 +904,25 @@ $(document).ready(function () {
 
       if (depthButton.attr('aria-pressed') === 'true') {
         $('.depths-container').css('display', 'block');
-        removeLayers();
-        map.addLayer(surfaceWaterDepthRos(3));
-        markerAddress();
-      }
+    
+        if (d30Button.attr('aria-pressed') === 'true') {
+            removeLayers();
+            map.addLayer(surfaceWaterDepthRos(2));
+            markerAddress();
+        } else if (d60Button.attr('aria-pressed') === 'true') {
+            removeLayers();
+            map.addLayer(surfaceWaterDepthRos(1));
+            markerAddress();
+        } else if (d90Button.attr('aria-pressed') === 'true') {
+            removeLayers();
+            map.addLayer(surfaceWaterDepthRos(0));
+            markerAddress();
+        } else {
+            removeLayers();
+            map.addLayer(surfaceWaterDepthRos(3));
+            markerAddress();
+        }
+    }
 
        if (buttonMore.attr('aria-expanded') === 'false' && rosButton.attr('aria-pressed') === 'true'){
         $('.ros-key-row').css('display', 'none');
@@ -1007,50 +1011,135 @@ $(document).ready(function () {
       depthButton.attr('aria-pressed', 'false');
       // hide depth levels container
       $('.depths-container').css('display', 'none');
+
+      if (swButton.attr('aria-pressed') === 'true') {
+        removeLayers();
+        map.addLayer(surfaceWaterDepth(2));
+      }
+
+      else if (rosButton.attr('aria-pressed') === 'true'){
+        removeLayers();
+        map.addLayer(surfaceWaterDepthRos(2));
+      }
     }
     });
     depthButton.on('click', function () {
       // Check if the left button is not pressed
-      if (depthButton.attr('aria-pressed') === 'false') {
+      // RS
+      if (depthButton.attr('aria-pressed') === 'false' && swButton.attr('aria-pressed') === 'true') {
         // Set aria-pressed to true for the left button
         depthButton.attr('aria-pressed', 'true');
         extentButton.attr('aria-pressed', 'false');
 
         // show depth levels container
         $('.depths-container').css('display', 'block');
+
+        if (d20Button.attr('aria-pressed') === 'true') {
+          removeLayers();
+          map.addLayer(surfaceWaterDepth(3));
+      } else if (d30Button.attr('aria-pressed') === 'true') {
+          removeLayers();
+          map.addLayer(surfaceWaterDepth(2));
+      } else if (d60Button.attr('aria-pressed') === 'true') {
+          removeLayers();
+          map.addLayer(surfaceWaterDepth(1));
+      } 
+      else if (d60Button.attr('aria-pressed') === 'true') {
+        removeLayers();
+      } 
       }
+     
+
+      // SW
+      if (depthButton.attr('aria-pressed') === 'false'  && rosButton.attr('aria-pressed') === 'true') {
+        // Set aria-pressed to true for the left button
+        depthButton.attr('aria-pressed', 'true');
+        extentButton.attr('aria-pressed', 'false');
+
+        // show depth levels container
+        $('.depths-container').css('display', 'block');
+
+        if (d20Button.attr('aria-pressed') === 'true') {
+          removeLayers();
+          map.addLayer(surfaceWaterDepthRos(3));
+      } else if (d30Button.attr('aria-pressed') === 'true') {
+          removeLayers();
+          map.addLayer(surfaceWaterDepthRos(2));
+      } else if (d60Button.attr('aria-pressed') === 'true') {
+          removeLayers();
+          map.addLayer(surfaceWaterDepthRos(1));
+      } 
+      else if (d60Button.attr('aria-pressed') === 'true') {
+        removeLayers();
+      } 
+      }
+      
       });
 
       d20Button.on('click', function () {
         // Check if the left button is not pressed
-        if (d20Button.attr('aria-pressed') === 'false') {
+        if (d20Button.attr('aria-pressed') === 'false' && swButton.attr('aria-pressed') === 'true') {
           // Set aria-pressed to true for the left button
           d20Button.attr('aria-pressed', 'true');
           d30Button.attr('aria-pressed', 'false');
           d60Button.attr('aria-pressed', 'false');
           d90Button.attr('aria-pressed', 'false');
+          removeLayers();
+          map.addLayer(surfaceWaterDepth(3));
+        }
+        else if (d20Button.attr('aria-pressed') === 'false' && rosButton.attr('aria-pressed') === 'true'){
+          d20Button.attr('aria-pressed', 'true');
+          d30Button.attr('aria-pressed', 'false');
+          d60Button.attr('aria-pressed', 'false');
+          d90Button.attr('aria-pressed', 'false');
+          removeLayers();
+          map.addLayer(surfaceWaterDepthRos(3));
         }
         });
 
         d30Button.on('click', function () {
           // Check if the left button is not pressed
-          if (d30Button.attr('aria-pressed') === 'false') {
+          if (d30Button.attr('aria-pressed') === 'false'  && swButton.attr('aria-pressed') === 'true')  {
             // Set aria-pressed to true for the left button
             d30Button.attr('aria-pressed', 'true');
             d20Button.attr('aria-pressed', 'false');
             d60Button.attr('aria-pressed', 'false');
             d90Button.attr('aria-pressed', 'false');
+            removeLayers();
+            map.addLayer(surfaceWaterDepth(2));
           }
+
+        else if (d30Button.attr('aria-pressed') === 'false'  && rosButton.attr('aria-pressed') === 'true')  {
+              // Set aria-pressed to true for the left button
+              d30Button.attr('aria-pressed', 'true');
+              d20Button.attr('aria-pressed', 'false');
+              d60Button.attr('aria-pressed', 'false');
+              d90Button.attr('aria-pressed', 'false');
+              removeLayers();
+              map.addLayer(surfaceWaterDepthRos(2));
+        }
           });
 
           d60Button.on('click', function () {
             // Check if the left button is not pressed
-            if (d60Button.attr('aria-pressed') === 'false') {
+            if (d60Button.attr('aria-pressed') === 'false' && swButton.attr('aria-pressed') === 'true')  {
               // Set aria-pressed to true for the left button
               d60Button.attr('aria-pressed', 'true');
               d20Button.attr('aria-pressed', 'false');
               d30Button.attr('aria-pressed', 'false');
               d90Button.attr('aria-pressed', 'false');
+              removeLayers();
+              map.addLayer(surfaceWaterDepth(1));
+            }
+
+            else if (d60Button.attr('aria-pressed') === 'false' && rosButton.attr('aria-pressed') === 'true') {
+                  // Set aria-pressed to true for the left button
+              d60Button.attr('aria-pressed', 'true');
+              d20Button.attr('aria-pressed', 'false');
+              d30Button.attr('aria-pressed', 'false');
+              d90Button.attr('aria-pressed', 'false');
+              removeLayers();
+              map.addLayer(surfaceWaterDepthRos(1));
             }
             });
 
@@ -1062,6 +1151,7 @@ $(document).ready(function () {
                 d20Button.attr('aria-pressed', 'false');
                 d30Button.attr('aria-pressed', 'false');
                 d60Button.attr('aria-pressed', 'false');
+                removeLayers();
               }
               });
   });

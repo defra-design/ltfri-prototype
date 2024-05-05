@@ -58,7 +58,7 @@ Surface water map
               {% set swHigh = true %}
   {% endswitch %}
 <!-- mobile key -->
-<div id="mobile-key-panel-bottom">
+<div id="mobile-key-panel-bottom" tabindex="-1">
   <button class="defra-map-info__close" style="z-index: 5;">
     <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
       <path d="M10,8.6L15.6,3L17,4.4L11.4,10L17,15.6L15.6,17L10,11.4L4.4,17L3,15.6L8.6,10L3,4.4L4.4,3L10,8.6Z" style="fill:currentColor;stroke:currentColor;stroke-width:0.1px;"></path>
@@ -184,13 +184,13 @@ Surface water map
     <div class="info-row">
       <div class="info-box">
         <div class="svg-square">
-          <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#99004d"></rect></svg>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#0066cc"></rect></svg>
         </div>
         <span>When rivers normal</span>
       </div>
       <div class="info-box">
         <div class="svg-square">
-          <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#e6772e"></rect></svg>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#bfc5ff"></rect></svg>
         </div>
         <span>When rivers flooded</span>
       </div>
@@ -225,18 +225,6 @@ Surface water map
           html: '<span class="checkbox-text">Show flooding</span>',
           checked: true
           },
-            {
-              id: "toggle",
-              html: '<span class="defra-map-key__symbol-container checkbox-text">
-                <span class="defra-map-key__symbol">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#160000" class="w-6 h-6">
-                    <path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
-                   </svg>
-                </span>
-                Selected address
-              </span>',
-              checked: marker
-            },
             {
               id: "tech-option",
               classes: "visible, hidden",
@@ -379,13 +367,13 @@ Surface water map
         <div class="info-row">
           <div class="info-box">
             <div class="svg-square">
-              <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#99004d"></rect></svg>
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#0066cc"></rect></svg>
             </div>
             <span>When rivers normal</span>
           </div>
           <div class="info-box">
             <div class="svg-square">
-              <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#e6772e"></rect></svg>
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#bfc5ff"></rect></svg>
             </div>
             <span>When rivers flooded</span>
           </div>
@@ -421,18 +409,6 @@ Surface water map
             html: '<span  style="font-size: 16px;">Show flooding</span>',
             checked: true
             },
-              {
-                id: "toggle",
-                html: '<span class="defra-map-key__symbol-container" style="font-size: 16px;">
-                  <span class="defra-map-key__symbol">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#160000" class="w-6 h-6">
-                      <path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
-                     </svg>
-                  </span>
-                  Selected address
-                </span>',
-                checked: marker
-              },
               {
                 id: "tech-option",
                 classes: "visible, hidden",
