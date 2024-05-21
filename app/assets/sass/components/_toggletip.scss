@@ -1,24 +1,24 @@
 .toggletip-container {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* the bubble element, added inside the toggletip live region */
-  
-  .toggletip-bubble {
-    display: inline-block;
-    position: absolute;
-    left: 100%;
-    top: 0;
-    width: 10em;
-    padding: 0.5rem;
-    background: #000;
-    color: #fff;
-    @include govuk-font($size: 16, $weight: regular);
-  }
+  position: relative;
+  display: inline-block;
+}
 
-  
-  /* button {
+/* the bubble element, added inside the toggletip live region */
+
+.toggletip-bubble {
+  display: inline-block;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 10em;
+  padding: 0.5rem;
+  background: #000;
+  color: #fff;
+  @include govuk-font($size: 16, $weight: regular);
+}
+
+
+/* button {
     width: 26px;
     height: 26px;
     border-radius: 50%;
@@ -33,3 +33,113 @@
     }
     cursor: help;
   }  */
+
+
+
+// v14
+
+.defra-toggletip__container {
+  position: absolute;
+  top: -3px;
+  right: 0px;
+  width: 26px;
+  height: 26px;
+}
+
+.defra-toggletip__button {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 26px;
+  height: 26px;
+  background-color: #fff;
+  border: 0px;
+  padding: 0px;
+  text-align: center;
+  color: #0b0c0c;
+  cursor: help;
+}
+
+.defra-toggletip__button-icon {
+  pointer-events: none;
+  position: absolute;
+  overflow: visible;
+  top: 5px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+}
+
+.defra-toggletip__button-text {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+
+.defra-toggletip__info {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  cursor: auto;
+  position: absolute;
+  width: 0px;
+  overflow: hidden;
+  box-sizing: border-box;
+  visibility: hidden;
+  top: auto;
+  bottom: 100%;
+  left: 0px;
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+.defra-toggletip__text {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  padding: 7.5px 10px;
+  color: #0b0c0c;
+  background: currentcolor;
+  border: 2px solid currentcolor;
+  z-index: 2;
+}
+
+.defra-toggletip__arrow {
+  position: absolute;
+  box-sizing: border-box;
+  z-index: 1;
+  width: 10px;
+  height: 10px;
+  left: 50%;
+  bottom: auto;
+  top: 100%;
+  margin: -15px 0px 0px -5px;
+  color: #0b0c0c;
+  border: 5px solid currentcolor;
+  transform: rotate(135deg);
+}
+
+.defra-toggletip:not(.defra-toggletip-target) {
+  padding-right: 26px;
+}
+
+.defra-toggletip:first-child {
+  display: inline-block;
+}
+.defra-toggletip {
+  height: 1rem;
+  display: inline-block;
+  position: relative;
+}

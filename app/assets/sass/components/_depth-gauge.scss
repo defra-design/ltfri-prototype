@@ -343,3 +343,32 @@
         margin: 0 2px 0 3px;
   }
 }
+
+
+// v14
+
+
+.gauge-display {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+
+.gauge-display__item {
+    position: relative;
+    width: 50%;
+    min-width: 228px;
+    margin-bottom: 20px;
+}
+
+.defra-flood-impact-list__key {
+    text-align: left;
+}
+
+.gauge-display__item-all-gauges {
+    position: relative;
+    width: 50%;
+    min-width: 228px;
+    margin-bottom: 10px;
+}
+
