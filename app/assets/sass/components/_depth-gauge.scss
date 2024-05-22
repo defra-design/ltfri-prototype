@@ -357,7 +357,7 @@
 .gauge-display__item {
     position: relative;
     width: 50%;
-    min-width: 228px;
+    min-width: 226px;
     margin-bottom: 20px;
 }
 
@@ -368,7 +368,12 @@
 .gauge-display__item-all-gauges {
     position: relative;
     width: 50%;
-    min-width: 228px;
+    min-width: 226px;
     margin-bottom: 10px;
+}
+
+.label-mod-depth-14 {
+    padding: 2px 4px 2px 4px;
+    white-space: nowrap;
 }
 
