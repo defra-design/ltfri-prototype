@@ -1,80 +1,256 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
+<div class="govuk-grid-row">
 
-    <div class="govuk-grid-column-two-thirds">
-    
+  <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">
-     Nafra2 service iteration
-        <span class="govuk-caption-xl">Version 15.0<span>
-      </h1>
-    
 
-          <h3 class="govuk-heading-m">
-            Seventh iteration of service with Nafra2 data
-            <strong class="govuk-tag govuk-tag--blue">
-              Not tested
-            </strong>
-          </h3>
+    <h1 class="govuk-heading-xl">
+      Nafra2 service iteration
+      <span class="govuk-caption-xl">Version 15.0<span>
+    </h1>
 
-          <p class="govuk-body">Version 15 focusses on TBC?</p>
 
-          <h4 class="govuk-heading-s">V14 research findings</h4>
+    <h3 class="govuk-heading-m">
+      Seventh iteration of service with Nafra2 data
+      <strong class="govuk-tag govuk-tag--green">
+        Tested
+      </strong>
+    </h3>
 
-          <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+    <p class="govuk-body">Version 15 focusses on TBC?</p>
 
-            <li>Depth is useful (provides context), but is not in the right place for users</li>
+    <h4 class="govuk-heading-s">V14 research findings</h4>
+
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+      <li>Depth is useful (provides context), but is not in the right place for users</li>
+
+      <li>This part of a bigger issue about where information sits on the service. This came out more this round from
+        users with neurodiverse needs
+      </li>
+
+      <li>We need time to look at the full user journey, and where depth sits Participants struggled without explanatory
+        information about what the ratings mean on the depth page</li>
+
+      <li>As we've seen before, the stats continue to cause confusion</li>
+
+      <li>Depth designs do not work for mobile</li>
+
+      <li>2050s dropdown caused significant confusion and mistrust of the data overall. We need to explore this issue
+        further. There is a serious risk of reputational damage to the EA and the government
+      </li>
+
+      <li>As we've seen before, people do not think about 'surface water' flooding and 'rivers and sea' flooding. It's
+        all just 'flooding'
+      </li>
+
+    </ul>
+
+
+    <details class="govuk-details govuk-!-padding-top-6 govuk-!-margin-bottom-3" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          V15.0 changes
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+
+        <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Enter a postcode</h4>
+
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+          <li>
+            Added a back link to the page
+          </li>
+
+        </ul>
+
+
+        <h4 class="govuk-heading-s govuk-!-margin-bottom-1">New page: About your flood risk</h4>
+
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+          <li>
+            This page was included to try and help users understand what they are about to see, and that likelihood and depth are related but separate things
+          </li>
+
+          <li>
+            This page also includes information that sat in the 'How we assess flood risk' dropdown in v14
+          </li>
+
+        </ul>
+
+        <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Flood risk summary</h4>
+
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+          <li>
+            Removal of 'How we assess' flood risk dropdown. Which was replaced by a new dropdown 'Why we cannot tell you the flood risk of a specific property'
+          </li>
+
+          <li>
+            Reintroduction of H1 'Flood risk summary' title distinguishes between this content and other content in the journey
+          </li>
+
+          <li>
+            Addition of inset text relating to neighbouring properties &ndash; this was originally under 'How we assess' dropdown in v14. We have seen in Smart Survey this is one of the most frequently asked questions by users
+          </li>
+
+          <li>
+            Addition of 'How likely a surface water flood is' title to further help users understand what this content is telling them, and that it is different from depth information
+          </li>
+
+          <li>
+            Replacing '2050s'timeline &ndash; explicitly stating the dates in the Climate change sub heading. Also added a dropdown to try and explain what the dates are and why they're different
+          </li>
+
+          <li>
+            Removal of information about what each type of flooding is &ndash; moved to more details page
+          </li>
+
+          <li>
+            We moved the link to enter the Surface water details page to the bottom of the summary card, and the text was rewritten
+          </li>
+
+        </ul>
+
+
+        <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Surface water: understand your flood risk</h4>
+
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+          <li>
+            Removal of contents list navigation component at top of page &ndash; pagination component at bottom of page retained
+          </li>
+
+          <li>
+            Addition of 'Your location' at the top of each page &ndash; to help users understand the information is for them, it relates to the address they just searched and it is not generic information
+          </li>
+
+          <li>
+            Addition of dropdown on each page, to tell users 'Why we cannot tell you the flood risk of a specific property'
+          </li>
+
+          <li>
+            Information about what each type of flooding is moved to the top of this page
+          </li>
+
+          <li>
+            Addition of heading to pull through information from summary and distinguish between likelihood and depth
+          </li>
+
+          <li>
+            Replacing '2050s'timeline &ndash; explicitly stating the dates in the Climate change sub heading. Also added a dropdown to try and explain what the dates are and why they're different
+          </li>
+
+          <li>
+            Redsign of dropdown containing information about what flood risk ratings mean
+          </li>
+
+          <li>
+            Removal of climate change information &ndash; this now sits in drop downs on summary page
+          </li>
+
+          <li>
+            Removal of specific map section &ndash; link now sits within likehood information
+          </li>
+
+          <li>
+            Addition of specific depth section with heading
+          </li>
+
+          <li>
+            Slight rewrite of info from v14 (depth page) plus the addition of link to get to the depth content
+          </li>
+
+          <li>
+            Removal of 'depth' bullet point from what you can do section to try and make it more prominent for users
+          </li>
+
+          <li>'What you can do' title changed to 'What to do next'</li>
+
+          <li>Added new subhead 'If you need more details on surface water flood risk' H3 relating to LLFAinformation on surface water</li>
+
+        </ul>
+
         
-            <li>This part of a bigger issue about where information sits on the service. This came out more this round from users with neurodiverse needs
-            </li>
+        <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Surface water: possible flood depths
+        </h4>
 
-            <li>We need time to look at the full user journey, and where depth sits Participants struggled without explanatory information about what the ratings mean on the depth page</li>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
 
-            <li>As we've seen before, the stats continue to cause confusion</li>
+          <li>
+            Addition of 'Your location' at the top of each page &ndash; to help users understand the information is for them, it relates to the address they just searched and it is not generic information
+          </li>
 
-            <li>Depth designs do not work for mobile</li>
+          <li>
+            Addition of dropdown on each page, to tell users 'Why we cannot tell you the flood risk of a specific property'
+          </li>
 
-            <li>2050s dropdown caused significant confusion and mistrust of the data overall. We need to explore this issue further. There is a serious risk of reputational damage to the EA and the government
-            </li>
+          <li>
+            Removal of coloured risk labels within the text &ndash; mainly for the benefit of mobile users (text becomes illegible)
+          </li>
 
-            <li>As we've seen before, people do not think about 'surface water' flooding and 'rivers and sea' flooding. It's all just 'flooding'
-            </li>
+          <li>
+            Removal of 'Adapt your home' information &ndash; this now sits in 'More details' page. With only one line about flood protection measures at 60cm
+          </li>
 
-          </ul>
+          <li>
+            Addition of new design of the risk ratings dropdown
+          </li>
+
+          <li>
+            Addition of content and link to help users find their way back to more details for information on preparing / managing risk
+          </li>
+
+        </ul>
+
+         
+        <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Rivers and sea: understand your flood risk
+        </h4>
+
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+          <li>
+            Addition of 'Your location' at the top of each page &ndash; to help users understand the information is for them, it relates to the address they just searched and it is not generic information
+          </li>
+
+          <li>
+            Addition of dropdown on each page, to tell users 'Why we cannot tell you the flood risk of a specific property'
+          </li>
+
+        </ul>
 
 
-          <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
-            <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">
-                V15.0 changes
-              </span>
-            </summary>
-            <div class="govuk-details__text">
-           
-              <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Groundwater and reservoirs: understand your flood risk
+        </h4>
 
-                <li class="govuk-!-padding-bottom-9">TBC?</li>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
 
+          <li>
+            Addition of 'Your location' at the top of each page &ndash; to help users understand the information is for them, it relates to the address they just searched and it is not generic information
+          </li>
 
-                <li><strong>TBC?</strong></li>
-
-              </ul>
-            </div>
-          </details>
+          <li>
+            Removal of grids in this content to match other 2 types of flooding</li>
+        </ul>
         
-      
-              <p class="govuk-body"> <a class="govuk-link" href="/version_15/nafra2/Desktop/start.html">Desktop</a></p>
+      </div>
+    </details>
 
-              <p class="govuk-body"> <a class="govuk-link" href="/version_15/nafra2/Mobile/start">Mobile</a></p>
 
-</div>
+    <p class="govuk-body govuk-!-padding-top-2"> <a class="govuk-link" href="/version_15/nafra2/Desktop/start.html">Desktop</a></p>
+
+    <p class="govuk-body"> <a class="govuk-link" href="/version_15/nafra2/Mobile/start">Mobile</a></p>
+
+  </div>
 </div>
 
 {% endblock %}
