@@ -1,0 +1,209 @@
+{% extends "layout-nafra2.html" %}
+
+{% block pageTitle %}
+Understand your flood risk: surface water
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+tag: {
+text: "Beta"
+},
+html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Rivers and sea: understand your flood risk
+    </h1>
+
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-2"><strong>Your location:</strong></h2>
+
+    <p class="govuk-body">41A<br> High Street<br> Cowes<br> PO31 7RT</p>
+
+
+    <details class="govuk-details govuk-!-margin-bottom-6 govuk-!-padding-bottom-6">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Why we cannot tell you the flood risk of a specific property
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        Our flood risk data does not include every feature like kerbs, or fences and walls around a building. That
+        means we can only tell you the flood risk of the land around a building, not the building itself. </div>
+    </details>
+
+    <!-- Start of cards -->
+
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <h2 class="govuk-heading-l govuk-!-padding-top-6">What makes rivers and sea flooding more likely</h2>
+
+    <p class="govuk-body">Low-lying areas that are close to rivers or the sea are more likely to flood when water levels
+      rise.</p>
+
+    <p class="govuk-body">This information takes into account any flood defences.</p>
+
+
+    <details class="govuk-details govuk-!-margin-bottom-6 govuk-!-margin-top-2" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Why flood defences cannot completely prevent flooding
+        </span>
+      </summary>
+
+      <div class="govuk-details__text">
+
+        <p class="govuk-body">Flood defences can help reduce the chance of flooding but cannot completely prevent it
+          because:</p>
+
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+          <li>they can fail</li>
+          <li>water could spill over the top if it is deep enough</li>
+        </ul>
+
+      </div>
+    </details>
+
+
+    <h2 class="govuk-heading-l govuk-!-padding-top-6 govuk-!-margin-bottom-4">How likely a river or sea flood is</h2>
+
+    <p class="govuk-body">Climate change is increasing the chances of flooding. Climate models project that we
+      will see:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>warmer and wetter winters</li>
+      <li>more frequent and intense weather events</li>
+    </ul>
+
+    <p class="govuk-body govuk-!-padding-top-4">The yearly chance of surface water flooding is:</p>
+    <p class="govuk-body">
+      <strong class="govuk-tag govuk-tag--yellow label-mod-depth" style="margin-right: 5px;">
+        Low
+      </strong> increasing to <strong class="govuk-tag govuk-tag--orange label-orange label-mod-depth" style="margin: 0px 5px 0px 5px;">
+        Medium<span class="govuk-visually-hidden">chance of flooding from surface water</span>
+      </strong> between 2036 and 2069
+    </p>
+
+
+    <details class="govuk-details govuk-!-margin-bottom-4 govuk-!-margin-top-2" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          What the flood risk ratings mean
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p class="govuk-body govuk-!-margin-top-4 govuk-!-margin-bottom-0 govuk-!-padding-bottom-4"><strong
+            class="govuk-tag govuk-tag--red">
+            High
+          </strong></p>
+        <p class="govuk-body">More than 3.3% chance of a flood each year</p>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <p class="govuk-body govuk-!-margin-top-4 govuk-!-margin-bottom-0 govuk-!-padding-bottom-4"><strong
+            class="govuk-tag govuk-tag--orange label-orange">
+            Medium
+          </strong></p>
+        <p class="govuk-body">Between 1% and 3.3% chance of a flood each year</p>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <p class="govuk-body govuk-!-margin-top-4 govuk-!-margin-bottom-0 govuk-!-padding-bottom-4"><strong
+            class="govuk-tag govuk-tag--yellow">
+            Low
+          </strong></p>
+        <p class="govuk-body">Between 0.1% and 1% chance of a flood each year</p>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <p class="govuk-body govuk-!-margin-top-4 govuk-!-margin-bottom-0 govuk-!-padding-bottom-4"><strong
+            class="govuk-tag govuk-tag--green">
+            Very low
+          </strong></p>
+        <p class="govuk-body">Less than 0.1% chance of a flood each year</p>
+
+
+      </div>
+    </details>
+
+    <p class="govuk-body govuk-!-margin-bottom-6"><a class="govuk-link" href="#">View a
+        rivers and sea map</a> to see where any flood water might spread to.</p>
+
+    <h2 class="govuk-heading-l govuk-!-padding-top-6">How deep any flood water could be</h2>
+
+    <p class="govuk-body">Even a small amount of water can cause significant damage so it's a good idea to understand
+      <a class="govuk-link" href="#">how deep any
+        flood water could be</a>.
+    </p>
+
+    <p class="govuk-body">You cannot completely protect your property from flooding, but there's a lot you can do to
+      reduce:</p>
+
+    <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-6">
+      <li>the amount of flood water that gets in</li>
+      <li>the damage from flood water</li>
+      <li>the cost and time of cleaning up after a flood</li>
+    </ul>
+
+
+
+    <h2 class="govuk-heading-l govuk-!-padding-top-6">What to do next</h2>
+
+    <p class="govuk-body">Sign up to <a class="govuk-link" href="#">receive flood warnings
+        by phone, text or email</a>.</p>
+
+    <p class="govuk-body">Read about how to <a class="govuk-link"
+        href="#">prepare yourself and your property for flooding</a>.</p>
+
+    <p class="govuk-body govuk-!-padding-bottom-6 govuk-!-margin-bottom-6">You should check your flood risk regularly
+      because the information may change.</p>
+
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+
+
+
+    <!-- End of full details -->
+
+
+
+    <nav class="govuk-pagination govuk-pagination--block" role="navigation" aria-label="results">
+      <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link"
+          href="/version_15/nafra2/Mobile/surface-water-result" rel="prev">
+          <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg"
+            height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path
+              d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z">
+            </path>
+          </svg>
+          <span class="govuk-pagination__link-title">Previous</span><span class="govuk-visually-hidden">:</span>
+          <span class="govuk-pagination__link-label">Surface water</span></a>
+      </div>
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link"
+          href="/version_15/nafra2/Mobile/groundwater-and reservoirs-result" rel="next"> <svg
+            class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13"
+            width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path
+              d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z">
+            </path>
+          </svg> <span class="govuk-pagination__link-title">Next</span><span class="govuk-visually-hidden">:</span>
+          <span class="govuk-pagination__link-label">Groundwater and reservoirs</span></a>
+      </div>
+    </nav>
+  </div>
+  {% endblock %}
