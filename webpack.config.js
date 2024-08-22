@@ -53,7 +53,9 @@ module.exports = {
 
     // A map with new nafra2 designs for the live service as of April 2024
     mapv8_3 : './app/assets/javascripts/maps/redesign-pre-nafra2.js',
-    mapv15_1 : './app/assets/javascripts/maps/nafra2/map-v15-1.js'
+
+    mapv15_1 : './app/assets/javascripts/maps/nafra2/map-v15-1.js',
+    mapv15_1_direct : './app/assets/javascripts/maps/nafra2/map-v15-1-direct.js'
 
           },
   output: {
