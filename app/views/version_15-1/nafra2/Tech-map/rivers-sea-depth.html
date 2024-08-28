@@ -1,7 +1,7 @@
 {% extends "layouts/map-v15-1-direct.html" %}
 
 {% block pageTitle %}
-Rivers and the sea map
+Rivers and sea map
 {% endblock %}
 
 
@@ -176,8 +176,8 @@ Rivers and the sea map
 <!-- key desktop -->
   <div class="defra-map-key" id="key" aria-labelledby="mapKeyLabel" tabindex="-1" role="region" aria-hidden="false" style="display: block;">
     <div class="defra-map-key__container" id="defra-map-key__container">
-      <h2 id="mapKeyLabel" class="defra-map-key__title">
-        <span role="text">Rivers and the sea <span class="govuk-visually-hidden">map with options for flood risk currently and by 2050</span></span></h2>
+      <h1 id="mapKeyLabel" class="defra-map-key__title">
+        <span role="text">Rivers and sea map</span></h1>
             <button class="defra-map-key__close" id="close-key">
               <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20"><path d="M10,8.6L15.6,3L17,4.4L11.4,10L17,15.6L15.6,17L10,11.4L4.4,17L3,15.6L8.6,10L3,4.4L4.4,3L10,8.6Z" fill="" style="fill:currentColor;stroke:currentColor;stroke-width:0.1px;"></path>
               </svg>
@@ -191,7 +191,7 @@ Rivers and the sea map
             classes: "govuk-radios--small",
             fieldset: {
             legend: {
-            html: '<h3 class="defra-map-key__section-title">Current likelihood of flooding</h3>',
+            html: '<h2 class="defra-map-key__section-title">Current likelihood of flooding</h2>',
             isPageHeading: false,
             classes: "govuk-fieldset__legend--s"
             }
@@ -214,28 +214,28 @@ Rivers and the sea map
             Depth
             <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="high-risk-rs">
               <span class="defra-map-key__symbol">
-                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#0066cc"></rect></svg>
+                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#555C9D"></rect></svg>
               </span>
               High chance
               <span class="risk-context-v3">More than 3.3% chance each year</span>
             </span>
             <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="med-risk-rs">
               <span class="defra-map-key__symbol">
-                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#599eff"></rect></svg>
+                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#9AA0DE"></rect></svg>
               </span>
               Medium chance
               <span class="risk-context-v3">Between 1% and 3.3% chance each year</span>
             </span>
             <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="low-risk-rs">
               <span class="defra-map-key__symbol">
-                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#bfc5ff"></rect></svg>
+                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#C4E1FF"></rect></svg>
               </span>
               Low chance
               <span class="risk-context-v3">Between 0.1% and 1% chance each year</span>
             </span>
               <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="vlow-risk-rs">
                 <span class="defra-map-key__symbol">
-                  <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#6b78ff"></rect></svg>
+                  <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#c9f8ff"></rect></svg>
                 </span>
                 Very low chance
                 <span class="risk-context-v3">Less than 0.1% chance each year</span>
@@ -253,7 +253,7 @@ Rivers and the sea map
             classes: "govuk-radios--small",
             fieldset: {
             legend: {
-            html: '<h3 class="defra-map-key__section-title">Likelihood of flooding by 2050</h3>',
+            html: '<h2 class="defra-map-key__section-title">Yearly chance of flooding between 2036 and 2069</h2>',
             isPageHeading: false,
             classes: "govuk-fieldset__legend--s"
             }
@@ -283,41 +283,7 @@ Rivers and the sea map
           ]
           }) }}
 
-          <!-- reservoirs -->
 
-          <!-- {{ govukRadios({
-            name: "risk-type",
-            classes: "govuk-radios--small",
-            fieldset: {
-            legend: {
-            html: '<h3 class="defra-map-key__section-title">Reservoirs</h3>',
-            isPageHeading: false,
-            classes: "govuk-fieldset__legend--s"
-            }
-          },
-          items: [
-          {
-            id: "sw",
-            classes: "visible",
-          value: "1",
-          html: ''
-        },
-          {
-            id: "ros",
-            classes: "visible",
-            value: "2",
-          html: ''
-          },
-          {
-            id: "reservoir",
-            classes: "visible",
-            value: "3",
-          html: '
-            Extent
-          '
-          }
-          ]
-          }) }} -->
           <!-- CHECKBOX TOGGLE-->
      
           {% if data.marker == "true"%}
@@ -331,7 +297,7 @@ Rivers and the sea map
             classes: "govuk-checkboxes--small",
             fieldset: {
               legend: {
-                html: '<h3 class="defra-map-key__section-title-toggle-v5">Map details</h3>',
+                html: '<h2 class="defra-map-key__section-title-toggle-v5">Map details</h2>',
           isPageHeading: false,
           classes: "govuk-fieldset__legend--s"
               }

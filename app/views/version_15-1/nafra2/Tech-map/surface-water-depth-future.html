@@ -22,7 +22,7 @@ Surface water map
       <div class="map-btn-group">
       <button class="defra-map__advanced" id="rivers-btn" href="#" style="color:	#0b0c0c;">
         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M565.6 36.2C572.1 40.7 576 48.1 576 56V392c0 10-6.2 18.9-15.5 22.4l-168 64c-5.2 2-10.9 2.1-16.1 .3L192.5 417.5l-160 61c-7.4 2.8-15.7 1.8-22.2-2.7S0 463.9 0 456V120c0-10 6.1-18.9 15.5-22.4l168-64c5.2-2 10.9-2.1 16.1-.3L383.5 94.5l160-61c7.4-2.8 15.7-1.8 22.2 2.7zM48 136.5V421.2l120-45.7V90.8L48 136.5zM360 422.7V137.3l-144-48V374.7l144 48zm48-1.5l120-45.7V90.8L408 136.5V421.2z"/></svg>
-      <span id="map-button-text">Rivers and the sea</span></button>
+      <span id="map-button-text">Rivers and sea</span></button>
 
       <button class="defra-map__advanced res-btn" id="res-btn" href="#" style="color:	#0b0c0c;">
         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M565.6 36.2C572.1 40.7 576 48.1 576 56V392c0 10-6.2 18.9-15.5 22.4l-168 64c-5.2 2-10.9 2.1-16.1 .3L192.5 417.5l-160 61c-7.4 2.8-15.7 1.8-22.2-2.7S0 463.9 0 456V120c0-10 6.1-18.9 15.5-22.4l168-64c5.2-2 10.9-2.1 16.1-.3L383.5 94.5l160-61c7.4-2.8 15.7-1.8 22.2 2.7zM48 136.5V421.2l120-45.7V90.8L48 136.5zM360 422.7V137.3l-144-48V374.7l144 48zm48-1.5l120-45.7V90.8L408 136.5V421.2z"/></svg>
@@ -174,9 +174,8 @@ Surface water map
   <!-- desktop key -->
   <div class="defra-map-key" id="key" aria-labelledby="mapKeyLabel" tabindex="-1" role="region" aria-hidden="false" style="display: block;">
     <div class="defra-map-key__container" id="defra-map-key__container">
-      <h2 id="mapKeyLabel" class="defra-map-key__title">
-        <span role="text">Surface water <span class="govuk-visually-hidden">for
-            map features</span></span></h2>
+      <h1 id="mapKeyLabel" class="defra-map-key__title">
+        <span role="text">Surface water map</span></h1>
             <button class="defra-map-key__close" id="close-key">
               <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20"><path d="M10,8.6L15.6,3L17,4.4L11.4,10L17,15.6L15.6,17L10,11.4L4.4,17L3,15.6L8.6,10L3,4.4L4.4,3L10,8.6Z" fill="" style="fill:currentColor;stroke:currentColor;stroke-width:0.1px;"></path>
               </svg>
@@ -190,7 +189,7 @@ Surface water map
             classes: "govuk-radios--small",
             fieldset: {
             legend: {
-            html: '<h3 class="defra-map-key__section-title">Current likelihood of flooding</h3>',
+            html: '<h2 class="defra-map-key__section-title">Yearly chance of flooding</h2>',
             isPageHeading: false,
             classes: "govuk-fieldset__legend--s"
             }
@@ -222,7 +221,7 @@ Surface water map
             classes: "govuk-radios--small",
             fieldset: {
             legend: {
-            html: '<h3 class="defra-map-key__section-title">Likelihood of flooding by 2050</h3>',
+            html: '<h2 class="defra-map-key__section-title">Yearly chance of flooding between 2040 and 2060</h2>',
             isPageHeading: false,
             classes: "govuk-fieldset__legend--s"
             }
@@ -250,65 +249,39 @@ Surface water map
           html: 'Depth
           <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="high-risk-sw">
             <span class="defra-map-key__symbol">
-              <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#99004d"></rect></svg>
+              <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#555C9D"></rect></svg>
             </span>
             High chance
             <span class="risk-context-v3">More than 3.3% chance each year</span>
           </span>
           <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="med-risk-sw">
             <span class="defra-map-key__symbol">
-              <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#e6772e"></rect></svg>
+              <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#9AA0DE"></rect></svg>
             </span>
             Medium chance
             <span class="risk-context-v3">Between 1% and 3.3% chance each year</span>
           </span>
           <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="low-risk-sw">
             <span class="defra-map-key__symbol">
-              <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#ffbfc9"></rect></svg>
+              <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#C4E1FF"></rect></svg>
             </span>
             Low chance
             <span class="risk-context-v3">Between 0.1% and 1% chance each year</span>
-          </span>',
+          </span>
+          <!-- <span class="defra-map-key__symbol-container-v3 defra-map-key__symbol-container--multi" id="low-risk-sw">
+            <span class="defra-map-key__symbol">
+              <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" style="fill:#ffbfc9"></rect></svg>
+            </span>
+            Very low chance
+            <span class="risk-context-v3">Less than 0.1% chance each year</span>
+          </span> -->
+          ',
           checked: true
           }
           ]
           }) }}
 
-          <!-- reservoirs -->
 
-          <!-- {{ govukRadios({
-            name: "risk-type",
-            classes: "govuk-radios--small",
-            fieldset: {
-            legend: {
-            html: '<h3 class="defra-map-key__section-title">Reservoirs</h3>',
-            isPageHeading: false,
-            classes: "govuk-fieldset__legend--s"
-            }
-          },
-          items: [
-          {
-            id: "sw",
-            classes: "visible",
-          value: "1",
-          html: ''
-        },
-          {
-            id: "ros",
-            classes: "visible",
-            value: "2",
-          html: ''
-          },
-          {
-            id: "reservoir",
-            classes: "visible",
-            value: "3",
-          html: '
-            Extent
-          '
-          }
-          ]
-          }) }} -->
           <!-- CHECKBOX TOGGLE-->
      
           {% if data.marker == "true"%}
@@ -322,7 +295,7 @@ Surface water map
             classes: "govuk-checkboxes--small",
             fieldset: {
               legend: {
-                html: '<h3 class="defra-map-key__section-title-toggle-v5">Map details</h3>',
+                html: '<h2 class="defra-map-key__section-title-toggle-v5">Map details</h2>',
           isPageHeading: false,
           classes: "govuk-fieldset__legend--s"
               }
