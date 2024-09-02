@@ -1,4 +1,4 @@
-{% extends "layout-nafra2.html" %}
+{% extends "new_gov_header_service_name.html" %}
 
 {% block pageTitle %}
 Enter a postcode
@@ -7,12 +7,12 @@ Enter a postcode
 {% block beforeContent %}
 {{ govukPhaseBanner({
   tag: {
-    text: "Beta"
+    text: "Prototype"
   },
   html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 
-<a href="/version_15-1/nafra2/Desktop/start" class="govuk-back-link back-link-left">Back</a>
+<a href="/version_15-1/nafra2/Dev_release/Desktop/start" class="govuk-back-link back-link-left">Back</a>
 
 {% endblock %}
 
@@ -25,7 +25,7 @@ Enter a postcode
  <div class="govuk-grid-column-two-thirds">
 
     <h1 class="govuk-heading-xl">
-      Enter a postcode
+      Where do you want to check?
     </h1>
 
     <div class="govuk-inset-text">
@@ -41,9 +41,11 @@ Enter a postcode
       <div class="govuk-form-group">
 
         <label class="govuk-label" for="address-postcode">
-          Postcode
+          Enter a postcode
         </label>
-
+        <div id="event-name-hint" class="govuk-hint">
+          for example, WA4 1AB
+        </div>
         <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" />
 
 
@@ -52,7 +54,7 @@ Enter a postcode
 
     </fieldset>
 
-    <a href="/version_15-1/nafra2/Desktop/select-an-address-dn19" role="button" class="govuk-button govuk-button--primary govuk-!-margin-bottom-8 govuk-!-margin-top-3">
+    <a href="/version_15-1/nafra2/Dev_release/Desktop/select-an-address-dn19" role="button" class="govuk-button govuk-button--primary govuk-!-margin-bottom-8 govuk-!-margin-top-3">
       Continue
     </a>
 

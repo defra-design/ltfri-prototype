@@ -1,4 +1,4 @@
-{% extends "layout-nafra2.html" %}
+{% extends "new_gov_header_service_nav" %}
 
 {% block pageTitle %}
 Select an address
@@ -7,7 +7,7 @@ Select an address
 {% block beforeContent %}
 {{ govukPhaseBanner({
   tag: {
-    text: "Beta"
+    text: "Prototype"
   },
   html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
@@ -57,7 +57,7 @@ Select an address
         <div class="govuk-form-group">
 
           <label class="govuk-label" for="address">
-            Address
+            Select an address
           </label>
 
           <select class="govuk-select" id="address" name="address">

@@ -1,0 +1,13 @@
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+
+{% extends "app/views/layouts/govuk-branded-new.njk" %}
+
+{% block scripts %}
+  {{ super() }}
+
+  <script src="/public/javascripts/components/toggletip.js"></script>
+
+{% endblock %}
