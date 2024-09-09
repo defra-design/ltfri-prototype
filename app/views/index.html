@@ -1,725 +1,927 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
+<div class="govuk-grid-row">
 
-    <div class="govuk-grid-column-two-thirds">
-    
+  <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">
-        Check your long term flood risk prototypes
-      </h1>
-      <p class="govuk-body">A collection of prototypes for testing scenarios and user journeys for the service 'Check your long term flood risk'.</p>
-</div>
-<div class="govuk-grid-column-full">
-      <table class="govuk-table">
-        <!--<caption class="govuk-table__caption govuk-table__caption--m"></caption>-->
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Version</th>
-            <th scope="col" class="govuk-table__header">Date</th>
-            <th scope="col" class="govuk-table__header">What's changed</th>
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
 
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><a href="/version-15-1">V15.1</a>
+    <h1 class="govuk-heading-xl">
+      Check your long term flood risk prototypes
+    </h1>
+    <p class="govuk-body">A collection of prototypes for testing scenarios and user journeys for the service 'Check your
+      long term flood risk'.</p>
+  </div>
+  <div class="govuk-grid-column-full">
+    <table class="govuk-table">
+      <!--<caption class="govuk-table__caption govuk-table__caption--m"></caption>-->
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Version</th>
+          <th scope="col" class="govuk-table__header">Date</th>
+          <th scope="col" class="govuk-table__header">What's changed</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/version-15-1">V15.1</a>
           </th>
-            <td class="govuk-table__cell">In progress</td>
-            <td class="govuk-table__cell">
-              <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                    V15.0 changes
-                  </span>
-                </summary>
-                <div class="govuk-details__text">
-               
-                  <ul class="govuk-list govuk-list--bullet">
-                    <li>TBC></li>
-                  </ul>
-                  </ul>
-                </div>
-              </details>
-              
-            </td>
-          </tr>          
+          <td class="govuk-table__cell">In progress</td>
+          <td class="govuk-table__cell">
 
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><a href="/version-15">V15.0</a>
+            <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  V15.0 changes
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+
+                <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Search for an address</h4>
+
+                <p class="govuk-body">Removed from the header of every page</p>
+
+
+                <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Page removed: About your flood risk</h4>
+
+                <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+                  <li>No evidence that it currently helps users, as most just skipped past in the testing sessions</li>
+
+                  <li>We may revisit this design and test at a later date</li>
+
+                </ul>
+
+                <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Back links</h4>
+
+                <p class="govuk-body">Have removed all the descriptive links on the following pages:</p>
+
+                <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+                  <li>Select an address</li>
+
+                  <li>Flood risk summary</li>
+
+                </ul>
+
+                <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Flood risk summary</h4>
+
+                <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+                  <li>Your location content made smaller and styled as body copy</li>
+
+                  <li>Removed dropdown for 'Why we cannot tell you the flood risk of a specific property' and placed the
+                    revised content underneath 'Your location'</li>
+
+                  <li>Removed indent text for 'Neighbouring houses may have different flood risk ratings. This could be
+                    because one is on higher land or nearer water, for example.'</li>
+
+                  <li>Added back in dropdown for 'How we assess an area's flood risk'</li>
+
+                  <li>Removed the two dropdowns on 'Surface water' and 'Rivers and sea' and combined them into one
+                    dropdown 'Flood risk and climate change'</li>
+
+                  <li>Removed the two links on 'Surface water' and 'Rivers and sea', replaced the old content back and
+                    positioned the links to the right of each flood source title</li>
+
+                  <li>Added back in the content for 'What surface water is' and the dropdown 'Why surface water flooding
+                    is a problem'</li>
+
+                  <li>Added back in the content for 'What makes rivers and sea flooding more likely' and the dropdown
+                    'Why flood defences cannot completely prevent flooding'</li>
+
+                  <li>Removed the link on 'Other flood risks', replaced the old content back and positioned the link to
+                    the right of the flood source title</li>
+
+                </ul>
+
+
+                <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Surface water: understand your flood risk</h4>
+
+                <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+                  <li>Added back in the navigation links for the other flood source pages and repostioned them above the
+                    H1 and below the 'Back' link</li>
+
+                  <li>Your location content made smaller and styled as body copy</li>
+
+                  <li>Removed dropdown for 'Why we cannot tell you the flood risk of a specific property' and placed the
+                    revised content underneath 'Your location'</li>
+
+                  <li>Changed H2 'See how deep any flood water could be' to 'How deep any flood water could be'</li>
+
+                  <li>Changed the first paragraph in the 'How deep any flood water could be'. Also changed the link 'how
+                    deep any flood water could be.' to 'See how deep any flood water could be at your selected
+                    location.' and moved it to the bottom of the last paragraph</li>
+
+                </ul>
+
+
+                <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Surface Water map</h4>
+
+                <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+                  <li>Changed colour palette from maroon, orange and pink to Shades of indigo, purple and pale blue</li>
+
+                  <li>Changed 'Current likelihood of flooding' to 'Yearly chance of flooding'</li>
+
+                  <li>Changed 'Likelihood of flooding by 2050's' to 'Yearly chance of flooding between 2040 and 2060'
+                  </li>
+
+                  <li>Removed radio input for 'Depth'</li>
+
+                </ul>
+
+
+                <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Surface water: possible flood depths</h4>
+
+                <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+                  <li>Your location content made smaller and styled as body copy</li>
+
+                  <li>Removed dropdown for 'Why we cannot tell you the flood risk of a specific property' and placed the
+                    revised content underneath 'Your location'</li>
+
+                  <li>Moved 'Flooding is hard to predict and there is always a chance any flood water could be deeper
+                    than what we show.' back up to the top of the page under 'Your location content'</li>
+
+                  <li>Moved dropdown 'What the flood depth risk ratings mean' to under the 'Flooding is hard to predict;
+                    content and above the depth information</li>
+
+                </ul>
+
+
+                <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Rivers and sea: understand your flood risk</h4>
+
+                <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+                  <li>Added back in the navigation links for the other flood source pages and repostioned them above the
+                    H1 and below the 'Back' link</li>
+
+                  <li>Your location content made smaller and styled as body copy</li>
+
+                  <li>Removed dropdown for 'Why we cannot tell you the flood risk of a specific property' and placed the
+                    revised content underneath 'Your location'</li>
+
+                  <li>Removed 'Climate change' content and placed it in the dropdown 'Flood risk and climate change' on
+                    the 'Flood risk summary' page</li>
+
+                  <li>Changed the first paragraph in the 'How deep any flood water could be'. Also changed the link 'how
+                    deep any flood water could be.' to 'See how deep any flood water could be at your selected
+                    location.' and moved it to the bottom of the last paragraph</li>
+
+                </ul>
+
+
+                <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Rivers and sea map</h4>
+
+                <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+                  <li>Changed colour palette from Dark blue, mid blue, violet and light purple to Shades of indigo,
+                    purple, pale blue and light blue</li>
+
+                  <li>Changed 'Current likelihood of flooding' to 'Yearly chance of flooding'</li>
+
+                  <li>Changed 'Likelihood of flooding by 2050's' to 'Yearly chance of flooding between 2036 and 2069'
+                  </li>
+
+                </ul>
+
+              </div>
+            </details>
+
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/version-15">V15.0</a>
           </th>
           <td class="govuk-table__cell">June to August 2024</td>
           <td class="govuk-table__cell">
-              <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                    V15.0 changes
-                  </span>
-                </summary>
-                <div class="govuk-details__text">
+            <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  V15.0 changes
+                </span>
+              </summary>
+              <div class="govuk-details__text">
 
-                  <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Enter a postcode</h4>
-          
-                  <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-          
-                    <li>
-                      Added a back link to the page
-                    </li>
-          
-                  </ul>
-          
-          
-                  <h4 class="govuk-heading-s govuk-!-margin-bottom-1">New page: About your flood risk</h4>
-          
-                  <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-          
-                    <li>
-                      This page was included to try and help users understand what they are about to see, and that likelihood and depth are related but separate things
-                    </li>
-          
-                    <li>
-                      This page also includes information that sat in the 'How we assess flood risk' dropdown in v14
-                    </li>
-          
-                  </ul>
-          
-                  <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Flood risk summary</h4>
-          
-                  <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-          
-                    <li>
-                      Removal of 'How we assess' flood risk dropdown. Which was replaced by a new dropdown 'Why we cannot tell you the flood risk of a specific property'
-                    </li>
-          
-                    <li>
-                      Reintroduction of H1 'Flood risk summary' title distinguishes between this content and other content in the journey
-                    </li>
-          
-                    <li>
-                      Addition of inset text relating to neighbouring properties &ndash; this was originally under 'How we assess' dropdown in v14. We have seen in Smart Survey this is one of the most frequently asked questions by users
-                    </li>
-          
-                    <li>
-                      Addition of 'How likely a surface water flood is' title to further help users understand what this content is telling them, and that it is different from depth information
-                    </li>
-          
-                    <li>
-                      Replacing '2050s'timeline &ndash; explicitly stating the dates in the Climate change sub heading. Also added a dropdown to try and explain what the dates are and why they're different
-                    </li>
-          
-                    <li>
-                      Removal of information about what each type of flooding is &ndash; moved to more details page
-                    </li>
-          
-                    <li>
-                      We moved the link to enter the Surface water details page to the bottom of the summary card, and the text was rewritten
-                    </li>
-          
-                  </ul>
-          
-          
-                  <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Surface water: understand your flood risk</h4>
-          
-                  <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-          
-                    <li>
-                      Removal of contents list navigation component at top of page &ndash; pagination component at bottom of page retained
-                    </li>
-          
-                    <li>
-                      Addition of 'Your location' at the top of each page &ndash; to help users understand the information is for them, it relates to the address they just searched and it is not generic information
-                    </li>
-          
-                    <li>
-                      Addition of dropdown on each page, to tell users 'Why we cannot tell you the flood risk of a specific property'
-                    </li>
-          
-                    <li>
-                      Information about what each type of flooding is moved to the top of this page
-                    </li>
-          
-                    <li>
-                      Addition of heading to pull through information from summary and distinguish between likelihood and depth
-                    </li>
-          
-                    <li>
-                      Replacing '2050s'timeline &ndash; explicitly stating the dates in the Climate change sub heading. Also added a dropdown to try and explain what the dates are and why they're different
-                    </li>
-          
-                    <li>
-                      Redsign of dropdown containing information about what flood risk ratings mean
-                    </li>
-          
-                    <li>
-                      Removal of climate change information &ndash; this now sits in drop downs on summary page
-                    </li>
-          
-                    <li>
-                      Removal of specific map section &ndash; link now sits within likehood information
-                    </li>
-          
-                    <li>
-                      Addition of specific depth section with heading
-                    </li>
-          
-                    <li>
-                      Slight rewrite of info from v14 (depth page) plus the addition of link to get to the depth content
-                    </li>
-          
-                    <li>
-                      Removal of 'depth' bullet point from what you can do section to try and make it more prominent for users
-                    </li>
-          
-                    <li>'What you can do' title changed to 'What to do next'</li>
-          
-                    <li>Added new subhead 'If you need more details on surface water flood risk' H3 relating to LLFAinformation on surface water</li>
-          
-                  </ul>
-          
-                  
-                  <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Surface water: possible flood depths
-                  </h4>
-          
-                  <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-          
-                    <li>
-                      Addition of 'Your location' at the top of each page &ndash; to help users understand the information is for them, it relates to the address they just searched and it is not generic information
-                    </li>
-          
-                    <li>
-                      Addition of dropdown on each page, to tell users 'Why we cannot tell you the flood risk of a specific property'
-                    </li>
-          
-                    <li>
-                      Removal of coloured risk labels within the text &ndash; mainly for the benefit of mobile users (text becomes illegible)
-                    </li>
-          
-                    <li>
-                      Removal of 'Adapt your home' information &ndash; this now sits in 'More details' page. With only one line about flood protection measures at 60cm
-                    </li>
-          
-                    <li>
-                      Addition of new design of the risk ratings dropdown
-                    </li>
-          
-                    <li>
-                      Addition of content and link to help users find their way back to more details for information on preparing / managing risk
-                    </li>
-          
-                  </ul>
-          
-                   
-                  <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Rivers and sea: understand your flood risk
-                  </h4>
-          
-                  <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-          
-                    <li>
-                      Addition of 'Your location' at the top of each page &ndash; to help users understand the information is for them, it relates to the address they just searched and it is not generic information
-                    </li>
-          
-                    <li>
-                      Addition of dropdown on each page, to tell users 'Why we cannot tell you the flood risk of a specific property'
-                    </li>
-          
-                  </ul>
-          
-          
-                  <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Groundwater and reservoirs: understand your flood risk
-                  </h4>
-          
-                  <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-          
-                    <li>
-                      Addition of 'Your location' at the top of each page &ndash; to help users understand the information is for them, it relates to the address they just searched and it is not generic information
-                    </li>
-          
-                    <li>
-                      Removal of grids in this content to match other 2 types of flooding</li>
-                  </ul>
-                  
-                </div>
-              </details>
-              
-            </td>
-          </tr>          
-          
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><a href="/version-14">V14.0</a>
-          </th>
-            <td class="govuk-table__cell">May to June 2024</td>
-            <td class="govuk-table__cell">
-              <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                    V14.0 changes
-                  </span>
-                </summary>
+                <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Enter a postcode</h4>
 
-                <div class="govuk-details__text">
+                <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
 
-                  <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Summary</h4>
-          
-                  <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-          
-                    <li>
-                      Changed heading from 'Yearly chance of flooding with climate change' to 'Yearly chance of flooding by the 2050s'. 
-                    </li>
-          
-                    <li>
-                      Also added two new dropdowns 'What we mean by the 2050s' in the Surface water and the Rivers and sea sections. 
-                      The information inside them is different to reflect the different time periods                    
-                    </li>
-          
-                  </ul>
+                  <li>
+                    Added a back link to the page
+                  </li>
+
+                </ul>
 
 
-                  <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Surface water: understand your flood risk</h4>
-          
-                  <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-          
-                    <li>
-                      Removed the link 'increasing the chances of flooding' under the climate change information                     
-                    </li>
-          
-                    <li>
-                      Also reduced the content in 'What the risk ratings mean' dropdown                    
-                    </li>
-          
-                  </ul>
+                <h4 class="govuk-heading-s govuk-!-margin-bottom-1">New page: About your flood risk</h4>
+
+                <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+                  <li>
+                    This page was included to try and help users understand what they are about to see, and that
+                    likelihood and depth are related but separate things
+                  </li>
+
+                  <li>
+                    This page also includes information that sat in the 'How we assess flood risk' dropdown in v14
+                  </li>
+
+                </ul>
+
+                <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Flood risk summary</h4>
+
+                <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+                  <li>
+                    Removal of 'How we assess' flood risk dropdown. Which was replaced by a new dropdown 'Why we cannot
+                    tell you the flood risk of a specific property'
+                  </li>
+
+                  <li>
+                    Reintroduction of H1 'Flood risk summary' title distinguishes between this content and other content
+                    in the journey
+                  </li>
+
+                  <li>
+                    Addition of inset text relating to neighbouring properties &ndash; this was originally under 'How we
+                    assess' dropdown in v14. We have seen in Smart Survey this is one of the most frequently asked
+                    questions by users
+                  </li>
+
+                  <li>
+                    Addition of 'How likely a surface water flood is' title to further help users understand what this
+                    content is telling them, and that it is different from depth information
+                  </li>
+
+                  <li>
+                    Replacing '2050s'timeline &ndash; explicitly stating the dates in the Climate change sub heading.
+                    Also added a dropdown to try and explain what the dates are and why they're different
+                  </li>
+
+                  <li>
+                    Removal of information about what each type of flooding is &ndash; moved to more details page
+                  </li>
+
+                  <li>
+                    We moved the link to enter the Surface water details page to the bottom of the summary card, and the
+                    text was rewritten
+                  </li>
+
+                </ul>
 
 
-                  <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Surface water: possible flood depths</h4>
-          
-                  <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-          
-                    <li>
-                      Added in graphs to cover each depth level of 20, 30 and 60cm across present day and the 2050s timelines                      
-                    </li>
-          
-                    <li>
-                      Included an individual risk rating of Very low, Low, Medium or High on the present day and 2050s graphs
-                    </li>
-          
-                    <li>
-                      Created two new versions A tabs and B stacked layout
-                    </li>
+                <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Surface water: understand your flood risk</h4>
 
-                  </ul>
+                <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
 
-                    
-                </div>
+                  <li>
+                    Removal of contents list navigation component at top of page &ndash; pagination component at bottom
+                    of page retained
+                  </li>
 
-              </details>
-              
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><a href="/version-13">V13.0</a>
+                  <li>
+                    Addition of 'Your location' at the top of each page &ndash; to help users understand the information
+                    is for them, it relates to the address they just searched and it is not generic information
+                  </li>
+
+                  <li>
+                    Addition of dropdown on each page, to tell users 'Why we cannot tell you the flood risk of a
+                    specific property'
+                  </li>
+
+                  <li>
+                    Information about what each type of flooding is moved to the top of this page
+                  </li>
+
+                  <li>
+                    Addition of heading to pull through information from summary and distinguish between likelihood and
+                    depth
+                  </li>
+
+                  <li>
+                    Replacing '2050s'timeline &ndash; explicitly stating the dates in the Climate change sub heading.
+                    Also added a dropdown to try and explain what the dates are and why they're different
+                  </li>
+
+                  <li>
+                    Redsign of dropdown containing information about what flood risk ratings mean
+                  </li>
+
+                  <li>
+                    Removal of climate change information &ndash; this now sits in drop downs on summary page
+                  </li>
+
+                  <li>
+                    Removal of specific map section &ndash; link now sits within likehood information
+                  </li>
+
+                  <li>
+                    Addition of specific depth section with heading
+                  </li>
+
+                  <li>
+                    Slight rewrite of info from v14 (depth page) plus the addition of link to get to the depth content
+                  </li>
+
+                  <li>
+                    Removal of 'depth' bullet point from what you can do section to try and make it more prominent for
+                    users
+                  </li>
+
+                  <li>'What you can do' title changed to 'What to do next'</li>
+
+                  <li>Added new subhead 'If you need more details on surface water flood risk' H3 relating to
+                    LLFAinformation on surface water</li>
+
+                </ul>
+
+
+                <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Surface water: possible flood depths
+                </h4>
+
+                <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+                  <li>
+                    Addition of 'Your location' at the top of each page &ndash; to help users understand the information
+                    is for them, it relates to the address they just searched and it is not generic information
+                  </li>
+
+                  <li>
+                    Addition of dropdown on each page, to tell users 'Why we cannot tell you the flood risk of a
+                    specific property'
+                  </li>
+
+                  <li>
+                    Removal of coloured risk labels within the text &ndash; mainly for the benefit of mobile users (text
+                    becomes illegible)
+                  </li>
+
+                  <li>
+                    Removal of 'Adapt your home' information &ndash; this now sits in 'More details' page. With only one
+                    line about flood protection measures at 60cm
+                  </li>
+
+                  <li>
+                    Addition of new design of the risk ratings dropdown
+                  </li>
+
+                  <li>
+                    Addition of content and link to help users find their way back to more details for information on
+                    preparing / managing risk
+                  </li>
+
+                </ul>
+
+
+                <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Rivers and sea: understand your flood risk
+                </h4>
+
+                <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+                  <li>
+                    Addition of 'Your location' at the top of each page &ndash; to help users understand the information
+                    is for them, it relates to the address they just searched and it is not generic information
+                  </li>
+
+                  <li>
+                    Addition of dropdown on each page, to tell users 'Why we cannot tell you the flood risk of a
+                    specific property'
+                  </li>
+
+                </ul>
+
+
+                <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Groundwater and reservoirs: understand your flood
+                  risk
+                </h4>
+
+                <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+                  <li>
+                    Addition of 'Your location' at the top of each page &ndash; to help users understand the information
+                    is for them, it relates to the address they just searched and it is not generic information
+                  </li>
+
+                  <li>
+                    Removal of grids in this content to match other 2 types of flooding</li>
+                </ul>
+
+              </div>
+            </details>
+
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/version-14">V14.0</a>
           </th>
-            <td class="govuk-table__cell">March 2024 to May 2024</td>
-            <td class="govuk-table__cell">
-              <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                    V13.0 changes
-                  </span>
-                </summary>
-                <div class="govuk-details__text">
-               
-                  <ul class="govuk-list govuk-list--bullet">
-                    <li>Summary: changed 'by 2050s' to 'with climate change', potentially removing the need to explain why the 2050s have been chosen on the summary page. Also made information and flood defences more prominent.</li>
-                    <li>More details: created one line of flood risk now and in the future with the wording 'increasing to' to imply gradual change over time.</li>
-                    <li>More details: added context about climate change and guidance page link.</li>
-                    <li>More details: testing a new way of presenting absolute risk as 1 in X is misinterpreted. Using a 20 year period and rounded up percentages to show what these initial percentages (1%/3.3%) mean over 20 years (20%/50%)</li>
-                    <li>Depth: stripped back to give the gist of the information. Not working quite how it's modelled, if a flood were to happen then these are the likely depths and how they're changing by 2050s. Using 'Present day' and '2050s' as we've already spoken about yearly chance on the 'more details' page and it is implied.</li>
-            
-                  </ul>
-                </div>
-              </details>
-              
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><a href="/version-12">V12.0</a>
+          <td class="govuk-table__cell">May to June 2024</td>
+          <td class="govuk-table__cell">
+            <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  V14.0 changes
+                </span>
+              </summary>
+
+              <div class="govuk-details__text">
+
+                <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Summary</h4>
+
+                <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+                  <li>
+                    Changed heading from 'Yearly chance of flooding with climate change' to 'Yearly chance of flooding
+                    by the 2050s'.
+                  </li>
+
+                  <li>
+                    Also added two new dropdowns 'What we mean by the 2050s' in the Surface water and the Rivers and sea
+                    sections.
+                    The information inside them is different to reflect the different time periods
+                  </li>
+
+                </ul>
+
+
+                <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Surface water: understand your flood risk</h4>
+
+                <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+                  <li>
+                    Removed the link 'increasing the chances of flooding' under the climate change information
+                  </li>
+
+                  <li>
+                    Also reduced the content in 'What the risk ratings mean' dropdown
+                  </li>
+
+                </ul>
+
+
+                <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Surface water: possible flood depths</h4>
+
+                <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+                  <li>
+                    Added in graphs to cover each depth level of 20, 30 and 60cm across present day and the 2050s
+                    timelines
+                  </li>
+
+                  <li>
+                    Included an individual risk rating of Very low, Low, Medium or High on the present day and 2050s
+                    graphs
+                  </li>
+
+                  <li>
+                    Created two new versions A tabs and B stacked layout
+                  </li>
+
+                </ul>
+
+
+              </div>
+
+            </details>
+
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/version-13">V13.0</a>
           </th>
-            <td class="govuk-table__cell">February 2024 to March 2024</td>
-            <td class="govuk-table__cell">
-              <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                    V12.0 changes
-                  </span>
-                </summary>
-                <div class="govuk-details__text">
-               
-                  <ul class="govuk-list govuk-list--bullet">
-                    <li>Summary page: reduced width of cards to keep them more contained, added more visual hierarchy, added a line to clarify what the highest risk is to both highlight which risk to focus on and imply there are more (for some users who don't scroll all the way down).</li>
-                    <li>Using 'Yearly' language after feedback from UCD community.</li>
-                    <li>Redesign of 'more details' page to use a more standard design to differentiate it from the summary page where the card design makes sense in breaking up similar flood risks.</li>
-                    <li>'More details' page now has better structure and readibility. Combined the flood risks in one line, which means that the drop down 'What the flood risk ratings mean' is now in the right section as it pertains to both ratings.</li>
-                    <li>Depth is now part of 'what you can do' as it is linked to guidance about how you can protect your home once you understand how deep flooding might be.</li>
-                  </ul>
-                </div>
-              </details>
-              
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><a href="/version-11">V11.0</a>
+          <td class="govuk-table__cell">March 2024 to May 2024</td>
+          <td class="govuk-table__cell">
+            <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  V13.0 changes
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Summary: changed 'by 2050s' to 'with climate change', potentially removing the need to explain why
+                    the 2050s have been chosen on the summary page. Also made information and flood defences more
+                    prominent.</li>
+                  <li>More details: created one line of flood risk now and in the future with the wording 'increasing
+                    to' to imply gradual change over time.</li>
+                  <li>More details: added context about climate change and guidance page link.</li>
+                  <li>More details: testing a new way of presenting absolute risk as 1 in X is misinterpreted. Using a
+                    20 year period and rounded up percentages to show what these initial percentages (1%/3.3%) mean over
+                    20 years (20%/50%)</li>
+                  <li>Depth: stripped back to give the gist of the information. Not working quite how it's modelled, if
+                    a flood were to happen then these are the likely depths and how they're changing by 2050s. Using
+                    'Present day' and '2050s' as we've already spoken about yearly chance on the 'more details' page and
+                    it is implied.</li>
+
+                </ul>
+              </div>
+            </details>
+
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/version-12">V12.0</a>
           </th>
-            <td class="govuk-table__cell">January 2024 to February 2024</td>
-            <td class="govuk-table__cell">
-              <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                    V11.0 changes
-                  </span>
-                </summary>
-                <div class="govuk-details__text">
-               
-                  <ul class="govuk-list govuk-list--bullet">
-                    <li>Removed statistics on summary on one version to see if it reduces cognitive load</li>
-                    <li>These stats have been shifted to the 'more details' page where there is a user expectation for more context of what the risk rating means</li>
-                    <li>Changed link text length on summary as the length seemed to be impacting readability/visibility</li>
-                    <li>Removed chance labels that aren't related to the address on more details as the range has been provided on the summary</li>
-                    <li>Depth is now one page, which shows how deep any flood water could be, combining the aspects that worked well in the 3 step version; bolding the border of the most likely rating and having a comparison of the now and future with flood risk ratings only.</li>
-                    <li>Depth now has more structure as a page, with what address the depths related to, a summary of the gauge, the gauge itself, what the impact of different depths are and what you can do about them - with a link to further guidance.</li>
-                  </ul>
-                </div>
-              </details>
-              
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><a href="/version-10">V10.0</a>
+          <td class="govuk-table__cell">February 2024 to March 2024</td>
+          <td class="govuk-table__cell">
+            <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  V12.0 changes
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Summary page: reduced width of cards to keep them more contained, added more visual hierarchy,
+                    added a line to clarify what the highest risk is to both highlight which risk to focus on and imply
+                    there are more (for some users who don't scroll all the way down).</li>
+                  <li>Using 'Yearly' language after feedback from UCD community.</li>
+                  <li>Redesign of 'more details' page to use a more standard design to differentiate it from the summary
+                    page where the card design makes sense in breaking up similar flood risks.</li>
+                  <li>'More details' page now has better structure and readibility. Combined the flood risks in one
+                    line, which means that the drop down 'What the flood risk ratings mean' is now in the right section
+                    as it pertains to both ratings.</li>
+                  <li>Depth is now part of 'what you can do' as it is linked to guidance about how you can protect your
+                    home once you understand how deep flooding might be.</li>
+                </ul>
+              </div>
+            </details>
+
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/version-11">V11.0</a>
           </th>
-            <td class="govuk-table__cell">December 2023 to January 2024</td>
-            <td class="govuk-table__cell">
-              <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                    V10.0 changes
-                  </span>
-                </summary>
-                <div class="govuk-details__text">
-               
-                  <ul class="govuk-list govuk-list--bullet">
-                    <li>Changed content for summary page</li>
-                    <li>Moved search for another address into the top navigation</li>
-                    <li>Changed language around depth to clarify chance of flooding to different depths</li>
-                    <li>Depth navigation changed to break up information</li>
-                    <li>Using ArcGIS accessible colour palettes for maps</li>
-                    <li>Changed mobile key to be semi-permanent in top right hand side, with buttons at bottom of screen</li>
-            
-                  </ul>
-                </div>
-              </details>
-              
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><a href="/version-9">V9.0</a>
+          <td class="govuk-table__cell">January 2024 to February 2024</td>
+          <td class="govuk-table__cell">
+            <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  V11.0 changes
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Removed statistics on summary on one version to see if it reduces cognitive load</li>
+                  <li>These stats have been shifted to the 'more details' page where there is a user expectation for
+                    more context of what the risk rating means</li>
+                  <li>Changed link text length on summary as the length seemed to be impacting readability/visibility
+                  </li>
+                  <li>Removed chance labels that aren't related to the address on more details as the range has been
+                    provided on the summary</li>
+                  <li>Depth is now one page, which shows how deep any flood water could be, combining the aspects that
+                    worked well in the 3 step version; bolding the border of the most likely rating and having a
+                    comparison of the now and future with flood risk ratings only.</li>
+                  <li>Depth now has more structure as a page, with what address the depths related to, a summary of the
+                    gauge, the gauge itself, what the impact of different depths are and what you can do about them -
+                    with a link to further guidance.</li>
+                </ul>
+              </div>
+            </details>
+
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/version-10">V10.0</a>
           </th>
-            <td class="govuk-table__cell">November 2023 to December 2023</td>
-            <td class="govuk-table__cell">
-              <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                    V9.0 changes
-                  </span>
-                </summary>
-                <div class="govuk-details__text">
-               
-                  <ul class="govuk-list govuk-list--bullet">
-                    <li>Inclusion of climate change scenarios (2050s)</li>
-                    <li>Removal of content on data reliability</li>
-                    <li>Drop down that includes how data is modelled</li>
-                    <li>Simple summary with chance rating scale</li>
-                    <li>Split out flood risks - more details page as hub page for each risk</li>
-                    <li>Depth removed from the main journey map</li>
-                    <li>Depth levels added in an accessible gauge</li>
-                    <li>Navigation between split flood risks via content list and 'next page', 'previous page' buttons</li>
-                    <li>Split out flood maps</li>
-                    <li>Removal of advanced button</li>
-                    <li>Utilising different colour palettes for different flood risks</li>
-                    <li>Removal of 15m buffer</li>
-                  </ul>
-                </div>
-              </details>
-              
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><a href="/version-8">V8.0 - V8.3</a>
+          <td class="govuk-table__cell">December 2023 to January 2024</td>
+          <td class="govuk-table__cell">
+            <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  V10.0 changes
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Changed content for summary page</li>
+                  <li>Moved search for another address into the top navigation</li>
+                  <li>Changed language around depth to clarify chance of flooding to different depths</li>
+                  <li>Depth navigation changed to break up information</li>
+                  <li>Using ArcGIS accessible colour palettes for maps</li>
+                  <li>Changed mobile key to be semi-permanent in top right hand side, with buttons at bottom of screen
+                  </li>
+
+                </ul>
+              </div>
+            </details>
+
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/version-9">V9.0</a>
           </th>
-            <td class="govuk-table__cell">October 2023 to November 2023<br>(including changes made to live service in 2024)</td>
-            <td class="govuk-table__cell">
-              <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                    V8.0 changes
-                  </span>
-                </summary>
-                <div class="govuk-details__text">
-               
-                  <ul class="govuk-list govuk-list--bullet">
-                    <li>Accessibility fixes</li>
-                <li>Return to well tested card design with simple user journey</li>
-                <li>Changes to text on advanced button</li>
-                  </ul>
-                </div>
-              </details>
-              
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><a href="/version-7">V7.0</a>
+          <td class="govuk-table__cell">November 2023 to December 2023</td>
+          <td class="govuk-table__cell">
+            <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  V9.0 changes
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Inclusion of climate change scenarios (2050s)</li>
+                  <li>Removal of content on data reliability</li>
+                  <li>Drop down that includes how data is modelled</li>
+                  <li>Simple summary with chance rating scale</li>
+                  <li>Split out flood risks - more details page as hub page for each risk</li>
+                  <li>Depth removed from the main journey map</li>
+                  <li>Depth levels added in an accessible gauge</li>
+                  <li>Navigation between split flood risks via content list and 'next page', 'previous page' buttons
+                  </li>
+                  <li>Split out flood maps</li>
+                  <li>Removal of advanced button</li>
+                  <li>Utilising different colour palettes for different flood risks</li>
+                  <li>Removal of 15m buffer</li>
+                </ul>
+              </div>
+            </details>
+
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/version-8">V8.0 - V8.3</a>
           </th>
-            <td class="govuk-table__cell">September 2023 to October 2023</td>
-            <td class="govuk-table__cell">
-              <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                    V7.0 changes
-                  </span>
-                </summary>
-                <div class="govuk-details__text">
-               
-                  <ul class="govuk-list govuk-list--bullet">
-                    <li>Added accessibility fixes with focus states</li>
-                    <li>Changed toggle to button</li>
-                    <li>Button text and icon changes depending on which map you are on</li>
-                    <li>Removed scenarios from extents, added ‘display flooding’ to toggle on and off layers</li>
-                    <li>Removed ‘turn off layers’ from depth and velocity </li>
-                  </ul>
-                </div>
-              </details>
-              
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><a href="/version-6">V6.0<br>V6.1</a>
+          <td class="govuk-table__cell">October 2023 to November 2023<br>(including changes made to live service in
+            2024)</td>
+          <td class="govuk-table__cell">
+            <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  V8.0 changes
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Accessibility fixes</li>
+                  <li>Return to well tested card design with simple user journey</li>
+                  <li>Changes to text on advanced button</li>
+                </ul>
+              </div>
+            </details>
+
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/version-7">V7.0</a>
           </th>
-            <td class="govuk-table__cell">July 2023 to September 2023</td>
-            <td class="govuk-table__cell">
-              <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                    V6.0, V6.1 changes
-                  </span>
-                </summary>
-                <div class="govuk-details__text">
-                  <p>Version 6.0</p>
-                  <ul class="govuk-list govuk-list--bullet">
-                    <li>Fixed responsiveness issues that were present in earlier prototypes</li>
-                    <li>Mobile and tablet version of map</li>
-                    <li>Scenario controls at bottom of the screen full width</li>
-                   <li> On depth and velocity, with 4 buttons utilised new approach</li>
-                       <li>an overflow with scrollable scenario control +
-                     arrows that act as buttons to scroll for user if scrolling action is difficult</li>
-                    <li>Key resizes and left aligns up until desktop where it right aligns</li>
-                    <li>Mobile version</li>
-                  </ul>
-                  <p>Version 6.1</p>
-                  <ul class="govuk-list govuk-list--bullet">
-                    <li>Advanced options toggle, shows and hides other flood risk information within ‘add technical layers’ toggle</li>
-                    <li>Simple map loaded by default which includes: surface water - depth and extent, rivers - extent, reservoirs - extent</li>
-                    <li>Added text to icons on mobile</li>
-                    <li>Shifted scenario control to the right hand side</li>
-                    <li>Fixed vertical scroll on desktop key</li>
-                  </ul>
-                </div>
-              </details>
-              
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><a href="/version-5">V5.0<br>V5.1</a>
+          <td class="govuk-table__cell">September 2023 to October 2023</td>
+          <td class="govuk-table__cell">
+            <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  V7.0 changes
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Added accessibility fixes with focus states</li>
+                  <li>Changed toggle to button</li>
+                  <li>Button text and icon changes depending on which map you are on</li>
+                  <li>Removed scenarios from extents, added ‘display flooding’ to toggle on and off layers</li>
+                  <li>Removed ‘turn off layers’ from depth and velocity </li>
+                </ul>
+              </div>
+            </details>
+
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/version-6">V6.0<br>V6.1</a>
           </th>
-            <td class="govuk-table__cell">June 2023 to July 2023</td>
-            <td class="govuk-table__cell">
-              <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                    V5.0, V5.1 changes
-                  </span>
-                </summary>
-                <div class="govuk-details__text">
-                  <p>Map version 5.0</p>
-                  <ul class="govuk-list govuk-list--bullet">
-                    <li>Scenarios as buttons on left side of map</li>
-                    <li>Key is in side menu, underneath relevant radio button</li>
-                    <li>Key is conditional, depending on what scenario is selected</li>
-                    <li>River sea very low scenario combined with low risk scenario</li>
-                    <li>Language on maps uses untested likelihood approach</li>
-                  </ul>
-                  <p>Map version 5.1</p>
-                  <ul class="govuk-list govuk-list--bullet">
-                    <li>Scenarios as buttons on left side of map</li>
-                    <li>Key is in side menu, underneath relevant radio button</li>
-                    <li>Extent scenarios are combined for surface water and rivers and seas</li>
-                    <li>River sea very low scenario combined with low risk scenario</li>
-                    <li>Uses language present on live service map</li>
-                    <li>New summary page design</li>
-                  </ul>
-                </div>
-              </details>
-              
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><a href="/version-4">V4.0<br>V4.1</a>
+          <td class="govuk-table__cell">July 2023 to September 2023</td>
+          <td class="govuk-table__cell">
+            <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  V6.0, V6.1 changes
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <p>Version 6.0</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Fixed responsiveness issues that were present in earlier prototypes</li>
+                  <li>Mobile and tablet version of map</li>
+                  <li>Scenario controls at bottom of the screen full width</li>
+                  <li> On depth and velocity, with 4 buttons utilised new approach</li>
+                  <li>an overflow with scrollable scenario control +
+                    arrows that act as buttons to scroll for user if scrolling action is difficult</li>
+                  <li>Key resizes and left aligns up until desktop where it right aligns</li>
+                  <li>Mobile version</li>
+                </ul>
+                <p>Version 6.1</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Advanced options toggle, shows and hides other flood risk information within ‘add technical
+                    layers’ toggle</li>
+                  <li>Simple map loaded by default which includes: surface water - depth and extent, rivers - extent,
+                    reservoirs - extent</li>
+                  <li>Added text to icons on mobile</li>
+                  <li>Shifted scenario control to the right hand side</li>
+                  <li>Fixed vertical scroll on desktop key</li>
+                </ul>
+              </div>
+            </details>
+
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/version-5">V5.0<br>V5.1</a>
           </th>
-            <td class="govuk-table__cell">February 2023 to June 2023</td>
-            <td class="govuk-table__cell">
-        
-                <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
-                  <summary class="govuk-details__summary">
-                    <span class="govuk-details__summary-text">
-                      V4.0, V4.1 changes
-                    </span>
-                  </summary>
-                  <div class="govuk-details__text">
-                    <p>Version 4.0</p>
-                    <ul class="govuk-list govuk-list--bullet">
-                      <li>Two versions, one full screen, one partial</li>
-                      <li>Added key to map</li>
-                      <li>Moved drop down to side menu with radios</li>
-                      <li>Split layers of extent for surface water and rivers sea</li>
-                      <li>Added marker, radius and address window + toggle in menu</li>
-                      
-                    </ul>
-                    <p>Version 4.1</p>
-                    <ul class="govuk-list govuk-list--bullet">
-                      <li>Added colour to split extents that matched with key for extents</li>
-                      <li>Added very low risk with defences to rivers sea</li>
-                      <li>Added new autocomplete search for testing</li>
-                    </ul>
-                  </div>
-                </details>
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><a href="/version-3">V3.0</a>
+          <td class="govuk-table__cell">June 2023 to July 2023</td>
+          <td class="govuk-table__cell">
+            <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  V5.0, V5.1 changes
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <p>Map version 5.0</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Scenarios as buttons on left side of map</li>
+                  <li>Key is in side menu, underneath relevant radio button</li>
+                  <li>Key is conditional, depending on what scenario is selected</li>
+                  <li>River sea very low scenario combined with low risk scenario</li>
+                  <li>Language on maps uses untested likelihood approach</li>
+                </ul>
+                <p>Map version 5.1</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Scenarios as buttons on left side of map</li>
+                  <li>Key is in side menu, underneath relevant radio button</li>
+                  <li>Extent scenarios are combined for surface water and rivers and seas</li>
+                  <li>River sea very low scenario combined with low risk scenario</li>
+                  <li>Uses language present on live service map</li>
+                  <li>New summary page design</li>
+                </ul>
+              </div>
+            </details>
+
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/version-4">V4.0<br>V4.1</a>
           </th>
-            <td class="govuk-table__cell">November 2022 to February 2023</td>
-            <td class="govuk-table__cell">
-              <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                    V3.0 changes
-                  </span>
-                </summary>
-                <p class="govuk-body">Testing scenarios for:</p>
+          <td class="govuk-table__cell">February 2023 to June 2023</td>
+          <td class="govuk-table__cell">
+
+            <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  V4.0, V4.1 changes
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <p>Version 4.0</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Two versions, one full screen, one partial</li>
+                  <li>Added key to map</li>
+                  <li>Moved drop down to side menu with radios</li>
+                  <li>Split layers of extent for surface water and rivers sea</li>
+                  <li>Added marker, radius and address window + toggle in menu</li>
+
+                </ul>
+                <p>Version 4.1</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Added colour to split extents that matched with key for extents</li>
+                  <li>Added very low risk with defences to rivers sea</li>
+                  <li>Added new autocomplete search for testing</li>
+                </ul>
+              </div>
+            </details>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/version-3">V3.0</a>
+          </th>
+          <td class="govuk-table__cell">November 2022 to February 2023</td>
+          <td class="govuk-table__cell">
+            <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  V3.0 changes
+                </span>
+              </summary>
+              <p class="govuk-body">Testing scenarios for:</p>
               <ul class="govuk-list govuk-list--bullet">
                 <li>Friendly captcha</li>
                 <li>Multiple search</li>
               </ul>
-                </div>
-              </details>
-              
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><a href="/version-2-2">V2.2</a>
-          </th>
-            <td class="govuk-table__cell">October 2022</td>
-            <td class="govuk-table__cell">
-              <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                    V2.2 changes
-                  </span>
-                </summary>
-                <p class="govuk-body">A list of as-is journeys of different flood risk summaries, includes:</p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li>A table of postcodes ranging from high risk to very low</li>
-                <li>Groundwater and reservoirs are included in some flows</li>
-                <li>An updated manage flood risk page</li>
-                <li>Links to maps are still linking to live service</li>
-              </ul>
-                </div>
-              </details>
-             
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><a href="/version-2-1.html">V2.1</a>
-          </th>
-            <td class="govuk-table__cell">April 2022 to August 2022</td>
-            <td class="govuk-table__cell">
-              <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                    V2.1 changes
-                  </span>
-                </summary>
-                <p class="govuk-body">A collection of different testing scenarios:</p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li>Content changes for flood risk summary pages</li>
-                <li>Holding comment content and structural changes</li>
-                <li>Different iterations of structural changes for flood risk summary pages</li>
-                <li>List of JPGs for a multiple postcode result feature</li>
-              </ul>
-                </div>
-              </details>
-              
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><a href="/version-2">V2.0</a>
-          </th>
-            <td class="govuk-table__cell">March 2022</td>
-            <td class="govuk-table__cell">
-              <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                    V2.0 changes
-                  </span>
-                </summary>
-                <p class="govuk-body">As-is prototype:</p>
-                <ul class="govuk-list govuk-list--bullet">
-                  <li>Updated journey to match live service</li>
-                  <li>Changed summary page</li>
-                </ul>
-                </div>
-              </details>
-            
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><a href="/version-1">V1.0</a>
-          </th>
-            <td class="govuk-table__cell">July 2019 to Jan 2020</td>
-            <td class="govuk-table__cell">
-              <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                    V1.0 changes
-                  </span>
-                </summary>
-                <p class="govuk-body">Original work containing:</p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li>Mock up of live service</li>
-                <li>Alternative results page</li>
-              </ul>
-                </div>
-              </details>
-              
-            </td>
-          </tr>
-        </tbody>
-      </table>
-  
-   
   </div>
+  </details>
+
+  </td>
+  </tr>
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header"><a href="/version-2-2">V2.2</a>
+    </th>
+    <td class="govuk-table__cell">October 2022</td>
+    <td class="govuk-table__cell">
+      <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            V2.2 changes
+          </span>
+        </summary>
+        <p class="govuk-body">A list of as-is journeys of different flood risk summaries, includes:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>A table of postcodes ranging from high risk to very low</li>
+          <li>Groundwater and reservoirs are included in some flows</li>
+          <li>An updated manage flood risk page</li>
+          <li>Links to maps are still linking to live service</li>
+        </ul>
+</div>
+</details>
+
+</td>
+</tr>
+<tr class="govuk-table__row">
+  <th scope="row" class="govuk-table__header"><a href="/version-2-1.html">V2.1</a>
+  </th>
+  <td class="govuk-table__cell">April 2022 to August 2022</td>
+  <td class="govuk-table__cell">
+    <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          V2.1 changes
+        </span>
+      </summary>
+      <p class="govuk-body">A collection of different testing scenarios:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Content changes for flood risk summary pages</li>
+        <li>Holding comment content and structural changes</li>
+        <li>Different iterations of structural changes for flood risk summary pages</li>
+        <li>List of JPGs for a multiple postcode result feature</li>
+      </ul>
+      </div>
+    </details>
+
+  </td>
+</tr>
+<tr class="govuk-table__row">
+  <th scope="row" class="govuk-table__header"><a href="/version-2">V2.0</a>
+  </th>
+  <td class="govuk-table__cell">March 2022</td>
+  <td class="govuk-table__cell">
+    <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          V2.0 changes
+        </span>
+      </summary>
+      <p class="govuk-body">As-is prototype:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Updated journey to match live service</li>
+        <li>Changed summary page</li>
+      </ul>
+      </div>
+    </details>
+
+  </td>
+</tr>
+<tr class="govuk-table__row">
+  <th scope="row" class="govuk-table__header"><a href="/version-1">V1.0</a>
+  </th>
+  <td class="govuk-table__cell">July 2019 to Jan 2020</td>
+  <td class="govuk-table__cell">
+    <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          V1.0 changes
+        </span>
+      </summary>
+      <p class="govuk-body">Original work containing:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Mock up of live service</li>
+        <li>Alternative results page</li>
+      </ul>
+      </div>
+    </details>
+
+  </td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
 
 </div>
 
