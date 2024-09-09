@@ -55,7 +55,9 @@ module.exports = {
     mapv8_3 : './app/assets/javascripts/maps/redesign-pre-nafra2.js',
 
     mapv15_1 : './app/assets/javascripts/maps/nafra2/map-v15-1.js',
-    mapv15_1_direct : './app/assets/javascripts/maps/nafra2/map-v15-1-direct.js'
+    mapv15_1_direct : './app/assets/javascripts/maps/nafra2/map-v15-1-direct.js',
+    mapv15_1_mobile : './app/assets/javascripts/maps/nafra2/map-v15-1-mobile.js',
+    mapv15_1_direct_mobile : './app/assets/javascripts/maps/nafra2/map-v15-1-direct-mobile.js'
 
           },
   output: {
