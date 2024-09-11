@@ -1,0 +1,361 @@
+{% extends "new_gov_header_service_nav" %}
+
+{% block pageTitle %}
+Summary of selected address
+{% endblock %}
+
+{% block pageScripts %}
+<script type="text/javascript">
+  var $element = document.querySelector('#step-by-step-navigation')
+  var stepByStepNavigation = new GOVUK.Modules.AppStepNav($element).init()
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+tag: {
+text: "Prototype"
+},
+html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a href="javascript:history.back()" class="govuk-back-link back-link-left">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Flood risk summary
+      </h1>
+
+      <p class="govuk-body govuk-!-margin-bottom-2"><strong>Your selected location:</strong> 41A, High Street, Cowes
+        PO31
+        7RT</p>
+
+      <p class="govuk-body govuk-!-margin-bottom-2">This information tells you the flood risk of the land around a
+        building, not the building itself.
+      </p>
+
+      <details class="govuk-details govuk-!-margin-top-4 govuk-!-margin-bottom-6">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            How we assess an area's flood risk
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+
+          <p class="govuk-body">Our data does not include every feature like kerbs, or fences and walls around a
+            building.
+            That means we cannot tell you the flood risk of every individual property.
+          </p>
+
+          <p class="govuk-body">Neighbouring houses may have different levels of flood risk. This could be because one
+            is on higher land or is nearer water, for example.
+          </p>
+
+          <p class="govuk-body">An area can be at risk even if it has not flooded before. If an area has flooded before,
+            any future flooding might not cover the same area.
+          </p>
+
+          <p class="govuk-body">Flooding is hard to predict, especially further into the future. Flood risks could be
+            bigger or smaller than what we show, and could change over time.
+          </p>
+      </details>
+
+      <p class="govuk-bod govuk-!-padding-top-4">The highest risk of flooding at this location
+        is from <strong>surface water</strong>.</p>
+
+
+        <details class="govuk-details govuk-!-margin-top-4 govuk-!-margin-bottom-4">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Flood risk and climate change
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+    
+            <p class="govuk-body">Climate change is increasing the chances of flooding.</p>
+    
+            <p class="govuk-body">Climate models project we will see warmer and wetter winters, and more frequent and
+              intense weather events.
+            </p>
+    
+            <p class="govuk-body">The models use projected rainfall totals, sea levels and river flows. They estimate
+              flood risk in different ways, with different time periods.
+            </p>
+    
+            <p class="govuk-body">Our flood risk data covers the following time periods:
+            </p>
+    
+            <ul class="govuk-list govuk-list--bullet">
+    
+              <li>2040 to 2060 for surface water</li>
+    
+              <li>2036 to 2069 for rivers and the sea
+              </li>
+    
+            </ul>
+    
+            <p class="govuk-body"> But the models cannot predict exactly when the chance of flooding will go up. Any increase in flood risk could happen at any time during these time periods.  
+            </p>
+    
+        </details>
+
+    </div>
+
+
+
+
+    <!-- Start of cards -->
+
+    <div class="govuk-grid-column-two-thirds summary-grid-width">
+
+      <!-- surface water-->
+
+      <div class="govuk-summary-card govuk-!-margin-top-3 govuk-!-margin-bottom-9" id="surface-water">
+
+        <div class="govuk-summary-card__title-wrapper vlow card-padding-left">
+          <h2 class="govuk-heading-m govuk-!-margin-bottom-0">Surface water</h2>
+          <ul class="govuk-summary-card__actions">
+            <li class="govuk-summary-card__action">
+              <a class="govuk-link" href="/version_16/Design/Desktop/surface-water-result">
+                More about your surface water flood risk
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="govuk-summary-card__content">
+
+          <dl>
+
+            <div>
+
+              <h3 class="govuk-heading-s">Yearly chance of flooding</h3>
+
+              <div class="risk-label-group-2 govuk-!-margin-top-4 govuk-!-margin-bottom-3">
+                <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+                  Very low
+                </strong>
+                <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+                  Low
+                </strong>
+                <strong class="govuk-tag govuk-tag--orange label-orange label-mod label-border">
+                  Medium<span class="govuk-visually-hidden"> within a scale of very low, low, medium and high.</span>
+                </strong>
+                <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+                  High
+                </strong>
+              </div>
+
+              <h3 class="govuk-heading-s govuk-!-padding-top-6 govuk-!-margin-bottom-0">Yearly chance of flooding
+                between 2040 and 2060</h3>
+
+              <div class="risk-label-group-2 govuk-!-margin-top-4 govuk-!-padding-bottom-3">
+                <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+                  Very low
+                </strong>
+                <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+                  Low
+                </strong>
+                <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+                  Medium
+                </strong>
+                <strong class="govuk-tag govuk-tag--red label-mod label-border">
+                  High<span class="govuk-visually-hidden"> within a scale of very low, low, medium and high.</span>
+                </strong>
+              </div>
+
+            </div>
+
+            <div>
+
+              <h3 class="govuk-heading-s govuk-!-padding-top-6 govuk-!-margin-bottom-0">What surface water is</h3>
+
+
+              <p class="govuk-body govuk-!-margin-top-2">Surface water flooding is sometimes known as flash flooding.
+                It happens when rainwater cannot drain away through normal drainage systems.
+              </p>
+              <details class="govuk-details govuk-!-margin-top-2 govuk-!-margin-bottom-6" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Why surface water flooding is a problem
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  <p class="govuk-body">Surface water flooding is a problem because:</p>
+                  <ul class="govuk-list--bullet">
+                    <li>it often happens in places you don't expect, like up hills</li>
+                    <li>it's hard to predict, as heavy rain sometimes only affects a small part of an area</li>
+                    <li>where there's lots of tarmac and concrete the water has nowhere to go</li>
+                  </ul>
+                </div>
+              </details>
+              </dt>
+            </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Rivers -->
+
+      <div class="govuk-summary-card govuk-!-margin-top-3 govuk-!-margin-bottom-9" id="surface-water">
+
+        <div class="govuk-summary-card__title-wrapper vlow card-padding-left">
+
+          <h2 class="govuk-heading-m govuk-!-margin-bottom-0">Rivers and sea</h2>
+
+          <ul class="govuk-summary-card__actions">
+            <li class="govuk-summary-card__action">
+              <a class="govuk-link card-link__font-size" href="/version_16/Design/Desktop/rivers-and-seas-result">
+                More about your rivers and sea flood risk
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+        <div class="govuk-summary-card__content">
+
+          <dl>
+
+            <div>
+
+              <h3 class="govuk-heading-s">Yearly chance of flooding</h3>
+
+              <div class="risk-label-group-2 govuk-!-margin-top-4 govuk-!-margin-bottom-3">
+                <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+                  Very low
+                </strong>
+                <strong class="govuk-tag govuk-tag--yellow label-mod label-border" aria-hidden="true">
+                  Low<span class="govuk-visually-hidden"> within a scale of very low, low, medium and high.</span>
+                </strong>
+                <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+                  Medium
+                </strong>
+                <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+                  High
+                </strong>
+              </div>
+
+              <h3 class="govuk-heading-s govuk-!-padding-top-6 govuk-!-margin-bottom-0">Yearly chance of flooding
+                between 2036 and 2069</h3>
+
+              <div class="risk-label-group-2 govuk-!-margin-top-4 govuk-!-padding-bottom-3">
+                <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+                  Very low
+                </strong>
+                <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+                  Low
+                </strong>
+                <strong class="govuk-tag govuk-tag--orange label-mod label-border" aria-hidden="true">
+                  Medium<span class="govuk-visually-hidden"> within a scale of very low, low, medium and high.</span>
+                </strong>
+                <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+                  High
+                </strong>
+              </div>
+
+            </div>
+
+            <div>
+
+              <h3 class="govuk-heading-s govuk-!-padding-top-6 govuk-!-margin-bottom-0">What makes rivers and sea
+                flooding more likely</h3>
+
+
+              <p class="govuk-body govuk-!-margin-top-2 govuk-!-margin-bottom-2">Low-lying areas that are close to
+                rivers or the sea are more likely to flood when water levels rise.
+              </p>
+              <p class="govuk-body">This information takes into account any flood defences.
+              </p>
+
+              <details class="govuk-details govuk-!-margin-top-2 govuk-!-margin-bottom-6" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Why flood defences cannot completely prevent flooding
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  <p class="govuk-body">Flood defences can help reduce the chance of flooding but cannot completely
+                    prevent it because:</p>
+                  <ul class="govuk-list--bullet">
+                    <li>they can fail</li>
+                    <li>water could spill over the top if it is deep enough</li>
+                  </ul>
+                </div>
+              </details>
+
+              </dt>
+            </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Other flood risks-->
+
+
+      <div class="govuk-summary-card govuk-!-margin-top-3 govuk-!-margin-bottom-9" id="surface-water">
+        <div class="govuk-summary-card__title-wrapper vlow card-padding-left">
+          <h2 class="govuk-heading-m govuk-!-margin-bottom-0">Other flood risks</h2>
+
+          <ul class="govuk-summary-card__actions">
+            <li class="govuk-summary-card__action">
+              <a class="govuk-link" href="/version_16/Design/Desktop/groundwater-and reservoirs-result">
+                More about groundwater and reservoirs
+              </a>
+            </li>
+          </ul>
+
+        </div>
+        <div class="govuk-summary-card__content">
+
+          <h3 class="govuk-heading-m govuk-!-margin-top-4 govuk-!-margin-bottom-2">Groundwater</h3>
+
+
+          <dl class="govuk-summary-list">
+
+
+
+            <div class="govuk-summary-list__row">
+
+
+              <p class="govuk-body govuk-!-padding-top-2 govuk-!-padding-bottom-4">
+                Flooding is possible when groundwater levels are high
+              </p>
+
+
+              <h3 class="govuk-heading-m govuk-!-margin-top-4 govuk-!-margin-bottom-2">Reservoirs</h3>
+
+              <p class="govuk-body govuk-!-padding-top-2 govuk-!-padding-bottom-4">
+                Flooding from reservoirs is unlikely in this area
+              </p>
+
+            </div>
+          </dl>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+{% endblock %}

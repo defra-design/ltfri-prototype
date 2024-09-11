@@ -62,6 +62,41 @@
     </div>
   </header>
 
+  <section aria-label="Service information" class="govuk-service-navigation"
+  data-module="govuk-service-navigation">
+  <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container">
+      <span class="govuk-service-navigation__service-name">
+        <a href="/version_16/Design/Desktop/start" class="govuk-service-navigation__link">
+          Check your long term flood risk
+        </a>
+      </span>
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden>
+          Menu
+        </button>
+        <ul class="govuk-service-navigation__list" id="navigation">
+          <li class="govuk-service-navigation__item">
+            <a class="govuk-service-navigation__link" href="/version_16/Design/Desktop/surface-water-result">
+              Surface water
+            </a>
+          </li>
+          <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
+            <a class="govuk-service-navigation__link" href="/version_16/Design/Desktop/rivers-and-seas-result" aria-current="true">
+              <strong class="govuk-service-navigation__active-fallback">Rivers and sea</strong>
+            </a>
+          </li>
+          <li class="govuk-service-navigation__item">
+            <a class="govuk-service-navigation__link" href="/version_16/Design/Desktop/groundwater-and reservoirs-result">
+              Groundwater and reservoirs
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</section>
+
 {% endblock %}
 
 

@@ -1,0 +1,97 @@
+{% extends "new_gov_header_service_nav_3" %}
+
+{% block pageTitle %}
+Understand your flood risk: groundwater and reservoirs
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+tag: {
+text: "Beta"
+},
+html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a href="javascript:history.back()" class="govuk-back-link back-link-left">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Groundwater and reservoirs: understand your flood risk
+      </h1>
+
+      <p class="govuk-body govuk-!-margin-bottom-2"><strong>Your selected location:</strong> 41A, High Street, Cowes
+        PO31
+        7RT</p>
+
+      <p class="govuk-body govuk-!-margin-bottom-6">This information tells you the flood risk of the land around a
+        building, not the building itself.
+      </p>
+
+
+
+      <h2 class="govuk-heading-l govuk-!-padding-top-6">Groundwater</h2>
+
+      <p class="govuk-body">Flooding is possible when groundwater levels are high.</p>
+
+      <h3 class="govuk-heading-m govuk-!-margin-top-4 govuk-!-margin-bottom-4">What groundwater is</h3>
+
+      <p class="govuk-body">Groundwater is the water that is usually held in rocks and soil underground.</p>
+
+      <p class="govuk-body">Groundwater flooding happens when this water rises and flows above the surface.</p>
+
+      <p class="govuk-body govuk-!-margin-bottom-6">We use flood alert data to check the risk of flooding from
+        groundwater.</p>
+
+
+
+      <h2 class="govuk-heading-l govuk-!-padding-top-6">Reservoirs</h2>
+
+      <p class="govuk-body">Flooding from reservoirs is unlikely in this area.</p>
+
+      <h3 class="govuk-heading-m govuk-!-margin-top-4 govuk-!-margin-bottom-4">What a reservoir is and how we
+        check an area's risk</h3>
+
+      <p class="govuk-body">A reservoir is a large natural or artificial lake that is designed to collect and
+        store water.</p>
+
+      <p class="govuk-body">We use predicted scenarios to understand the risk of flooding from reservoirs.</p>
+
+      <p class="govuk-body govuk-!-padding-bottom-6 govuk-!-margin-bottom-6">Flooding from reservoirs is extremely
+        unlikely. An area is
+        considered at risk if people's lives could be threatened in the event of a dam or reservoir failure.</p>
+
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+      <!-- end of details -->
+      <nav class="govuk-pagination govuk-pagination--block" role="navigation" aria-label="results">
+        <div class="govuk-pagination__prev">
+          <a class="govuk-link govuk-pagination__link" href="/version_16/Design/Desktop/rivers-and-seas-result"
+            rel="prev">
+            <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg"
+              height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path
+                d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z">
+              </path>
+            </svg>
+            <span class="govuk-pagination__link-title">Previous</span><span class="govuk-visually-hidden">:</span>
+            <span class="govuk-pagination__link-label">Rivers and sea</span></a>
+        </div>
+      </nav>
+      <!-- end of nav -->
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
