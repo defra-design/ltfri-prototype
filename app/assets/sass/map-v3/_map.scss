@@ -1346,3 +1346,60 @@ h1{
     font-size: 16px;
 }
 }
+
+
+// V17 Map // 
+.defra-map__open-key-v17 {
+  float:right;
+  position:relative;
+  display: inline-block;
+  margin-left:0px;
+  margin-top:0px;
+  height:40px;
+  width:90px;
+  padding:0;
+  border:0;
+  cursor:pointer;
+  background-color:white;
+  @include govuk-font($size: 16);
+  line-height:40px;
+/*   text-indent: -5000px; */
+  color: govuk-colour('black');
+  @include mq ($from: desktop) {
+    display: none;
+  }
+  svg {
+    display: block;
+    margin:10px;
+    vertical-align: middle;
+  }
+  &:hover {
+    background-color: govuk-colour('light-grey');
+  }
+  &:focus-visible {
+    /* outline: none; */
+    outline: 3px solid transparent;
+    box-shadow: 0px 0px 0px 2px white, inset 0px 0px 0px 0px #0b0c0c, 0px 0px 0px 5px #0b0c0c, 0px 0px 0px 8px #ffdd00;
+  }
+  &:focus[keyboard-focus]:after {
+    /* @include focus; */
+    outline: 3px solid transparent;
+    box-shadow: 0px 0px 0px 2px white, inset 0px 0px 0px 0px #0b0c0c, 0px 0px 0px 5px #0b0c0c, 0px 0px 0px 8px #ffdd00;
+  }
+  &::-moz-focus-inner {
+    border: 0;
+  }
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  pointer-events: auto;
+  .button-content {
+    display: flex;
+    align-items: center;
+  }
+  .open-button-text {
+    margin-left: 2px;  
+   }
+}

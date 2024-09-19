@@ -58,3 +58,4 @@ tmp/
 /app/assets/javascripts/bundles/mapv15_1_direct.bundle.js
 /app/assets/javascripts/bundles/mapv15_1_mobile.bundle.js
 /app/assets/javascripts/bundles/mapv15_1_direct_mobile.bundle.js
+/app/assets/javascripts/bundles/mapv17.bundle.js
