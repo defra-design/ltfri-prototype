@@ -59,3 +59,6 @@ tmp/
 /app/assets/javascripts/bundles/mapv15_1_mobile.bundle.js
 /app/assets/javascripts/bundles/mapv15_1_direct_mobile.bundle.js
 /app/assets/javascripts/bundles/mapv17.bundle.js
+/app/assets/javascripts/bundles/mapv17_DB.bundle.js
+/app/assets/javascripts/bundles/mapv17_MA.bundle.js
+/app/assets/javascripts/bundles/mapv17_MB.bundle.js

@@ -613,3 +613,14 @@ h3 {
   text-decoration-thickness: max(1px, .0625rem);
   text-underline-offset: .1578em;
 }
+
+// Version 17 //
+
+.no-data {
+  background-color:hsla(204, 3%, 70%, 0.5);
+  color: #0b0c0c;
+}
+
+.flood-extent{
+  padding-top: 10px;
+}

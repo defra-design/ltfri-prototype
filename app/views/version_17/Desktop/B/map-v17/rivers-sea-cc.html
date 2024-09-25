@@ -1,0 +1,290 @@
+{% extends "layouts/map-v17-DB" %}
+
+{% block pageTitle %}
+Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+
+<!--map -->
+<div id="maphigh" class="map">
+  <!-- Search box -->
+
+  <div class="defra-map-controls" aria-hidden="false">
+    <!--exit map-->
+    <a style="color: #0b0c0c; text-decoration: none;" href="/version_17/Desktop/B/rivers-and-seas-result">
+    <button class="defra-map__exit" id="exit-map-ros" style="color: #0b0c0c;"><svg aria-hidden="true" focusable="false"
+        width="20" height="20" viewBox="0 0 20 20">
+        <path d="M4.828,11L12.314,18.485L10.899,19.899L1,10L10.899,0.101L12.314,1.515L4.828,9L19,9L19,11L4.828,11Z"
+          style="fill:currentColor;stroke:currentColor;stroke-width:0.1px"></path>
+      </svg><span>Exit map</span></button></a>
+
+    <img class="defra-map-os-logo" alt="Ordnance Survey logo" src="/public/images/map-os-logo.png" width="90"
+      height="24" style="pointer-events: auto; display: block;">
+
+    {# Scenario switch#}
+    {% switch data.scenario %}
+    {% case '4' %}
+    {% set swHigh = true %}
+    {% case '10' %}
+    {% set swHigh = true %}
+    {% case '13' %}
+    {% set swHigh = true %}
+    {% case '5' %}
+    {% set swMed = true %}
+    {% case '11' %}
+    {% set swMed = true %}
+    {% case '14' %}
+    {% set swMed = true %}
+    {% case '6' %}
+    {% set swLow = true %}
+    {% case '12' %}
+    {% set swLow = true %}
+    {% case '15' %}
+    {% set swLow = true %}
+    {% default %}
+    {% set swMed = true %}
+    {% endswitch %}
+
+    <!--controls on the bottom-->
+
+    <div class="defra-map-controls__bottom-v3" id="controls">
+
+      <!-- open map on mobile -->
+      <button class="defra-map__open-key-v17" focusable="true" id="open-key">
+        <div class="button-content">
+          <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
+            <path
+              d="M17.215,11.31L19,12.5L10,18.5L1,12.5L2.785,11.31L9.945,16.083C9.978,16.106 10.022,16.106 10.055,16.083L17.215,11.31Z"
+              style="fill:currentColor;"></path>
+            <path d="M10,1.5L1,7.5L10,13.5L19,7.5L10,1.5ZM10,3.88L15.43,7.5L10,11.12L4.57,7.5L10,3.88Z"
+              style="fill:currentColor;"></path>
+          </svg>
+          <span class="govuk-visually-hidden">open</span><span class="open-button-text">Menu</span>
+        </div>
+      </button>
+
+      <div class="defra-map-zoom ol-unselectable ol-control">
+        <button id="zoomIn" class="defra-map-zoom-in" type="button" aria-controls="viewport"><svg aria-hidden="true"
+            focusable="false" width="20" height="20" viewBox="0 0 20 20"
+            style="fill:currentColor;fill-rule:evenodd;clip-rule:evenodd;">
+            <rect x="3" y="9" width="14" height="2"></rect>
+            <rect x="9" y="3" width="2" height="14"></rect>
+          </svg><span class="govuk-visually-hidden">Zoom in</span></button>
+        <!--zoom out-->
+        <button id="zoomOut" class="defra-map-zoom-out" type="button" aria-controls="viewport"><svg aria-hidden="true"
+            focusable="false" width="20" height="20" viewBox="0 0 20 20"
+            style="fill:currentColor;fill-rule:evenodd;clip-rule:evenodd;">
+            <rect x="3" y="9" width="14" height="2"></rect>
+          </svg><span class="govuk-visually-hidden">Zoom out</span></button>
+      </div>
+
+
+      <!-- Scenarios -->
+
+      <div class="defra-map-scenarios-v3-2 scenario-float-right" style="display: none;">
+        <div class="defra-map-scenarios-v3_container" id="scenarios-controls">
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+
+<!-- attribution start -->
+<div class="defra-map-info dialog-right-extent" id="info" role="dialog" style="display:none;" aria-modal="true"
+  aria-labelledby="infoLabel" aria-describedby="infoDescription" tabindex="-1">
+  <h2 id="infoLabel" class="govuk-visually-hidden">Attributions</h2>
+  <div class="defra-map-info__container">
+    <div id="infoContent" class="defra-map-info__content">
+      <div id="infoDescription">
+        <div class="ol-attribution ol-unselectable ol-control ol-uncollapsible govuk-!-padding-2">
+          <ul class="govuk-list">
+            <li class="govuk-!-font-size-14"><a
+                href="https://check-long-term-flood-risk.service.gov.uk/os-terms">Contains OS data</a><br>© Crown
+              copyright and database rights 2023</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <button class="defra-map-info__close">
+      <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
+        <path d="M10,8.6L15.6,3L17,4.4L11.4,10L17,15.6L15.6,17L10,11.4L4.4,17L3,15.6L8.6,10L3,4.4L4.4,3L10,8.6Z"
+          style="fill:currentColor;stroke:currentColor;stroke-width:0.1px;"></path>
+      </svg>
+      <span class="govuk-visually-hidden">Close</span>
+    </button>
+  </div>
+</div>
+
+<!-- attribution end -->
+
+<!-- key -->
+<div class="defra-map-key" id="key" aria-labelledby="mapKeyLabel" tabindex="-1" role="region" aria-hidden="false"
+  style="display: block;">
+  <div class="defra-map-key__container" id="defra-map-key__container">
+    <h1 id="mapKeyLabel" class="defra-map-key__title"><span role="text">Menu <span class="govuk-visually-hidden">for
+          map features</span></span></h1>
+    <button class="defra-map-key__close" id="close-key"><svg aria-hidden="true" focusable="false" width="20" height="20"
+        viewBox="0 0 20 20">
+        <path d="M10,8.6L15.6,3L17,4.4L11.4,10L17,15.6L15.6,17L10,11.4L4.4,17L3,15.6L8.6,10L3,4.4L4.4,3L10,8.6Z" fill=""
+          style="fill:currentColor;stroke:currentColor;stroke-width:0.1px;"></path>
+      </svg><span class="govuk-visually-hidden">Close key</span></button>
+    <div class="defra-map-key__content">
+
+      <h2 class="defra-map-key__section-title-1">Rivers and the sea</h2>
+
+      <div class="defra-map-key__section">
+        <div class="defra-map-key__item">
+
+
+          <!-- Rivers and sea-->
+
+          {{ govukRadios({
+          name: "risk-type",
+          classes: "govuk-radios--small",
+          fieldset: {
+          legend: {
+          html: 'Yearly chance of flooding',
+          classes: "defra-map-key__radio-heading",
+          isPageHeading: false
+          }
+          },
+          items: [
+          {
+          id: "ros",
+          classes: "visible",
+          value: "2",
+          html: 'Flood area (extent)'
+          }
+          ]
+          }) }}
+
+          <!-- reservoirs -->
+
+          {{ govukRadios({
+          name: "risk-type",
+          classes: "govuk-radios--small",
+          fieldset: {
+          legend: {
+          html: 'Yearly chance of flooding between 2036 and 2069',
+          isPageHeading: false,
+          classes: "defra-map-key__radio-heading-2"
+          }
+          },
+          items: [
+          {
+          id: "reservoir",
+          classes: "visible",
+          value: "3",
+          checked: true,
+          html: 'Flood area (extent)
+          <span class="defra-map-key__symbol-container defra-map-key__symbol-container--multi" id="high-risk-rs">
+            <span class="defra-map-key__symbol">
+              <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32">
+                <rect x="5" y="5" width="22" height="22" style="fill:#555C9D"></rect>
+              </svg>
+            </span>
+            High risk
+          </span>
+          <span class="defra-map-key__symbol-container defra-map-key__symbol-container--multi" id="med-risk-rs">
+            <span class="defra-map-key__symbol">
+              <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32">
+                <rect x="5" y="5" width="22" height="22" style="fill:#9AA0DE"></rect>
+              </svg>
+            </span>
+            Medium risk
+          </span>
+          <span class="defra-map-key__symbol-container defra-map-key__symbol-container--multi" id="low-risk-rs">
+            <span class="defra-map-key__symbol">
+              <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32">
+                <rect x="5" y="5" width="22" height="22" style="fill:#C4E1FF"></rect>
+              </svg>
+            </span>
+            Low risk
+          </span>
+          <span class="defra-map-key__symbol-container defra-map-key__symbol-container--multi" id="vlow-risk-rs">
+            <span class="defra-map-key__symbol">
+              <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32">
+                <rect x="5" y="5" width="22" height="22" style="fill:#c9f8ff"></rect>
+              </svg>
+            </span>
+            Very low risk
+          </span>
+          <span class="defra-map-key__symbol-container defra-map-key__symbol-container--multi" id="vlow-risk-rs">
+            <span class="defra-map-key__symbol">
+              <svg  aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 32 32">
+                <rect x="5" y="5" width="22" height="22" style="fill:hsla(204, 3%, 70%, 0.5);
+                "></rect>
+              </svg>
+            </span>
+            No data available
+          </span>
+          '
+          }
+          ]
+          }) }}
+
+          <!-- CHECKBOX TOGGLE-->
+
+          {% if data.marker == "true"%}
+          {% set marker = true %}
+          {% else %}
+          {% set marker = false %}
+          {% endif %}
+
+          {{ govukCheckboxes({
+          name: "ros-map-toggle",
+          classes: "govuk-checkboxes--small",
+          fieldset: {
+          legend: {
+          html: '<h2 class="defra-map-key__section-title-1-toggle-v5">Map details</h2>',
+          isPageHeading: false,
+          classes: "govuk-fieldset__legend--s"
+          }
+          },
+
+          items: [
+          {
+          id: "display-option",
+          classes: "visible",
+          value: "30",
+          html: 'Show flooding',
+          checked: true
+          },
+          {
+          id: "toggle",
+          html: '<span class="defra-map-key__symbol-container">
+            <span class="defra-map-key__symbol">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#160000" class="w-6 h-6">
+                <path fill-rule="evenodd"
+                  d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                  clip-rule="evenodd" />
+              </svg>
+            </span>
+            Selected address
+          </span>',
+          checked: marker
+          },
+          {
+          id: "tech-option",
+          classes: "visible, hidden",
+          value: "40",
+          html: ''
+          }
+          ]
+          }) }}
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

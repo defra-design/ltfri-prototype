@@ -1,0 +1,38 @@
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+
+{% extends "layouts/maps-unbranded.html" %}
+
+
+{% block header %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no, shrink-to-fit=no" />
+<meta name="HandheldFriendly" content="true"
+
+{% endblock %}
+
+
+
+{% block scripts %}
+  {{ super() }}
+  <script src="/public/javascripts/bundles/mapv17_MA.bundle.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+
+  <script>
+    //copyright modal
+    function toggle() {
+      $("#info").toggle();
+    }
+
+        
+    </script> 
+
+{% endblock %}
+
+{% block footer %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/9d4f3210cf.js" crossorigin="anonymous"></script>
+{% endblock %}
