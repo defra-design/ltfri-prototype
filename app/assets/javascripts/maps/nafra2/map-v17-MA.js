@@ -447,10 +447,44 @@ function removeLayers() {
    });
 
 
+// Polygon on map //
+
+import Polygon from 'ol/geom/Polygon.js';
+var polygonStyle = new Style({
+  fill: new Fill({
+    color: 'rgba(177, 180, 182, 0.5)',
+  }),
+});
+var nafraPolygon = new Feature({
+  geometry: new Polygon([[
+    [-1.2981245, 50.7652459], 
+    [-1.3019308, 50.7648421], 
+    [-1.3041854, 50.7634242], 
+    [-1.3024482, 50.7610315], 
+    [-1.3003215, 50.7619557], 
+    [-1.2972109, 50.7624075],
+    [-1.2966752, 50.7630193], 
+    [-1.2969752, 50.7636283], 
+    [-1.2981245, 50.7652459]]]),
+  name: 'nafraPolygon'
+});
+
+var polygonLayer = new VectorLayer({
+  title: 'polygon',
+  source: new VectorSource({
+    features: [nafraPolygon]
+  }),
+  style: polygonStyle
+});
+
+function showMissingPolygon() {
+  map.addLayer(polygonLayer);
+}
+
 //add marker and address
 function markerAddress() {
-  map.addLayer(markerLayer)/* ,
-  map.addLayer(addressLayer) */;
+  map.addLayer(markerLayer)
+  // map.addLayer(addressLayer)
 };
 
 //remove marker, address and radius
@@ -530,6 +564,7 @@ removeLayers();
   }
   else if (pathname == '/version_17/Mobile/A/map-v17/rivers-sea-cc'){
     map.addLayer(surfaceWaterDepthRos(2)),
+    showMissingPolygon();
     /* map.addLayer(riverSea(4)),
     map.addLayer(riverSea(3)),
     map.addLayer(riverSea(2)),
@@ -862,57 +897,57 @@ $('#att-key').on('click', function() {
 
 // Scenario control arrows 
 
-if (window.location.pathname.includes("/version_17/Mobile/A/map-v17/surface-water") || window.location.pathname.includes("/version_17/Mobile/A/map-v17/surface-water-cc") || window.location.pathname.includes("/version_17/Mobile/A/map-v17/rivers-sea") || window.location.pathname.includes("/version_17/Mobile/A/map-v17/rivers-sea-cc")) {
-  const btnLeft = document.querySelector(".left-btn");
-  const btnRight = document.querySelector(".right-btn");
-  const scenarioContainer = document.querySelector(".defra-map-scenarios-depth-v4");
+// if (window.location.pathname.includes("/version_17/Mobile/A/map-v17/surface-water") || window.location.pathname.includes("/version_17/Mobile/A/map-v17/surface-water-cc") || window.location.pathname.includes("/version_17/Mobile/A/map-v17/rivers-sea") || window.location.pathname.includes("/version_17/Mobile/A/map-v17/rivers-sea-cc")) {
+//   const btnLeft = document.querySelector(".left-btn");
+//   const btnRight = document.querySelector(".right-btn");
+//   const scenarioContainer = document.querySelector(".defra-map-scenarios-depth-v4");
 
-  const IconVisibility = () => {
-    let scrollLeftValue = Math.ceil(scenarioContainer.scrollLeft);
-    let scrollableWidth = scenarioContainer.scrollWidth - scenarioContainer.clientWidth;
-    let isAtLeftEdge = scrollLeftValue < 10; // Check if within 10 pixels of the left side
+//   const IconVisibility = () => {
+//     let scrollLeftValue = Math.ceil(scenarioContainer.scrollLeft);
+//     let scrollableWidth = scenarioContainer.scrollWidth - scenarioContainer.clientWidth;
+//     let isAtLeftEdge = scrollLeftValue < 10; // Check if within 10 pixels of the left side
 
-    btnLeft.style.display = isAtLeftEdge ? "none" : "block";
-    btnRight.style.display = scrollableWidth > scrollLeftValue ? "block" : "none";
-  }
+//     btnLeft.style.display = isAtLeftEdge ? "none" : "block";
+//     btnRight.style.display = scrollableWidth > scrollLeftValue ? "block" : "none";
+//   }
 
-  btnLeft.addEventListener("click", () => {
-    scenarioContainer.scrollLeft -= 150;
-    IconVisibility();
-  });
+//   btnLeft.addEventListener("click", () => {
+//     scenarioContainer.scrollLeft -= 150;
+//     IconVisibility();
+//   });
 
-  btnRight.addEventListener("click", () => {
-    scenarioContainer.scrollLeft += 150;
-    IconVisibility();
-  });
+//   btnRight.addEventListener("click", () => {
+//     scenarioContainer.scrollLeft += 150;
+//     IconVisibility();
+//   });
 
-  // Listen to the scroll event to update arrow visibility
-  scenarioContainer.addEventListener("scroll", () => {
-    IconVisibility();
-  });
+//   // Listen to the scroll event to update arrow visibility
+//   scenarioContainer.addEventListener("scroll", () => {
+//     IconVisibility();
+//   });
 
-  // Work with drag interaction
-  let activeDrag = false;
+//   // Work with drag interaction
+//   let activeDrag = false;
 
-  scenarioContainer.addEventListener("mousedown", (e) => {
-    e.preventDefault(); // Prevent accidental text selection during drag
-    activeDrag = true;
-    startX = e.pageX - scenarioContainer.offsetLeft;
-    scrollLeft = scenarioContainer.scrollLeft;
-  });
+//   scenarioContainer.addEventListener("mousedown", (e) => {
+//     e.preventDefault(); // Prevent accidental text selection during drag
+//     activeDrag = true;
+//     startX = e.pageX - scenarioContainer.offsetLeft;
+//     scrollLeft = scenarioContainer.scrollLeft;
+//   });
 
-  scenarioContainer.addEventListener("mousemove", (e) => {
-    if (!activeDrag) return;
-    e.preventDefault(); // Prevent accidental text selection during drag
-    const x = e.pageX - scenarioContainer.offsetLeft;
-    const walk = (x - startX) * 2; // Adjust drag sensitivity
-    scenarioContainer.scrollLeft = scrollLeft - walk;
-  });
+//   scenarioContainer.addEventListener("mousemove", (e) => {
+//     if (!activeDrag) return;
+//     e.preventDefault(); // Prevent accidental text selection during drag
+//     const x = e.pageX - scenarioContainer.offsetLeft;
+//     const walk = (x - startX) * 2; // Adjust drag sensitivity
+//     scenarioContainer.scrollLeft = scrollLeft - walk;
+//   });
 
-  document.addEventListener("mouseup", () => {
-    activeDrag = false;
-  });
-}
+//   document.addEventListener("mouseup", () => {
+//     activeDrag = false;
+//   });
+// }
 
 
 // Fix CSS and display left arrow none + display right button none above tablet width
