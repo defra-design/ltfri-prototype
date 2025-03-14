@@ -1,0 +1,21 @@
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+
+{% extends "layouts/maps-unbranded.html" %}
+
+
+{% block header %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no, shrink-to-fit=no" />
+<meta name="HandheldFriendly" content="true"
+
+{% endblock %}
+
+
+
+{% block scripts %}
+  {{ super() }}
+  <script src="/public/javascripts/bundles/mapv19.bundle.js"></script>
+{% endblock %}

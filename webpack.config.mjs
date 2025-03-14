@@ -1,12 +1,14 @@
-const webpack = require('webpack');
+import webpack from 'webpack'
+import dotenv from 'dotenv'
+import path from 'path'
 
-const Dotenv = require('dotenv-webpack');
+const __dirname = path.dirname(new URL(import.meta.url).pathname)
 
+dotenv.config({ path: path.join(__dirname, './.env') })
 
-module.exports = {
+export default{
   
   plugins: [
-    new Dotenv(),
     new webpack.DefinePlugin({
       'process.env': {
         OS_API_KEY: JSON.stringify(process.env.OS_API_KEY)
@@ -61,13 +63,24 @@ module.exports = {
     mapv17 : './app/assets/javascripts/maps/nafra2/map-v17.js',
     mapv17_DB : './app/assets/javascripts/maps/nafra2/map-v17-DB.js',
     mapv17_MA : './app/assets/javascripts/maps/nafra2/map-v17-MA.js',
-    mapv17_MB: './app/assets/javascripts/maps/nafra2/map-v17-MB.js'
-
-          },
+    mapv17_MB: './app/assets/javascripts/maps/nafra2/map-v17-MB.js',
+    mapv19: './app/assets/javascripts/maps/nafra2/map-v19.js'
+  },
   output: {
     path: __dirname,
     filename: './app/assets/javascripts/bundles/[name].bundle.js'
   },
-};
+module: {
+  rules: [
+    {
+      test: /\.m?js/, // fix:issue: https://github.com/webpack/webpack/issues/11467
+      resolve: {
+        fullySpecified: false,
+      }
+    }
+  ]
+}
+
+}
 
 
