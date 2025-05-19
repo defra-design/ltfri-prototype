@@ -1,0 +1,148 @@
+{% extends "new_gov_header_service_nav_3" %}
+
+{% block pageTitle %}
+Understand your flood risk: groundwater and reservoirs
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+tag: {
+text: "Beta"
+},
+html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a href="javascript:history.back()" class="govuk-back-link back-link-left">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Groundwater: understand your flood risk
+      </h1>
+
+      <p class="govuk-body govuk-!-margin-bottom-2"><strong>Your selected location:</strong> 8, Sydenham Way, Dorchester, 
+        Dorset DT1 1DN
+        </p>
+
+      <p class="govuk-body govuk-!-margin-bottom-6">This information tells you the flood risk of the land around a
+        building, not the building itself.
+      </p>
+
+
+
+      <h2 class="govuk-heading-l govuk-!-padding-top-6">Groundwater</h2>
+
+      <p class="govuk-body">Flooding is possible when groundwater levels are high.</p>
+
+      <h3 class="govuk-heading-m govuk-!-margin-top-4 govuk-!-margin-bottom-4">What groundwater is</h3>
+
+      <p class="govuk-body">Groundwater is the water that is usually held in rocks and soil underground.</p>
+
+      <p class="govuk-body">Groundwater flooding happens when this water rises and flows above the surface.</p>
+
+      <p class="govuk-body govuk-!-margin-bottom-6">We use flood alert data to check the risk of flooding from
+        groundwater.</p>
+
+
+      <h3 class="govuk-heading-m govuk-!-margin-top-4 govuk-!-margin-bottom-4">Why groundwater flooding is a problem</h3>
+
+      <p class="govuk-body">Groundwater flooding is a problem because:</p>
+      <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+        <li>water will come up through the ground or the floor
+        </li>
+        <li>It usually happens days, weeks or months after lots of rain and can last a long time
+        </li>
+        <li>it often happens in the places you don't expect, like on the side of a hill
+        </li>
+
+      </ul>
+
+      <details class="govuk-details govuk-!-margin-top-2 govuk-!-margin-bottom-6" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            How we assess an area's flood risk
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body">It is difficult to predict groundwater flooding. We use flood alert data to check the risk of flooding from groundwater.</p>
+
+            Groundwater flood alert areas are set up where there is good monitoring data along with historic flood data.</p>
+            
+            Alert areas can cover large parts of the community - not every property within the area may be at risk of flooding.</p>
+            
+            Some properties outside of flood alert areas may also be at risk of groundwater flooding.</p>
+          </details>
+
+
+            <h3 class="govuk-heading-m govuk-!-margin-top-4 govuk-!-margin-bottom-4">What you can do next</h3>
+          
+        
+            <p class="govuk-body">You cannot completely protect your property from flooding, but there's a lot you can do to reduce:</p>
+            <ul class="govuk-list govuk-list--bullet">
+
+              <li>the amount of water that gets in </li>
+              <li>the damage from flood water</li>
+              <li>the cost and time of cleaning up after a flood</li>
+      
+            </ul>
+            
+
+            <p class="govuk-body">You can:</p>
+            <ul class="govuk-list govuk-list--bullet">
+
+               <li>Read about how to <a href="https://www.gov.uk/prepare-for-flooding">protect yourself from future flooding</a></p>
+               </li>
+               <li>Make a flood plan</p>
+               </li>
+               <li>Read about <a href="https://www.gov.uk/guidance/adapting-your-home-or-business-to-the-risk-of-flooding">adapt your home or business to flooding</a></p>
+               </li>
+               <li><a href="https://www.gov.uk/sign-up-for-flood-warnings">Sign up to flood alerts</a></p>
+               </li>
+               <li>Read amore about <a href="https://www.gov.uk/guidance/groundwater-flooding">groundwater flooding</a></p>
+               </li>
+          
+            </ul>   
+
+            <p class="govuk-body">You should check your flood risk regularly because the information may change.</p>
+
+            
+            <h3 class="govuk-heading-m govuk-!-margin-top-4 govuk-!-margin-bottom-4">If you need more details on groundwater flood risk</h3>
+              <p class="govuk-body">Lead local flood authorities are responsible for managing flood risk from groundwater. They may hold more detailed information.</p>
+              <p class="govuk-body">Your lead local flood authority is <b>Xxxx.</b></p>
+        </div>
+      
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+      <!-- end of details -->
+      <nav class="govuk-pagination govuk-pagination--block" role="navigation" aria-label="results">
+        <div class="govuk-pagination__prev">
+          <a class="govuk-link govuk-pagination__link" href="/version_16/Design/Desktop/rivers-and-seas-result"
+            rel="prev">
+            <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg"
+              height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path
+                d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z">
+              </path>
+            </svg>
+            <span class="govuk-pagination__link-title">Previous</span><span class="govuk-visually-hidden">:</span>
+            <span class="govuk-pagination__link-label">Rivers and sea</span></a>
+        </div>
+      </nav>
+      <!-- end of nav -->
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
