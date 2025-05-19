@@ -1,0 +1,111 @@
+{% extends "new_gov_header_service_nav" %}
+
+{% block pageTitle %}
+Select an address
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a href="javascript:history.back()" class="govuk-back-link back-link-left">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+<div id="address-page">
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Select an address
+      </h1>
+
+      <div class="govuk-inset-text">
+
+        <p>
+          This service will tell you the flood risk of an area, not a specific property.
+        </p>
+
+        <p>
+          We need to ask for the property number so we know where you want to check.
+        </p>
+
+      </div>
+
+
+      <form method="post">
+
+        <div class="govuk-form-group">
+
+          <span class="govuk-label">Postcode</span>
+
+          <p class="govuk-body">
+            <strong style="text-transform: uppercase;">BA16 0GZ</strong>
+            <a href="where-do-you-want-to-check" class="govuk-link">Change</a>
+          </p>
+
+        </div>
+
+        <div class="govuk-form-group">
+
+          <label class="govuk-label" for="address">
+            Select an address
+          </label>
+
+          <select class="govuk-select" id="address" name="address">
+  
+    
+            <option value="-1">1 addresses found</option>
+          
+        
+          
+            <option value="0">Add address</option>
+          
+      
+          
+        
+        </select>
+        </div>
+
+        <a href="/version_19/version_b/flood-risk-summary-groundwater" role="button" 
+        class="govuk-button govuk-button--primary govuk-!-margin-top-2 govuk-!-margin-bottom-8">Continue</a>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+{% endblock %} {% if useAutoStoreData %} {% block footer %}
+{{
+  govukFooter({
+    meta: {
+      items: [
+        {
+          href: "https://govuk-prototype-kit.herokuapp.com/",
+          text: "GOV.UK Flooding " + releaseVersion
+        },
+        {
+          href: "/prototype-admin/clear-data",
+          text: "Clear data"
+        }
+      ]
+    }
+  })
+}}
+{% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
+"includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
+<!-- GOV.UK Flooding {{releaseVersion}} -->
+{% endblock %}
