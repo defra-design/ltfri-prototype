@@ -139,14 +139,14 @@ html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedbac
               <h3 class="govuk-heading-s">Yearly chance of flooding</h3>
 
               <div class="risk-label-group-2 govuk-!-margin-top-4 govuk-!-margin-bottom-3">
-                <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
-                  Very low
+                <strong class="govuk-tag govuk-tag--green label-green label-mod label-border">
+                  Very low <span class="govuk-visually-hidden"> within a scale of very low, low, medium and high.</span>
                 </strong>
                 <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
                   Low
                 </strong>
-                <strong class="govuk-tag govuk-tag--orange label-orange label-mod label-border">
-                  Medium<span class="govuk-visually-hidden"> within a scale of very low, low, medium and high.</span>
+                <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+                  Medium
                 </strong>
                 <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
                   High
@@ -157,8 +157,8 @@ html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedbac
                 between 2040 and 2060</h3>
 
               <div class="risk-label-group-2 govuk-!-margin-top-4 govuk-!-padding-bottom-3">
-                <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
-                  Very low
+                <strong class="govuk-tag govuk-tag--green label-green label-mod label-border">
+                  Very low <span class="govuk-visually-hidden"> within a scale of very low, low, medium and high.</span>
                 </strong>
                 <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
                   Low
@@ -166,8 +166,8 @@ html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedbac
                 <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
                   Medium
                 </strong>
-                <strong class="govuk-tag govuk-tag--red label-mod label-border">
-                  High<span class="govuk-visually-hidden"> within a scale of very low, low, medium and high.</span>
+                <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+                  High
                 </strong>
               </div>
 
@@ -242,14 +242,12 @@ html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedbac
               <h3 class="govuk-heading-s">Yearly chance of flooding</h3>
 
               <div class="risk-label-group-2 govuk-!-margin-top-4 govuk-!-margin-bottom-3">
-                <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
-                  No data
+
+                <strong class="govuk-tag govuk-tag--green label-green label-mod label-border">
+                  Very low <span class="govuk-visually-hidden"> within a scale of very low, low, medium and high.</span>
                 </strong>
                 <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
-                  Very low
-                </strong>
-                <strong class="govuk-tag govuk-tag--yellow label-mod label-border" aria-hidden="true">
-                  Low<span class="govuk-visually-hidden"> within a scale of very low, low, medium and high.</span>
+                  Low
                 </strong>
                 <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
                   Medium
@@ -262,10 +260,8 @@ html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedbac
               <h3 class="govuk-heading-s govuk-!-padding-top-6 govuk-!-margin-bottom-0">Yearly chance of flooding
                 between 2036 and 2069</h3>
               <div class="risk-label-group-2 govuk-!-margin-top-4 govuk-!-padding-bottom-3">
-                <strong class="govuk-tag no-data label-mod label-border" aria-hidden="true">
-                  No data
-                </strong>
-                <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+
+                <strong class="govuk-tag govuk-tag--green label-green label-mod label-border">
                   Very low
                 </strong>
                 <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
@@ -278,9 +274,6 @@ html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedbac
                   High
                 </strong>
               </div>
-
-              <p class="govuk-body govuk-!-margin-top-2 govuk-!-margin-bottom-2">This data is currently unavailable. 
-              </p>
 
             </div>
 
@@ -348,14 +341,31 @@ html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedbac
                 We use flood alert data to check the risk of flooding from groundwater.
               </p>
 
-                <div class="risk-label-group-2 govuk-!-margin-top-4 govuk-!-padding-bottom-3">
-                  <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
-                    Outside a flood area
-                  </strong>
-                  <strong class="govuk-tag no-data label-mod label-border" aria-hidden="true">
-                    Inside a flood area
-                  </strong>
-                </div>
+              
+              <style>
+                .govuk-tag {
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  max-width: 270px; /* control width */
+                  display: inline-block;
+                }
+              
+                .risk-label-group-2 {
+                  display: flex;
+                  flex-wrap: nowrap;
+                  gap: 0.5rem;
+                }
+              </style>
+              
+              <div class="risk-label-group-2 govuk-!-margin-top-4 govuk-!-padding-bottom-3">
+                <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
+                  Outside a flood alert area
+                </strong>
+                <strong class="govuk-tag no-data label-mod label-border" aria-hidden="true">
+                  Inside a flood alert area
+                </strong>
+              </div>
 
               <details class="govuk-details govuk-!-margin-top-2 govuk-!-margin-bottom-6" data-module="govuk-details">
                 <summary class="govuk-details__summary">

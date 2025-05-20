@@ -349,12 +349,28 @@ html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedbac
                 We use flood alert data to check the risk of flooding from groundwater.
               </p>
 
+              <style>
+                .govuk-tag {
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  max-width: 270px; /* control width */
+                  display: inline-block;
+                }
+              
+                .risk-label-group-2 {
+                  display: flex;
+                  flex-wrap: nowrap;
+                  gap: 0.5rem;
+                }
+              </style>
+
                 <div class="risk-label-group-2 govuk-!-margin-top-4 govuk-!-padding-bottom-3">
                   <strong class="govuk-tag no-data label-mod label-border" aria-hidden="true">
-                    Outside a flood area
+                    Outside a flood alert area
                   </strong>
                   <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
-                    Inside a flood area
+                    Inside a flood alert area
                   </strong>
                 </div>
 
@@ -365,10 +381,7 @@ html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedbac
                   </span>
                 </summary>
                 <div class="govuk-details__text">
-                  <p class="govuk-body">Flooding is possible when groundwater level are high</p>
-                  <p class="govuk-body">You can sign up to <a href="https://www.gov.uk/sign-up-for-flood-warnings">
-                    get groundwater flood alerts</a></p>
-                    
+                  <p class="govuk-body">Flooding from groundwater is unlikely in this area.</p>
                 </div>
               </details>
 

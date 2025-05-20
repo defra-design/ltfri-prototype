@@ -1,4 +1,4 @@
-{% extends "new_gov_header_service_nav_3" %}
+{% extends "layout" %}
 
 {% block pageTitle %}
 Understand your flood risk: groundwater and reservoirs
@@ -7,7 +7,7 @@ Understand your flood risk: groundwater and reservoirs
 {% block beforeContent %}
 {{ govukPhaseBanner({
 tag: {
-text: "Beta"
+text: "Prototype"
 },
 html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
@@ -20,6 +20,30 @@ html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedbac
 
 
 <div class="govuk-width-container">
+
+  <nav aria-label="Pages with more detail on this service" class="gem-c-contents-list govuk-!-margin-bottom-3" role="navigation">
+    <h2 class="govuk-body govuk-!-margin-bottom-2">Contents</h2>
+    <ol class="gem-c-contents-list__list">
+      
+      
+  <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active" aria-current="true">
+  <strong>Groundwater</strong>
+  </li>
+  
+      
+  <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+    <a class="gem-c-contents-list__link govuk-link" href="/rivers-and-sea" previewlistener="true" aria-label="Rivers and the sea understand your flood risk page.">Rivers and the sea</a>
+  </li>
+  <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+    <a class="gem-c-contents-list__link govuk-link" href="/surface-water-result" previewlistener="true" aria-label="Rivers and the sea understand your flood risk page.">Surface water</a>
+  </li>
+  <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+    <a class="gem-c-contents-list__link govuk-link" href="/surface-water-result" previewlistener="true" aria-label="Rivers and the sea understand your flood risk page.">Reservoirs</a>
+  </li>
+  <br>
+  <br>
+
+
   <div class="govuk-grid-row">
 
     <div class="govuk-grid-column-two-thirds">
@@ -35,21 +59,6 @@ html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedbac
       <p class="govuk-body govuk-!-margin-bottom-6">This information tells you the flood risk of the land around a
         building, not the building itself.
       </p>
-
-
-
-      <h2 class="govuk-heading-l govuk-!-padding-top-6">Groundwater</h2>
-
-      <p class="govuk-body">Flooding is possible when groundwater levels are high.</p>
-
-      <h3 class="govuk-heading-m govuk-!-margin-top-4 govuk-!-margin-bottom-4">What groundwater is</h3>
-
-      <p class="govuk-body">Groundwater is the water that is usually held in rocks and soil underground.</p>
-
-      <p class="govuk-body">Groundwater flooding happens when this water rises and flows above the surface.</p>
-
-      <p class="govuk-body govuk-!-margin-bottom-6">We use flood alert data to check the risk of flooding from
-        groundwater.</p>
 
 
       <h3 class="govuk-heading-m govuk-!-margin-top-4 govuk-!-margin-bottom-4">Why groundwater flooding is a problem</h3>
@@ -83,7 +92,7 @@ html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedbac
           </details>
 
 
-            <h3 class="govuk-heading-m govuk-!-margin-top-4 govuk-!-margin-bottom-4">What you can do next</h3>
+            <h3 class="govuk-heading-m govuk-!-margin-top-4 govuk-!-margin-bottom-4">What to do next</h3>
           
         
             <p class="govuk-body">You cannot completely protect your property from flooding, but there's a lot you can do to reduce:</p>
@@ -119,24 +128,28 @@ html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedbac
               <p class="govuk-body">Lead local flood authorities are responsible for managing flood risk from groundwater. They may hold more detailed information.</p>
               <p class="govuk-body">Your lead local flood authority is <b>Xxxx.</b></p>
         </div>
-      
-
-      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    
 
 
       <!-- end of details -->
-      <nav class="govuk-pagination govuk-pagination--block" role="navigation" aria-label="results">
-        <div class="govuk-pagination__prev">
-          <a class="govuk-link govuk-pagination__link" href="/version_16/Design/Desktop/rivers-and-seas-result"
-            rel="prev">
-            <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg"
-              height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-              <path
-                d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z">
-              </path>
-            </svg>
-            <span class="govuk-pagination__link-title">Previous</span><span class="govuk-visually-hidden">:</span>
-            <span class="govuk-pagination__link-label">Rivers and sea</span></a>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full"> <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+          <nav class="govuk-pagination govuk-pagination--block" role="navigation" aria-label="results">
+            <div class="govuk-pagination__prev">
+              <a class="govuk-link govuk-pagination__link" href="/version_19/version_b/rivers-and-seas-result"
+                rel="prev">
+                <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg"
+                  height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                  <path
+                    d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z">
+                  </path>
+                </svg>
+                <span class="govuk-pagination__link-title">Previous</span><span class="govuk-visually-hidden">:</span>
+                <span class="govuk-pagination__link-label">Rivers and sea</span></a>
+            </div>
         </div>
       </nav>
       <!-- end of nav -->
