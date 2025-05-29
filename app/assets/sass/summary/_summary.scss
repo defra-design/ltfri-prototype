@@ -164,9 +164,26 @@ a.search-link-right-v2{
     margin-top: 10px;
     display: flex;
     justify-content: flex-start;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 10px;
-  }
+    max-width: none;
+   }
+
+
+    .risk-label-group-3 {
+      margin-top: 10px;
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      gap: 10px;
+      max-width: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 270px;
+    }
+  
+
 
    .label-orange {
      background-color:#FFDEBF;
