@@ -171,16 +171,12 @@ a.search-link-right-v2{
 
 
     .risk-label-group-3 {
-      margin-top: 10px;
-      display: flex;
-      justify-content: flex-start;
-      flex-wrap: nowrap;
-      gap: 10px;
-      max-width: none;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 270px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 270px;
+        /* control width */
+        display: inline-block;
     }
   
 

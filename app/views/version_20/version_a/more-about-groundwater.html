@@ -1,0 +1,191 @@
+{% extends "layout" %}
+
+{% block pageTitle %}
+Understand your flood risk: groundwater and reservoirs
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+tag: {
+text: "Prototype"
+},
+html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a href="javascript:history.back()" class="govuk-back-link back-link-left">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+
+  <nav aria-label="Pages with more detail on this service" class="gem-c-contents-list govuk-!-margin-bottom-3" role="navigation">
+    <h2 class="govuk-body govuk-!-margin-bottom-2">Contents</h2>
+    <ol class="gem-c-contents-list__list">
+      
+  <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+    <a class="gem-c-contents-list__link govuk-link" href="/version_20/version_a/surface-water-result.html" previewlistener="true" aria-label="Surface water 
+    understand your flood risk page.">Surface water</a> </li>
+
+    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+      <a class="gem-c-contents-list__link govuk-link" href="/version_20/version_a/rivers-and-seas-result.html" previewlistener="true" aria-label="Rivers and the 
+      sea understand your flood risk page.">Rivers and the sea</a></li>
+  
+    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active" aria-current="true">
+  <strong>Groundwater</strong>
+  </li>
+  
+  <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+    <a class="gem-c-contents-list__link govuk-link" href="/version_20/version_a/more-about-reservoirs.html" previewlistener="true" aria-label="Rivers and the sea understand your flood risk page.">Reservoirs</a>
+  </li>
+  <br>
+  <br>
+
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Groundwater: understand your flood risk
+      </h1>
+
+      <p class="govuk-body govuk-!-margin-bottom-2"><strong>Your selected location:</strong> 8, Sydenham Way, Dorchester, 
+        Dorset DT1 1DN
+        </p>
+
+      <p class="govuk-body govuk-!-margin-bottom-2">This information tells you the flood risk of the land around a
+        building, not the building itself.
+      </p>
+  
+    <br>
+    <style>
+      .govuk-tag {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 500px;
+        /* control width */
+        display: inline-block;
+      }
+    </style>
+
+    <div class="risk-label-group-2 govuk-!-margin-top-3 govuk-!-padding-bottom-6">
+      <strong class="govuk-tag no-data label-mod label-border" aria-hidden="true">
+        This location is outside a groundwater flood alert area.
+      </strong>
+    </div>
+      <h3 class="govuk-heading-m govuk-!-margin-top-4 govuk-!-margin-bottom-">Why groundwater flooding is a problem</h3>
+      <br> 
+      
+
+
+      <p class="govuk-body">Groundwater flooding is a problem because:</p>
+      <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+        <li>water will come up through the ground or the floor
+        </li>
+        <li>It usually happens days, weeks or months after lots of rain and can last a long time
+        </li>
+        <li>it often happens in the places you don't expect, like on the side of a hill
+        </li>
+      </ul>
+
+      <p class="govuk-body govuk-!-margin-bottom-6">High groundwater levels can make other types of flooding worse, as water cannot drain away.
+      </p>
+
+      <details class="govuk-details govuk-!-margin-top-2 govuk-!-margin-bottom-6" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            How we assess an area's flood risk
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body">It is difficult to predict groundwater flooding.</p>
+
+            We only provide groundwater flood alerts in some areas of the country. Alerts are set up where there is monitoring data along with historic flood data.</p>
+            
+            Alert areas can cover large parts of the community - not every property within the area may be at risk of flooding.</p>
+            
+            Some properties outside of flood alert areas may also be at risk of groundwater flooding.</p>
+          </details>
+
+
+            <h3 class="govuk-heading-m govuk-!-margin-top-4 govuk-!-margin-bottom-4">What to do next</h3>
+          
+        
+            <p class="govuk-body">You cannot completely protect your property from flooding, but there are things you can do to reduce:</p>
+            <ul class="govuk-list govuk-list--bullet">
+
+              <li>the amount of water that gets in </li>
+              <li>the damage from flood water</li>
+              <li>the cost and time of cleaning up after a flood</li>
+      
+            </ul>
+            
+
+            <p class="govuk-body">You can:</p>
+            <ul class="govuk-list govuk-list--bullet">
+
+               <li>Read about how to <a href="https://www.gov.uk/prepare-for-flooding">protect yourself from future flooding</a></p>
+               </li>
+               <li>Make a <a href="https://www.gov.uk/government/publications/personal-flood-plan">personal flood plan</a></p>
+               </li>
+               <li>Read about <a href="https://www.gov.uk/guidance/adapting-your-home-or-business-to-the-risk-of-flooding">adapt your home or business to flooding</a></p>
+               </li>
+               <li><a href="https://www.gov.uk/sign-up-for-flood-warnings">Sign up to get flood warnings</a></p>
+               </li>
+               <li>Read a more about <a href="https://www.gov.uk/guidance/groundwater-flooding">groundwater flooding</a></p>
+               </li>
+          
+            </ul>   
+
+            <p class="govuk-body">You should check your flood risk regularly because the information may change.</p>
+
+            
+            <h3 class="govuk-heading-m govuk-!-margin-top-4 govuk-!-margin-bottom-4">If you need more details on groundwater flood risk</h3>
+              <p class="govuk-body">Lead local flood authorities are responsible for managing flood risk from groundwater. They may hold more detailed information, 
+                including previous groundwater flooding details for this area.</p>
+              <p class="govuk-body">Your lead local flood authority is <b>Dorset</b></p>
+        </div>
+    
+
+
+      <!-- end of details -->
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full"> <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+          <nav class="govuk-pagination govuk-pagination--block" role="navigation" aria-label="results">
+            <div class="govuk-pagination__prev">
+              <a class="govuk-link govuk-pagination__link" href="/version_19/version_a/rivers-and-seas-result" rel="prev">
+                <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg"
+                  height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                  <path
+                    d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z">
+                  </path>
+                </svg>
+                <span class="govuk-pagination__link-title">Previous</span><span class="govuk-visually-hidden">:</span>
+                <span class="govuk-pagination__link-label">Rivers and seas</span></a>
+            </div>
+            <div class="govuk-pagination__next">
+              <a class="govuk-link govuk-pagination__link" href="/version_19/version_a/more-about-reservoirs" rel="next"> <svg
+                  class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13"
+                  width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                  <path
+                    d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z">
+                  </path>
+                </svg> <span class="govuk-pagination__link-title">Next</span><span class="govuk-visually-hidden">:</span>
+                <span class="govuk-pagination__link-label">Reservoirs</span></a>
+            </div>
+          </nav>
+      <!-- end of nav -->
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
