@@ -26,11 +26,11 @@ html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedbac
     <ol class="gem-c-contents-list__list">
       
   <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-    <a class="gem-c-contents-list__link govuk-link" href="/version_19/version_a/surface-water-result.html" previewlistener="true" aria-label="Surface water 
+    <a class="gem-c-contents-list__link govuk-link" href="/version_20/version_a/surface-water-result.html" previewlistener="true" aria-label="Surface water 
     understand your flood risk page.">Surface water</a> </li>
 
     <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-      <a class="gem-c-contents-list__link govuk-link" href="/version_19/version_a/rivers-and-seas-result.html" previewlistener="true" aria-label="Rivers and the 
+      <a class="gem-c-contents-list__link govuk-link" href="/version_20/version_a/rivers-and-seas-result.html" previewlistener="true" aria-label="Rivers and the 
       sea understand your flood risk page.">Rivers and the sea</a></li>
   
     <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active" aria-current="true">
@@ -38,7 +38,7 @@ html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedbac
   </li>
   
   <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-    <a class="gem-c-contents-list__link govuk-link" href="/version_19/version_a/more-about-reservoirs.html" previewlistener="true" aria-label="Rivers and the sea understand your flood risk page.">Reservoirs</a>
+    <a class="gem-c-contents-list__link govuk-link" href="/version_20/version_a/more-about-reservoirs.html" previewlistener="true" aria-label="Rivers and the sea understand your flood risk page.">Reservoirs</a>
   </li>
   <br>
   <br>
@@ -56,17 +56,27 @@ html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedbac
         Dorset DT1 1DN
         </p>
 
-      <p class="govuk-body govuk-!-margin-bottom-3">This information tells you the flood risk of the land around a
+      <p class="govuk-body govuk-!-margin-bottom-2">This information tells you the flood risk of the land around a
         building, not the building itself.
       </p>
   
     <br>
-    <p class="govuk-body">This location is
-      <strong class="govuk-tag govuk-tag--grey label-mod-depth" style="margin-right: 5px; ">
-        Outside
-      </strong> 
-      a groundwater flood alert area.
-    </p>
+    <style>
+      .govuk-tag {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 500px;
+        /* control width */
+        display: inline-block;
+      }
+    </style>
+
+    <div class="risk-label-group-2 govuk-!-margin-top-3 govuk-!-padding-bottom-6">
+      <strong class="govuk-tag no-data label-mod label-border" aria-hidden="true">
+        This location is outside a groundwater flood alert area.
+      </strong>
+    </div>
       <h3 class="govuk-heading-m govuk-!-margin-top-4 govuk-!-margin-bottom-">Why groundwater flooding is a problem</h3>
       <br> 
       
