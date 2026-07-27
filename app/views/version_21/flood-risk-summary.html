@@ -14,12 +14,12 @@ Summary of selected address
 {% block beforeContent %}
 {{ govukPhaseBanner({
 tag: {
-text: "Prototype"
+text: "Beta"
 },
-html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback</a>.'
 }) }}
 
-<a href="/version_19/version_a/select-an-address-dt1" class="govuk-back-link back-link-left">Back</a>
+<a href="/version_21/select-an-address-dt1" class="govuk-back-link back-link-left">Back to select an address</a>
 
 {% endblock %}
 
@@ -43,7 +43,13 @@ html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedbac
         building, not the building itself.
       </p>
 
-      <details class="govuk-details govuk-!-margin-top-4 govuk-!-margin-bottom-6">
+      <p class="govuk-body">The highest risk of flooding at this location is from <strong>rivers and the sea</strong>.</p>
+
+      <h2 class="govuk-heading-m">Get flood warnings by text, phone or email</h2>
+
+      <p class="govuk-body">You can <a class="govuk-link" href="#">sign up for free flood warnings</a>, and get messages by text, phone or email.</p>
+
+      <details class="govuk-details govuk-!-margin-top-2 govuk-!-margin-bottom-2">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             How we assess an area's flood risk
@@ -69,11 +75,7 @@ html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedbac
           </p>
       </details>
 
-      <p class="govuk-bod govuk-!-padding-top-4">The highest risk of flooding at this location
-        is from <strong>surface water</strong>.</p>
-
-
-      <details class="govuk-details govuk-!-margin-top-4 govuk-!-margin-bottom-4">
+      <details class="govuk-details govuk-!-margin-top-2 govuk-!-margin-bottom-4">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             Flood risk and climate change
