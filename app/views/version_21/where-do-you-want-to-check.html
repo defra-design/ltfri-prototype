@@ -6,10 +6,10 @@ Enter a postcode
 
 {% block beforeContent %}
 {{ govukPhaseBanner({
-  tag: {
-    text: "Prototype"
-  },
-  html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+tag: {
+text: "Prototype"
+},
+html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 
 <a href="javascript:history.back()" class="govuk-back-link back-link-left">Back</a>
@@ -22,7 +22,7 @@ Enter a postcode
 
 <div class="govuk-grid-row">
 
- <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-two-thirds">
 
     <h1 class="govuk-heading-xl">
       Where do you want to check?
@@ -53,12 +53,14 @@ Enter a postcode
 
     </fieldset>
 
-    <a href="/version_21/select-an-address-dt1" role="button" class="govuk-button govuk-button--primary govuk-!-margin-bottom-8 govuk-!-margin-top-3">
+    <a href="/version_21/select-an-address-dt1" role="button"
+      class="govuk-button govuk-button--primary govuk-!-margin-bottom-8 govuk-!-margin-top-3">
       Continue
     </a>
 
     <p>
-      or <a href="#">view a map showing areas at risk of flooding</a>.
+      or <a href="/version_21/planning-application-map" class="govuk-link">view a map showing areas at risk of
+        flooding</a>.
     </p>
 
     <p>
@@ -73,20 +75,20 @@ Enter a postcode
 
 {% endblock %} {% if useAutoStoreData %} {% block footer %}
 {{
-  govukFooter({
-    meta: {
-      items: [
-        {
-          href: "https://govuk-prototype-kit.herokuapp.com/",
-          text: "GOV.UK Flooding " + releaseVersion
-        },
-        {
-          href: "/prototype-admin/clear-data",
-          text: "Clear data"
-        }
-      ]
-    }
-  })
+govukFooter({
+meta: {
+items: [
+{
+href: "https://govuk-prototype-kit.herokuapp.com/",
+text: "GOV.UK Flooding " + releaseVersion
+},
+{
+href: "/prototype-admin/clear-data",
+text: "Clear data"
+}
+]
+}
+})
 }}
 {% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
 "includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}

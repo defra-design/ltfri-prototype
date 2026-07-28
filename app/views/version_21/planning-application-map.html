@@ -1,0 +1,68 @@
+{% extends "new_gov_header_service_nav" %}
+
+{% block pageTitle %}
+Are you looking for information to support a planning application? - Check your long term flood risk
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+tag: {
+text: "Beta"
+},
+html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback</a>.'
+}) }}
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">
+            Are you looking for information to support a planning application?
+        </h1>
+
+        <p class="govuk-body">
+            The climate change and depth scenarios shown on this map may help to inform risk assessments. Further
+            assessment is likely to be needed to assess planned development.
+        </p>
+
+        <p class="govuk-body">You can:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>
+                carry on to the <a class="govuk-link" href="/version_21/map">flood risk map</a>
+            </li>
+            <li>
+                read <a class="govuk-link" href="#">when and how to use climate change allowances in flood risk
+                    assessments</a>
+            </li>
+            <li>
+                use the <a class="govuk-link" href="#">flood risk information for planning service</a>
+            </li>
+        </ul>
+
+    </div>
+</div>
+{% endblock %} {% if useAutoStoreData %} {% block footer %}
+{{
+govukFooter({
+meta: {
+items: [
+{
+href: "https://govuk-prototype-kit.herokuapp.com/",
+text: "GOV.UK Flooin " + releaseVersion
+},
+{
+href: "/prototype-admin/clear-data",
+text: "Clear data"
+}
+]
+}
+})
+}}
+{% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
+"includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
+<!-- GOV.UK Prototype Kit {{releaseVersion}} -->
+{% endblock %}
