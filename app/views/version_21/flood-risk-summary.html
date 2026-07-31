@@ -14,12 +14,12 @@ Summary of selected address
 {% block beforeContent %}
 {{ govukPhaseBanner({
 tag: {
-text: "Prototype"
+text: "Beta"
 },
-html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback</a>.'
 }) }}
 
-<a href="/version_19/version_a/select-an-address-dt1" class="govuk-back-link back-link-left">Back</a>
+<a href="/version_21/select-an-address-dt1" class="govuk-back-link back-link-left">Back to select an address</a>
 
 {% endblock %}
 
@@ -34,16 +34,24 @@ html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedbac
         Flood risk summary
       </h1>
 
-      <p class="govuk-body govuk-!-margin-bottom-2"><strong>Your selected location:</strong> 8, Sydenham Way,
+      <p class="govuk-body govuk-!-margin-bottom-4"><strong>Your selected location:</strong> 8, Sydenham Way,
         Dorchester,
         Dorset DT1 1DN
       </p>
 
-      <p class="govuk-body govuk-!-margin-bottom-2">This information tells you the flood risk of the land around a
+      <p class="govuk-body govuk-!-margin-bottom-4">This information tells you the flood risk of the land around a
         building, not the building itself.
       </p>
 
-      <details class="govuk-details govuk-!-margin-top-4 govuk-!-margin-bottom-6">
+      <p class="govuk-body">The highest risk of flooding at this location is from <strong>rivers and the sea</strong>.
+      </p>
+
+      <h2 class="govuk-heading-m">Get flood warnings by text, phone or email</h2>
+
+      <p class="govuk-body">You can <a class="govuk-link" href="#">sign up for free flood warnings</a>, and get messages
+        by text, phone or email.</p>
+
+      <details class="govuk-details govuk-!-margin-top-2 govuk-!-margin-bottom-4">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             How we assess an area's flood risk
@@ -69,11 +77,7 @@ html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedbac
           </p>
       </details>
 
-      <p class="govuk-bod govuk-!-padding-top-4">The highest risk of flooding at this location
-        is from <strong>surface water</strong>.</p>
-
-
-      <details class="govuk-details govuk-!-margin-top-4 govuk-!-margin-bottom-4">
+      <details class="govuk-details govuk-!-margin-top-2 govuk-!-margin-bottom-4">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             Flood risk and climate change
@@ -317,7 +321,7 @@ html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedbac
 
           <ul class="govuk-summary-card__actions">
             <li class="govuk-summary-card__action">
-              <a class="govuk-link" href="/version_19/version_a/more-about-groundwater">
+              <a class="govuk-link" href="/version_21/more-about-groundwater">
                 More about your groundwater flood risk
               </a>
             </li>
@@ -340,7 +344,7 @@ html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedbac
                   white-space: nowrap;
                   overflow: hidden;
                   text-overflow: ellipsis;
-                  max-width: 270px;
+                  max-width: 500px;
                   /* control width */
                   display: inline-block;
                 }
@@ -348,10 +352,7 @@ html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedbac
 
               <div class="risk-label-group-2 govuk-!-margin-top-4 govuk-!-padding-bottom-3">
                 <strong class="govuk-tag no-data label-mod label-border" aria-hidden="true">
-                  Outside a flood alert area
-                </strong>
-                <strong class="govuk-tag govuk-tag--grey label-mod" aria-hidden="true">
-                  Inside a flood alert area
+                  This location is outside of a groundwater flood alert area.
                 </strong>
               </div>
 
@@ -398,7 +399,7 @@ html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedbac
 
           <ul class="govuk-summary-card__actions">
             <li class="govuk-summary-card__action">
-              <a class="govuk-link" href="/version_19/version_a/more-about-reservoirs">
+              <a class="govuk-link" href="/version_21/more-about-reservoirs">
                 More about your reservoirs flood risk
               </a>
             </li>
@@ -407,10 +408,34 @@ html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedbac
         </div>
         <div class="govuk-summary-card__content">
 
-          <h3 class="govuk-heading-m govuk-!-margin-top-4 govuk-!-margin-bottom-2">Reservoirs</h3>
+          <style>
+            .govuk-tag {
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              max-width: 500px;
+              /* control width */
+              display: inline-block;
+            }
+          </style>
 
-          <p class="govuk-body govuk-!-padding-top-2 govuk-!-padding-bottom-4">
-            Flooding from reservoirs is unlikely in this area
+          <div class="risk-label-group-2 govuk-!-margin-top-4 govuk-!-padding-bottom-3">
+            <strong class="govuk-tag no-data label-mod label-border" aria-hidden="true">
+              There is a risk of flooding from reservoirs in this area.
+            </strong>
+          </div>
+
+          <h3 class="govuk-heading-s govuk-!-padding-top-6 govuk-!-margin-bottom-0">What a reservoir is</h3>
+
+          <p class="govuk-body govuk-!-margin-top-2 govuk-!-margin-bottom-2">A reservoir is a large natural or
+            artificial lake that is designed to collect and store water.
+          </p>
+
+          <p class="govuk-body govuk-!-margin-top-2 govuk-!-margin-bottom-2"> They are usually formed by building a dam
+            across a river, or by building a large tank or surrounding embankment.
+            If one of these dams or embankments fails, then water could escape from the reservoir.
+            This would result in land or properties being flooded.</p>
+
           </p>
 
         </div>
