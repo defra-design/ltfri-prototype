@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <h1 class="govuk-heading-xl">
+      Flood depth
+      <span class="govuk-caption-xl">Version 23.0<span>
+    </h1>
+
+
+    <h3 class="govuk-heading-m">
+      Accessibility fix for depth gauge contrast ratios
+      <br><strong class="govuk-tag govuk-tag--blue">
+        Accessibility
+      </strong>
+    </h3>
+
+    <p class="govuk-body">Version 23.0 introduces a critical accessibility fix for low-vision users on the rivers and
+      sea depth page. The contrast ratios for the depth gauge meter graphics (for 20cm, 30cm, and 60cm depths) have been
+      updated to meet the WCAG 3:1 contrast ratio threshold against both the white page background and the blue/grey
+      elements.</p>
+
+    <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          V23 changes
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+          <li>Updated grey against white and grey against blue contrast ratios to satisfy the WCAG 3:1 threshold
+            on the depth page.</li>
+        </ul>
+      </div>
+    </details>
+
+    <p class="govuk-body govuk-!-padding-top-4"><a class="govuk-link" href="version_23/start">Version A</a>
+    </p>
+
+
+
+  </div>
+</div>
+
+{% endblock %}
