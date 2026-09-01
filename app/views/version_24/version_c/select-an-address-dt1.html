@@ -1,0 +1,153 @@
+{% extends "new_gov_header_service_nav" %}
+
+{% block pageTitle %}
+Select an address
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+tag: {
+text: "Prototype"
+},
+html: 'This is a new service &ndash; your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a href="javascript:history.back()" class="govuk-back-link back-link-left">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+<div id="address-page">
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Select an address
+      </h1>
+
+      <div class="govuk-inset-text">
+
+        <p>
+          This service will tell you the flood risk of an area, not a specific property.
+        </p>
+
+      </div>
+
+
+      <form method="post">
+
+        <div class="govuk-form-group">
+
+          <span class="govuk-label">Postcode</span>
+
+          <p class="govuk-body">
+            <strong style="text-transform: uppercase;">DT1 1DN</strong>
+            <a href="where-do-you-want-to-check" class="govuk-link">Change Postcode</a>
+          </p>
+
+        </div>
+
+        <div class="govuk-form-group">
+
+          <label class="govuk-label" for="address">
+            Select an address
+          </label>
+
+          <select class="govuk-select" id="address" name="address">
+
+
+            <option value="-1">1 addresses found</option>
+
+
+
+            <option value="0">8, Sydenham Way, Dorchester, Dorset DT1 1DN</option>
+
+
+
+
+
+
+          </select>
+        </div>
+
+        <h2 class="govuk-heading-l govuk-!-margin-top-8">About this address</h2>
+
+        <p class="govuk-body">We ask you to choose an address so we can find the area you want to check.</p>
+        <p class="govuk-body">Telling us why you chose this address helps us to improve this service for you.</p>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios" data-module="govuk-radios">
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="about-address" name="aboutAddress" type="radio"
+                  value="lives-here">
+                <label class="govuk-label govuk-radios__label" for="about-address">
+                  I, or someone I know lives here
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="about-address-2" name="aboutAddress" type="radio" value="moving">
+                <label class="govuk-label govuk-radios__label" for="about-address-2">
+                  I am thinking of moving to this area
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="about-address-3" name="aboutAddress" type="radio"
+                  value="work-or-study">
+                <label class="govuk-label govuk-radios__label" for="about-address-3">
+                  I am checking this for work or study
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="about-address-4" name="aboutAddress" type="radio"
+                  value="prefer-not-to-say">
+                <label class="govuk-label govuk-radios__label" for="about-address-4">
+                  Prefer not to say
+                </label>
+              </div>
+
+            </div>
+          </fieldset>
+        </div>
+
+        <a href="/version_24/version_c/flood-risk-summary" role="button"
+          class="govuk-button govuk-button--primary govuk-!-margin-top-6 govuk-!-margin-bottom-8">Continue</a>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+{% endblock %} {% if useAutoStoreData %} {% block footer %}
+{{
+govukFooter({
+meta: {
+items: [
+{
+href: "https://govuk-prototype-kit.herokuapp.com/",
+text: "GOV.UK Flooding " + releaseVersion
+},
+{
+href: "/prototype-admin/clear-data",
+text: "Clear data"
+}
+]
+}
+})
+}}
+{% endblock %} {% endif %} {% block bodyEnd %} {% block scripts %} {% include
+"includes/scripts.html" %} {% block pageScripts %}{% endblock %} {% endblock %}
+<!-- GOV.UK Flooding {{releaseVersion}} -->
+{% endblock %}

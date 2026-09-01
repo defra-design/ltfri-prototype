@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <h1 class="govuk-heading-xl">
+      Taking action (Phase 1)
+      <span class="govuk-caption-xl">Version 24.0</span>
+    </h1>
+
+
+    <h3 class="govuk-heading-m">
+      Showing different presentation styles for the different flood types.
+      <br>
+      <strong class="govuk-tag govuk-tag--blue">
+        In progress
+      </strong>
+    </h3>
+
+    <p class="govuk-body">Version 24 focuses on testing different layout options to help users understand what actions
+      they can take to prepare for flood risk.</p>
+
+    <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          V24.0 changes
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+          <p class="govuk-body govuk-!-margin-top-2 govuk-!-margin-bottom-0">
+            <li>The pages being tested evaluate the logic behind which action cards and guidance are displayed based on
+              whether an address is inside or outside a flood alert area.</li>
+          </p>
+        </ul>
+
+        <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Version A (Rivers and the sea - Get flood warning)</h4>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+          <p class="govuk-body govuk-!-margin-top-2 govuk-!-margin-bottom-0">
+            <li>Tests the 'Get flood warning' action component for locations where the primary risk is from rivers and
+              the sea.</li>
+          </p>
+        </ul>
+
+        <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Version B (Surface water - Get flood warning)</h4>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+          <p class="govuk-body govuk-!-margin-top-2 govuk-!-margin-bottom-0">
+            <li>Tests the 'Get flood warning' action component for locations where surface water is the main flood risk.
+            </li>
+          </p>
+        </ul>
+
+        <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Version C (Surface water - Prepare for flooding)</h4>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+          <p class="govuk-body govuk-!-margin-top-2 govuk-!-margin-bottom-0">
+            <li>Tests the 'Prepare for flooding' action component for surface water risks outside alert coverage areas.
+            </li>
+          </p>
+        </ul>
+
+      </div>
+    </details>
+
+
+    <p class="govuk-body govuk-!-padding-top-4"><a class="govuk-link" href="version_24/version_a/start">Version a
+        (Rivers and the sea, GFW)</a></p>
+
+    <p class="govuk-body govuk-!-padding-top-4"><a class="govuk-link" href="version_24/version_b/start">Version b
+        (Surface water, GFW)</a></p>
+
+    <p class="govuk-body govuk-!-padding-top-4"><a class="govuk-link" href="version_24/version_c/start">Version c
+        (Surface water, PFF)</a></p>
+
+
+  </div>
+</div>
+
+{% endblock %}
