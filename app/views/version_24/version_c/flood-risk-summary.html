@@ -46,20 +46,39 @@ href: "/version_24/version_c/select-an-address-dt1"
         building, not the building itself.
       </p>
 
+      <div class="govuk-!-margin-bottom-6" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px;">
+        <span class="govuk-body govuk-!-margin-bottom-0">The highest risk of flooding at this location is</span>
+        <strong class="govuk-tag govuk-tag--orange">Medium</strong>
+      </div>
+
+      <!--  Other option to risk intro
       <p class="govuk-body govuk-!-margin-bottom-2">The highest risk of flooding at this location is from:
       </p>
 
       <div class="govuk-!-margin-bottom-6" style="display: flex; align-items: center; gap: 8px;">
         <strong class="govuk-heading-s govuk-!-margin-bottom-0">Surface water</strong>
         <strong class="govuk-tag govuk-tag--orange">Medium</strong>
-      </div>
+      </div>  -->
 
       <div class="govuk-inset-text govuk-!-margin-top-0 govuk-!-margin-bottom-6"
         style="border: 1px solid #cecece; border-left: 1px solid #cecece; padding: 20px;">
         <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Prepare for flooding</h2>
 
-        <p class="govuk-body">Take steps now to help you protect your home, belongings and loved ones.
+        <p class="govuk-body">Take steps now to help you protect your home, belongings and<br class="desktop-only-br">
+          loved ones.
         </p>
+
+        <style>
+          .desktop-only-br {
+            display: none;
+          }
+
+          @media (min-width: 40.0625em) {
+            .desktop-only-br {
+              display: inline;
+            }
+          }
+        </style>
 
         {{ govukButton({
         text: "Prepare for future flooding",
