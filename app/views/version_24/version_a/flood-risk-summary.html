@@ -20,6 +20,13 @@ text: "Beta"
 },
 html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
+
+
+{{ govukBackLink({
+text: "Back to select an address",
+href: "/version_24/version_a/select-an-address-dt1"
+}) }}
+
 {% endblock %}
 
 {% block content %}
@@ -33,8 +40,9 @@ html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a
         Flood risk summary
       </h1>
 
-      <p class="govuk-body govuk-!-margin-bottom-4"><strong>Your selected location:</strong> 12 Flood Lane, Floodington
-        FL0 0DS
+      <p class="govuk-body govuk-!-margin-bottom-4"><strong>Your selected location:</strong> 8, Sydenham Way,
+        Dorchester,
+        Dorset DT1 1DN
       </p>
 
       <p class="govuk-body govuk-!-margin-bottom-4">This information tells you the flood risk of the land around a
@@ -51,13 +59,13 @@ html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a
 
       <div class="govuk-inset-text govuk-!-margin-top-0 govuk-!-margin-bottom-6"
         style="border: 1px solid #cecece; border-left: 1px solid #cecece; padding: 20px;">
-        <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Get free flood warning</h2>
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Get free flood warnings</h2>
 
-        <p class="govuk-body">The Environmental Agency will message you by phone, text or email so you have time to act.
+        <p class="govuk-body">You can get flood warnings by text, phone or email for this location.
         </p>
 
         {{ govukButton({
-        text: "Sign up for flood warnings",
+        text: "Get flood warnings",
         classes: "govuk-!-margin-bottom-0"
         }) }}
       </div>
