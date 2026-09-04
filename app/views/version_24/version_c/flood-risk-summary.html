@@ -19,8 +19,10 @@ text: "Beta"
 html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback</a>.'
 }) }}
 
-<a href="/version_24/version_c/select-an-address-dt1" class="govuk-back-link back-link-left">Back to select an
-  address</a>
+{{ govukBackLink({
+text: "Back to select an address",
+href: "/version_24/version_c/select-an-address-dt1"
+}) }}
 
 {% endblock %}
 
@@ -56,11 +58,11 @@ html: 'This is a new service. Help us improve it and <a class="govuk-link" href=
         style="border: 1px solid #cecece; border-left: 1px solid #cecece; padding: 20px;">
         <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Prepare for flooding</h2>
 
-        <p class="govuk-body">See how to prepare yourself and your property for flooding.
+        <p class="govuk-body">Take steps now to help you protect your home, belongings and loved ones.
         </p>
 
         {{ govukButton({
-        text: "Read how to prepare",
+        text: "Prepare for future flooding",
         classes: "govuk-!-margin-bottom-0"
         }) }}
       </div>

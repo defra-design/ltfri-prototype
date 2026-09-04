@@ -19,8 +19,10 @@ text: "Beta"
 html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback</a>.'
 }) }}
 
-<a href="/version_24/version_b/select-an-address-dt1" class="govuk-back-link back-link-left">Back to select an
-  address</a>
+{{ govukBackLink({
+text: "Back to select an address",
+href: "/version_24/version_b/select-an-address-dt1"
+}) }}
 
 {% endblock %}
 
@@ -54,13 +56,13 @@ html: 'This is a new service. Help us improve it and <a class="govuk-link" href=
 
       <div class="govuk-inset-text govuk-!-margin-top-0 govuk-!-margin-bottom-6"
         style="border: 1px solid #cecece; border-left: 1px solid #cecece; padding: 20px;">
-        <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Get free flood warning</h2>
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Get free flood warnings</h2>
 
-        <p class="govuk-body">The Environmental Agency will message you by phone, text or email so you have time to act.
+        <p class="govuk-body">You can get flood warnings by text, phone or email for this location.
         </p>
 
         {{ govukButton({
-        text: "Sign up for flood warnings",
+        text: "Get flood warnings",
         classes: "govuk-!-margin-bottom-0"
         }) }}
       </div>
