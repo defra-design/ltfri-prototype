@@ -21,12 +21,12 @@ GOV.UK Prototype Kit
       Showing different presentation styles for the different flood types.
       <br>
       <strong class="govuk-tag govuk-tag--blue">
-        In progress
+        Ready for dev
       </strong>
     </h3>
 
-    <p class="govuk-body">Version 24 focuses on testing different layout options to help users understand what actions
-      they can take to prepare for flood risk.</p>
+    <p class="govuk-body">Version 24 introduces a clear single risk indicator alongside the address summary, It also
+      adds a prominent "Get free flood warnings" action card or "Prepare for flooding".</p>
 
     <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
       <summary class="govuk-details__summary">
@@ -36,44 +36,28 @@ GOV.UK Prototype Kit
       </summary>
       <div class="govuk-details__text">
 
+        <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Version A (Rivers and sea – Get flood warnings)</h4>
         <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-          <p class="govuk-body govuk-!-margin-top-2 govuk-!-margin-bottom-0">
-            <li>The pages being tested evaluate the logic behind which action cards and guidance are displayed based on
-              whether an address is inside or outside a flood alert area.</li>
-          </p>
+          <li>Show the 'Get flood warnings' action card when rivers and the sea is the highest risk, and the address
+            sits within a Flood Warning (FW) or Severe Flood Warning (SFW) area.</li>
         </ul>
 
-        <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Version A (Rivers and the sea - Get flood warning)</h4>
+        <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Version B (Surface water – Get flood warnings)</h4>
         <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-          <p class="govuk-body govuk-!-margin-top-2 govuk-!-margin-bottom-0">
-            <li>Tests the 'Get flood warning' action component for locations where the primary risk is from rivers and
-              the sea.</li>
-          </p>
+          <li>Show the 'Get flood warnings' action card when surface water is the highest risk, and the address sits
+            within a Flood Warning (FW) or Severe Flood Warning (SFW) area.</li>
         </ul>
 
-        <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Version B (Surface water - Get flood warning)</h4>
+        <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Version C (Surface water – Prepare for flooding)</h4>
         <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-          <p class="govuk-body govuk-!-margin-top-2 govuk-!-margin-bottom-0">
-            <li>Tests the 'Get flood warning' action component for locations where surface water is the main flood risk.
-            </li>
-          </p>
+          <li>Show the 'Prepare for flooding' action component when surface water is the highest risk, but the address
+            sits outside a Flood Warning (FW) or Severe Flood Warning (SFW) coverage area.</li>
         </ul>
 
-        <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Version C (Surface water - Prepare for flooding)</h4>
+        <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Version D (Very low risk – No action)</h4>
         <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-          <p class="govuk-body govuk-!-margin-top-2 govuk-!-margin-bottom-0">
-            <li>Tests the 'Prepare for flooding' action component for surface water risks outside alert coverage areas.
-            </li>
-          </p>
-        </ul>
-
-        <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Version D (Rivers and the sea - Prepare for flooding)</h4>
-        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-          <p class="govuk-body govuk-!-margin-top-2 govuk-!-margin-bottom-0">
-            <li>Tests the 'Prepare for flooding' action component for locations where the primary risk is from rivers
-              and
-              the sea outside alert coverage areas.</li>
-          </p>
+          <li>No action component displayed when both rivers and sea and surface water risks are rated as 'Very low'.
+          </li>
         </ul>
 
       </div>
