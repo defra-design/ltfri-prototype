@@ -60,17 +60,23 @@ href: "/version_25/version_b/select-an-address-dt1"
         <strong class="govuk-tag govuk-tag--orange">Medium</strong>
       </div>  -->
 
-      <div class="govuk-inset-text govuk-!-margin-top-0 govuk-!-margin-bottom-6"
-        style="border: 1px solid #cecece; border-left: 1px solid #cecece; padding: 20px;">
-        <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Get free flood warnings</h2>
+      <!-- Updated Action Card Component -->
+      <div class="govuk-summary-card govuk-!-margin-top-0 govuk-!-margin-bottom-4" style="border: 1px solid #b1b4b6;">
+        <div class="govuk-summary-card__title-wrapper" style="background-color: #f3f2f1; padding: 12px 20px;">
+          <h2 class="govuk-heading-m govuk-!-margin-bottom-0">Prepare for flooding</h2>
+        </div>
 
-        <p class="govuk-body">You can get flood warnings by text, phone or email for this location.
-        </p>
+        <div class="govuk-summary-card__content" style="padding: 20px;">
+          <p class="govuk-body">Take steps now to help you protect your home, belongings and loved ones.</p>
 
-        {{ govukButton({
-        text: "Get flood warnings",
-        classes: "govuk-!-margin-bottom-0"
-        }) }}
+          {{ govukButton({
+          text: "Prepare for future flooding",
+          href: "https://www.gov.uk/sign-up-for-flood-warnings",
+          isStartButton: false,
+          classes: "govuk-!-margin-bottom-2
+          "
+          }) }}
+        </div>
       </div>
       <details class="govuk-details govuk-!-margin-top-2 govuk-!-margin-bottom-4">
         <summary class="govuk-details__summary">
