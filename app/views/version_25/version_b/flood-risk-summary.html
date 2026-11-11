@@ -61,23 +61,33 @@ href: "/version_25/version_b/select-an-address-dt1"
       </div>  -->
 
       <!-- Updated Action Card Component -->
-      <div class="govuk-summary-card govuk-!-margin-top-0 govuk-!-margin-bottom-4" style="border: 1px solid #b1b4b6;">
+      <div class="govuk-summary-card govuk-!-margin-top-0 govuk-!-margin-bottom-6" style="border: 1px solid #b1b4b6;">
         <div class="govuk-summary-card__title-wrapper" style="background-color: #f3f2f1; padding: 12px 20px;">
-          <h2 class="govuk-heading-m govuk-!-margin-bottom-0">Prepare for flooding</h2>
+          <h2 class="govuk-heading-m govuk-!-margin-bottom-0">Get free flood warnings</h2>
         </div>
 
         <div class="govuk-summary-card__content" style="padding: 20px;">
+          <p class="govuk-body">You can get flood warnings by text, phone or email for this location.</p>
+
+          {{ govukButton({
+          text: "Get flood warnings",
+          href: "https://www.gov.uk/sign-up-for-flood-warnings",
+          isStartButton: false,
+          classes: "govuk-!-margin-bottom-4"
+          }) }}
+
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-2">If you have already done that</h3>
+
           <p class="govuk-body">Take steps now to help you protect your home, belongings and loved ones.</p>
 
           {{ govukButton({
-          text: "Prepare for future flooding",
+          text: "Prepare for flooding",
           href: "https://www.gov.uk/prepare-for-flooding",
-          isStartButton: false,
-          classes: "govuk-!-margin-bottom-2
-          "
+          classes: "govuk-button--secondary govuk-!-margin-bottom-2"
           }) }}
         </div>
       </div>
+
       <details class="govuk-details govuk-!-margin-top-2 govuk-!-margin-bottom-4">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
