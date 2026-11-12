@@ -1,24 +1,24 @@
 .govuk-summary-card__title-wrapper {
-    box-shadow: inset 10px 0px 0px #E3000E;
-    padding-left: 25px;
+  box-shadow: none;
+  padding-left: 25px;
 }
 
 .risk-rating {
-   font-weight: normal;
-   padding-left: 5px;
+  font-weight: normal;
+  padding-left: 5px;
 }
 
 // card summary page tests
 .govuk-summary-card__title-wrapper {
-    padding-left: 25px;
+  padding-left: 25px;
 }
 
 .govuk-summary-card__title-wrapper.high {
-    box-shadow: inset 10px 0px 0px #E3000E;
+  box-shadow: inset 10px 0px 0px #E3000E;
 }
 
 .govuk-summary-card__title-wrapper.medium {
-    box-shadow: inset 10px 0px 0px #F18604;
+  box-shadow: inset 10px 0px 0px #F18604;
 }
 
 .govuk-summary-card__title-wrapper.low {
@@ -34,85 +34,94 @@
 
 
 // float search address link on right hand side
-.search-link-right{
-    display: none;
-    @media only screen and (min-width: 385px) {
+.search-link-right {
+  display: none;
+
+  @media only screen and (min-width: 385px) {
     display: block;
     float: right;
     margin-right: 15px;
     padding-left: 0;
-    }
+  }
 }
 
-a.search-link-left{
+a.search-link-left {
   display: none;
+
   @media only screen and (min-width: 385px) {
-  display: block;
-  float: right;
-  margin-top: 15px;
-  padding-left: 0;
-  color: #0b0c0c;
+    display: block;
+    float: right;
+    margin-top: 15px;
+    padding-left: 0;
+    color: #0b0c0c;
   }
 }
 
 
-a.search-link-right-v2{
+a.search-link-right-v2 {
   display: none;
   font-size: 16px;
+
   @media only screen and (min-width: 400px) {
-  display: block;
-  float: right;
-  margin-top: 15px;
-  padding-left: 0;
-  color: #0b0c0c;
-  
+    display: block;
+    float: right;
+    margin-top: 15px;
+    padding-left: 0;
+    color: #0b0c0c;
+
   }
+
   @media only screen and (max-width: 1020px) {
     margin-right: 15px;
-    }
-    @media only screen and (max-width: 640px) {
-      font-size: 14px;
-      }
+  }
+
+  @media only screen and (max-width: 640px) {
+    font-size: 14px;
+  }
 }
 
 .hidden-search-link {
+  display: none;
+
+  @media only screen and (max-width: 400px) {
+    display: block;
+    float: left;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  &::before {
     display: none;
-    @media only screen and (max-width: 400px) {
-        display: block;
-        float: left;
-        padding-left: 0;
-        margin: 0;
-    }
-    &::before{
-      display: none;
-    }
+  }
 }
 
 //indent back link
-.back-link-left{
+.back-link-left {
   margin-left: 15px;
-  
+
 }
 
 @media screen and (min-width:769px) {
   .govuk-back-link {
-  margin-bottom: 0;
+    margin-bottom: 0;
+  }
 }
-}
+
 // remove padding on desktop and margin-bottom
 @media screen and (min-width:1020px) {
-.search-link-right{
-  margin-right: 0;
-}
-.back-link-left{
-  margin-left: 0;
-}
+  .search-link-right {
+    margin-right: 0;
+  }
+
+  .back-link-left {
+    margin-left: 0;
+  }
 }
 
 @media screen and (min-width:769px) {
   .govuk-back-link {
-  margin-bottom: 0;
-}
+    margin-bottom: 0;
+  }
 }
 
 .chance-content {
@@ -125,124 +134,130 @@ a.search-link-right-v2{
 }
 
 // res and gw starts on new line
-@media screen and (max-width: 640px){
-    .link-font {
-      font-size: 16px;
-    }
-  
-    .gw-context {
-      display: block;
-      padding-left: 0;
-      margin-left: 0;
-      border: none;
-      padding-top: 2px;
-    }
-    .sw-risk-context {
-      display: block;
-      padding-left: 0;
-      margin-left: 0;
-      border: none;
-      padding-top: 4px;
-      padding-bottom: 0px;
-    }
-    .title-margin-fix {
-      margin-bottom: 0;
-    }
-   }
+@media screen and (max-width: 640px) {
+  .link-font {
+    font-size: 16px;
+  }
+
+  .gw-context {
+    display: block;
+    padding-left: 0;
+    margin-left: 0;
+    border: none;
+    padding-top: 2px;
+  }
+
+  .sw-risk-context {
+    display: block;
+    padding-left: 0;
+    margin-left: 0;
+    border: none;
+    padding-top: 4px;
+    padding-bottom: 0px;
+  }
+
+  .title-margin-fix {
+    margin-bottom: 0;
+  }
+}
 
 
-   .risk-label-group {
-     margin-top: 10px;
-     display: flex;
-     justify-content: flex-start;
-     flex-wrap: wrap;
-     gap: 10px;
-   }
+.risk-label-group {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
 
-   .risk-label-group-2 {
-    margin-top: 10px;
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 8px;
+.risk-label-group-2 {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: none;
+
+  .label-mod,
+  .govuk-tag {
+    width: auto;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
     max-width: none;
-
-    .label-mod,
-    .govuk-tag {
-      width: auto;
-      white-space: normal;
-      overflow: visible;
-      text-overflow: clip;
-      max-width: none;
-    }
-   }
+  }
+}
 
 
-    .risk-label-group-3 {
-        white-space: normal;
-        display: inline-block;
-    }
-  
+.risk-label-group-3 {
+  white-space: normal;
+  display: inline-block;
+}
 
 
-   .label-orange {
-     background-color:#FFDEBF;
-   }
 
-   .label-mod {
-     padding: 8px 12px 8px 12px;
-     white-space: normal;
-     width: auto;
-     @include mq ($until: 710px) {
-      padding: 5px 8px 5px 8px;
-    }
-    /* @include mq ($until: 426px) {
+.label-orange {
+  background-color: #FFDEBF;
+}
+
+.label-mod {
+  padding: 8px 12px 8px 12px;
+  white-space: normal;
+  width: auto;
+
+  @include mq ($until: 710px) {
+    padding: 5px 8px 5px 8px;
+  }
+
+  /* @include mq ($until: 426px) {
       padding: 5px 6px 4px 6px;
       font-size: 14px;
     } */
-   }
+}
 
-   .govuk-tag.no-data {
-     white-space: normal;
-     height: auto;
-     line-height: 1.3;
-     padding-top: 6px;
-     padding-bottom: 6px;
-     max-width: 100%;
-   }
+.govuk-tag.no-data {
+  white-space: normal;
+  height: auto;
+  line-height: 1.3;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  max-width: 100%;
+}
 
-   .card-padding-left {
-     padding-left: 20px;
-   }
+.card-padding-left {
+  padding-left: 20px;
+}
 
-   .label-border {
-     outline: solid 3px #0b0c0c;
-   }
-  
-   .h1-gap {
-    @include mq ($until: 769px) {
-     margin-top: 20px;
-   }
+.label-border {
+  outline: solid 3px #0b0c0c;
+}
+
+.h1-gap {
+  @include mq ($until: 769px) {
+    margin-top: 20px;
+  }
+}
+
+// v12
+.card-title__font-size {
+  font-size: 22px;
+
+  @include mq ($until: tablet) {
+    font-size: 19px;
+  }
+}
+
+.summary-grid-width {
+  @include mq ($from: tablet) {
+    width: 100%
   }
 
-  // v12
-  .card-title__font-size {
-    font-size: 22px;
-    @include mq ($until: tablet) {
-      font-size: 19px;
-    }
+  @include mq ($from: 960px) {
+    width: 66.6%;
   }
+}
 
-  .summary-grid-width {
-    @include mq ($from: tablet) {
-      width: 100%
-    }
-    @include mq ($from: 960px) {
-      width: 66.6%;
-    }
-  }
- 
-  .summary-card__wrapper-mod {
-    padding: 5px 20px;
-  }
+.summary-card__wrapper-mod {
+  padding: 5px 20px;
+}

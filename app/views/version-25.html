@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <h1 class="govuk-heading-xl">
+      Taking action (Phase 2)
+      <span class="govuk-caption-xl">Version 25.0</span>
+    </h1>
+
+
+    <h3 class="govuk-heading-m">
+      Adding alternative action with the GFW component
+      <br>
+      <strong class="govuk-tag govuk-tag--blue">
+        In progress
+      </strong>
+    </h3>
+
+    <p class="govuk-body">Version 25 introduces alternative action components.</p>
+
+    <details class="govuk-details govuk-!-margin-bottom-3" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          V25.0 changes
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+
+        <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Version A (Rivers and sea – Get flood warnings)</h4>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+          <li>Show the 'Get flood warnings' action card when rivers and the sea is the highest risk, and the address
+            sits within a Flood Warning (FW) or Severe Flood Warning (SFW) area.</li>
+        </ul>
+
+        <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Version B (Surface water – Get flood warnings)</h4>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+          <li>Show the 'Get flood warnings' action card when surface water is the highest risk, and the address sits
+            within a Flood Warning (FW) or Severe Flood Warning (SFW) area.</li>
+        </ul>
+
+        <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Version C (Surface water – Prepare for flooding)</h4>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+          <li>Show the 'Prepare for flooding' action component when surface water is the highest risk, but the address
+            sits outside a Flood Warning (FW) or Severe Flood Warning (SFW) coverage area.</li>
+        </ul>
+
+        <h4 class="govuk-heading-s govuk-!-margin-bottom-1">Version D (Very low risk – No action)</h4>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+          <li>No action component displayed when both rivers and sea and surface water risks are rated as 'Very low'.
+          </li>
+        </ul>
+
+      </div>
+    </details>
+
+
+    <p class="govuk-body govuk-!-padding-top-4"><a class="govuk-link" href="version_25/version_a/start">Version a
+        (Rivers and the sea, GFW)</a></p>
+
+    <p class="govuk-body govuk-!-padding-top-4"><a class="govuk-link" href="version_25/version_b/start">Version b
+        (Surface water, GFW)</a></p>
+
+    <p class="govuk-body govuk-!-padding-top-4"><a class="govuk-link" href="version_25/version_c/start">Version c
+        (Surface water, PFF)</a></p>
+
+    <p class="govuk-body govuk-!-padding-top-4"><a class="govuk-link" href="version_25/version_d/start">Version d
+        (No action card shown)</a></p>
+
+
+  </div>
+</div>
+
+{% endblock %}
